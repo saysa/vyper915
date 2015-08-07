@@ -1,0 +1,121 @@
+{% if is_carousel and front_page_index is defined %}
+
+    <script>
+        jQuery(document).ready(function($) {
+            $("#carousel-posts").owlCarousel({
+                slideSpeed: 200,					//Slide speed in milliseconds
+                paginationSpeed: 800,				//Pagination speed in milliseconds
+                autoPlay: 5000,						//Autoplay every 5 seconds.
+                stopOnHover: true,					//Stop autoplay on mouse hover
+                navigation: false,					//Display "next" and "prev" buttons.
+                pagination: false,					//Display pagination
+                items : 3,							//Number of items to display
+                itemsDesktop : [1199,3],			//Number of slides visible with a particular browser width.
+                itemsTablet: [736,2],
+                itemsMobile: [462,1]
+            });
+        });
+    </script>
+
+    <div class="header-carousel section main-color-reverse">
+
+        <div id="carousel-posts" class="owl-carousel">
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+            <div class="item">
+                <img src="http://betatest.japanfm.fr/uploads/pic/2014/10/7318-1413747752.jpeg?size=374-200" alt="5">
+            </div>
+
+        </div>
+
+    </div>
+
+{% endif %}
+
+
+{#
+
+<script>
+        jQuery(document).ready(function($) {
+            $("#carousel-posts").owlCarousel({
+                slideSpeed: 200,					//Slide speed in milliseconds
+                paginationSpeed: 800,				//Pagination speed in milliseconds
+                autoPlay: 5000,						//Autoplay every 5 seconds.
+                stopOnHover: true,					//Stop autoplay on mouse hover
+                navigation: true,					//Display "next" and "prev" buttons.
+                pagination: false,					//Display pagination
+                items : 3,							//Number of items to display
+                itemsDesktop : [1199,3],			//Number of slides visible with a particular browser width.
+                itemsTablet: [736,2],
+                itemsMobile: [462,1]
+            });
+        });
+    </script>
+
+
+<div class="header-carousel section main-color-reverse">
+
+        <div class="content-wrap">
+            <div id="carousel-posts" class="owl-carousel">
+
+                {% for article in mini_carousel %}
+                    <div class="item">
+                        <div class="thumbnail overlay">
+                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                <img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp374_200 wp-post-image" alt="5">
+                            </a>
+                        </div>
+
+
+                        <div class="post-details">
+                            <div class="post-wrap">
+                                <div class="post-title">
+                                    <div class="post-icon"><i class="icon-file-text-alt"></i></div>
+                                    <h4><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                            {{ article.getTitle }}
+                                        </a>
+                                    </h4>
+                                </div>
+
+                                <div class="post-desc">
+                                    <div class="excerpt">
+                                        {{ article.getDescription }}
+                                    </div>
+                                    <div class="more">
+                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">En savoir plus</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+#}

@@ -1,0 +1,63 @@
+{% block content %}
+    {% set clear_count = 0 %}
+    {% for key, disco in discos %}
+
+        <div class="col-md-3 padding-off item" data-discoid="{{ disco.id }}">
+            <div class="release-thumbnail">
+                <div style="height: 142px; background: url({{ asset(disco.picture.getPath('152')) }});">
+
+                </div>
+
+                <div class="release-meta">
+                    <h6 class="release-artist">
+                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                    </h6>
+                </div>
+
+                <div class="release-meta">
+                    {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                        <div class="button-container tip-container">
+                            <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                            <div class="tip-cloud">
+                                <div class="tip-corner"></div>
+                                <div class="tip-content">
+                                    <ul>
+                                        {% if disco.getCdJapan %}
+                                            <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                        {% endif %}
+                                        {% if disco.getItunes %}
+                                            <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                        {% endif %}
+                                        {% if disco.getAmazon %}
+                                            <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        {% set clear_count = clear_count + 1 %}
+
+        {% if clear_count==4 %}
+
+            <div style="clear: both;"></div>
+            {% set clear_count = 0 %}
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+
+
+{#
+
+
+
+#}

@@ -1,0 +1,67 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Vyper Japanese Music Magazines | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <div class="post-wrap">
+            <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
+                <header class="entry-header">
+                    <h1>Vyper Japanese Music Magazines</h1>
+                </header>
+            </article>
+        </div>
+
+
+        <div class="listing-block">
+            <div class="releases-listing">
+                {% for key, mag in magazines %}
+                    <div class="col-md-3 padding-off">
+                        <div class="release-thumbnail">
+                            <div class="release-cover">
+                                <a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
+                            </div>
+
+                            <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">Vyper Magazine</a></h4>
+                            <h6 class="release-artist">Vol {{ mag.volume }}</h6>
+                            <div class="release-meta">
+
+                                <div class="release-info">{{ mag.dateRelease|date("d/m/Y") }}</div>
+                                <div class="clear"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <div class="clear"></div>
+            </div>
+
+        </div><!--/ listing block-->
+
+
+
+        <div class="add_468">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- un_artist -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:468px;height:60px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="6183315514"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="pagination">
+
+            {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+            {% for p in range(1, total_magazines) %}
+                {% if p == page %}
+                    <span class="page-numbers current">{{ p }}</span>
+                {% else %}
+                    <a href="{{ path('showAllMagazine', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    {% endblock %}

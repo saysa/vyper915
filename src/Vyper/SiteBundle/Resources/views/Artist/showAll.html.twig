@@ -1,0 +1,133 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Artistes | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Artistes</h2>
+        </header><!-- /archive-header -->
+
+
+
+
+
+
+        <div id="filters" class="portfolioFilter">
+
+            <div class="button-group" data-filter-group="a-alpha">
+                <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
+                <a href="javascript: void(0);" data-filter=".a" class="iso">A</a>
+                <a href="javascript: void(0);" data-filter=".b" class="iso">B</a>
+                <a href="javascript: void(0);" data-filter=".c" class="iso">C</a>
+                <a href="javascript: void(0);" data-filter=".d" class="iso">D</a>
+                <a href="javascript: void(0);" data-filter=".e" class="iso">E</a>
+                <a href="javascript: void(0);" data-filter=".f" class="iso">F</a>
+                <a href="javascript: void(0);" data-filter=".g" class="iso">G</a>
+                <a href="javascript: void(0);" data-filter=".h" class="iso">H</a>
+                <a href="javascript: void(0);" data-filter=".i" class="iso">I</a>
+                <a href="javascript: void(0);" data-filter=".j" class="iso">J</a>
+                <a href="javascript: void(0);" data-filter=".k" class="iso">K</a>
+                <a href="javascript: void(0);" data-filter=".l" class="iso">L</a>
+                <a href="javascript: void(0);" data-filter=".m" class="iso">M</a>
+                <a href="javascript: void(0);" data-filter=".n" class="iso">N</a>
+                <a href="javascript: void(0);" data-filter=".o" class="iso">O</a>
+                <a href="javascript: void(0);" data-filter=".p" class="iso">P</a>
+                <a href="javascript: void(0);" data-filter=".q" class="iso">Q</a>
+                <a href="javascript: void(0);" data-filter=".r" class="iso">R</a>
+                <a href="javascript: void(0);" data-filter=".s" class="iso">S</a>
+                <a href="javascript: void(0);" data-filter=".t" class="iso">T</a>
+                <a href="javascript: void(0);" data-filter=".u" class="iso">U</a>
+                <a href="javascript: void(0);" data-filter=".v" class="iso">V</a>
+                <a href="javascript: void(0);" data-filter=".w" class="iso">W</a>
+                <a href="javascript: void(0);" data-filter=".x" class="iso">X</a>
+                <a href="javascript: void(0);" data-filter=".y" class="iso">Y</a>
+                <a href="javascript: void(0);" data-filter=".z" class="iso">Z</a>
+
+            </div>
+
+            {#
+            <div class="button-group" data-filter-group="a-type">
+                <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
+                {% for artistType in artistTypes %}
+                    <a href="javascript: void(0);" data-filter=".at-{{ artistType.id }}" class="iso">{{ artistType.name }}</a>
+                {% endfor %}
+            </div>
+            #}
+
+        </div>
+
+        <div class="portfolioContainer">
+            {% for artist in artists %}
+                {% if artist.picture is null %}
+                    {% set bg = asset('assets/css/images/artists-music.jpg') %}
+                {% else %}
+                    {% set bg = asset(artist.picture.getPath('290-180')) %}
+                {% endif %}
+                <div class="color-shape {{ artist.name|first|lower }} at-{{ artist.type.id }} {{ artist.type.name }} col-md-4 col-sm-6 padding-off artist-all-container">
+                    <div class="thumb artist-thumbnail" style="background: url('{{ bg }}') no-repeat center;">
+                        <div class="hover-effect">
+                            <div class="gallery-info">
+                                <p><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">{{ artist.name }}</a></p>
+                            </div>
+                            <div class="artist-link">
+                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
+                                    <span>{{ artist.name }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+
+
+
+        <script>
+
+            $(window).load(function(){
+
+                $( function() {
+                    // init Isotope
+                    var $container = $('.portfolioContainer').isotope({
+                        itemSelector: '.color-shape'
+                    });
+
+                    // store filter for each group
+                    var filters = {};
+
+                    $('#filters').on( 'click', '.iso', function() {
+                        var $this = $(this);
+                        // get group key
+                        var $buttonGroup = $this.parents('.button-group');
+                        var filterGroup = $buttonGroup.attr('data-filter-group');
+                        // set filter for group
+                        filters[ filterGroup ] = $this.attr('data-filter');
+                        // combine filters
+                        var filterValue = '';
+                        for ( var prop in filters ) {
+                            filterValue += filters[ prop ];
+                        }
+                        // set filter for Isotope
+                        $container.isotope({ filter: filterValue });
+                    });
+
+                    // change is-checked class on buttons
+                    $('.iso').each( function( i, buttonGroup ) {
+                        var $buttonGroup = $( buttonGroup );
+                        $buttonGroup.on( 'click', 'iso', function() {
+                            $buttonGroup.find('.current').removeClass('current');
+                            $( this ).addClass('current');
+                        });
+                    });
+
+                });
+
+
+
+            });
+
+        </script>
+    {% endblock %}
+

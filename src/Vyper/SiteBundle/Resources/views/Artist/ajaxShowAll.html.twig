@@ -1,0 +1,145 @@
+{% block content %}
+    <header class="archive-header">
+        <h2 class="archive-title">Artistes</h2>
+    </header><!-- /archive-header -->
+
+
+
+    <div class="pagination">
+
+        {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+        {% for p in range(1, total_artists) %}
+            {% if p == page %}
+                <span class="page-numbers current">{{ p }}</span>
+            {% else %}
+                <a href="{{ path('showAllArtist', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+
+    <div id="filters" class="portfolioFilter">
+
+        <div class="button-group" data-filter-group="a-alpha">
+            <a href="#filters" data-filter="" class="button current">All Alpha</a>
+            <a href="#filters" data-filter=".a" class="button">A</a>
+            <a href="#filters" data-filter=".b" class="button">B</a>
+        </div>
+
+        <div class="button-group" data-filter-group="a-type">
+            <a href="#filters" data-filter="" class="button current">All Types</a>
+            {% for artistType in artistTypes %}
+                <a href="#filters" data-filter=".at-{{ artistType.id }}" class="button">{{ artistType.name }}</a>
+            {% endfor %}
+        </div>
+
+
+
+
+    </div>
+
+    <div class="portfolioContainer">
+        {% for artist in artists %}
+            {% if artist.picture is null %}
+                {% set bg = asset('assets/css/images/artists-music.jpg') %}
+            {% else %}
+                {% set bg = asset(artist.picture.getPath('290-180')) %}
+            {% endif %}
+            <div class="color-shape {{ artist.name|first|lower }} at-{{ artist.type.id }} {{ artist.type.name }} col-md-4 col-sm-6 padding-off">
+                <div class="thumb artist-thumbnail" style="background: url('{{ bg }}') no-repeat center;">
+                    <div class="hover-effect">
+                        <div class="gallery-info">
+                            <p><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">{{ artist.name }}</a></p>
+                        </div>
+                        <div class="artist-link">
+                            <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
+                                <span>{{ artist.name }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+
+
+    {#
+    <div class="archive-postlist portfolioContainer">
+
+        {% for artist in artists %}
+            <div class="{{ artist.keywords }} one-fourth{% if loop.index%4==0 %} last{% endif %}">
+                <article class="post type-post status-publish format-standard hentry">
+                    <div class="thumb-wrap">
+                        <div class="thumb artist-thumbnail">
+                            <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
+                                {% if artist.picture is null %}
+                                    <img  src="{{ asset('assets/css/images/artists-music.jpg') }}" class="wp-post-image artists-img" alt="">
+                                {% else %}
+                                    <img  src="{{ asset(artist.picture.getPath('162-108')) }}" class="wp-post-image artists-img" alt="">
+                                {% endif %}
+
+                            </a>
+                            <div class="ribbon-caption">
+                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}" class="ribbon-caption-title">
+                                    <span>{{ artist.getName }}</span>
+                                    <span class="ribbon-caption-background"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        {% endfor %}
+
+    </div>
+    #}
+
+
+
+    <script>
+
+        $(document).ready(function(){
+
+            $( function() {
+                // init Isotope
+                var $container = $('.portfolioContainer').isotope({
+                    itemSelector: '.color-shape'
+                });
+
+                // store filter for each group
+                var filters = {};
+
+                $('#filters').on( 'click', '.button', function() {
+                    var $this = $(this);
+                    // get group key
+                    var $buttonGroup = $this.parents('.button-group');
+                    var filterGroup = $buttonGroup.attr('data-filter-group');
+                    // set filter for group
+                    filters[ filterGroup ] = $this.attr('data-filter');
+                    // combine filters
+                    var filterValue = '';
+                    for ( var prop in filters ) {
+                        filterValue += filters[ prop ];
+                    }
+                    // set filter for Isotope
+                    $container.isotope({ filter: filterValue });
+                });
+
+                // change is-checked class on buttons
+                $('.button-group').each( function( i, buttonGroup ) {
+                    var $buttonGroup = $( buttonGroup );
+                    $buttonGroup.on( 'click', 'button', function() {
+                        $buttonGroup.find('.is-checked').removeClass('is-checked');
+                        $( this ).addClass('is-checked');
+                    });
+                });
+
+            });
+
+        });
+
+
+    </script>
+{% endblock %}

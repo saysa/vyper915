@@ -1,0 +1,275 @@
+{% extends "VyperSiteBundle:layouts:admin.html.twig" %}
+
+{% block title "ADMIN" %}
+
+    {% block content %}
+
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header" data-original-title>
+                        <h2><i class="icon-book"></i><span class="break"></span>Articles</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+
+                        {# On affiche tous les messages flash dont le nom est « info » #}
+                        {% for message in app.session.flashbag.get('info') %}
+                            <div class="alert alert-info">Message flash : {{ message }}</div>
+                        {% endfor %}
+
+
+                        <div class="pull-right">
+                            <a href="{{ path('admin_add_article') }}">
+                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
+                            </a>
+                        </div>
+
+
+                        <hr>
+
+                        <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Highlight</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Title</th>
+                                <th>Preview</th>
+                                <th>Modify</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for article in articles %}
+                                <tr>
+                                    <td>{{ article.getId }}</td>
+                                    <td><input type="checkbox" class="hightlight" data-articleid="{{ article.getId }}" {% if article.getHighlight == 1 %}checked="checked"{% endif %} /></td>
+                                    <td>{{ article.getModified|date('Y-m-d') }}</td>
+                                    <td>{{ article.getArticleType.getName }}</td>
+                                    <td>{{ article.getTitle }}</td>
+                                    <td><a class="btn btn-success" href="#"><i class="icon-zoom-in "></i></a></td>
+                                    <td><a class="btn btn-info" href="{{ path('admin_update_article', {'id': article.getId}) }}"><i class="icon-edit "></i></a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_article', {'id': article.getId}) }}"><i class="icon-trash "></i> </a></td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+
+                        <hr>
+
+                        <div class="pull-right">
+                            <a href="{{ path('admin_add_article') }}">
+                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
+                            </a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header" data-original-title>
+                        <h2><i class="icon-book"></i><span class="break"></span>Themes</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+
+                        <div class="pull-right">
+                            <a href="{{ path('admin_add_theme') }}">
+                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
+                            </a>
+                        </div>
+
+
+                        <hr>
+
+                        <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Active</th>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Modify</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for theme in themes %}
+                                <tr>
+                                    <td>{{ theme.getId }}</td>
+                                    <td><input type="checkbox" class="theme-active" data-themeid="{{ theme.getId }}" {% if theme.getShowInMenu == 1 %}checked="checked"{% endif %} /></td>
+                                    <td>{{ theme.getModified|date('Y-m-d') }}</td>
+                                    <td>{{ theme.getTitle }}</td>
+                                    <td><a class="btn btn-info" href="{{ path('admin_update_theme', {'id': theme.getId}) }}"><i class="icon-edit "></i></a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_theme', {'id': theme.getId}) }}"><i class="icon-trash "></i></a></td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+
+
+                        <div class="pull-right">
+                            <a href="{{ path('admin_add_theme') }}">
+                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
+                            </a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        {# Flashnews #}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header" data-original-title>
+                        <h2><i class="icon-book"></i><span class="break"></span>Flash News</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+
+                        <div class="pull-right">
+                            <a href="{{ path('admin_add_flashnew') }}">
+                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
+                            </a>
+                        </div>
+
+
+                        <hr>
+
+                        <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Modify</th>
+                                <th>Delete</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            {% for flashnew in flashnews %}
+                                <tr>
+                                    <td>{{ flashnew.getId }}</td>
+                                    <td>{{ flashnew.getModified|date('Y-m-d') }}</td>
+                                    <td>{{ flashnew.getTitle }}</td>
+                                    <td><a class="btn btn-info" href="{{ path('admin_update_flashnew', {'id': flashnew.getId}) }}"><i class="icon-edit "></i></a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_flashnew', {'id': flashnew.getId}) }}"><i class="icon-trash "></i></a></td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+
+
+                        <div class="pull-right">
+                            <a href="{{ path('admin_add_flashnew') }}">
+                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
+                            </a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script>
+
+            $(document).ready(function() {
+                $( ".hightlight" ).on("click", function() {
+
+                    var articleId = $(this).data('articleid');
+                    var checkboxValue = $(this).is(':checked');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('ajax_switch_article_highlight') }}",
+                        dataType: "json",
+                        data:{
+                            article_id : articleId,
+                            checkboxValue : checkboxValue
+                        },
+                        success: function(data){
+                            console.log("changed :)");
+                        }
+                    });
+
+                });
+
+                $( ".theme-active" ).on("click", function() {
+
+                    var themeId = $(this).data('themeid');
+                    var checkboxValue = $(this).is(':checked');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "ajax/switch_theme_show_in_menu",
+                        dataType: "json",
+                        data:{
+                            theme_id : themeId,
+                            checkboxValue : checkboxValue
+                        },
+                        success: function(data){
+                            console.log("changed :)");
+                        }
+                    });
+
+                });
+            });
+
+        </script>
+
+
+    {% endblock %}

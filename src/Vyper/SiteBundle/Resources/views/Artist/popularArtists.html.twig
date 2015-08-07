@@ -1,0 +1,7 @@
+<ul>
+    {% for artist in popular_artists %}
+        <li>
+            <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}" title="{{ artist.getName }}">{{ artist.getName }}</a>
+        </li>
+    {% endfor %}
+</ul>

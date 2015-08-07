@@ -1,0 +1,7 @@
+parameters:
+#    vyper_user.example.class: Vyper\UserBundle\Example
+
+services:
+#    vyper_user.example:
+#        class: %vyper_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

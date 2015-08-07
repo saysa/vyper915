@@ -1,0 +1,50 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Programme | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Programme</h2>
+        </header><!-- /archive-header -->
+
+        <div id='calendar'></div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                    },
+                    buttonText: {
+                        today: "Aujourd'hui",
+                        week: 'Semaine',
+                        day: 'Jour'
+                    },
+                    columnFormat:{
+                        month: 'ddd '    // Mon
+                    },
+                    height: 'auto',
+                    defaultView: 'agendaWeek',
+                    minTime : '06:00:00',
+                    firstDay:1,
+                    monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'],
+                    monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Juin','Juil','Aout','Sep','Oct','Nov','Dec'],
+                    dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+                    dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+                    allDaySlot: false,
+                    axisFormat : 'H:mm',
+                    timeFormat: 'H:mm',
+                    defaultDate: '{{ defaultDate }}',
+                    editable: false,
+                    eventLimit: true, // allow "more" link when too many events
+                    events: {{ programs|raw }}
+                });
+
+            });
+
+        </script>
+    {% endblock %}

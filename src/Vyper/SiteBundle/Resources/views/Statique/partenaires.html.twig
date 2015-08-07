@@ -1,0 +1,66 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Partenaires | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Partenaires</h2>
+        </header><!-- /archive-header -->
+
+
+        <div class="content-title main-color-reverse">
+            <h4>Production et Médias</h4>
+        </div>
+
+        {% set count = 1 %}
+        {% for partner in partner_media %}
+            {% if count==1 %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-3">
+                <a href="{{ partner.link }}">
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}"
+                </a>
+            </div>
+            {% if count==4 or loop.last %}
+                </div>
+            {% endif %}
+
+            {% set count = count + 1 %}
+
+            {% if count==5 %}
+                {% set count = 1 %}
+            {% endif %}
+        {% endfor %}
+
+
+
+
+        <div class="content-title main-color-reverse">
+            <h4>Evénements</h4>
+        </div>
+        {% set count = 1 %}
+        {% for partner in partner_event %}
+            {% if count==1 %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-3">
+                <a href="{{ partner.link }}">
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}"
+                </a>
+            </div>
+            {% if count==4 or loop.last %}
+                </div>
+            {% endif %}
+
+            {% set count = count + 1 %}
+
+            {% if count==5 %}
+                {% set count = 1 %}
+            {% endif %}
+        {% endfor %}
+
+
+
+
+    {% endblock %}

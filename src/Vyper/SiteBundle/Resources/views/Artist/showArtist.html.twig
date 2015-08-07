@@ -1,0 +1,354 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ artist.name }} | {{ parent() }}{% endblock %}
+
+    {% block content %}
+
+        <div class="post-wrap">
+            <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
+                <header class="entry-header">
+                    <h1>{{ artist.getName }}{% if artist.getRealName %} - {{ artist.getRealName }}{% endif %}</h1>
+
+                    <div class="entry-meta">
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style ">
+                            <a class="addthis_button_preferred_1"></a>
+                            <a class="addthis_button_preferred_2"></a>
+                            <a class="addthis_button_preferred_3"></a>
+                            <a class="addthis_button_preferred_4"></a>
+                            <a class="addthis_button_compact"></a>
+                            <a class="addthis_counter addthis_bubble_style"></a>
+                        </div>
+                        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
+                        <!-- AddThis Button END -->
+                        <div class="left">
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </header>
+
+
+                <div class="entry-content-wrap">
+
+                    <div class="one-half">
+                        {% if artist.picture is null %}
+                            <img  src="{{ asset('assets/css/images/artists-music.jpg?size=374-200') }}" class="wp-post-image artists-img" alt="">
+                        {% else %}
+                            <img  src="{{ asset(artist.picture.getPath('374-200')) }}" class="wp-post-image" alt="">
+                        {% endif %}
+
+                    </div>
+                    <div class="one-half last">
+                        {{ artist.getProfile }}
+                    </div>
+
+
+                </div>
+                <!-- /entry-content-wrap -->
+
+            </article>
+
+
+
+        </div>
+        <!-- /post-wrap -->
+
+        {% if artist.getBiography %}
+
+            <div class="content-title main-color-reverse" id="toggle-biography">
+                <h4>Biographie</h4>
+            </div>
+
+            <div class="entry-content" id="toggle-target-biography">
+                {{ artist.getBiography|raw }}
+            </div>
+        {% endif %}
+
+        <!-- /entry-content -->
+
+        {% if discos is defined %}
+            <div class="content-title main-color-reverse" id="toggle-discos">
+                <h4>Discographie</h4>
+            </div>
+
+            <div id="toggle-target-discos">
+                <div class="column">
+                    <div class="listing-block">
+                        <div class="releases-listing">
+                            {% for key, disco in discos %}
+                                {% if key < 4 %}
+                                    <div class="col-md-3 padding-off">
+                                        <div class="release-thumbnail">
+                                            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                                                <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
+                                            </a>
+
+                                            <h6 class="release-artist">
+                                                <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                                            </h6>
+                                            <div class="release-meta">
+                                                {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                                                    <div class="button-container tip-container">
+                                                        <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                                                        <div class="tip-cloud">
+                                                            <div class="tip-corner"></div>
+                                                            <div class="tip-content">
+                                                                <ul>
+                                                                    {% if disco.getCdJapan %}
+                                                                        <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                                                    {% endif %}
+                                                                    {% if disco.getItunes %}
+                                                                        <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                                    {% endif %}
+                                                                    {% if disco.getAmazon %}
+                                                                        <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                                    {% endif %}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                                <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                                                <div class="clear"></div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+
+
+                            <div class="clear"></div>
+                        </div>
+
+                    </div><!--/ listing block-->
+                </div>
+
+                <p class="seemore-button">
+                    <a href="{{ path('artistDiscography', {'id': artist.getId, 'slug': artist.slug}) }}"><i class="icon-plus"></i> Toute la discographie</a>
+                </p>
+            </div>
+
+
+
+        {% endif %}
+
+
+
+
+        <div class="clear"></div>
+        {% if events is defined %}
+            <div class="content-title main-color-reverse" id="toggle-events">
+                <h4>événements</h4>
+            </div>
+
+
+            <ul class="list" id="toggle-target-events">
+
+                {% for key, event in events %}
+                    <li class="one-third{% if key==2 %} last{% endif %}">
+                        <div class="thumbnail">
+                            <a href="{{ path('showEvent', {'id': event.getId, 'slug': event.slug}) }}">
+                                <img src="{{ asset(event.picture.getPath('374-200')) }}" class="attachment-fp239_130 wp-post-image" alt="">									</a>
+                        </div>
+
+                        <h5>
+                            <a href="{{ path('showEvent', {'id': event.getId, 'slug': event.slug}) }}">
+                                {{ event.getTitle }}
+                            </a>
+                        </h5>
+
+                        <div class="entry-meta">
+                    <span class="date">
+                        <i class="icon-calendar"></i>
+                         event.getDate }}
+                    </span>
+                        </div>
+                    </li>
+                {% endfor %}
+
+
+            </ul>
+
+        {% endif %}
+
+        {% if articles is defined %}
+            <div class="content-title main-color-reverse" id="toggle-articles">
+                <h4>Articles</h4>
+            </div>
+
+            <ul class="list" id="toggle-target-articles">
+                {% for key, article in articles %}
+                    <li class="one-third{% if key==2 %} last{% endif %}">
+                        <div class="thumbnail">
+                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                <img src="{{ asset(article.picture.getPath('374-200')) }}" class="attachment-fp239_130 wp-post-image" alt="">
+                            </a>
+                        </div>
+
+                        <h5>
+                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                {{ article.getTitle }}
+                            </a>
+                        </h5>
+
+                        <div class="entry-meta">
+                <span class="date">
+                    <i class="fa fa-calendar"></i>
+                    {{ article.getReleaseDateFrontFormat(article.getId) }}
+                </span>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if albums is defined %}
+            <div class="content-title main-color-reverse" id="toggle-albums">
+                <h4>Galerie</h4>
+            </div>
+
+            <ul class="list" id="toggle-target-albums">
+                {% for key, album in albums %}
+                    <li class="one-third{% if key==2 %} last{% endif %}">
+                        <div class="thumbnail">
+                            <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">
+                                <img src="{{ asset(album.cover.getPath('374-200')) }}" class="attachment-fp239_130 wp-post-image" alt="">
+                            </a>
+                        </div>
+
+                        <h5>
+                            <a href="showAlbum">
+                                {{ album.getTitle }}
+                            </a>
+                        </h5>
+
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+
+
+        {% if artist.youtubeChannel is not empty or artist.officialWebsite is not empty %}
+        <div class="content-title main-color-reverse" id="toggle-links">
+            <h4>Liens</h4>
+        </div>
+
+            <ul id="toggle-target-links">
+                {% if artist.officialWebsite is not empty %}<li><a href="{{ artist.officialWebsite }}">Site officiel</a></li>{% endif %}
+                {% if artist.youtubeChannel is not empty %}<li><a href="{{ artist.youtubeChannel }}">Chaine Youtube</a></li>{% endif %}
+            </ul>
+
+        {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="comments">
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-rocket"></i>
+                    </div>
+                    <h4>Donnez votre avis</h4>
+                </div>
+            </div>
+        </div>
+        <!-- /comments -->
+
+        {# DISQUS #}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'japanfm'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                $(".tip-container").on("click", ".buy", function() {
+                    $(".tip-cloud").hide();
+                    var tipcloud = $(this).next();
+                    tipcloud.show();
+                });
+
+
+
+            });
+
+
+        </script>
+
+        {# Chat #}
+        <script>
+            $(document).ready(function() {
+                $( "#toggle-biography" ).on("click", function() {
+                    $('#toggle-target-biography').toggle('slow');
+                });
+                $('#toggle-target-biography').hide();
+
+
+                $( "#toggle-discos" ).on("click", function() {
+                    $('#toggle-target-discos').toggle('slow');
+                });
+                $('#toggle-target-discos').hide();
+
+                $( "#toggle-events" ).on("click", function() {
+                    $('#toggle-target-events').toggle('slow');
+                });
+                $('#toggle-target-events').hide();
+
+                $( "#toggle-articles" ).on("click", function() {
+                    $('#toggle-target-articles').toggle('slow');
+                });
+                $('#toggle-target-articles').hide();
+
+
+
+                $( "#toggle-albums" ).on("click", function() {
+                    $('#toggle-target-albums').toggle('slow');
+                });
+                $('#toggle-target-albums').hide();
+
+
+                $( "#toggle-links" ).on("click", function() {
+                    $('#toggle-target-links').toggle('slow');
+                });
+                $('#toggle-target-links').hide();
+
+            });
+
+        </script>
+
+    {% endblock %}

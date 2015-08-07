@@ -1,0 +1,575 @@
+index:
+    path:     /
+    defaults: { _controller: VyperSiteBundle:Index:index }
+
+home:
+    path:     /home
+    defaults: { _controller: VyperSiteBundle:Index:index }
+
+ajax_general:
+    path:    /ajax/general
+    defaults: { _controller: VyperSiteBundle:Ajax:ajax }
+    requirements:
+        _method:  POST
+
+a_propos:
+    path:     /a-propos
+    defaults: { _controller: VyperSiteBundle:Statique:aPropos }
+
+l_equipe:
+    path:     /l-equipe
+    defaults: { _controller: VyperSiteBundle:Statique:lEquipe }
+
+contact:
+    path:     /contact
+    defaults: { _controller: VyperSiteBundle:Statique:contact }
+
+partenaires:
+    path:     /partenaires
+    defaults: { _controller: VyperSiteBundle:Statique:partenaires }
+
+cgu:
+    path:     /conditions-utilisation
+    defaults: { _controller: VyperSiteBundle:Statique:cgu }
+
+cgu_sms:
+    path:     /conditions-utilisation-sms
+    defaults: { _controller: VyperSiteBundle:Statique:cguSms }
+
+mentions_legales:
+    path:     /mentions-legales
+    defaults: { _controller: VyperSiteBundle:Statique:mentionsLegales }
+
+vyper_site_top_music:
+    path:     /top-music
+    defaults: { _controller: VyperSiteBundle:Top:pageMusic }
+
+shoAllArticles:
+    path:    /actualites/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: actualites }
+    requirements:
+        page: \d*
+
+musique-news:
+    path:    /musique-archives/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-news }
+    requirements:
+        page: \d*
+
+musique-interviews:
+    path:    /musique-interviews/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-interviews }
+    requirements:
+        page: \d*
+
+musique-live-reports:
+    path:    /musique-live-reports/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-live-reports }
+    requirements:
+        page: \d*
+
+musique-chroniques:
+    path:    /musique-chroniques/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-chroniques }
+    requirements:
+        page: \d*
+
+showEvent:
+    path:    /event/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Event:showEvent }
+    requirements:
+        id: \d+
+
+showAlbums:
+    path:    /galerie/{page}
+    defaults: { _controller: VyperSiteBundle:Album:showAll, page: 1, category: concert }
+    requirements:
+        page: \d*
+
+showAlbum:
+    path:    /album/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Album:showAlbum }
+    requirements:
+        id: \d+
+
+showMagazine:
+    path:    /vyper-jmusic-magazine/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Magazine:showMagazine }
+    requirements:
+        id: \d+
+
+showAllMagazine:
+    path:    /vyper-jmusic-magazines/{page}
+    defaults: { _controller: VyperSiteBundle:Magazine:showAll, page: 1 }
+    requirements:
+        page: \d*
+
+showAllPodcasts:
+    path:    /podcast
+    defaults: { _controller: VyperSiteBundle:Podcast:showAll }
+
+showAllPodcastsAudio:
+    path:    /podcasts-audio
+    defaults: { _controller: VyperSiteBundle:Podcast:showAllAudio }
+
+showArticle:
+    path:    /article/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Article:showArticle }
+    requirements:
+        id: \d+
+
+showAllArtist:
+    path:    /artistes/{page}
+    defaults: { _controller: VyperSiteBundle:Artist:showAll, page: 1 }
+    requirements:
+        page: \d*
+
+showAllEvent:
+    path:    /events
+    defaults: { _controller: VyperSiteBundle:Event:showAll }
+
+showArtist:
+    path:    /artiste/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Artist:showArtist }
+    requirements:
+        id: \d+
+
+showVideo:
+    path:    /video/{slug}/{id}
+    defaults: { _controller: VyperSiteBundle:Video:showVideo }
+    requirements:
+        id: \d+
+
+showDisco:
+    path:    /disco/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Disco:showDisco }
+    requirements:
+        id: \d+
+
+artistDiscography:
+    path:    /artist-discography/{slug}/{id}.html/{page}
+    defaults: { _controller: VyperSiteBundle:Artist:showDisco, page: 1 }
+    requirements:
+        id: \d+
+        page: \d*
+
+infiniteScrollArtistDiscography:
+    path:    /is/artist-discography
+    defaults: { _controller: VyperSiteBundle:Artist:infinteScrollShowDisco }
+
+
+mangaanime:
+    path:    /manga-anime/{page}
+    defaults: { _controller: VyperSiteBundle:Manga:showAll, page: 1, type: manga-anime }
+    requirements:
+        page: \d*
+
+jeuxvideos:
+    path:    /jeux-videos/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: jeux-videos }
+    requirements:
+        page: \d*
+
+culture:
+    path:    /culture/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: culture }
+    requirements:
+        page: \d*
+
+playerradio:
+    path:    /radio
+    defaults: { _controller: VyperSiteBundle:Statique:radio }
+
+radio-programme:
+    path:    /programme
+    defaults: { _controller: VyperSiteBundle:Program:showAllPrograms }
+
+radio-emissions:
+    path:    /emissions
+    defaults: { _controller: VyperSiteBundle:Program:showAllProgramTypes }
+
+showTheme:
+    path:    /theme/{slug}/{id}/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showTheme, page: 1 }
+
+showManga:
+    path:    /manga/{slug}/{id}/{page}
+    defaults: { _controller: VyperSiteBundle:Manga:showManga, page: 1 }
+
+showProgramType:
+    path:    /emission/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Program:showProgramType }
+    requirements:
+        id: \d+
+
+showFlashnew:
+    path:    /breve/{slug}/{id}.html
+    defaults: { _controller: VyperSiteBundle:Flashnew:showFlashnew }
+    requirements:
+        id: \d+
+
+admin_show_articles:
+    path:     /_admin_/articles
+    defaults: { _controller: VyperSiteBundle:AdminArticle:showArticles }
+
+admin_add_article:
+    path:     /_admin_/article/add
+    defaults: { _controller: VyperSiteBundle:AdminArticle:addArticle }
+
+admin_delete_article:
+    path:     /_admin_/article/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminArticle:deleteArticle }
+    requirements:
+        id: \d+
+
+admin_show_editables:
+    path:     /_admin_/editables
+    defaults: { _controller: VyperSiteBundle:AdminEditable:showAll }
+
+admin_update_editable:
+    path:     _admin_/editable/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminEditable:update }
+    requirements:
+        id: \d+
+
+admin_add_partner:
+    path:     /_admin_/partner/add
+    defaults: { _controller: VyperSiteBundle:AdminPartner:add }
+
+admin_show_partners:
+    path:     /_admin_/partners
+    defaults: { _controller: VyperSiteBundle:AdminPartner:showAll }
+
+admin_update_partner:
+    path:     _admin_/partner/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminPartner:update }
+    requirements:
+        id: \d+
+
+admin_delete_partner:
+    path:     /_admin_/partner/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminPartner:delete }
+    requirements:
+        id: \d+
+
+admin_show_mangas:
+    path:     /_admin_/mangas
+    defaults: { _controller: VyperSiteBundle:AdminManga:showMangas }
+
+admin_add_manga:
+    path:     /_admin_/manga/add
+    defaults: { _controller: VyperSiteBundle:AdminManga:addManga }
+
+admin_update_manga:
+    path:     _admin_/manga/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminManga:updateManga }
+    requirements:
+        id: \d+
+
+admin_show_tops:
+    path:     /_admin_/tops
+    defaults: { _controller: VyperSiteBundle:AdminTop:showTops }
+
+admin_show_programs:
+    path:     /_admin_/programs
+    defaults: { _controller: VyperSiteBundle:AdminProgram:showPrograms }
+
+admin_add_program:
+    path:     /_admin_/program/add
+    defaults: { _controller: VyperSiteBundle:AdminProgram:addProgram }
+
+admin_update_program:
+    path:     _admin_/program/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminProgram:updateProgram }
+    requirements:
+        id: \d+
+
+admin_add_programType:
+    path:     /_admin_/programType/add
+    defaults: { _controller: VyperSiteBundle:AdminProgram:addProgramType }
+
+admin_update_programType:
+    path:     _admin_/programType/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminProgram:updateProgramType }
+    requirements:
+        id: \d+
+
+admin_show_magazines:
+    path:     /_admin_/magazines
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:showMagazines }
+
+admin_add_magazine:
+    path:     /_admin_/magazine/add
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:addMagazine }
+
+admin_update_magazine:
+    path:     _admin_/magazine/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:updateMagazine }
+    requirements:
+        id: \d+
+
+admin_update_top:
+    path:     _admin_/top/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTop:updateTop }
+    requirements:
+        id: \d+
+
+admin_update_flashnew:
+    path:     _admin_/flashnew/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminFlashnew:updateFlashnew }
+    requirements:
+        id: \d+
+
+admin_delete_flashnew:
+    path:     /_admin_/flashnew/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminFlashnew:deleteFlashnew }
+    requirements:
+        id: \d+
+
+admin_update_article:
+    path:     _admin_/article/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminArticle:updateArticle }
+    requirements:
+        id: \d+
+
+admin_add_flashnew:
+    path:     /_admin_/flashnew/add
+    defaults: { _controller: VyperSiteBundle:AdminFlashnew:addFlashnew }
+
+admin_show_discos:
+    path:     /_admin_/discos
+    defaults: { _controller: VyperSiteBundle:AdminDisco:showDiscos }
+
+admin_add_disco:
+    path:     /_admin_/disco/add
+    defaults: { _controller: VyperSiteBundle:AdminDisco:addDisco }
+
+admin_update_disco:
+    path:     _admin_/disco/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminDisco:updateDisco }
+    requirements:
+        id: \d+
+
+admin_show_events:
+    path:     /_admin_/events
+    defaults: { _controller: VyperSiteBundle:AdminEvent:showEvents }
+
+admin_add_event:
+    path:     /_admin_/event/add
+    defaults: { _controller: VyperSiteBundle:AdminEvent:addEvent }
+
+admin_update_event:
+    path:     _admin_/event/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminEvent:updateEvent }
+    requirements:
+        id: \d+
+
+admin_show_locations:
+    path:     /_admin_/locations
+    defaults: { _controller: VyperSiteBundle:AdminLocation:showLocations }
+
+admin_add_location:
+    path:     /_admin_/location/add
+    defaults: { _controller: VyperSiteBundle:AdminLocation:addLocation }
+
+admin_update_location:
+    path:     _admin_/location/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminLocation:updateLocation }
+    requirements:
+        id: \d+
+
+admin_add_theme:
+    path:     /_admin_/themes/add
+    defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }
+
+admin_update_theme:
+    path:     _admin_/theme/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTheme:updateTheme }
+    requirements:
+        id: \d+
+
+admin_delete_theme:
+    path:     /_admin_/themes/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTheme:deleteTheme }
+    requirements:
+        id: \d+
+
+admin_switchThemeShowInMenu:
+   path:    /_admin_/ajax/switch_theme_show_in_menu
+   defaults: { _controller: VyperSiteBundle:AdminAjax:toto }
+
+admin_show_pictures:
+    path:     /_admin_/pictures
+    defaults: { _controller: VyperSiteBundle:AdminPicture:showPictures }
+
+admin_add_picture:
+    path:     /_admin_/picture/add
+    defaults: { _controller: VyperSiteBundle:AdminPicture:addPicture }
+
+admin_delete_picture:
+    path:     /_admin_/picture/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminPicture:delete }
+    requirements:
+        id: \d+
+
+admin_show_videos:
+    path:     /_admin_/videos
+    defaults: { _controller: VyperSiteBundle:AdminVideo:showVideos }
+
+admin_add_video:
+    path:     /_admin_/video/add
+    defaults: { _controller: VyperSiteBundle:AdminVideo:addVideo }
+
+admin_update_video:
+    path:     _admin_/video/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminVideo:updateVideo }
+    requirements:
+        id: \d+
+
+admin_add_podcast:
+    path:     /_admin_/podcast/add
+    defaults: { _controller: VyperSiteBundle:AdminPodcast:addPodcast }
+
+admin_update_podcast:
+    path:     _admin_/podcast/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminPodcast:updatePodcast }
+    requirements:
+        id: \d+
+
+admin_show_tours:
+    path:     /_admin_/tours
+    defaults: { _controller: VyperSiteBundle:AdminTour:showTours }
+
+admin_add_tour:
+    path:     /_admin_/tour/add
+    defaults: { _controller: VyperSiteBundle:AdminTour:addTour }
+
+admin_update_tour:
+    path:     _admin_/tour/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTour:updateTour }
+    requirements:
+        id: \d+
+
+admin_add_tourType:
+    path:     /_admin_/tourType/add
+    defaults: { _controller: VyperSiteBundle:AdminTourType:addTourType }
+
+admin_update_tourType:
+    path:     _admin_/tourType/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminTourType:updateTourType }
+    requirements:
+        id: \d+
+
+admin_add_album:
+    path:     /_admin_/album/add
+    defaults: { _controller: VyperSiteBundle:AdminAlbum:addAlbum }
+
+admin_update_album:
+    path:     _admin_/album/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminAlbum:updateAlbum }
+    requirements:
+        id: \d+
+
+admin_show_artists:
+    path:     /_admin_/artists
+    defaults: { _controller: VyperSiteBundle:AdminArtist:showArtists }
+
+admin_add_artist:
+    path:     /_admin_/artist/add
+    defaults: { _controller: VyperSiteBundle:AdminArtist:addArtist }
+
+admin_update_artist:
+    path:     _admin_/artist/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminArtist:updateArtist }
+    requirements:
+        id: \d+
+
+
+
+ajax_vyper:
+    path:    /ajax/vyper-jmusic-magazines
+    defaults: { _controller: VyperSiteBundle:Magazine:showAll, page: 1 }
+    requirements:
+        page: \d*
+
+get_playlist:
+    path:     /ajax/get_playlist
+    defaults: { _controller: VyperSiteBundle:Ajax:getPlaylist }
+
+vote_picture:
+    path:     /ajax/vote_picture
+    defaults: { _controller: VyperSiteBundle:Ajax:votePicture }
+
+vote_song:
+    path:     /ajax/vote_song
+    defaults: { _controller: VyperSiteBundle:Ajax:voteSong }
+
+get_device:
+    path:     /ajax/get_device
+    defaults: { _controller: VyperSiteBundle:Ajax:getDevice }
+
+ajax_switch_article_highlight:
+    path:     /_admin_/ajax/switch_article_highlight
+    defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticleHighlight }
+
+ajax_articleArtistLink:
+    path:     /_admin_/ajax/article_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:articleArtistLink }
+
+ajax_articleArtistLinkDelete:
+    path:     /_admin_/ajax/article_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:articleArtistLinkDelete }
+
+ajax_albumArtistLink:
+    path:     /_admin_/ajax/album_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:albumArtistLink }
+
+ajax_albumArtistLinkDelete:
+    path:     /_admin_/ajax/album_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:albumArtistLinkDelete }
+
+ajax_eventArtistLink:
+    path:     /_admin_/ajax/event_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:eventArtistLink }
+
+ajax_eventArtistLinkDelete:
+    path:     /_admin_/ajax/event_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:eventArtistLinkDelete }
+
+ajax_discoArtistLink:
+    path:     /_admin_/ajax/disco_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:discoArtistLink }
+
+ajax_discoArtistLinkDelete:
+    path:     /_admin_/ajax/disco_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:discoArtistLinkDelete }
+
+ajax_magazineArtistLink:
+    path:     /_admin_/ajax/magazine_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:magazineArtistLink }
+
+ajax_magazineArtistLinkDelete:
+    path:     /_admin_/ajax/magazine_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:magazineArtistLinkDelete }
+
+ajax_videoArtistLink:
+    path:     /_admin_/ajax/video_artist_link
+    defaults: { _controller: VyperSiteBundle:AdminAjax:videoArtistLink }
+
+ajax_videoArtistLinkDelete:
+    path:     /_admin_/ajax/video_artist_link_delete
+    defaults: { _controller: VyperSiteBundle:AdminAjax:videoArtistLinkDelete }
+
+ajax_addTitleDisco:
+    path:     /_admin_/ajax/add_title_to_disco
+    defaults: { _controller: VyperSiteBundle:AdminAjax:addTitleDisco }
+
+ajax_removeTitleDisco:
+    path:     /_admin_/ajax/remove_title_to_disco
+    defaults: { _controller: VyperSiteBundle:AdminAjax:removeTitleDisco }
+
+ajax_setTopManga:
+    path:     /_admin_/ajax/set_top_manga
+    defaults: { _controller: VyperSiteBundle:AdminAjax:setTopManga }
+
+

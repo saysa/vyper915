@@ -1,0 +1,116 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Contact | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Contactez-nous</h2>
+        </header><!-- /archive-header -->
+
+
+        {# On affiche tous les messages flash dont le nom est « info » #}
+        {% for message in app.session.flashbag.get('info') %}
+            <div class="alert alert-info">{{ message }}</div>
+        {% endfor %}
+
+        <div class="statique">
+            <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+
+                {{ form_widget(form._token) }}
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="select">Sujet : </label>
+                        <select id="select" class="form-control" name="objet">
+                            <option value="francois.gavenc">Demande commerciale et Publicité</option>
+                            <option value="ash">Programmation et émissions</option>
+                            <option value="antoine.marion">Partenariats</option>
+                            <option value="cyrielle">Contenu rédactionnel</option>
+                            <option value="matthieu.marion">Evénementiel et salons</option>
+                            <option value="francois.gavenc">International requests</option>
+                            <option value="contact">Autre demande</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Sujet -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.sujet, "Sujet *") }}
+                        <div class="controls">
+                            {{ form_widget(form.sujet, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.sujet) }}
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Name -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.name, "Nom et prénom *") }}
+                        <div class="controls">
+                            {{ form_widget(form.name, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.name) }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Societe -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.societe, "Société") }}
+                        <div class="controls">
+                            {{ form_widget(form.societe, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.societe) }}
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Email -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.email, "Adresse E-mail *") }}
+                        <div class="controls">
+                            {{ form_widget(form.email, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.email) }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.message) }}
+                        <div class="controls">
+                            {{ form_widget(form.message, {  'attr': {'class': 'form-control'} }) }}
+                            {{ form_errors(form.message) }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code -->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ form_label(form.securitycod, "Code de sécurité *") }}
+                        <div class="controls">
+                            {{ form_widget(form.securitycod) }}
+                            {{ form_errors(form.securitycod) }}
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-actions">
+                    <input type="hidden" name="add" value="add">
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    {% endblock %}

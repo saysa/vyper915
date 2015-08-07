@@ -1,0 +1,9 @@
+<ul>
+    {% for key, article in footer_recent_articles %}
+        {% if key<5 %}
+            <li>
+                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

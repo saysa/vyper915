@@ -1,0 +1,21 @@
+<div id="widget-tab2-content" class="tab-content">
+    <ul class="list post-list">
+
+        {% for key, article in popular_articles %}
+            {% if key < 5 %}
+            <li>
+                <div class="thumbnail">
+                    <img src="{{ asset(article.picture.getPath('75-75')) }}" class="attachment-fp75_75 wp-post-image" alt="{{ article.getTitle|escape }}">
+                </div>
+                <div class="post-right">
+                    <h5><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h5>
+                    <div class="entry-meta">
+                        <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
+                    </div>
+                </div>
+            </li>
+            {% endif %}
+        {% endfor %}
+
+    </ul>
+</div>

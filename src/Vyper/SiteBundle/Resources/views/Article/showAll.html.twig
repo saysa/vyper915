@@ -1,0 +1,101 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ article_type }} | {{ parent() }}{% endblock %}
+
+    {% block content %}
+
+        <header class="archive-header">
+            <h2 class="archive-title">{{ article_type }}</h2>
+        </header><!-- /archive-header -->
+
+        <div class="archive-postlist">
+            {% for article in articles %}
+                {% if loop.index%2!=0 %}
+                    <div class="row">
+                {% endif %}
+
+                <div class="one-half{% if loop.index%2==0 %} last{% endif %} col-lg-6">
+                    <article class="post type-post status-publish format-standard hentry category-graphics tag-cars tag-characters tag-girl tag-man">
+
+                        {% if article.getYoutube %}
+                            <div class="thumb-wrap video-thumb">
+                                <iframe width="290" height="180" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+                            </div>
+                        {% else %}
+                            <div class="thumb-wrap">
+                                <div class="thumb">
+                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
+                                </div>
+
+
+
+                                <div class="overlay">
+                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
+                                </div>
+                            </div>
+                        {% endif %}
+
+
+                        <header class="entry-header">
+                            <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                            <div class="entry-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+
+
+                            </div>
+                        </header>
+
+                        <div class="entry-excerpt">
+                            <p>{{ article.getDescription }}</p>
+                        </div>
+                    </article>
+                </div>
+
+                {% if loop.index%2==0 %}
+                </div>
+                <!-- end row -->
+                {% endif %}
+
+
+            {% endfor %}
+        </div>
+
+
+
+
+        <div class="pagination">
+
+                {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+                {% for p in range(1, total_articles) %}
+                    {% if p == page %}
+                        <span class="page-numbers current">{{ p }}</span>
+                    {% else %}
+
+                        {% if article_type == 'Live Reports' %}
+                            <a href="{{ path('musique-live-reports', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Review' %}
+                            <a href="{{ path('musique-chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Interviews' %}
+                            <a href="{{ path('musique-interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Manga/Anime' %}
+                            <a href="{{ path('mangaanime', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Jeux Vidéos' %}
+                            <a href="{{ path('jeuxvideos', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Culture' %}
+                            <a href="{{ path('culture', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Actualités' %}
+                            <a href="{{ path('shoAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Archives' %}
+                            <a href="{{ path('musique-news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% else %}
+                            <a href="{{ path('shoAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% endif %}
+
+
+                    {% endif %}
+                {% endfor %}
+
+        </div>
+
+
+    {% endblock %}

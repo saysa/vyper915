@@ -1,0 +1,404 @@
+.flexslider {
+	margin: 0; 
+	padding: 0;
+}
+
+.flexslider .slides > li {
+	display: none; 
+	-webkit-backface-visibility: hidden;
+}
+
+.flexslider .slides img {
+	/*width: 100%;*/ /* display true size image */
+	display: block;
+    margin: 0 auto;
+}
+
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+
+.slides:after {
+	content: "\0020"; 
+	display: block; 
+	clear: both; 
+	visibility: hidden; 
+	line-height: 0; 
+	height: 0;
+}
+
+html[xmlns] .slides {
+	display: block;
+}
+
+* html .slides {
+	height: 1%;
+}
+
+.no-js .slides > li:first-child {
+	display: block;
+}
+
+/* 
+ * Styles
+ * ============= */
+
+.flexslider { 
+	background: #FFFFFF; 
+/* 	margin-bottom: 10px; */
+	position: relative; 
+	zoom: 1; 
+}
+
+.flex-viewport { 
+	max-height: 2000px; 
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	-o-transition: all 1s ease; 
+	transition: all 1s ease; 
+}
+
+.loading .flex-viewport {
+	max-height: 300px; 
+}
+
+.flexslider .slides { 
+	zoom: 1; 
+}
+
+.carousel li {
+	margin-right: 5px; 
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+	*height: 0;
+}
+
+.flex-direction-nav a  { 
+	display: block; 
+	width: 40px; 
+	height: 40px; 
+	margin: -20px 0 0; 
+	position: absolute; 
+	top: 45%; 
+	z-index: 10; 
+	overflow: hidden; 
+	/* opacity: 0;  */
+	cursor: pointer; 
+	-webkit-transition: all .3s ease; 
+	-moz-transition: all .3s ease; 
+	transition: all .3s ease; 
+}
+
+/* .flex-direction-nav .flex-prev { 
+	left: -50px; 
+}
+
+.flex-direction-nav .flex-next { 
+	right: -50px; 
+	text-align: right; 
+} */
+
+.flexslider:hover .flex-prev { 
+	opacity: 0.7; 
+	/* left: 30px;  */
+}
+
+.flexslider:hover .flex-next { 
+	opacity: 0.7; 
+	/* right: 30px; */ 
+}
+
+.flexslider:hover .flex-next:hover, 
+.flexslider:hover .flex-prev:hover { 
+	opacity: 1; 
+}
+
+.flex-direction-nav .flex-disabled { 
+	opacity: 0!important; 
+	filter:alpha(opacity=0); 
+	cursor: default; 
+}
+
+/* Pause/Play */
+.flex-pauseplay a { 
+	display: block; 
+	width: 20px; 
+	height: 20px; 
+	position: absolute; 
+	bottom: 5px; 
+	left: 10px; 
+	opacity: 0.8; 
+	z-index: 10; 
+	overflow: hidden; 
+	cursor: pointer; 
+	color: #000; 
+}
+
+
+/* Control Nav */
+.flex-control-nav {
+	width: 100%; 
+	position: absolute; 
+	bottom: -40px; 
+	text-align: center;
+}
+
+.flex-control-nav li {
+	margin: 0 6px; 
+	display: inline-block; 
+	zoom: 1; 
+	*display: inline;
+}
+
+.flex-control-paging li a {
+	width: 11px; 
+	height: 11px; 
+	display: block; 
+	cursor: pointer; 
+	text-indent: -9999px; 
+}
+
+.flex-control-paging li a:hover { 
+	background: #333; 
+	background: rgba(0,0,0,0.7); 
+}
+
+.flex-control-paging li a.flex-active { 
+	background: #000; 
+	background: rgba(0,0,0,0.9); 
+	cursor: default; 
+}
+
+.flex-control-thumbs {
+	margin: 5px 0 0; 
+	position: static; 
+	overflow: hidden;
+}
+
+.flex-control-thumbs li {
+	width: 25%; 
+	float: left; 
+	margin: 0;
+}
+
+.flex-control-thumbs img {
+	width: 100%; 
+	display: block; 
+	opacity: .7; 
+	cursor: pointer;
+}
+
+.flex-control-thumbs img:hover {
+	opacity: 1;
+}
+
+.flex-control-thumbs .flex-active {
+	opacity: 1; 
+	cursor: default;
+}
+
+/*============================================*/
+
+ul.slides,
+ul.flex-direction-nav{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.entry-slider-main .flex-direction-nav a {
+    height: 48px;
+    margin: 0;
+    width: 48px;
+	border: 3px solid red;
+	border: 3px solid #FFFFFF;
+	opacity: 0.6; 
+	text-indent: -9999em;
+}
+
+.entry-slider-main .flex-direction-nav .flex-prev { 
+	background: url("images/arrow-left.png") no-repeat center center;
+	left: 30px; 	
+}
+
+.entry-slider-main .flex-direction-nav .flex-next {
+	background: url("images/arrow-right.png") no-repeat center center;
+	right: 30px; 	
+}
+
+.flexslider:hover .flex-prev { 
+	opacity: 0.8;
+}
+
+.flexslider:hover .flex-next { 
+	opacity: 0.8;
+}
+
+/*-- Carousel Navigation --*/
+
+
+.entry-slider-nav ul.slides li{
+	margin-right: 10px;
+    background: black;
+}
+
+.entry-slider-nav ul.slides li img{
+	/*width: 190px;*/
+	height: 110px;
+}
+
+.entry-slider-nav {
+  margin: 0;
+  padding: 10px 50px;
+}
+
+.entry-slider-nav .flex-direction-nav a {
+	display: block;
+	width: 30px;	
+	position: absolute;
+	text-indent: -9999em;
+	top: 48%;
+	opacity: 0.6; 		
+}
+
+.entry-slider-nav .flex-direction-nav .flex-prev { 
+	background: url("images/arrow-left.png") no-repeat center center;
+	left: 10px; 	
+}
+
+.entry-slider-nav .flex-direction-nav .flex-next {
+	background: url("images/arrow-right.png") no-repeat center center;
+	right: 10px; 	
+}
+
+
+/*==== Header Carousel =====*/
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	margin-left: 0;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-webkit-perspective: 1000;
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	font-size: 12px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.6;
+	top: 35%;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	padding: 3px;
+	border: 3px solid #FFFFFF;
+	text-indent: -9999px;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;	
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}

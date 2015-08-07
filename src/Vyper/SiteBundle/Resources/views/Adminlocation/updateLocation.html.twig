@@ -1,0 +1,178 @@
+{% extends "VyperSiteBundle:layouts:admin.html.twig" %}
+
+{% block title "ADMIN" %}
+
+    {% block content %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="icon-edit"></i>Update Location : {{ location.getName }}</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+
+                            {{ form_widget(form._token) }}
+
+                            <fieldset class="col-sm-12">
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <!-- Name -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.name, "Name *") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.name, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.name) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                        <!-- Name Real -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.nameReal, "Real Name") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.nameReal, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.nameReal) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <!-- Town -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.town, "Town *") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.town, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.town) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                        <!-- Town Real -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.townReal, "Town Real") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.townReal, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.townReal) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!-- Country -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9">
+                                        {{ form_label(form.country, "Country") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.country, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <!-- Address -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.address, "Address") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.address, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.address) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                        <!-- Access -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.access, "Access") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.access, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.access) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <!-- URL -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.url, "URL") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.url, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.url) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                        <!-- Googlemap -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.googlemap, "Googlemap") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.googlemap, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.googlemap) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="map">
+                                    <iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q={{ location.getGooglemap }}&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
+                                </div>
+
+
+
+                                <div class="form-actions">
+                                    <input type="hidden" name="update" value="update">
+                                    <button type="submit" class="btn btn-primary">Edit location</button>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    {% endblock %}

@@ -1,0 +1,12 @@
+<div class="tickercontainer">
+    <div class="mask">
+        <ul id="ticker-posts" class="newsticker marquee" >
+            {% for flashnew in ticker_flashnews %}
+                <li>
+                    <a href="{{ path('showFlashnew', {'id':flashnew.id, 'slug': flashnew.slug}) }}">{{ flashnew.getTitle }}</a>
+                    <div class="sep"></div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

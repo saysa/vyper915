@@ -1,0 +1,17 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}L'Equipe | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">L'Equipe</h2>
+        </header><!-- /archive-header -->
+
+        {{ editable[0].content|raw }}
+
+
+
+
+
+
+    {% endblock %}

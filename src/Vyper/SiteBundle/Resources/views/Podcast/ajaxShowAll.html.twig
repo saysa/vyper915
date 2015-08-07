@@ -1,0 +1,57 @@
+{% block content %}
+    <div class="post-wrap">
+        <article id="post-28" class="post type-post status-publish format-standard hentry">
+            <header class="entry-header">
+                <h1>Podcasts</h1>
+            </header>
+        </article>
+    </div>
+
+
+    <div id="mediaplayer" style="position: relative; width: 100%; height: 430px;">
+        <object type="application/x-shockwave-flash" data="{{ asset('podcasts/player.swf') }}" width="100%" height="100%" bgcolor="#000000" id="mediaplayer" name="mediaplayer" tabindex="0">
+            <param name="allowfullscreen" value="true">
+            <param name="allowscriptaccess" value="always">
+            <param name="seamlesstabbing" value="true">
+            <param name="wmode" value="opaque">
+
+        </object>
+    </div>
+    <script type="text/javascript" src="{{ asset('assets/js/jwplayer/jwplayer.js') }}"></script>
+    <script type="text/javascript">
+        jwplayer("mediaplayer").setup({
+            flashplayer: "{{ asset('podcasts/player.swf') }}",
+            file: "{{ asset('podcasts/video1.mp4') }}",
+            image: "{{ asset('uploads/pic/2014/11/file02.jpg') }}",
+            width: "100%",
+            aspectratio: "16:9",
+            skin: "bekle"
+        });
+    </script>
+    <script>
+        function loadVideo(myFile) {
+            jwplayer().load([{
+                file: myFile
+            }]);
+            jwplayer().play();
+        };
+    </script>
+
+    <li><a class="loadVideo" href="javascript:loadVideo('/podcasts/video2.mp4')">Video 2</a></li>
+    <li><a class="loadVideo" href="javascript:loadVideo('/podcasts/video1.flv')">Video 3</a></li>
+
+
+
+    <div class="add_468">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- un_artist -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:468px;height:60px"
+             data-ad-client="ca-pub-3070362287154347"
+             data-ad-slot="6183315514"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+{% endblock %}
+

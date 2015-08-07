@@ -1,0 +1,149 @@
+{% extends "VyperSiteBundle:layouts:admin.html.twig" %}
+
+{% block title "ADMIN" %}
+
+    {% block content %}
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="icon-edit"></i>Add Magazine</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                        <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                    </div>
+                </div>
+                <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+
+                    {{ form_widget(form._token) }}
+
+                    <fieldset class="col-sm-12">
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <!-- Title -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.title, "Title *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.title, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.title) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- Date Release -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.dateRelease, "Release Date *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.dateRelease, { 'attr': {'class': 'form-control datepicker'} }) }}
+                                            {{ form_errors(form.dateRelease) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <!-- France -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.formFrance, "Envoie en France *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.formFrance, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.formFrance) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- Outre Mer -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.formOutremer, "Envoie Outre Mer *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.formOutremer, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.formOutremer) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <!-- International -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.formInternational, "Envoie à l'international *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.formInternational, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.formInternational) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- Volume -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.volume, "Volume number *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.volume, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.volume) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <!-- Content -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.content, "Contenu *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.content, { 'attr': {'class': 'cleditor'} }) }}
+                                            {{ form_errors(form.content) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <!-- Related Picture -->
+                            <div class="form-group col-lg-3">
+                                {{ form_label(form.pictureID, "Picture ID *") }}
+                                <div class="controls">
+                                    {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
+                                    <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>
+                                    {{ form_errors(form.pictureID) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="hidden" name="add" value="add">
+                            <button type="submit" class="btn btn-primary">Save</button>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        </div>
+    {% endblock %}

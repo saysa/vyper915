@@ -1,0 +1,96 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Events | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Events</h2>
+        </header><!-- /archive-header -->
+
+        <div id="eventContent" title="Event Details" style="display:none;">
+            <strong class="main-color">Date:</strong> <span id="dateInfo"></span><br>
+            <strong class="main-color">Début:</strong> <span id="startTime"></span><br>
+            <strong class="main-color">Fin:</strong> <span id="endTime"></span><br><br>
+            <span id="langInfo"></span>
+            <span id="presentInfo"></span>
+            <p id="eventInfo"></p>
+
+            <div id="map"></div>
+
+            <p><strong><a id="eventLink" href="">En savoir plus</a></strong></p>
+        </div>
+
+        <div id='calendar'></div>
+
+        <script>
+
+            $(document).ready(function() {
+
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'prevYear,month,agendaWeek,agendaDay'
+                    },
+                    buttonText: {
+                        today: "Aujourd'hui",
+                        month: 'Mois',
+                        week: 'Semaine',
+                        day: 'Jour'
+                    },
+                    columnFormat:{
+                        month: 'ddd '    // Mon
+                    },
+                    firstDay:1,
+                    height: 'auto',
+                    minTime : '06:00:00',
+                    monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'],
+                    monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Juin','Juil','Aout','Sep','Oct','Nov','Dec'],
+                    dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+                    dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+                    allDaySlot: false,
+                    axisFormat : 'H:mm',
+                    timeFormat: 'H:mm',
+                    defaultDate: '{{ defaultDate }}',
+                    editable: false,
+                    eventLimit: true, // allow "more" link when too many events
+                    eventRender: function (event, element) {
+                        element.attr('href', 'javascript:void(0);');
+                        element.click(function() {
+
+                            console.log(event);
+
+
+                            $("#dateInfo").html(event.date_info);
+                            $("#startTime").html(event.startTime_info);
+                            $("#eventInfo").html(event.description);
+                            if (event.endTime_info != undefined) {
+                                $("#endTime").html(event.endTime_info);
+                            } else {
+                                $("#endTime").html('-');
+                            }
+                            if (event.googlemap != undefined) {
+                                $("#map").html('<iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + event.googlemap + '&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>');
+                            } else {
+                                $("#map").html('');
+                            }
+
+                            if (event.lang != undefined) {
+                                $("#langInfo").html('<strong class="main-color">Langue: </strong>'+event.lang+'<br />');
+                            } else $("#langInfo").html('');
+
+                            if (event.present != undefined) {
+                                $("#presentInfo").html('<strong class="main-color">Cadeau(x): </strong>'+event.present+'<br />');
+                            } else $("#presentInfo").html('');
+
+                            $("#eventLink").attr('href', event.url);
+                            $("#eventContent").dialog({ modal: true, title: event.title, width:500});
+                        });
+                    },
+                    events: {{ events|raw }}
+                });
+
+            });
+
+        </script>
+    {% endblock %}

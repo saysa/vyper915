@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="fr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="fr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="fr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="fr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Japan FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
+    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+
+    {% block meta_description %}
+        <meta name="description" content="Japan FM : Toute la J-music, une seule web radio. Japan FM est la 1ère webradio japonaise de France. Tous les hits et toute l'actu Jpop sont sur Japan FM !" />
+    {% endblock %}
+
+
+    {% if article.metaKeywords is defined and article.metaKeywords is not empty %}
+        <meta name="keywords" content="{{ article.metaKeywords }}" />
+    {% else %}
+        <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+    {% endif %}
+    <meta name="author" content="japanfm.fr" />
+    <meta name="ROBOTS" content="index,follow" />
+
+    <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="{{ app.request.getSchemeAndHttpHost() }}/rss_fil_info.xml" />
+
+    {% block social_card %}{% endblock %}
+
+    {# Latest compiled and minified CSS #}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    {# Optional theme #}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    {% stylesheets filter='cssrewrite'
+    'assets/css/fullcalendar/fullcalendar.css'
+    'assets/css/owl-carousel/owl.carousel.css'
+    'assets/css/owl-carousel/owl.theme.css'
+        'assets/bootstrap-star-rating/css/star-rating.min.css'
+    'assets/css/prettyphoto/prettyphoto.css'
+        'assets/css/reset.css'
+        'assets/css/style.css'
+
+    %}
+
+
+
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+
+{#
+    <!-- Fullcalendar -->
+    <link rel="stylesheet" href="{{ asset('assets/css/fullcalendar/fullcalendar.css') }}" type="text/css" />
+
+    <!-- Owl Carousel Assets -->
+    <link href="{{ asset('assets/css/owl-carousel/owl.carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl-carousel/owl.theme.css') }}" rel="stylesheet">
+#}
+
+
+
+    {# Font awesome #}
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+{#
+        <!-- Pretty Photo -->
+        <link rel='stylesheet' id='de7igner-prettyPhoto-style-css'  href='{{ asset('assets/css/prettyphoto/prettyphoto.css') }}' type='text/css' media='all' />
+
+
+        <!-- Star Rating -->
+        <link href="{{ asset('assets/bootstrap-star-rating/css/star-rating.min.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+
+
+    {# Jplayer #}
+    {#
+    <link href="{{ asset('assets/css/jplayer/prettify-jPlayer.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/jplayer/jfm-jplayer.css') }}">
+    #}
+    {# Jquery UI #}
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
+
+
+
+
+{#
+    <link href="{{ asset('assets/css/reset.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" />
+ #}
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <!--  -->
+    {# jQuery (necessary for Bootstrap's Javascript plugins) #}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <![endif]-->
+
+
+
+</head>
+<body>
+<!--[if lt IE 9]>
+<p class="chromeframe">Notre site est optimisé pour les navigateurs plus récents. <a data-bypass href="http://browsehappy.com/">Mets le tien à jour !</a></p>
+<![endif]-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=1470537739827941";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="#header" id="top-link"><i class="fa fa-chevron-up"></i> </a>
+
+<header id="header" class="container-fluid">
+    <div class="row">
+        <section class="top main-color-bg col-lg-12">
+            <div class="content-wrap">
+                <div class="left">
+                    <ul class="list">
+
+
+                        <li>
+                            <i class="fa fa-star"></i>
+                            <a href="{{ path('a_propos') }}">A propos</a>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-users"></i>
+                            <a href="{{ path('l_equipe') }}">L'Equipe</a>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <a href="{{ path('contact') }}">Contact</a>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-flag"></i>
+                            <a href="{{ path('partenaires') }}">Partenaires</a>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-calendar"></i>
+                            <a href="{{ path('showAllEvent') }}">Events</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul class="list">
+                        <li class="gplus"><a href="#" id="toggle-chat"><i class="fa fa-comments"></i> Live Chat</a></li>
+                        <li class="youtube"><a href="http://forum.japanfm.fr">Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- /top -section -->
+
+        <section class="main-color-bg">
+            <div id="japanfm-news" class="container">
+
+                <div class="row">
+                    <div class="col-md-9 left">
+                        <div id="flash-news" class="ticker" style="display: block;">
+
+                            <div class="title second-color-bg">
+
+                                <h6>Japan FM news</h6>
+                            </div>
+
+
+
+                            {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 right">
+                        <div class="search pull-right">
+                            <script>
+                                (function() {
+                                    var cx = '001775883577770650674:f0b74h1hzdo';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                            '//www.google.com/cse/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                            <gcse:search></gcse:search>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section id="bar-fixed" class="container">
+            <div id="jp_container_1" class="jp-state-looped jp-state-playing">
+
+                <div class="row">
+                    <div class="col-lg-7 left">
+                        <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="http://radio.japanfm.fr/japan"></audio></div>
+
+                        <div id="logo" class="title">
+                            <a href="/" title="Japan FM"><img src="{{ asset('assets/img/logo.png') }}" width="100%" alt="Japan FM" /></a>
+                        </div>
+
+                        <ul id="header-social">
+                            <li id="social-facebook">
+                                <a href="https://www.facebook.com/japanfm">
+                                    <span>Japan FM sur Facebook</span>
+                                </a>
+                            </li>
+                            <li id="social-twitter">
+                                <a href="https://twitter.com/japanfm">
+                                    <span>Japan FM sur Twitter</span>
+                                </a>
+                            </li>
+                            <li id="social-youtube">
+                                <a href="http://www.dailymotion.com/Japanfm">
+                                    <span>Japan FM sur Dailymotion</span>
+                                </a>
+                            </li>
+                            <li id="social-ios">
+                                <a href="https://itunes.apple.com/US/app/id902475027">
+                                    <span>Japan FM sur AppStore</span>
+                                </a>
+                            </li>
+                            <li id="social-android">
+                                <a href="https://play.google.com/store/apps/details?id=com.conduit.app_4e50177a5739444585a029434352002a.app">
+                                    <span>Japan FM sur Android</span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                    <div class="col-lg-5 right">
+
+                        <div id="player">
+
+                            <h2>En ce moment sur Japan FM</h2>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <div id="cover-container">
+
+                                            <img width="100%" id="currentCover" src="" alt=""  />
+                                            <i class="fa fa-play"></i>
+
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="jp-title audio-title">
+                                        <b id="currentArtist-player">Japan FM</b><br />
+                                        <span id="currentTitle-player">Toute la Jmusic</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+                        <ul id="header-right" style="display: none;">
+                            <li class="jp-mute ui-state-default ui-corner-all"><a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute" style="display: block;">mute</a></li>
+                            <li class="jp-unmute ui-state-default ui-state-active ui-corner-all" style="display: none;"><a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute" style="display: none;">unmute</a></li>
+                            <li><div class="jp-volume-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all pull-right" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+                            </li>
+
+                        </ul>
+
+                        <div class="jp-clearboth"></div>
+
+                        <div class="jp-no-solution" style="display: none;">
+                            <span>Update Required</span>
+                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- /ticker-section -->
+    </div>
+</header>
+
+<div id="casing" class="container-fluid">
+    {# <a href="http://www.japan-expo-sud.com/fr/"><span>Japan Expo Sud</span></a> #}
+    <div id="casing-top"></div>
+    <div id="main-container" class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+
+                    <div id="spacer">
+                        &nbsp;
+                    </div>
+
+
+                    <!-- Static navbar -->
+                    <nav id="nav-fixed" class="navbar navbar-default primary-menu" role="navigation">
+
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <i class="fa fa-list"></i>
+                                    <span class="sr-only">Toggle navigation</span>
+                                </button>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home {% if front_page_index is defined %} current_page_item{% endif %}"><a href="{{ path('index') }}" title="Accueil">Accueil</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle {% if current_radio is defined %} current_page_item{% endif %}" data-toggle="dropdown">Radio <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ path('radio-programme') }}">Programme</a></li>
+                                            <li><a href="{{ path('radio-emissions') }}">Émissions</a></li>
+                                            <li><a href="{{ path('showAllPodcasts') }}">Podcasts</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="{{ path('showArtist', {'id': 79, 'slug': 'shoko-nakagawa'}) }}">Marraine</a></li>
+                                    <li class="q{% if current_actualites is defined %} current_page_item{% endif %}"><a href="{{ path('shoAllArticles') }}">Actualités</a></li>
+                                    <li class="dropdown {% if current_musique is defined %}current_page_item{% endif %}">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Musique <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ path('musique-live-reports') }}">Live Report</a></li>
+                                            <li><a href="{{ path('musique-chroniques') }}">Review</a></li>
+                                            <li><a href="{{ path('showTheme', {'id': 4, 'slug': 'top-oricon'}) }}">Oricon</a></li>
+                                            <li><a href="{{ path('showAllArtist') }}">Artistes</a></li>
+                                            <li><a href="{{ path('musique-news') }}">Archives</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="{{ path('mangaanime') }}">Manga/Anime</a></li>
+                                            <li><a href="{{ path('jeuxvideos') }}">Jeux vidéos</a></li>
+                                            <li><a href="{{ path('culture') }}">Culture</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}"><i class="fa fa-book"></i> Vyper</a></li>
+
+
+                                </ul>
+
+                            </div><!--/.nav-collapse -->
+                        </div><!--/.container-fluid -->
+                    </nav>
+
+                    {#
+                    {{ render(controller("VyperSiteBundle:Article:headerCarousel")) }}
+                    #}
+                    <!--/.Menu + Carousel -->
+                </div>
+
+
+                <div class="row" id="wrapper-2-big">
+                    <section class="col-sm-8" id="push">
+                        <!-- Start template -->
+                        {% block content %}{% endblock %}
+                        <!-- End template -->
+                    </section>
+                    <section id="sidebar" class="col-sm-4">
+
+                        <aside class="widget">
+
+                            <a href="http://forum.japanfm.fr">
+                                <img src="{{ asset('assets/img/forum300.jpg') }}" alt="Rejoignez notre forum">
+                            </a>
+
+                        </aside>
+
+
+
+
+
+                        <aside class="widget widget_tabs">
+                            <script>
+                                jQuery(document).ready(function($) {
+                                    $(".widget-tab-titles-top li").click(function() {
+                                        $(".widget-tab-titles-top li").removeClass('active');
+                                        $(this).addClass("active");
+                                        $(".tab-content-top").hide();
+                                        var selected_tab = $(this).find("a").attr("href");
+                                        $(selected_tab).fadeIn();
+                                        return false;
+                                    });
+                                });
+                            </script>
+
+                            <div class="widget-tabs-title-container">
+                                <ul class="widget-tab-titles-top">
+                                    <li class="active"><h5><a href="#widget-tab4-content">Top 10 Music</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab5-content">Top 10 OST</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab6-content">Top Manga</a></h5></li>
+                                </ul>
+                            </div>
+
+                            <div class="tabs-content-container">
+                                {{ render(controller("VyperSiteBundle:Top:topMusics")) }}
+                                {{ render(controller("VyperSiteBundle:Top:topOsts")) }}
+                                {{ render(controller("VyperSiteBundle:Top:topMangas")) }}
+                            </div>
+                        </aside>
+
+                        {% if article is defined %}
+                            {% if article.artists|length > 0 %}
+                                <aside class="widget fiche-group">
+                                    {% for artist in article.artists %}
+                                        <h4>{{ artist.name }}</h4>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img  src="{{ asset(artist.picture.getPath('75-75')) }}" alt="{{ artist.name }}">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <ul>
+                                                    <li><a href="#">Biographie</a></li>
+                                                    <li><a href="#">Discographie</a></li>
+                                                    <li><a href="#">Site officiel</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </aside>
+                            {% endif %}
+                        {% endif %}
+
+
+                        <aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">
+                            <script>
+                                jQuery(document).ready(function($) {
+                                    $(".widget-tab-titles li").click(function() {
+                                        $(".widget-tab-titles li").removeClass('active');
+                                        $(this).addClass("active");
+                                        $(".tab-content").hide();
+                                        var selected_tab = $(this).find("a").attr("href");
+                                        $(selected_tab).fadeIn();
+                                        return false;
+                                    });
+                                });
+                            </script>
+
+                            <div class="widget-tabs-title-container">
+                                <ul class="widget-tab-titles">
+                                    <li class="active"><h5><a href="#widget-tab1-content">Récents</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab2-content">Populaires</a></h5></li>
+                                    <li class=""><h5><a href="#widget-tab3-content">Evénements</a></h5></li>
+                                </ul>
+                            </div>
+                            <div class="tabs-content-container">
+
+                                {{ render(controller("VyperSiteBundle:Article:recentArticles")) }}
+                                {{ render(controller("VyperSiteBundle:Article:popularArticles")) }}
+
+
+
+                                <div id="widget-tab3-content" class="tab-content">
+                                    <ul class="list comment-list">
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div id="widget-posts-tiles">
+
+                            </div><!-- /tiles -->
+                        </aside>
+
+                        {{ render(controller("VyperSiteBundle:Event:nextEvent")) }}
+
+
+
+
+
+
+                        <aside class="widget">
+                            <div class="widget-title"><h4>Suivez-nous</h4></div>
+                            <div class="fb-like-box" data-href="https://www.facebook.com/japanfm" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+                        </aside>
+
+                        <aside class="widget">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- sidebar -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:300px;height:250px"
+                                 data-ad-client="ca-pub-3070362287154347"
+                                 data-ad-slot="7520447913"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </aside>
+
+
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="add-mobile">
+    <a id="add-mobile-link" href="#">
+        <img src="{{ asset('assets/img/japanFM-app-320x50.jpg') }}" alt="Application Japan FM">
+    </a>
+</div>
+
+<script>
+
+    $(document).ready(function() {
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+
+        };
+
+        if ( isMobile.Android() ) {
+            var device = 'android';
+        } else if(isMobile.iOS()) {
+            var device = 'ios';
+        } else {
+            var device = 'any';
+        }
+
+        $.ajax({
+            type: "POST",
+            url: "{{ path('get_device') }}",
+
+            data:{
+                device : device
+            },
+            success: function(data){
+
+                $('#add-mobile-link').attr("href", data);
+            }
+        });
+    });
+
+</script>
+
+<footer>
+    <div class="container">
+        <div class="leaderboard">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- footer-leaderboard -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="5037213511"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+{#
+        <div class="row">
+            <div class="col-md-3 footer-top">
+                Top Music
+            </div>
+            <div class="col-md-3 footer-top border-left">
+                Top OST
+            </div>
+            <div class="col-md-3 footer-top border-left">
+                Top Manga
+            </div>
+            <div class="col-md-3 footer-top border-left">
+                Top Artistes
+            </div>
+        </div>
+#}
+        <div class="row">
+            <div class="col-md-12 footer">
+                <ul>
+                    <li>
+                        <a href="{{ path('mentions_legales') }}">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('cgu') }}">CG d'Utilisation</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('cgu_sms') }}">CG des Concours SMS</a>
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid footer-info">
+        <div class="row">
+            <div class="col-md-12">
+                ©2014 Japan FM est une marque déposée par <a href="#">IGAM Entertainment</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+{# Marquee logic #}
+<script>
+    $(document).ready(function() {
+        $('.marquee').marquee({
+            duration: 10000,
+            pauseOnHover: true
+        });
+    });
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+{# Include all compiled plugins (below), or include individual files as needed #}
+{# Latest compiled and minified JavaScript #}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+{# Marquee #}
+<script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
+
+
+
+{# Jquery UI #}
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+
+
+
+{% javascripts
+    'assets/js/vendor/moment.min.js'
+    'assets/js/fullcalendar/fullcalendar.min.js'
+    'assets/js/owl-carousel/owl.carousel.min.js'
+    'assets/js/prettyPhoto/prettyPhoto.js'
+    'assets/bootstrap-star-rating/js/star-rating.min.js'
+    'assets/js/jquery.isotope.js'
+%}
+
+
+
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{#
+<!-- Full calendar -->
+<script src="{{ asset('assets/js/vendor/moment.min.js') }}"></script>
+<script src="{{ asset('assets/js/fullcalendar/fullcalendar.min.js') }}"></script>
+
+<!-- Owl Carousel -->
+<script src="{{ asset('assets/js/owl-carousel/owl.carousel.min.js') }}"></script>
+
+
+
+<!-- Pretty Photo -->
+<script type='text/javascript' src='{{ asset('assets/js/prettyPhoto/prettyPhoto.js') }}'></script>
+
+<!-- Star Rating -->
+<script src="{{ asset('assets/bootstrap-star-rating/js/star-rating.min.js') }}" type="text/javascript"></script>
+
+
+
+<!-- Isotope -->
+<script type='text/javascript' src='{{ asset('assets/js/jquery.isotope.js') }}'></script>
+
+
+<!-- Jplayer -->
+<script type="text/javascript" src="{{ asset('assets/js/jplayer/jfm-jplayer.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/jplayer/jquery.jplayer.min.js') }}"></script>
+<script type="text/javascript" src="{{  asset('assets/js/jplayer/jquery.jplayer.inspector.min.js') }}"></script>
+#}
+
+
+
+{# Top Scroll #}
+<script>
+
+
+    $(document).ready(function(){
+
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('#top-link').fadeIn();
+            } else {
+                $('#top-link').fadeOut();
+            }
+        });
+
+        //Click event to scroll to top
+        $('#top-link').click(function(){
+            $('html, body').animate({scrollTop : 0},800);
+            return false;
+        });
+
+    });
+
+
+</script>
+
+
+
+{# Nav fixed #}
+<script>
+
+
+    $(document).ready(function(){
+
+        $(function() {
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 400) {
+                    $('#bar-fixed').hide();
+                    $('#nav-fixed').addClass('fixed-the-nav');
+                    $('#logo').addClass('logo-soft');
+                    $('#player-button').removeClass('rock_controls_default').addClass('rock_controls');
+                    $('#flash-news').hide();
+                    $('#spacer').show();
+                    $('#header-social').hide();
+                } else {
+                    $('#bar-fixed').show();
+                    $('#nav-fixed').removeClass('fixed-the-nav');
+                    $('#logo').removeClass('logo-soft');
+                    $('#player-button').removeClass('rock_controls').addClass('rock_controls_default');
+                    $('#flash-news').show();
+                    $('#spacer').hide();
+                    $('#header-social').show();
+                }
+            });
+        });
+
+    });
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ article.title }} | {{ parent() }}{% endblock %}
+
+{% block meta_description %}
+    <meta name="description" content="{{ article.getDescription|escape }}" />
+{% endblock %}
+
+{% block social_card %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@japanfm" />
+    <meta name="twitter:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" />
+    <meta name="twitter:description" content="{{ article.getDescription|escape }}" />
+
+    <meta property="og:title" content="{{ article.getTitle }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" />
+    <meta property="og:site_name" content="Japan FM" />
+    <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" />
+    <meta property="og:description" content="{{ article.getDescription|escape }}" />
+{% endblock %}
+
+    {% block content %}
+
+        <div class="single-post">
+            <div class="post-wrap">
+                <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
+                    <header class="entry-header">
+                        <h1>{{ article.getTitle }}</h1>
+
+                        <div class="entry-meta">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style ">
+                                <a class="addthis_button_preferred_1"></a>
+                                <a class="addthis_button_preferred_2"></a>
+                                <a class="addthis_button_preferred_3"></a>
+                                <a class="addthis_button_preferred_4"></a>
+                                <a class="addthis_button_compact"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
+                            <!-- AddThis Button END -->
+                            <div class="left">
+                                <span>{{ article.author }}</span>, le <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
+
+
+
+
+                            </div>
+
+
+                        </div>
+                    </header>
+
+
+                    <div class="entry-content-wrap">
+                        <div class="entry-image">
+                            {% if img_type_news is defined %}
+                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" alt="{{ article.getTitle|escape }}">
+                            {% else %}
+
+                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="big-format" alt="{{ article.getTitle|escape }}">
+
+                            {% endif %}
+
+
+                        </div>
+
+                        <div class="entry-content">
+
+                            {% if (article.textEN is not null or article.textJP is not null)  %}
+                                <script>
+                                    $(function() {
+                                        $( "#lang-tabs" ).tabs();
+                                    });
+                                </script>
+
+                                <div id="lang-tabs">
+                                    <ul>
+                                        <li><a href="#tabs-1">FR <img src="{{ asset('assets/css/images/france.ico') }}" /></a></li>
+                                        {% if article.textEN is not null %}
+                                        <li><a href="#tabs-2">EN <img src="{{ asset('assets/css/images/uk.ico') }}" /></a></li>
+                                        {% endif %}
+                                        {% if article.textJP is not null %}
+                                        <li><a href="#tabs-3">JP <img src="{{ asset('assets/css/images/japan.ico') }}" /></a></li>
+                                        {% endif %}
+                                    </ul>
+                                    <div id="tabs-1">
+                                        {{ article.text|raw }}
+                                    </div>
+                                    {% if article.textEN is not null %}
+                                    <div id="tabs-2" lang="en">
+                                        {{ article.textEN|raw }}
+                                    </div>
+                                    {% endif %}
+                                    {% if article.textJP is not null %}
+                                    <div id="tabs-3" lang="ja">
+                                        {{ article.textJP|raw }}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            {% else %}
+                                {{ article.text|raw }}
+                            {% endif %}
+
+
+
+                            {% if article.source != '' %}
+                                {% if article.sourceURL != '' %}
+                                    <p>
+                                        Source : <a href="{{ article.sourceURL }}">{{ article.source }}</a>
+                                    </p>
+                                {% else %}
+                                    <p>
+                                        Source : {{ article.source }}
+                                    </p>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                        <!-- /entry-content -->
+
+                    </div>
+                    <!-- /entry-content-wrap -->
+
+                </article>
+            </div>
+            <!-- /post-wrap -->
+        </div>
+
+
+
+
+        {% if article.magazines is defined %}
+            <div class="content-title main-color-reverse">
+                <h4>Vyper Japanese Music</h4>
+            </div>
+
+            <ul>
+            {% for key, mag in article.magazines %}
+                <div class="col-md-3 padding-off">
+                    <div class="release-thumbnail">
+                        <div class="release-cover">
+                            <a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
+                        </div>
+
+                        <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">Vyper Magazine</a></h4>
+                        <h6 class="release-artist">Vol {{ mag.volume }}</h6>
+                        <div class="release-meta">
+
+                            <div class="release-info">{{ mag.dateRelease|date("d/m/Y") }}</div>
+                            <div class="clear"></div>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </ul>
+            <div class="clear"></div>
+        {% endif %}
+
+
+        {% if article.album is not null %}
+            <div class="content-title main-color-reverse">
+                <h4>Galerie</h4>
+            </div>
+
+
+
+                    {% for key, picture in article.album.pictures %}
+                        {% if key <= 2 %}
+
+                            <div class="col-md-4 col-sm-6">
+                                <div class="thumb album-thumbnail" style="background: url('{{ asset(picture.getPath('album-cover')) }}') no-repeat center;">
+
+                                </div>
+
+                            </div>
+
+                        {% endif %}
+                    {% endfor %}
+
+
+
+
+
+            <a href="{{ path('showAlbum', {'id': article.album.getId, 'slug': article.album.slug}) }}">Plus de photos</a>
+        {% endif %}
+
+
+
+
+
+
+
+
+
+        <div id="comments" class="content-title main-color-reverse">
+            <h4>Réagir</h4>
+        </div>
+        <!-- /comments -->
+
+
+
+        {# DISQUS #}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'japanfm'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    {% endblock %}

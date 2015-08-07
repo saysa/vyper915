@@ -1,0 +1,79 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ magazine.title }} | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">{{ magazine.title }}</h2>
+        </header><!-- /archive-header -->
+
+        <div class="entry-content-wrap">
+
+            <div class="show-disco">
+
+                <div class="row">
+                    <div class="col-md-4 column">
+                        <div class="release-thumbnail">
+                            <div class="release-cover">
+
+                                <a rel="lightbox[cover]" href="{{ asset(magazine.picture.getPath()) }}" title=""><img src="{{ asset(magazine.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt="{{ magazine.title }}"></a>
+
+                            </div>
+
+                            <h4 class="release-title">VYPER Magazine</h4>
+                            <h6 class="release-artist">Vol.{{ magazine.volume }}</h6>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="three-fourth column last">
+                            <div class="box-effect">
+                                <h4>Envoi En France</h4>
+                                {{ magazine.formFrance|raw }}
+
+                            </div>
+                        </div>
+
+                        <div class="three-fourth column last">
+                            <div class="box-effect">
+                                <h4>Envoi En Outre-Mer</h4>
+                                {{ magazine.formOutremer|raw }}
+                            </div>
+                        </div>
+
+                        <div class="three-fourth column last">
+                            <div class="box-effect">
+                                <h4>Envoi International</h4>
+                                {{ magazine.formInternational|raw }}
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-effect clear">
+                            <h4>Contenu</h4>
+                            <hr />
+                            {{ magazine.content|raw }}
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+    {% endblock %}

@@ -1,0 +1,128 @@
+{% extends "VyperSiteBundle:layouts:admin.html.twig" %}
+
+{% block title "ADMIN" %}
+
+    {% block content %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="icon-edit"></i>Add tour</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+
+                            {{ form_widget(form._token) }}
+
+                            <fieldset class="col-sm-12">
+
+
+                                <!-- Title -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.title, "Title *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.title, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.title) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Real Title -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.realTitle, "Real Title") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.realTitle, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.realTitle) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.description, "Description *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.description, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.description) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Description Local -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.descriptionLocal, "Description Local") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.descriptionLocal, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.descriptionLocal) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Type -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9">
+                                        {{ form_label(form.type, "Type") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.type, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Continent -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9">
+                                        {{ form_label(form.continent, "Continent") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.continent, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Start -->
+                                    <div class="form-group col-lg-2{%if error_rel_date is defined %} has-error{% endif %}">
+                                        {{ form_label(form.start, "Start *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.start, { 'attr': {'class': 'form-control datetimepicker'} }) }}
+                                            {{ form_errors(form.start) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-lg-1">
+                                    </div>
+
+                                    <!-- End -->
+                                    <div class="form-group col-lg-2{%if error_rel_date is defined %} has-error{% endif %}">
+                                        {{ form_label(form.end, "End *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.end, { 'attr': {'class': 'form-control datetimepicker'} }) }}
+                                            {{ form_errors(form.end) }}
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                                <div class="form-actions">
+                                    <input type="hidden" name="add" value="add">
+                                    <button type="submit" class="btn btn-primary">Save tour</button>
+                                    <button type="reset" class="btn">Cancel</button>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

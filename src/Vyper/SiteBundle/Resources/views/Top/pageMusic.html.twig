@@ -1,0 +1,38 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Top Music | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">Top Music du moment</h2>
+        </header><!-- /archive-header -->
+
+        <ol>
+            {% for top in top_musics %}
+                {% if top.link is empty %}
+                    {% set my_link = '#' %}
+                {% else %}
+                    {% set my_link = top.link %}
+                {% endif %}
+                <li class="b-list__item b-list__item--cat7 js-list-item">
+                    <div class="b-list__item__illu b-list__item__number ">
+                        <div class="b-list__item__number__infos">
+                            {{ top.position }}
+                        </div>
+                        <a href="{{ my_link }}">
+                            <img src="{{ asset(top.picture.getPath()) }}" width="140" height="140" alt="{{ top.title }}" class="picture" />
+                        </a>
+                    </div>
+                    <div class="b-list__item__text">
+                        <h3 class="heading-3">{{ top.author }}</h3>
+                        <span class="teaser-1">
+                            {{ top.title }}
+                        </span>
+                    </div>
+
+                </li>
+            {% endfor %}
+        </ol>
+
+
+    {% endblock %}

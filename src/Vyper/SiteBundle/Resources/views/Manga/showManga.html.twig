@@ -1,0 +1,147 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ manga.title }} | {{ parent() }}{% endblock %}
+
+    {% block content %}
+
+        <div class="single-post">
+            <div class="post-wrap">
+                <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
+                    <header class="entry-header">
+                        <h1>{{ manga.getTitle }}</h1>
+
+                        <div class="entry-meta">
+                            <!-- AddThis Button BEGIN -->
+                            <div class="addthis_toolbox addthis_default_style ">
+                                <a class="addthis_button_preferred_1"></a>
+                                <a class="addthis_button_preferred_2"></a>
+                                <a class="addthis_button_preferred_3"></a>
+                                <a class="addthis_button_preferred_4"></a>
+                                <a class="addthis_button_compact"></a>
+                                <a class="addthis_counter addthis_bubble_style"></a>
+                            </div>
+                            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
+                            <!-- AddThis Button END -->
+                            <div class="left">
+                                <span>{{ manga.author }}</span>, le <span class="date"><i class="icon-calendar"></i> {{ manga.getReleaseDateFrontFormat() }}</span>
+
+
+
+
+                            </div>
+
+
+                        </div>
+                    </header>
+
+
+                    <div class="entry-content-wrap">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img width="100%" src="{{ app.request.getSchemeAndHttpHost() ~ asset(manga.picture.getPath()) }}" class="big-format" alt="{{ manga.getTitle|escape }}">
+
+                            </div>
+
+                            <div class="col-xs-8">
+                                <ul>
+                                    {% if manga.mangaka %}<li>Auteur : <strong>{{ manga.mangaka }}</strong></li>{% endif %}
+                                    {% if manga.title %}<li>Titre : <strong>{{ manga.title }}</strong></li>{% endif %}
+                                    {% if manga.titleReal %}<li>Titre original : <strong>{{ manga.titleReal }}</strong></li>{% endif %}
+                                    {% if manga.type is not empty %}<li>Genre :
+
+                                        {% for type in manga.type %}
+                                            <strong>{{ type.name }}</strong> -
+                                        {% endfor %}
+
+                                    </li>{% endif %}
+
+                                    {% if manga.publicationDate %}<li>Sortie : <strong>{{ manga.publicationDate|date('Y-m-d') }}</strong></li>{% endif %}
+                                    {% if manga.format %}<li>Format : <strong>{{ manga.format }}</strong></li>{% endif %}
+                                    {% if manga.price %}<li>Prix : <strong>{{ manga.price }}</strong></li>{% endif %}
+                                    {% if manga.ean %}<li>EAN/ISBN : <strong>{{ manga.ean }}</strong></li>{% endif %}
+                                    {% if manga.publisherFR %}<li>Editeur : <strong>{{ manga.publisherFR }}</strong></li>{% endif %}
+                                    {% if manga.publisherJA %}<li>Editeur VO : <strong>{{ manga.publisherJA }}</strong></li>{% endif %}
+                                    <li>Existe en anime : <strong>{% if manga.anime == 1 %}Oui{% else %}Non{% endif %}</strong></li>
+                                    {% if manga.broadcastingPlatform %}<li>Plateforme de Diffusion : <strong>{{ manga.broadcastingPlatform }}</strong></li>{% endif %}
+
+
+
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="entry-content">
+                            {% if manga.summary %}
+                                <div class="content-title main-color-reverse">
+                                    <h4>Résumé</h4>
+                                </div>
+
+                                {{ manga.summary|raw }}
+                            {% endif %}
+
+
+                            {% if manga.review %}
+                                <div class="content-title main-color-reverse">
+                                    <h4>Avis</h4>
+                                </div>
+
+                                {{ manga.review|raw }}
+                            {% endif %}
+
+                        </div>
+                        <!-- /entry-content -->
+
+                    </div>
+                    <!-- /entry-content-wrap -->
+
+                </article>
+            </div>
+            <!-- /post-wrap -->
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="comments">
+            <div class="cat-header">
+                <div class="cat-title second-color-bg">
+                    <div class="cat-icon">
+                        <i class="icon-rocket"></i>
+                    </div>
+                    <h4>Donnez votre avis</h4>
+                </div>
+            </div>
+        </div>
+        <!-- /comments -->
+
+
+
+        {# DISQUS #}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'japanfm'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    {% endblock %}

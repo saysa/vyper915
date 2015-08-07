@@ -1,0 +1,209 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ artist.name }} Discographie | {{ parent() }}{% endblock %}
+
+    {% block content %}
+
+        <article>
+            <header class="entry-header">
+                <h1>{{ artist.name }}</h1>
+
+                <div class="entry-meta">
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style ">
+                        <a class="addthis_button_preferred_1"></a>
+                        <a class="addthis_button_preferred_2"></a>
+                        <a class="addthis_button_preferred_3"></a>
+                        <a class="addthis_button_preferred_4"></a>
+                        <a class="addthis_button_compact"></a>
+                        <a class="addthis_counter addthis_bubble_style"></a>
+                    </div>
+                    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
+                    <!-- AddThis Button END -->
+
+
+
+                </div>
+            </header>
+
+
+
+
+        </article>
+
+
+
+
+
+
+        <!-- /entry-content -->
+
+        {% if discos %}
+            <div class="content-title main-color-reverse">
+                <h4>Discographie</h4>
+            </div>
+
+            {#
+                        <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                            <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
+                        </a>
+                        <h6 class="release-artist">
+                            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                        </h6>
+            #}
+
+            <div id="discos" data-page="1">
+                {% set clear_count = 0 %}
+                {% for key, disco in discos %}
+
+                    <div class="col-md-3 padding-off item" data-discoid="{{ disco.id }}">
+                        <div class="release-thumbnail">
+                            <div style="height: 142px; background: url({{ asset(disco.picture.getPath('152')) }});">
+
+                            </div>
+
+                            <div class="release-meta">
+                                <h6 class="release-artist">
+                                    <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
+                                </h6>
+                            </div>
+
+                            <div class="release-meta">
+                                {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
+                                    <div class="button-container tip-container">
+                                        <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
+                                        <div class="tip-cloud">
+                                            <div class="tip-corner"></div>
+                                            <div class="tip-content">
+                                                <ul>
+                                                    {% if disco.getCdJapan %}
+                                                        <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
+                                                    {% endif %}
+                                                    {% if disco.getItunes %}
+                                                        <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                    {% endif %}
+                                                    {% if disco.getAmazon %}
+                                                        <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                    {% endif %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
+                                <div class="clear"></div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {% set clear_count = clear_count + 1 %}
+
+                    {% if clear_count==4 %}
+
+                        <div style="clear: both;"></div>
+                        {% set clear_count = 0 %}
+                    {% endif %}
+
+                {% endfor %}
+            </div>
+
+
+
+
+
+        {% endif %}
+
+
+
+
+        <div class="add_468">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- un_artist -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:468px;height:60px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="6183315514"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        {#
+
+
+
+        <!-- Infinte Scroll Grafikart -->
+        <script>
+
+
+            $(document).ready(function(){
+
+                //Check to see if the window is top if not then display button
+                $(window).scroll(function(){
+                    if ($(this).scrollTop() == $(document).height() - $(window).height()) {
+
+                        var page = $("#discos").data("page")+1;
+
+                        console.log(page);
+
+                        $.ajax({
+                            type: "POST",
+                            url: '{{ path('infiniteScrollArtistDiscography') }}',
+                            dataType: "html",
+                            data:{
+                                page : page,
+                                artist: {{ artist.id }}
+                            },
+                            success: function(data){
+                                $("#discos").append(data);
+                                $("#discos").data('page', page);
+                                $(".tip-container").on("click", ".buy", function() {
+                                    $(".tip-cloud").hide();
+                                    var tipcloud = $(this).next();
+                                    tipcloud.show();
+                                });
+                                //console.log(data);
+                                //alert('die 2');
+                                //$("#content").html(data);
+                                //$("#loading").hide();
+                            }
+                        });
+                    }
+                });
+
+
+
+            });
+
+
+        </script>
+
+        #}
+
+        <script>
+
+            $(window).load(function() {
+
+                $(".tip-container").on("click", ".buy", function() {
+                    $(".tip-cloud").hide();
+                    var tipcloud = $(this).next();
+                    tipcloud.show();
+                });
+
+
+
+            });
+
+
+        </script>
+    {% endblock %}
+
+
+{#
+
+
+
+#}

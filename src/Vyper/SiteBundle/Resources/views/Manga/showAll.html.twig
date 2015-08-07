@@ -1,0 +1,86 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Manga/Anime | {{ parent() }}{% endblock %}
+
+    {% block content %}
+
+        <header class="archive-header">
+            <h2 class="archive-title">Manga/Anime</h2>
+        </header><!-- /archive-header -->
+
+        <div class="archive-postlist">
+            {% set count = 1 %}
+            {% for manga in mangas %}
+                {% if count==1 %}
+                    <div class="row">
+                {% endif %}
+                <div class="col-xs-4">
+                    <article class="post type-post status-publish format-standard hentry category-graphics tag-cars tag-characters tag-girl tag-man">
+
+
+                        <div class="thumb-wrap">
+                            <div class="thumb">
+                                <a href="{{ path('showManga', {'id': manga.getId, 'slug': manga.slug}) }}"><img src="{{ asset(manga.picture.getPath()) }}" width="100%" class="wp-post-image" alt=""></a>
+                            </div>
+
+
+
+                            <div class="overlay">
+                                <a class="post-link" href="{{ path('showManga', {'id': manga.getId, 'slug': manga.slug}) }}"><i class="icon-link"></i></a>
+                            </div>
+                        </div>
+
+
+
+                        <header class="entry-header">
+                            <h3><a href="{{ path('showManga', {'id': manga.getId, 'slug': manga.slug}) }}">{{ manga.getTitle }}</a></h3>
+                            <div class="entry-meta">
+                                <span class="date"><i class="fa fa-calendar"></i> {{ manga.getReleaseDateFrontFormat() }}</span>
+
+
+                            </div>
+                        </header>
+
+
+                    </article>
+
+
+                </div>
+                {% if count==3 %}
+                    </div>
+                {% endif %}
+
+                {% set count = count + 1 %}
+
+                {% if count==4 %}
+                    {% set count = 1 %}
+                {% endif %}
+
+
+
+            {% endfor %}
+        </div>
+
+
+
+
+        <div class="pagination">
+
+            {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+            {% for p in range(1, total_articles) %}
+                {% if p == page %}
+                    <span class="page-numbers current">{{ p }}</span>
+                {% else %}
+
+
+                        <a href="{{ path('mangaanime', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+
+
+
+                {% endif %}
+            {% endfor %}
+
+        </div>
+
+
+    {% endblock %}

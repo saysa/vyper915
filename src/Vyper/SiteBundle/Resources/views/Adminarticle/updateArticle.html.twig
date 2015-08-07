@@ -1,0 +1,404 @@
+{% extends "VyperSiteBundle:layouts:admin.html.twig" %}
+
+{% block title "ADMIN" %}
+
+    {% block content %}
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="box">
+                <div class="box-header">
+                    <h2><i class="icon-edit"></i>Update article : {{ article.getTitle }}</h2>
+                    <div class="box-icon">
+                        <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                        <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+
+                        {{ form_widget(form._token) }}
+
+                        <fieldset class="col-sm-12">
+
+                            <!-- Continent -->
+                            <div class="row">
+                                <div class="form-group col-lg-9">
+                                    {{ form_label(form.continent, "Continent") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.continent, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Type -->
+                            <div class="row">
+                                <div class="form-group col-lg-9">
+                                    {{ form_label(form.articleType, "Type *") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.articleType, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="row">
+                                <div class="form-group col-lg-9{%if error_title is defined %} has-error{% endif %}">
+                                    {{ form_label(form.title, "Title *") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.title, {  'attr': {'class': 'form-control focused'} }) }}
+                                        {{ form_errors(form.title) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Description -->
+                            <div class="row">
+                                <div class="form-group col-lg-9{%if error_description is defined %} has-error{% endif %}">
+                                    {{ form_label(form.description) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}
+                                        {{ form_errors(form.description) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text -->
+                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
+                                {{ form_label(form.text) }}
+                                <div class="controls">
+                                    {{ form_widget(form.text, { 'attr': {'class': 'cleditor'} }) }}
+                                    {{ form_errors(form.text) }}
+                                </div>
+                            </div>
+
+                            <!-- Text EN -->
+                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
+                                {{ form_label(form.textEN, "Text English") }}
+                                <div class="controls">
+                                    {{ form_widget(form.textEN, { 'attr': {'class': 'cleditor'} }) }}
+                                    {{ form_errors(form.textEN) }}
+                                </div>
+                            </div>
+
+                            <!-- Text JP -->
+                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
+                                {{ form_label(form.textJP, "Text Japanese") }}
+                                <div class="controls">
+                                    {{ form_widget(form.textJP, { 'attr': {'class': 'cleditor'} }) }}
+                                    {{ form_errors(form.textJP) }}
+                                </div>
+                            </div>
+
+                            <!-- Youtube -->
+                            <div class="row">
+                                <div class="form-group col-lg-9{%if error_youtube is defined %} has-error{% endif %}">
+                                    {{ form_label(form.youtube) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.youtube, { 'attr': {'class': 'form-control'} }) }}
+                                        {{ form_errors(form.youtube) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Release Date -->
+                                <div class="form-group col-lg-2{%if error_rel_date is defined %} has-error{% endif %}">
+                                    {{ form_label(form.releaseDate) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.releaseDate, { 'attr': {'class': 'form-control datepicker'} }) }}
+                                        {{ form_errors(form.releaseDate) }}
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-1">
+                                </div>
+                                <!-- Release Time -->
+                                <div class="form-group col-lg-2{%if error_rel_time is defined %} has-error{% endif %}">
+                                    {{ form_label(form.releaseTime) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.releaseTime, { 'attr': {'class': 'form-control timepicker'} }) }}
+                                        {{ form_errors(form.releaseTime) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <!-- Author -->
+                                <div class="form-group col-lg-3{%if error_author is defined %} has-error{% endif %}">
+                                    {{ form_label(form.author, "Author *") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.author, { 'attr': {'class': 'form-control'} }) }}
+                                        {{ form_errors(form.author) }}
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-1">
+                                </div>
+                                <!-- Translator -->
+                                <div class="form-group col-lg-4">
+                                    {{ form_label(form.translator) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.translator, { 'attr': {'class': 'form-control'} }) }}
+                                        {{ form_errors(form.translator) }}
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <!-- Source -->
+                                <div class="form-group col-lg-3">
+                                    {{ form_label(form.source) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.source, { 'attr': {'class': 'form-control'} }) }}
+                                    </div>
+                                </div>
+                                <div class="form-group col-lg-1"></div>
+                                <!-- Source URL -->
+                                <div class="form-group col-lg-6">
+                                    {{ form_label(form.sourceURL, "Source URL") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.sourceURL, { 'attr': {'class': 'form-control'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- META keywords -->
+                            <div class="row">
+                                <div class="form-group col-lg-9{%if error_meta_keywords is defined %} has-error{% endif %}">
+                                    {{ form_label(form.metaKeywords) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.metaKeywords, { 'attr': {'class': 'form-control'} }) }}
+                                        {{ form_errors(form.metaKeywords) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Theme -->
+                            <div class="row">
+                                <div class="form-group col-lg-9">
+                                    {{ form_label(form.theme) }}
+                                    <div class="controls">
+                                        {{ form_widget(form.theme, { 'attr': {'class': 'form-control'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Album -->
+                            <div class="row">
+                                <div class="form-group col-lg-5">
+                                    {{ form_label(form.album, "Link an album") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.album, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Related Picture -->
+                                <div class="form-group col-lg-3">
+                                    {{ form_label(form.pictureID, "Picture ID") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
+                                        <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>
+                                        {{ form_errors(form.pictureID) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <img src="{{ asset(article.picture.getPath('article')) }}" alt="Current picture" height="150" />
+                            </div>
+
+                            <div class="form-actions">
+                                <input type="hidden" name="update" value="update">
+                                <button type="submit" class="btn btn-primary">Save article</button>
+                                <button type="reset" class="btn">Cancel</button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="icon-edit"></i>Artists linked</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" method="post">
+                            <fieldset class="col-sm-12">
+
+
+                                <div class="row">
+                                    <!-- Gauche -->
+                                    <div class="form-group col-lg-5">
+                                        <label class="control-label" for="theme">Artists </label>
+                                        <div class="controls">
+                                            <select id="artists_to_link" name="artists_to_link" class="form-control" data-rel="chosen">
+                                                <option value="-1">-- none --</option>
+                                                {% for artist in artists %}
+                                                    {% if artist in article.artists %}
+
+                                                    {% else %}
+                                                        <option value="{{ artist.getId }}">{{ artist.getName }}</option>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="row">
+                                            <button type="button" class="btn btn-primary" id="link_button">Link the artist</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-1">
+                                    </div>
+                                    <!-- Droite -->
+                                    <div class="form-group col-lg-6">
+                                        <table class="table table-striped table-bordered bootstrap-datatable" id="relArtistLinkTable">
+                                            <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Artist</th>
+                                                <th>Unlink</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            {% for artist in article.artists %}
+                                                <tr id="{{ artist.getId }}">
+                                                    <td>{{ artist.getId }}</td>
+                                                    <td>{{ artist.getName }}</td>
+                                                    <td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            $(document).ready(function() {
+
+                $("#relArtistLinkTable").on("click", ".deleteLink", function() {
+                    var tr = $(this).closest('tr');
+                    var artistID = tr.attr('id');
+
+                    console.log("boucle supp ? artistID est " + artistID);
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('ajax_articleArtistLinkDelete') }}",
+
+                        data:{
+                            artist_id : artistID,
+                            item_id : '{{ article.getId }}'
+                        },
+                        success: function(data){
+                        }
+                    });
+
+                    tr.css("background-color","#FF3700");
+
+                    tr.fadeOut(400, function(){
+                        tr.remove();
+                    });
+                    return false;
+                });
+
+                $( "#link_button" ).on("click", function() {
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('ajax_articleArtistLink') }}",
+                        dataType: "json",
+                        data:{
+                            artist_id : $('#artists_to_link').val(),
+                            item_id : '{{ article.getId }}'
+                        },
+                        success: function(data){
+                            $('#relArtistLinkTable tr:last').after('<tr id="'+ data.artist.id +'"><td>' + data.artist.id + '</td><td>' + data.artist.name + '</td><td><a class="btn btn-danger deleteLink" href="#"><i class="icon-trash "></i> </a></td></tr>');
+                        }
+                    });
+
+                });
+
+            });
+
+
+        </script>
+    {% endblock %}

@@ -1,0 +1,119 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}{{ album.title }} | {{ parent() }}{% endblock %}
+
+    {% block content %}
+        <header class="archive-header">
+            <h2 class="archive-title">{{ album.title }}</h2>
+        </header><!-- /archive-header -->
+
+        <p>{{ album.getDescription }}</p>
+
+
+
+        <div class="gallery">
+            {% for picture in pictures %}
+                <div class="col-md-4 album-thumbs">
+                    <a rel="prettyPhoto[gallery]" href="{{ asset(picture.getPath()) }}">
+                        <img width="204" height="204" src="{{ asset(picture.getPath('gallery-thumb')) }}"
+                             alt="{{ picture.photoCredit }}"
+                             title="Titre de la photo"
+                             data-pictureId="{{ picture.id }}"
+                             data-average="{{ picture.averageMark }}"
+                             data-readonly="{{ picture.readonly }}"
+                                >
+                    </a>
+                    <div class="picture-hover">
+                        <input id="input-{{ picture.id }}" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+
+
+        <div class="add_468">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- un_artist -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:468px;height:60px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="6183315514"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+
+        <script>
+
+
+            $(document).ready(function(){
+
+                {% for picture in pictures %}
+                    $("#input-{{ picture.id }}").rating({
+
+                        glyphicon: false,
+                        showClear: false,
+                        showCaption: false,
+                        readonly: false
+
+                    });
+                    $("#input-{{ picture.id }}").rating('update', {{ picture.averageMark }}); /* average comes from the controller */
+
+
+                {% endfor %}
+
+
+
+
+                $("a[rel^='prettyPhoto']").prettyPhoto({
+                    animation_speed: 'slow',
+                    theme: 'facebook',  /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+                    show_title: true,
+                    allow_resize: true,
+                    counter_separator_label: ' sur ', /* The separator for the gallery counter 1 "of" 2 */
+                    changepicturecallback: function(){
+                        console.log($(this));
+                        var pictureID = pp_pictureids[set_position];
+                        var readonly = pp_readonlys[set_position];
+                        var average = pp_averages[set_position];
+                        $pp_pic_holder.find('.pp_social').html('<input id="pp-input-'+ pictureID + '" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" >');
+                        options = { "showClear": false, "showCaption": false };
+
+                        console.log('readonly : ' +readonly );
+
+                        if (readonly == 1) {
+                            options['readonly'] = true;
+                        } else {
+                            options['readonly'] = false;
+                        }
+
+                        $("#pp-input-" + pictureID).rating(options);
+                        $("#pp-input-" + pictureID).rating('update', average);
+
+                        $("#pp-input-" + pictureID).on('rating.change', function(event, value, caption) {
+                            console.log('J qi vote : '+value + ' pour ' + pictureID);
+                            /* update database with the vote */
+                            $.ajax({
+                                type: "POST",
+                                url: "{{ path('vote_picture') }}",
+
+                                data:{
+                                    item_id : pictureID,
+                                    mark : value
+                                },
+                                success: function(data){
+                                }
+                            });
+                        });
+                    }
+                });
+
+            });
+
+
+        </script>
+
+    {% endblock %}

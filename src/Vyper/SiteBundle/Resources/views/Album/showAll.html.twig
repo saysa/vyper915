@@ -1,0 +1,59 @@
+{% extends "VyperSiteBundle:layouts:layout.html.twig" %}
+
+{% block title %}Galerie | {{ parent() }}{% endblock %}
+
+    {% block content %}
+
+        <header class="archive-header">
+            <h2 class="archive-title">Galerie</h2>
+        </header><!-- /archive-header -->
+
+        <div class="archive-postlist">
+
+            {% for album in albums %}
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="thumb album-thumbnail" style="background: url('{{ asset(album.cover.getPath('album-cover')) }}') no-repeat center;">
+                               <div class="hover-effect">
+                                   <div class="gallery-info">
+                                       <p>{{ album.getTitle }}</p>
+                                       <a href="{{ path('showAlbum', {'id': album.getId, 'slug': album.slug}) }}">Ouvrir</a>
+                                   </div>
+                               </div>
+                            </div>
+
+                        </div>
+
+            {% endfor %}
+
+
+
+        </div>
+
+        <div class="add_468">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- un_artist -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:468px;height:60px"
+                 data-ad-client="ca-pub-3070362287154347"
+                 data-ad-slot="6183315514"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div class="pagination">
+
+            {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+            {% for p in range(1, total_albums) %}
+                {% if p == page %}
+                    <span class="page-numbers current">{{ p }}</span>
+                {% else %}
+                    <a href="{{ path('showAlbums', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                {% endif %}
+            {% endfor %}
+
+        </div>
+
+
+    {% endblock %}

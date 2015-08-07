@@ -1,0 +1,8 @@
+<ul>
+
+    {% for disco in popular_discos %}
+        <li>
+            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}" title="{{ disco.getTitle }}">{{ disco.getTitle }}</a>
+        </li>
+    {% endfor %}
+</ul>

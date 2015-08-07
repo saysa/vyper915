@@ -1,0 +1,20 @@
+{% if nextEvent_exists is defined %}
+    <aside class="widget widget_flickr">
+        <div class="widget-title"><h4>Prochain événement</h4></div>
+
+        <div class="featured-event">
+            <div class="event-date">
+                <div class="event-date-holder">
+                    <div class="event-date-number">{{ nextEvent_event.date|date("d") }}</div>
+                    <div class="event-month">{{ nextEvent_dateMonth }}</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="event-details">
+                <h5 class="event-title"><a href="{{ path('showEvent', {'id': nextEvent_event.getId, 'slug': nextEvent_event.slug}) }}">{{ nextEvent_event.title }}</a></h5>
+                <div class="event-place">{{ nextEvent_event.location.town }}, {{ nextEvent_event.location.country.name|upper|slice(0,3) }}</div>
+                <div>{{ nextEvent_remainingDays }} jours restant(s)</div>
+            </div>
+        </div>
+    </aside>
+{% endif %}
