@@ -147,6 +147,11 @@ class AdminArticleController extends AdminCommonController {
         return $this->render('VyperSiteBundle:AdminArticle:updateArticle.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function deleteArticleAction(Request $request, Article $article)
     {
         // todo delete visit and search other relations in order to also delete them
