@@ -313,7 +313,9 @@
     <div class="nav-collapse sidebar-nav collapse navbar-collapse bs-navbar-collapse">
         <ul class="nav nav-tabs nav-stacked main-menu">
             <li{% if active_article is defined %} class="active"{% endif %}><a href="{{ path('admin_show_articles') }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
+            {% if user_role == 'admin' %}
             <li{% if active_picture  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_pictures') }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
+            {% endif %}
             <li{% if active_top  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_tops') }}"><i class="fa fa-bar-chart"></i><span class="hidden-sm"> Tops</span></a></li>
             <li{% if active_video  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_videos') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Videos</span></a></li>
             <li{% if active_program  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_programs') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Programs</span></a></li>
