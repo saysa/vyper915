@@ -102,6 +102,7 @@ class AdminVideoController extends AdminCommonController {
         $view->set('videos',       $videos);
         $view->set('podcast_video',       $podcast_video);
         $view->set('podcast_audio',       $podcast_audio);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_video", true);
 
         return $this->render('VyperSiteBundle:AdminVideo:showVideos.html.twig', $view->getView());
