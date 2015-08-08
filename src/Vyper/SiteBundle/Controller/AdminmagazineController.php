@@ -99,6 +99,7 @@ class AdminMagazineController extends AdminCommonController {
         $magazines  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Magazine')->myFindAll();
 
         $view->set('magazines',       $magazines);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_magazine", true);
 
         return $this->render('VyperSiteBundle:Adminmagazine:showMagazines.html.twig', $view->getView());
