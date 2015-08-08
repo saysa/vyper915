@@ -43,18 +43,62 @@ class LoadUser extends AbstractFixture implements FixtureInterface, ContainerAwa
     public function load(ObjectManager $manager)
     {
         $userManager = $this->container->get('fos_user.user_manager');
+        $names = array(
 
-        // Create a new user
-        $user = $userManager->createUser();
-        $user->setUsername('Camio');
-        $user->setEmail('antoine@japanfm.fr');
-        $user->setPlainPassword('Camio');
-        $user->setEnabled(true);
+            array(
+                'username' => 'Saysa',
+                'email' => 'saysa@vyper-jmusic.com',
+                'password' => 'Saysa',
+                'role' => 'ROLE_SAYSA',
+            ),
+            array(
+                'username' => 'Cyrielle',
+                'email' => 'cyrielle@vyper-jmusic.com',
+                'password' => 'Cyrielle',
+                'role' => 'ROLE_ADMIN',
+            ),
+            array(
+                'username' => 'Allyson',
+                'email' => 'allyson@vyper-jmusic.com',
+                'password' => 'Allyson',
+                'role' => 'ROLE_ADMIN',
+            ),
+            array(
+                'username' => 'RedacV',
+                'email' => 'redacv@vyper-jmusic.com',
+                'password' => 'RedacV',
+                'role' => 'ROLE_REDAC',
+            ),
+            array(
+                'username' => 'RedacP',
+                'email' => 'redacp@vyper-jmusic.com',
+                'password' => 'RedacP',
+                'role' => 'ROLE_REDAC',
+            ),
+        );
 
-        $manager->persist($user);
+        $i = 0;
+        foreach ($names as $k => $infos)
+        {
+            // Create a new user
+            $user = $userManager->createUser();
+            $user->setUsername($infos['username']);
+            $user->setEmail($infos['email']);
+            $user->setPlainPassword($infos['password']);
+            $user->setEnabled(true);
+            $user->setRoles(array($infos['role']));
+
+            $manager->persist($user);
+
+            if ($i == 1) {
+                $this->addReference('user', $user);
+            }
+
+            $i++;
+        }
+
         $manager->flush();
 
-        $this->addReference('user', $user);
     }
 
     public function getOrder()
