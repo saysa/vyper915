@@ -49,31 +49,31 @@ class LoadUser extends AbstractFixture implements FixtureInterface, ContainerAwa
                 'username' => 'Saysa',
                 'email' => 'saysa@vyper-jmusic.com',
                 'password' => 'Saysa',
-                'role' => 'ROLE_SAYSA',
+                'role' => array('ROLE_SAYSA', 'ROLE_ADMIN'),
             ),
             array(
                 'username' => 'Cyrielle',
                 'email' => 'cyrielle@vyper-jmusic.com',
                 'password' => 'Cyrielle',
-                'role' => 'ROLE_ADMIN',
+                'role' => array('ROLE_ADMIN'),
             ),
             array(
                 'username' => 'Allyson',
                 'email' => 'allyson@vyper-jmusic.com',
                 'password' => 'Allyson',
-                'role' => 'ROLE_ADMIN',
+                'role' => array('ROLE_ADMIN'),
             ),
             array(
                 'username' => 'RedacV',
                 'email' => 'redacv@vyper-jmusic.com',
                 'password' => 'RedacV',
-                'role' => 'ROLE_REDAC',
+                'role' => array('ROLE_REDAC'),
             ),
             array(
                 'username' => 'RedacP',
                 'email' => 'redacp@vyper-jmusic.com',
                 'password' => 'RedacP',
-                'role' => 'ROLE_REDAC',
+                'role' => array('ROLE_REDAC'),
             ),
         );
 
@@ -86,7 +86,7 @@ class LoadUser extends AbstractFixture implements FixtureInterface, ContainerAwa
             $user->setEmail($infos['email']);
             $user->setPlainPassword($infos['password']);
             $user->setEnabled(true);
-            $user->setRoles(array($infos['role']));
+            $user->setRoles($infos['role']);
 
             $manager->persist($user);
 
