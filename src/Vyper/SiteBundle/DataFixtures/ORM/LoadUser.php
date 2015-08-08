@@ -49,19 +49,19 @@ class LoadUser extends AbstractFixture implements FixtureInterface, ContainerAwa
                 'username' => 'Saysa',
                 'email' => 'saysa@vyper-jmusic.com',
                 'password' => 'Saysa',
-                'role' => array('ROLE_SAYSA', 'ROLE_ADMIN'),
+                'role' => array('ROLE_SAYSA', 'ROLE_ADMIN', 'ROLE_REDAC'),
             ),
             array(
                 'username' => 'Cyrielle',
                 'email' => 'cyrielle@vyper-jmusic.com',
                 'password' => 'Cyrielle',
-                'role' => array('ROLE_ADMIN'),
+                'role' => array('ROLE_ADMIN', 'ROLE_REDAC'),
             ),
             array(
                 'username' => 'Allyson',
                 'email' => 'allyson@vyper-jmusic.com',
                 'password' => 'Allyson',
-                'role' => array('ROLE_ADMIN'),
+                'role' => array('ROLE_ADMIN', 'ROLE_REDAC'),
             ),
             array(
                 'username' => 'RedacV',

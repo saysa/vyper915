@@ -19,7 +19,7 @@ class AdminArticleController extends AdminCommonController {
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_REDAC')")
      */
     public function showArticlesAction(Request $request)
     {
@@ -45,6 +45,7 @@ class AdminArticleController extends AdminCommonController {
         $view->set("active_article", true);
         $view->set('themes', $themes);
         $view->set('flashnews', $flashnews);
+        $view->set('user_role', $this->getUserRole());
 
         return $this->render('VyperSiteBundle:AdminArticle:showArticles.html.twig', $view->getView());
     }

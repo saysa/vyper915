@@ -315,8 +315,6 @@
             <li{% if active_article is defined %} class="active"{% endif %}><a href="{{ path('admin_show_articles') }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
             {% if user_role == 'admin' %}
             <li{% if active_picture  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_pictures') }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
-            {% endif %}
-            <li{% if active_top  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_tops') }}"><i class="fa fa-bar-chart"></i><span class="hidden-sm"> Tops</span></a></li>
             <li{% if active_video  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_videos') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Videos</span></a></li>
             <li{% if active_program  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_programs') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Programs</span></a></li>
             <li{% if active_artist  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_artists') }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
@@ -339,7 +337,7 @@
                     <li><a class="submenu" href="{{ path('admin_show_partners') }}"><i class="fa fa-edit"></i><span class="hidden-sm"> Partners</span></a></li>
                 </ul>
             </li>
-
+            {% endif %}
             <li><a href="{{ path('fos_user_security_logout') }}"><i class="icon-lock"></i><span class="hidden-sm"> Logout</span></a></li>
         </ul>
     </div>

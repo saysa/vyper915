@@ -28,21 +28,19 @@ class AdminPictureController extends AdminCommonController {
         $pictures  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->myFindAll();
         $albums    = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Album')  ->myFindAll();
 
-        $user = $this->getUser();
-        if ( $user->getRoles()[0] == 'ROLE_SAYSA' || $user->getRoles()[0] == 'ROLE_ADMIN' ) {
-            $user_role = 'admin';
-        } else {
-            $user_role = '';
-        }
-
         $view->set('albums',         $albums);
         $view->set('pictures',       $pictures);
-        $view->set('user_role', $user_role);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_picture", true);
 
         return $this->render('VyperSiteBundle:AdminPicture:showPictures.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addPictureAction(Request $request)
     {
 
@@ -65,11 +63,17 @@ class AdminPictureController extends AdminCommonController {
         }
 
         $view->set('form', $form->createView());
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_picture", true);
 
         return $this->render('VyperSiteBundle:AdminPicture:addPicture.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function deleteAction(Request $request, Picture $picture)
     {
         $em = $this->getDoctrine()->getManager();

@@ -40,4 +40,16 @@ class AdminCommonController extends Controller {
 
         return true;
     }
+
+    public function getUserRole()
+    {
+        $user = $this->getUser();
+        if ( $user->getRoles()[0] == 'ROLE_SAYSA' || $user->getRoles()[0] == 'ROLE_ADMIN' ) {
+            $user_role = 'admin';
+        } else {
+            $user_role = '';
+        }
+
+        return $user_role;
+    }
 } 
