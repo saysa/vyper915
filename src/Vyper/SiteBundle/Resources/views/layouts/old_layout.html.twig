@@ -220,7 +220,7 @@
                     <li class="menu-item menu-item-type-post_type"><a href="{{ path('showAllArtist') }}">Artistes</a></li>
                 </ul>
             </li>
-            <li class="menu-item menu-item-type-post_type{% if current_mangaanime is defined %} current_page_item{% endif %}"><a href="{{ path('mangaanime') }}" title="Manga/Anime">Manga/Anime</a></li>
+
             <li class="menu-item menu-item-type-post_type{% if current_jeuxvideos is defined %} current_page_item{% endif %}"><a href="{{ path('jeuxvideos') }}" title="Jeux Vidéos">Jeux Vidéos</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_culture is defined %} current_page_item{% endif %}"><a href="{{ path('culture') }}" title="Culture">Culture</a></li>
             <li class="menu-item menu-item-type-post_type{% if current_album is defined %} current_page_item{% endif %}"><a href="{{ path('showAlbums') }}" title="Galerie">Galerie</a></li>
@@ -302,7 +302,6 @@
             <ul class="widget-tab-titles-top">
                 <li class=""><h5><a href="#widget-tab4-content">Top 5 Music</a></h5></li>
                 <li class=""><h5><a href="#widget-tab5-content">Top 5 OST</a></h5></li>
-                <li class="active"><h5><a href="#widget-tab6-content">Top 5 Manga</a></h5></li>
             </ul>
         </div>
 
@@ -313,7 +312,7 @@
             <div id="widget-tab5-content" class="tab-content-top">
                 O
             </div>
-            {{ render(controller("VyperSiteBundle:Top:topMangas")) }}
+
         </div>
     </aside>
 

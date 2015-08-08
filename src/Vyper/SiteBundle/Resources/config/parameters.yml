@@ -3,7 +3,6 @@ parameters:
     albums_per_page: 32
     magazines_per_page: 12
     artists_per_page: 12
-    mangas_per_page: 12
     big_format_picture:
         interview: musique : interview
         live: musique : live report

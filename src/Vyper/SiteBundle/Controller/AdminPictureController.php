@@ -82,7 +82,6 @@ class AdminPictureController extends AdminCommonController {
         $artists = $em->getRepository('VyperSiteBundle:Artist')->getByPictureId($picture->getId());
         $tops = $em->getRepository('VyperSiteBundle:Top')->getPictureTopByPictureId($picture->getId());
         $partners = $em->getRepository('VyperSiteBundle:Partner')->getByPictureId($picture->getId());
-        $mangas = $em->getRepository('VyperSiteBundle:Manga')->getByPictureId($picture->getId());
         $magazines = $em->getRepository('VyperSiteBundle:Magazine')->getByPictureId($picture->getId());
         $videos = $em->getRepository('VyperSiteBundle:Video')->getByPictureId($picture->getId());
         $programType = $em->getRepository('VyperSiteBundle:ProgramType')->getByPictureId($picture->getId());
@@ -100,8 +99,6 @@ class AdminPictureController extends AdminCommonController {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Artist.');
         } else if (sizeof($partners)>0) {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Partner.');
-        } else if (sizeof($mangas)>0) {
-            $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Manga.');
         } else if (sizeof($magazines)>0) {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Magazine.');
         } else if (sizeof($videos)>0) {

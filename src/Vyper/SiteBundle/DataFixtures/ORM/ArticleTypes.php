@@ -23,7 +23,7 @@ class ArticleTypes extends AbstractFixture implements FixtureInterface {
      */
     public function load(ObjectManager $manager)
     {
-        $names = array('Manga/Anime', 'Jeux Vidéos', 'Culture', 'musique : chronique', 'musique : interview', 'musique : live report', 'musique : news', 'concert');
+        $names = array('Jeux Vidéos', 'Culture', 'musique : chronique', 'musique : interview', 'musique : live report', 'musique : news', 'concert');
 
         foreach ($names as $i => $name)
         {

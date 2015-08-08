@@ -328,68 +328,6 @@
 
 
 
-        <div class="feat-cat section">
-
-                <div class="cat-header">
-                    <div class="cat-title second-color-bg">
-                        <h4><i class="fa fa-star"></i> Manga/Anime</h4>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 homepage-section">
-                        <div class="row">
-
-                            {%  if latest_mangas is defined %}
-                                {% for key, article in latest_mangas %}
-                                    {% if key>=0 and key<4 %}
-                                        <div class="col-xs-3">
-                                        <div class="thumb-wrap">
-                                            <div class="thumb">
-                                                <a href="{{ path('showManga', {'id': article.getId, 'slug': article.slug}) }}"><img width="100%" src="{{ asset(article.picture.getPath()) }}" class="wp-post-image" alt=""></a>
-                                            </div>
-
-
-
-                                            <div class="overlay">
-                                                <a class="post-link" href="{{ path('showManga', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
-                                            </div>
-                                        </div>
-
-
-
-                                        <div class="post-details">
-                                            <h3>
-                                                <a href="{{ path('showManga', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
-                                            </h3>
-
-                                            <div class="entry-meta">
-                                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
-
-
-
-                                            </div>
-
-                                        </div>
-                                        </div>
-
-                                    {% endif %}
-                                {% endfor %}
-                            {% endif %}
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </div><!-- /feat-cat -->
-
-
-        <!-- category1 -->
-
-
-        <!-- /category1 -->
-
 
 
         <!-- category2 -->
