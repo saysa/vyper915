@@ -145,13 +145,6 @@ infiniteScrollArtistDiscography:
     path:    /is/artist-discography
     defaults: { _controller: VyperSiteBundle:Artist:infinteScrollShowDisco }
 
-
-mangaanime:
-    path:    /manga-anime/{page}
-    defaults: { _controller: VyperSiteBundle:Manga:showAll, page: 1, type: manga-anime }
-    requirements:
-        page: \d*
-
 jeuxvideos:
     path:    /jeux-videos/{page}
     defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: jeux-videos }
@@ -171,10 +164,6 @@ playerradio:
 showTheme:
     path:    /theme/{slug}/{id}/{page}
     defaults: { _controller: VyperSiteBundle:Article:showTheme, page: 1 }
-
-showManga:
-    path:    /manga/{slug}/{id}/{page}
-    defaults: { _controller: VyperSiteBundle:Manga:showManga, page: 1 }
 
 showFlashnew:
     path:    /breve/{slug}/{id}.html
@@ -223,20 +212,6 @@ admin_update_partner:
 admin_delete_partner:
     path:     /_admin_/partner/delete/{id}
     defaults: { _controller: VyperSiteBundle:AdminPartner:delete }
-    requirements:
-        id: \d+
-
-admin_show_mangas:
-    path:     /_admin_/mangas
-    defaults: { _controller: VyperSiteBundle:AdminManga:showMangas }
-
-admin_add_manga:
-    path:     /_admin_/manga/add
-    defaults: { _controller: VyperSiteBundle:AdminManga:addManga }
-
-admin_update_manga:
-    path:     _admin_/manga/update/{id}
-    defaults: { _controller: VyperSiteBundle:AdminManga:updateManga }
     requirements:
         id: \d+
 
