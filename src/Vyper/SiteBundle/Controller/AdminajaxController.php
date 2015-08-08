@@ -308,35 +308,4 @@ class AdminAjaxController extends AdminCommonController {
 
         return new Response();
     }
-
-    public function setTopMangaAction(Request $request)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $top_to_delete = $em->getRepository('VyperSiteBundle:Top')->getManga(array(
-            'position' => $request->request->get('position'),
-        ));
-
-        if (sizeof($top_to_delete) > 0) {
-            // delete
-            foreach ($top_to_delete as $delete_me) {
-                $em->remove($delete_me);
-            }
-
-        }
-
-        $top = new Top();
-        $top
-            ->setType('manga')
-            ->setPosition($request->request->get('position'))
-            ->setItemId($request->request->get('manga_id'))
-        ;
-        $em->persist($top);
-        $em->flush();
-
-        $manga = $em->getRepository('VyperSiteBundle:Manga')->find($request->request->get('manga_id'));
-
-        echo json_encode(array('manga' => $manga->getTitle()));
-
-        return new Response();
-    }
 } 

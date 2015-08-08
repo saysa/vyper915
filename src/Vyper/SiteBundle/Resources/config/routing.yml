@@ -40,10 +40,6 @@ mentions_legales:
     path:     /mentions-legales
     defaults: { _controller: VyperSiteBundle:Statique:mentionsLegales }
 
-vyper_site_top_music:
-    path:     /top-music
-    defaults: { _controller: VyperSiteBundle:Top:pageMusic }
-
 shoAllArticles:
     path:    /actualites/{page}
     defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: actualites }
@@ -266,10 +262,6 @@ admin_update_manga:
     requirements:
         id: \d+
 
-admin_show_tops:
-    path:     /_admin_/tops
-    defaults: { _controller: VyperSiteBundle:AdminTop:showTops }
-
 admin_show_programs:
     path:     /_admin_/programs
     defaults: { _controller: VyperSiteBundle:AdminProgram:showPrograms }
@@ -305,12 +297,6 @@ admin_add_magazine:
 admin_update_magazine:
     path:     _admin_/magazine/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminMagazine:updateMagazine }
-    requirements:
-        id: \d+
-
-admin_update_top:
-    path:     _admin_/top/update/{id}
-    defaults: { _controller: VyperSiteBundle:AdminTop:updateTop }
     requirements:
         id: \d+
 
@@ -567,9 +553,3 @@ ajax_addTitleDisco:
 ajax_removeTitleDisco:
     path:     /_admin_/ajax/remove_title_to_disco
     defaults: { _controller: VyperSiteBundle:AdminAjax:removeTitleDisco }
-
-ajax_setTopManga:
-    path:     /_admin_/ajax/set_top_manga
-    defaults: { _controller: VyperSiteBundle:AdminAjax:setTopManga }
-
-
