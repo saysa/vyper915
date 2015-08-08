@@ -100,14 +100,6 @@ showAllMagazine:
     requirements:
         page: \d*
 
-showAllPodcasts:
-    path:    /podcast
-    defaults: { _controller: VyperSiteBundle:Podcast:showAll }
-
-showAllPodcastsAudio:
-    path:    /podcasts-audio
-    defaults: { _controller: VyperSiteBundle:Podcast:showAllAudio }
-
 showArticle:
     path:    /article/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Article:showArticle }
@@ -409,16 +401,6 @@ admin_add_video:
 admin_update_video:
     path:     _admin_/video/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminVideo:updateVideo }
-    requirements:
-        id: \d+
-
-admin_add_podcast:
-    path:     /_admin_/podcast/add
-    defaults: { _controller: VyperSiteBundle:AdminPodcast:addPodcast }
-
-admin_update_podcast:
-    path:     _admin_/podcast/update/{id}
-    defaults: { _controller: VyperSiteBundle:AdminPodcast:updatePodcast }
     requirements:
         id: \d+
 
