@@ -316,7 +316,6 @@
             {% if user_role == 'admin' %}
             <li{% if active_picture  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_pictures') }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
             <li{% if active_video  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_videos') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Videos</span></a></li>
-            <li{% if active_program  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_programs') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Programs</span></a></li>
             <li{% if active_artist  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_artists') }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
             <li{% if active_disco  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_discos') }}"><i class="fa fa-music"></i><span class="hidden-sm"> Disco</span></a></li>
             <li{% if active_location  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_locations') }}"><i class="icon-location-arrow"></i><span class="hidden-sm"> Locations</span></a></li>
