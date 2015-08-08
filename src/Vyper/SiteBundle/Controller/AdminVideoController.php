@@ -15,6 +15,11 @@ use Vyper\SiteBundle\Form\VideoType;
 
 class AdminVideoController extends AdminCommonController {
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addVideoAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -53,7 +58,7 @@ class AdminVideoController extends AdminCommonController {
      * @param Request $request
      * @param Video $video
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateVideoAction(Request $request, Video $video)
     {
@@ -90,6 +95,10 @@ class AdminVideoController extends AdminCommonController {
         return $this->render('VyperSiteBundle:AdminVideo:updateVideo.html.twig', $view->getView());
     }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function showVideosAction()
     {
         $view = $this->container->get('saysa_view');
