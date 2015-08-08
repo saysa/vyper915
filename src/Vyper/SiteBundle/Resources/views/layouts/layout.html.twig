@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{% block title %}Japan FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
+    <title>{% block title %}Vyper FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
     <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
     {% block meta_description %}
@@ -135,10 +135,7 @@
                             <a href="{{ path('a_propos') }}">A propos</a>
                         </li>
 
-                        <li>
-                            <i class="fa fa-users"></i>
-                            <a href="{{ path('l_equipe') }}">L'Equipe</a>
-                        </li>
+
 
                         <li>
                             <i class="fa fa-envelope"></i>
@@ -157,12 +154,7 @@
 
                     </ul>
                 </div>
-                <div class="social">
-                    <ul class="list">
-                        <li class="gplus"><a href="#" id="toggle-chat"><i class="fa fa-comments"></i> Live Chat</a></li>
-                        <li class="youtube"><a href="http://forum.japanfm.fr">Forum</a></li>
-                    </ul>
-                </div>
+
             </div>
         </section>
         <!-- /top -section -->
@@ -219,83 +211,8 @@
                             <a href="/" title="Japan FM"><img src="{{ asset('assets/img/logo.png') }}" width="100%" alt="Japan FM" /></a>
                         </div>
 
-                        <ul id="header-social">
-                            <li id="social-facebook">
-                                <a href="https://www.facebook.com/japanfm">
-                                    <span>Japan FM sur Facebook</span>
-                                </a>
-                            </li>
-                            <li id="social-twitter">
-                                <a href="https://twitter.com/japanfm">
-                                    <span>Japan FM sur Twitter</span>
-                                </a>
-                            </li>
-                            <li id="social-youtube">
-                                <a href="http://www.dailymotion.com/Japanfm">
-                                    <span>Japan FM sur Dailymotion</span>
-                                </a>
-                            </li>
-                            <li id="social-ios">
-                                <a href="https://itunes.apple.com/US/app/id902475027">
-                                    <span>Japan FM sur AppStore</span>
-                                </a>
-                            </li>
-                            <li id="social-android">
-                                <a href="https://play.google.com/store/apps/details?id=com.conduit.app_4e50177a5739444585a029434352002a.app">
-                                    <span>Japan FM sur Android</span>
-                                </a>
-                            </li>
-                        </ul>
-
-
-
                     </div>
-                    <div class="col-lg-5 right">
 
-                        <div id="player">
-
-                            <h2>En ce moment sur Japan FM</h2>
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <div id="cover-container">
-
-                                            <img width="100%" id="currentCover" src="" alt=""  />
-                                            <i class="fa fa-play"></i>
-
-
-                                    </div>
-                                </div>
-                                <div class="col-xs-8">
-                                    <div class="jp-title audio-title">
-                                        <b id="currentArtist-player">Japan FM</b><br />
-                                        <span id="currentTitle-player">Toute la Jmusic</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-
-
-                        <ul id="header-right" style="display: none;">
-                            <li class="jp-mute ui-state-default ui-corner-all"><a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute" style="display: block;">mute</a></li>
-                            <li class="jp-unmute ui-state-default ui-state-active ui-corner-all" style="display: none;"><a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute" style="display: none;">unmute</a></li>
-                            <li><div class="jp-volume-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all pull-right" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
-                            </li>
-
-                        </ul>
-
-                        <div class="jp-clearboth"></div>
-
-                        <div class="jp-no-solution" style="display: none;">
-                            <span>Update Required</span>
-                            To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-                        </div>
-
-
-                    </div>
                 </div>
 
             </div>
@@ -384,13 +301,7 @@
                     </section>
                     <section id="sidebar" class="col-sm-4">
 
-                        <aside class="widget">
 
-                            <a href="http://forum.japanfm.fr">
-                                <img src="{{ asset('assets/img/forum300.jpg') }}" alt="Rejoignez notre forum">
-                            </a>
-
-                        </aside>
 
 
 
@@ -410,19 +321,7 @@
                                 });
                             </script>
 
-                            <div class="widget-tabs-title-container">
-                                <ul class="widget-tab-titles-top">
-                                    <li class="active"><h5><a href="#widget-tab4-content">Top 10 Music</a></h5></li>
-                                    <li class=""><h5><a href="#widget-tab5-content">Top 10 OST</a></h5></li>
-                                    <li class=""><h5><a href="#widget-tab6-content">Top Manga</a></h5></li>
-                                </ul>
-                            </div>
 
-                            <div class="tabs-content-container">
-                                {{ render(controller("VyperSiteBundle:Top:topMusics")) }}
-                                {{ render(controller("VyperSiteBundle:Top:topOsts")) }}
-                                {{ render(controller("VyperSiteBundle:Top:topMangas")) }}
-                            </div>
                         </aside>
 
                         {% if article is defined %}
@@ -521,74 +420,12 @@
     </div>
 </div>
 
-<div class="add-mobile">
-    <a id="add-mobile-link" href="#">
-        <img src="{{ asset('assets/img/japanFM-app-320x50.jpg') }}" alt="Application Japan FM">
-    </a>
-</div>
 
-<script>
 
-    $(document).ready(function() {
-        var isMobile = {
-            Android: function() {
-                return navigator.userAgent.match(/Android/i);
-            },
-            BlackBerry: function() {
-                return navigator.userAgent.match(/BlackBerry/i);
-            },
-            iOS: function() {
-                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-            },
-            Opera: function() {
-                return navigator.userAgent.match(/Opera Mini/i);
-            },
-            Windows: function() {
-                return navigator.userAgent.match(/IEMobile/i);
-            },
-            any: function() {
-                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-            }
-
-        };
-
-        if ( isMobile.Android() ) {
-            var device = 'android';
-        } else if(isMobile.iOS()) {
-            var device = 'ios';
-        } else {
-            var device = 'any';
-        }
-
-        $.ajax({
-            type: "POST",
-            url: "{{ path('get_device') }}",
-
-            data:{
-                device : device
-            },
-            success: function(data){
-
-                $('#add-mobile-link').attr("href", data);
-            }
-        });
-    });
-
-</script>
 
 <footer>
     <div class="container">
-        <div class="leaderboard">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- footer-leaderboard -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:728px;height:90px"
-                 data-ad-client="ca-pub-3070362287154347"
-                 data-ad-slot="5037213511"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+
 {#
         <div class="row">
             <div class="col-md-3 footer-top">
@@ -614,9 +451,7 @@
                     <li>
                         <a href="{{ path('cgu') }}">CG d'Utilisation</a>
                     </li>
-                    <li>
-                        <a href="{{ path('cgu_sms') }}">CG des Concours SMS</a>
-                    </li>
+
                     <li>
 
                     </li>
@@ -625,13 +460,7 @@
         </div>
 
     </div>
-    <div class="container-fluid footer-info">
-        <div class="row">
-            <div class="col-md-12">
-                ©2014 Japan FM est une marque déposée par <a href="#">IGAM Entertainment</a>
-            </div>
-        </div>
-    </div>
+
 </footer>
 
 
