@@ -323,6 +323,7 @@
                 <li{% if active_tour  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_tours') }}"><i class="fa fa-globe"></i><span class="hidden-sm"> Tours</span></a></li>
                 <li{% if active_event  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_events') }}"><i class="fa fa-calendar"></i><span class="hidden-sm"> Events</span></a></li>
 
+                {#
                 <li{% if active_editable is defined %} class="active"{% endif %}>
                     <a class="dropmenu" href="#"><i class="fa fa-edit"></i><span class="hidden-sm"> Pages</span></a>
                     <ul>
@@ -330,6 +331,7 @@
                         <li><a class="submenu" href="{{ path('admin_show_partners') }}"><i class="fa fa-edit"></i><span class="hidden-sm"> Partners</span></a></li>
                     </ul>
                 </li>
+                #}
             {% endif %}
             <li><a href="{{ path('fos_user_security_logout') }}"><i class="icon-lock"></i><span class="hidden-sm"> Logout</span></a></li>
         </ul>
