@@ -32,6 +32,7 @@ class AdminEditableController extends AdminCommonController {
         $editables     = $em->getRepository('VyperSiteBundle:Editable')->findAll();
 
         $view->set('editables', $editables);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_editable", true);
 
         return $this->render('VyperSiteBundle:AdminEditable:showAll.html.twig', $view->getView());
