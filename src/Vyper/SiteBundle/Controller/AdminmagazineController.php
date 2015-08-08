@@ -15,6 +15,11 @@ use Vyper\SiteBundle\Form\MagazineType;
 
 class AdminMagazineController extends AdminCommonController {
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addMagazineAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -52,7 +57,7 @@ class AdminMagazineController extends AdminCommonController {
      * @param Request $request
      * @param Magazine $magazine
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateMagazineAction(Request $request, Magazine $magazine)
     {
@@ -91,6 +96,10 @@ class AdminMagazineController extends AdminCommonController {
         return $this->render('VyperSiteBundle:Adminmagazine:updateMagazine.html.twig', $view->getView());
     }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function showMagazinesAction()
     {
         $view = $this->container->get('saysa_view');
