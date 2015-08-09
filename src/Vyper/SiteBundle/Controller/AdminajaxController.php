@@ -308,4 +308,21 @@ class AdminAjaxController extends AdminCommonController {
 
         return new Response();
     }
+
+    public function switchArticlePublishedAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('VyperSiteBundle:Article')->find($request->request->get('article_id'));
+
+        if ($request->request->get('checkboxValue') == "true") {
+            $article->setLive(true);
+        } else {
+            $article->setLive(false);
+        }
+
+        $em->persist($article);
+        $em->flush();
+
+        return new Response();
+    }
 } 

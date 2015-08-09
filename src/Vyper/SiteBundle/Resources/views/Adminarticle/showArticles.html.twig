@@ -56,7 +56,7 @@
                                 <tr>
                                     <td>{{ article.getId }}</td>
                                     <td><input type="checkbox" {% if user_role != 'admin' %}disabled="disabled"{% endif %} class="hightlight" data-articleid="{{ article.getId }}" {% if article.getHighlight == 1 %}checked="checked"{% endif %} /></td>
-                                    <td><input type="checkbox" {% if user_role != 'admin' %}disabled="disabled"{% endif %} class=""  {% if article.getLive == 1 %}checked="checked"{% endif %} /></td>
+                                    <td><input type="checkbox" {% if user_role != 'admin' %}disabled="disabled"{% endif %} class="published"  data-articleid="{{ article.getId }}" {% if article.getLive == 1 %}checked="checked"{% endif %} /></td>
                                     <td>{{ article.getModified|date('Y-m-d') }}</td>
                                     <td>{{ article.getArticleType.getName }}</td>
                                     <td>{{ article.getTitle }}</td>
@@ -236,6 +236,28 @@
         <script>
 
             $(document).ready(function() {
+
+                $( ".published" ).on("click", function() {
+
+                    var articleId = $(this).data('articleid');
+                    var checkboxValue = $(this).is(':checked');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('ajax_switch_article_published') }}",
+                        dataType: "json",
+                        data:{
+                            article_id : articleId,
+                            checkboxValue : checkboxValue
+                        },
+                        success: function(data){
+                            console.log("Published switched :)");
+                        }
+                    });
+
+                });
+
+
                 $( ".hightlight" ).on("click", function() {
 
                     var articleId = $(this).data('articleid');

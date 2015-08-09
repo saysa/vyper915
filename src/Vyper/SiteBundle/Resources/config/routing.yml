@@ -417,6 +417,10 @@ ajax_switch_article_highlight:
     path:     /_admin_/ajax/switch_article_highlight
     defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticleHighlight }
 
+ajax_switch_article_published:
+    path:     /_admin_/ajax/switch_article_published
+    defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticlePublished }
+
 ajax_articleArtistLink:
     path:     /_admin_/ajax/article_artist_link
     defaults: { _controller: VyperSiteBundle:AdminAjax:articleArtistLink }
