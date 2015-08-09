@@ -115,7 +115,6 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Date</th>
                                 <th>Title</th>
                             </tr>
                             </thead>
@@ -124,7 +123,6 @@
                             {% for tourType in tourTypes %}
                                 <tr>
                                     <td>{{ tourType.getId }}</td>
-                                    <td>{{ tourType.getModified|date('Y-m-d') }}</td>
                                     <td>{{ tourType.getName }}</td>
                                 </tr>
                             {% endfor %}
