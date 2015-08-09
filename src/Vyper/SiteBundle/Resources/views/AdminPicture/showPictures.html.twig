@@ -38,6 +38,7 @@
                                 <th>Date</th>
                                 <th>Album</th>
                                 <th>Name</th>
+                                <th>Credit</th>
                                 <th>Preview</th>
                                 <th>Modify</th>
                                 <th>Delete</th>
@@ -51,6 +52,7 @@
                                     <td>{{ picture.getModified|date('Y-m-d') }}</td>
                                     <td>{{ picture.getAlbum.getTitle }}</td>
                                     <td>{{ picture.getName }}</td>
+                                    <td>{{ picture.getPhotoCredit }}</td>
                                     <td><a class="btn btn-success" href="{{ asset(picture.getPath()) }}"><i class="icon-zoom-in "></i></a></td>
                                     <td><a class="btn btn-info" href="#">
                                             <i class="icon-edit "></i>
