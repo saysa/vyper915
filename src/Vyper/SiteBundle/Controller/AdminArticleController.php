@@ -89,6 +89,7 @@ class AdminArticleController extends AdminCommonController {
         }
 
         $view->set('form', $form->createView());
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_article", true);
 
         return $this->render('VyperSiteBundle:AdminArticle:addArticle.html.twig', $view->getView());
@@ -140,6 +141,7 @@ class AdminArticleController extends AdminCommonController {
         $view
             ->set('article', $article)
             ->set('artists', $artists)
+            ->set('user_role', $this->getUserRole())
             ->set('active_article', true)
             ->set('form', $form->createView())
         ;
