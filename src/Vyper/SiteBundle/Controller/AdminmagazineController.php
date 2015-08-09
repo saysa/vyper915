@@ -41,6 +41,9 @@ class AdminMagazineController extends AdminCommonController {
 
                 $em->persist($magazine);
                 $em->flush();
+
+                $request->getSession()->getFlashBag()->add('info', 'Magazine added.');
+                return $this->redirect($this->generateUrl('admin_show_magazines'));
             }
 
         }
