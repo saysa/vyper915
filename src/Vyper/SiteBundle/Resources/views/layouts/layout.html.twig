@@ -29,11 +29,13 @@
 
     {% block social_card %}{% endblock %}
 
-    {# Latest compiled and minified CSS #}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
-    {# Optional theme #}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    {% stylesheets filter='cssrewrite'
+        'bundles/vypersite/foundation/vyper/stylesheets/app.css'
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 
     {% stylesheets filter='cssrewrite'
     'assets/css/fullcalendar/fullcalendar.css'
