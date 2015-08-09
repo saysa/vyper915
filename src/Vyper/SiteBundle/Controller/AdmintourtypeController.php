@@ -40,6 +40,7 @@ class AdminTourTypeController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_tour', true)
         ;
 
@@ -71,6 +72,7 @@ class AdminTourTypeController extends AdminCommonController {
 
         $view
             ->set('tourType', $tourType)
+            ->set('user_role', $this->getUserRole())
             ->set('active_tour', true)
             ->set('form', $form->createView())
         ;
@@ -93,6 +95,7 @@ class AdminTourTypeController extends AdminCommonController {
 
         $view->set('tours',       $tours);
         $view->set('tourTypes',       $tourTypes);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_tour", true);
 
         return $this->render('VyperSiteBundle:Admintour:showTours.html.twig', $view->getView());
