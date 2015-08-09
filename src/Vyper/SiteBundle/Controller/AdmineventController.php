@@ -101,6 +101,7 @@ class AdminEventController extends AdminCommonController {
         $events  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Event')->myFindAll();
 
         $view->set('events',       $events);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_event", true);
 
         return $this->render('VyperSiteBundle:Adminevent:showEvents.html.twig', $view->getView());

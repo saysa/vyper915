@@ -86,6 +86,7 @@ class AdminTourController extends AdminCommonController {
 
         $view->set('tours',       $tours);
         $view->set('tourTypes',       $tourTypes);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_tour", true);
 
         return $this->render('VyperSiteBundle:Admintour:showTours.html.twig', $view->getView());

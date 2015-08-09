@@ -83,6 +83,7 @@ class AdminLocationController extends AdminCommonController {
         $locations  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Location')->myFindAll();
 
         $view->set('locations',       $locations);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_location", true);
 
         return $this->render('VyperSiteBundle:Adminlocation:showLocations.html.twig', $view->getView());

@@ -32,6 +32,7 @@ class AdminArtistController extends AdminCommonController {
         $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
 
         $view->set('artists', $artists);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_artist", true);
 
         return $this->render('VyperSiteBundle:Adminartist:showArtists.html.twig', $view->getView());

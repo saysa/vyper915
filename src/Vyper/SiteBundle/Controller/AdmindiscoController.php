@@ -111,6 +111,7 @@ class AdminDiscoController extends AdminCommonController {
         $discos  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Disco')->myFindAll();
 
         $view->set('discos',       $discos);
+        $view->set('user_role', $this->getUserRole());
         $view->set("active_disco", true);
 
         return $this->render('VyperSiteBundle:Admindisco:showDiscos.html.twig', $view->getView());
