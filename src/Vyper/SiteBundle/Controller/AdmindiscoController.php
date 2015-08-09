@@ -128,4 +128,22 @@ class AdminDiscoController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:Admindisco:showDiscos.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @param Disco $disco
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction(Request $request, Disco $disco)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($disco);
+        $em->flush();
+
+        $request->getSession()->getFlashBag()->add('info', 'Disco deleted.');
+
+        return $this->redirect($this->generateUrl('admin_show_discos'));
+    }
 } 
