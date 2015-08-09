@@ -49,7 +49,7 @@
                                     <td>{{ artist.getModified|date('Y-m-d') }}</td>
                                     <td>{{ artist.getName }}</td>
                                     <td><a class="btn btn-info" href="{{ path('admin_update_artist', {'id': artist.getId}) }}"><i class="icon-edit "></i>  </a></td>
-                                    <td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_artist', {'id': artist.getId}) }}"><i class="icon-trash "></i> </a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>

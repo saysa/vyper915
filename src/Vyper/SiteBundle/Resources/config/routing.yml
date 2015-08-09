@@ -395,7 +395,11 @@ admin_update_artist:
     requirements:
         id: \d+
 
-
+admin_delete_artist:
+    path:     /_admin_/artist/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminArtist:delete }
+    requirements:
+        id: \d+
 
 ajax_vyper:
     path:    /ajax/vyper-jmusic-magazines

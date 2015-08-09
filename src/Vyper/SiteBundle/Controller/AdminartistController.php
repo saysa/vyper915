@@ -120,4 +120,22 @@ class AdminArtistController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:Adminartist:updateArtist.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @param Artist $artist
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction(Request $request, Artist $artist)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($artist);
+        $em->flush();
+
+        $request->getSession()->getFlashBag()->add('info', 'Artist deleted.');
+
+        return $this->redirect($this->generateUrl('admin_show_artists'));
+    }
 } 
