@@ -88,10 +88,11 @@ class AdminTourTypeController extends AdminCommonController {
     public function showToursAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
+        $em = $this->getDoctrine()->getManager();
 
         // Get all the articles not deleted
-        $tours  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Tour')->myFindAll();
-        $tourTypes = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:TourType')->myFindAll();
+        $tours  = $em->getRepository('VyperSiteBundle:Tour')->myFindAll();
+        $tourTypes = $em->getRepository('VyperSiteBundle:TourType')->myFindAll();
 
         $view->set('tours',       $tours);
         $view->set('tourTypes',       $tourTypes);
