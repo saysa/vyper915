@@ -7,6 +7,8 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
+        define("APP_PATH", dirname(dirname(__FILE__)));
+
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
