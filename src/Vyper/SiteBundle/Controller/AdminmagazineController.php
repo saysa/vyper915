@@ -118,4 +118,22 @@ class AdminMagazineController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:Adminmagazine:showMagazines.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @param Magazine $magazine
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction(Request $request, Magazine $magazine)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($magazine);
+        $em->flush();
+
+        $request->getSession()->getFlashBag()->add('info', 'Magazine deleted.');
+
+        return $this->redirect($this->generateUrl('admin_show_magazines'));
+    }
 } 

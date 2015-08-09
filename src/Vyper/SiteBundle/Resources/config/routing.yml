@@ -229,6 +229,12 @@ admin_update_magazine:
     requirements:
         id: \d+
 
+admin_delete_magazine:
+    path:     /_admin_/magazine/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminMagazine:delete }
+    requirements:
+        id: \d+
+
 admin_update_flashnew:
     path:     _admin_/flashnew/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminFlashnew:updateFlashnew }
