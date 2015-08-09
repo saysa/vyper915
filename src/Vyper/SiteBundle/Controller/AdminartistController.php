@@ -68,6 +68,7 @@ class AdminArtistController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_artist', true)
         ;
 
