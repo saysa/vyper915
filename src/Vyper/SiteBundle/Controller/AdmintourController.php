@@ -104,4 +104,29 @@ class AdminTourController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:Admintour:showTours.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @param Tour $tour
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction(Request $request, Tour $tour)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $events = $em->getRepository('VyperSiteBundle:Event')->getByTourId($tour->getId());
+
+        if (sizeof($events)>0) {
+            $request->getSession()->getFlashBag()->add('info', 'The Tour is used in Event.');
+        } else {
+
+            $em->remove($tour);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('info', 'Tour deleted.');
+        }
+
+        return $this->redirect($this->generateUrl('admin_show_tours'));
+    }
 } 

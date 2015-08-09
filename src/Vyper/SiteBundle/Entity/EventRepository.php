@@ -25,6 +25,19 @@ class EventRepository extends EntityRepository
         return $results;
     }
 
+    public function getByTourId($tourID)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.tour = :tourID')
+            ->setParameter('tourID', $tourID)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('p');
