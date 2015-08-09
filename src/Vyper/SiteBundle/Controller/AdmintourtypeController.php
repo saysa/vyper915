@@ -15,6 +15,11 @@ use Vyper\SiteBundle\Form\TourTypeType;
 
 class AdminTourTypeController extends AdminCommonController {
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addTourTypeAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -45,7 +50,7 @@ class AdminTourTypeController extends AdminCommonController {
      * @param Request $request
      * @param TourType $tourType
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateTourTypeAction(Request $request, TourType $tourType)
     {
@@ -73,6 +78,11 @@ class AdminTourTypeController extends AdminCommonController {
         return $this->render('VyperSiteBundle:Admintourtype:updateTourType.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function showToursAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
