@@ -81,20 +81,15 @@ class AdminPictureController extends AdminCommonController {
 
         $articles = $em->getRepository('VyperSiteBundle:Article')->getByPictureId($picture->getId());
         $artists = $em->getRepository('VyperSiteBundle:Artist')->getByPictureId($picture->getId());
-        $tops = $em->getRepository('VyperSiteBundle:Top')->getPictureTopByPictureId($picture->getId());
         $partners = $em->getRepository('VyperSiteBundle:Partner')->getByPictureId($picture->getId());
         $magazines = $em->getRepository('VyperSiteBundle:Magazine')->getByPictureId($picture->getId());
         $videos = $em->getRepository('VyperSiteBundle:Video')->getByPictureId($picture->getId());
-        $programType = $em->getRepository('VyperSiteBundle:ProgramType')->getByPictureId($picture->getId());
-        $podcasts = $em->getRepository('VyperSiteBundle:Podcast')->getByPictureId($picture->getId());
         $events = $em->getRepository('VyperSiteBundle:Event')->getByPictureId($picture->getId());
         $discos = $em->getRepository('VyperSiteBundle:Disco')->getByPictureId($picture->getId());
 
 
 
-        if (sizeof($tops)>0) {
-            $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Top.');
-        } else if (sizeof($articles)>0) {
+        if (sizeof($articles)>0) {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Article.');
         } else if (sizeof($artists)>0) {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Artist.');
@@ -104,10 +99,6 @@ class AdminPictureController extends AdminCommonController {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Magazine.');
         } else if (sizeof($videos)>0) {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Video.');
-        } else if (sizeof($programType)>0) {
-            $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Program Type.');
-        } else if (sizeof($podcasts)>0) {
-            $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Podcast.');
         } else if (sizeof($events)>0) {
             $request->getSession()->getFlashBag()->add('info', 'The Picture is used in Event.');
         } else if (sizeof($discos)>0) {
