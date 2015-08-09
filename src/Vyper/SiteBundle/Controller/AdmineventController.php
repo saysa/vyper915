@@ -50,6 +50,7 @@ class AdminEventController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_event', true)
         ;
 
@@ -91,6 +92,7 @@ class AdminEventController extends AdminCommonController {
         $view
             ->set('event', $event)
             ->set('artists', $artists)
+            ->set('user_role', $this->getUserRole())
             ->set('active_event', true)
             ->set('form', $form->createView())
         ;
