@@ -15,6 +15,11 @@ use Vyper\SiteBundle\Form\DiscoType;
 
 class AdminDiscoController extends AdminCommonController {
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addDiscoAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -55,7 +60,7 @@ class AdminDiscoController extends AdminCommonController {
      * @param Request $request
      * @param Disco $disco
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateDiscoAction(Request $request, Disco $disco)
     {
@@ -103,6 +108,11 @@ class AdminDiscoController extends AdminCommonController {
         return $this->render('VyperSiteBundle:Admindisco:updateDisco.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function showDiscosAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
