@@ -42,6 +42,7 @@ class AdminLocationController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_location', true)
         ;
 
@@ -73,6 +74,7 @@ class AdminLocationController extends AdminCommonController {
 
         $view
             ->set('location', $location)
+            ->set('user_role', $this->getUserRole())
             ->set('active_location', true)
             ->set('form', $form->createView())
         ;
