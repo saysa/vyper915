@@ -117,8 +117,6 @@
                                 <th>ID</th>
                                 <th>Date</th>
                                 <th>Title</th>
-                                <th>Modify</th>
-                                <th>Delete</th>
                             </tr>
                             </thead>
 
@@ -128,8 +126,6 @@
                                     <td>{{ tourType.getId }}</td>
                                     <td>{{ tourType.getModified|date('Y-m-d') }}</td>
                                     <td>{{ tourType.getName }}</td>
-                                    <td><a class="btn btn-info" href="{{ path('admin_update_tourType', {'id': tourType.getId}) }}"><i class="icon-edit "></i></a></td>
-                                    <td><a class="btn btn-danger" href="#"><i class="icon-trash "></i></a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>
