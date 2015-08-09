@@ -37,6 +37,7 @@
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
+    {#
     {% stylesheets filter='cssrewrite'
     'assets/css/fullcalendar/fullcalendar.css'
     'assets/css/owl-carousel/owl.carousel.css'
@@ -52,7 +53,7 @@
 
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-
+    #}
 {#
     <!-- Fullcalendar -->
     <link rel="stylesheet" href="{{ asset('assets/css/fullcalendar/fullcalendar.css') }}" type="text/css" />
@@ -109,481 +110,130 @@
 
 </head>
 <body>
-<!--[if lt IE 9]>
-<p class="chromeframe">Notre site est optimisé pour les navigateurs plus récents. <a data-bypass href="http://browsehappy.com/">Mets le tien à jour !</a></p>
-<![endif]-->
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=1470537739827941";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 
-<a href="#header" id="top-link"><i class="fa fa-chevron-up"></i> </a>
-
-<header id="header" class="container-fluid">
-    <div class="row">
-        <section class="top main-color-bg col-lg-12">
-            <div class="content-wrap">
-                <div class="left">
-                    <ul class="list">
-
-
-                        <li>
-                            <i class="fa fa-star"></i>
-                            <a href="{{ path('a_propos') }}">A propos</a>
-                        </li>
-
-
-
-                        <li>
-                            <i class="fa fa-envelope"></i>
-                            <a href="{{ path('contact') }}">Contact</a>
-                        </li>
-
-                        <li>
-                            <i class="fa fa-flag"></i>
-                            <a href="{{ path('partenaires') }}">Partenaires</a>
-                        </li>
-
-                        <li>
-                            <i class="fa fa-calendar"></i>
-                            <a href="{{ path('showAllEvent') }}">Events</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-        <!-- /top -section -->
-
-        <section class="main-color-bg">
-            <div id="japanfm-news" class="container">
-
-                <div class="row">
-                    <div class="col-md-9 left">
-                        <div id="flash-news" class="ticker" style="display: block;">
-
-                            <div class="title second-color-bg">
-
-                                <h6>Japan FM news</h6>
-                            </div>
-
-
-
-                            {{ render(controller("VyperSiteBundle:Flashnew:tickerlist")) }}
-
-                        </div>
-                    </div>
-                    <div class="col-md-3 right">
-                        <div class="search pull-right">
-                            <script>
-                                (function() {
-                                    var cx = '001775883577770650674:f0b74h1hzdo';
-                                    var gcse = document.createElement('script');
-                                    gcse.type = 'text/javascript';
-                                    gcse.async = true;
-                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                                            '//www.google.com/cse/cse.js?cx=' + cx;
-                                    var s = document.getElementsByTagName('script')[0];
-                                    s.parentNode.insertBefore(gcse, s);
-                                })();
-                            </script>
-                            <gcse:search></gcse:search>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </section>
-
-        <section id="bar-fixed" class="container">
-            <div id="jp_container_1" class="jp-state-looped jp-state-playing">
-
-                <div class="row">
-                    <div class="col-lg-7 left">
-                        <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata" src="http://radio.japanfm.fr/japan"></audio></div>
-
-                        <div id="logo" class="title">
-                            <a href="/" title="Japan FM"><img src="{{ asset('assets/img/logo.png') }}" width="100%" alt="Japan FM" /></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-        <!-- /ticker-section -->
-    </div>
-</header>
-
-<div id="casing" class="container-fluid">
-    {# <a href="http://www.japan-expo-sud.com/fr/"><span>Japan Expo Sud</span></a> #}
-    <div id="casing-top"></div>
-    <div id="main-container" class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row">
-
-                    <div id="spacer">
-                        &nbsp;
-                    </div>
-
-
-                    <!-- Static navbar -->
-                    <nav id="nav-fixed" class="navbar navbar-default primary-menu" role="navigation">
-
-                        <div class="container-fluid">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                    <i class="fa fa-list"></i>
-                                    <span class="sr-only">Toggle navigation</span>
-                                </button>
-                            </div>
-                            <div id="navbar" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav">
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home {% if front_page_index is defined %} current_page_item{% endif %}"><a href="{{ path('index') }}" title="Accueil">Accueil</a></li>
-
-
-                                    <li><a href="{{ path('showArtist', {'id': 79, 'slug': 'shoko-nakagawa'}) }}">Marraine</a></li>
-                                    <li class="q{% if current_actualites is defined %} current_page_item{% endif %}"><a href="{{ path('shoAllArticles') }}">Actualités</a></li>
-                                    <li class="dropdown {% if current_musique is defined %}current_page_item{% endif %}">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Musique <span class="caret"></span></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="{{ path('musique-live-reports') }}">Live Report</a></li>
-                                            <li><a href="{{ path('musique-chroniques') }}">Review</a></li>
-                                            <li><a href="{{ path('showTheme', {'id': 4, 'slug': 'top-oricon'}) }}">Oricon</a></li>
-                                            <li><a href="{{ path('showAllArtist') }}">Artistes</a></li>
-                                            <li><a href="{{ path('musique-news') }}">Archives</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Articles <span class="caret"></span></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="{{ path('jeuxvideos') }}">Jeux vidéos</a></li>
-                                            <li><a href="{{ path('culture') }}">Culture</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="q{% if current_magazine is defined %} current_page_item{% endif %}"><a href="{{ path('showAllMagazine') }}"><i class="fa fa-book"></i> Vyper</a></li>
-
-
-                                </ul>
-
-                            </div><!--/.nav-collapse -->
-                        </div><!--/.container-fluid -->
-                    </nav>
-
-                    {#
-                    {{ render(controller("VyperSiteBundle:Article:headerCarousel")) }}
-                    #}
-                    <!--/.Menu + Carousel -->
-                </div>
-
-
-                <div class="row" id="wrapper-2-big">
-                    <section class="col-sm-8" id="push">
-                        <!-- Start template -->
-                        {% block content %}{% endblock %}
-                        <!-- End template -->
-                    </section>
-                    <section id="sidebar" class="col-sm-4">
-
-
-
-
-
-
-
-                        <aside class="widget widget_tabs">
-                            <script>
-                                jQuery(document).ready(function($) {
-                                    $(".widget-tab-titles-top li").click(function() {
-                                        $(".widget-tab-titles-top li").removeClass('active');
-                                        $(this).addClass("active");
-                                        $(".tab-content-top").hide();
-                                        var selected_tab = $(this).find("a").attr("href");
-                                        $(selected_tab).fadeIn();
-                                        return false;
-                                    });
-                                });
-                            </script>
-
-
-                        </aside>
-
-                        {% if article is defined %}
-                            {% if article.artists|length > 0 %}
-                                <aside class="widget fiche-group">
-                                    {% for artist in article.artists %}
-                                        <h4>{{ artist.name }}</h4>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <img  src="{{ asset(artist.picture.getPath('75-75')) }}" alt="{{ artist.name }}">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <ul>
-                                                    <li><a href="#">Biographie</a></li>
-                                                    <li><a href="#">Discographie</a></li>
-                                                    <li><a href="#">Site officiel</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    {% endfor %}
-                                </aside>
-                            {% endif %}
-                        {% endif %}
-
-
-                        <aside id="fairpixels_recent_popular_widget-2" class="widget widget_tabs">
-                            <script>
-                                jQuery(document).ready(function($) {
-                                    $(".widget-tab-titles li").click(function() {
-                                        $(".widget-tab-titles li").removeClass('active');
-                                        $(this).addClass("active");
-                                        $(".tab-content").hide();
-                                        var selected_tab = $(this).find("a").attr("href");
-                                        $(selected_tab).fadeIn();
-                                        return false;
-                                    });
-                                });
-                            </script>
-
-                            <div class="widget-tabs-title-container">
-                                <ul class="widget-tab-titles">
-                                    <li class="active"><h5><a href="#widget-tab1-content">Récents</a></h5></li>
-                                    <li class=""><h5><a href="#widget-tab2-content">Populaires</a></h5></li>
-                                    <li class=""><h5><a href="#widget-tab3-content">Evénements</a></h5></li>
-                                </ul>
-                            </div>
-                            <div class="tabs-content-container">
-
-                                {{ render(controller("VyperSiteBundle:Article:recentArticles")) }}
-                                {{ render(controller("VyperSiteBundle:Article:popularArticles")) }}
-
-
-
-                                <div id="widget-tab3-content" class="tab-content">
-                                    <ul class="list comment-list">
-
-
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div id="widget-posts-tiles">
-
-                            </div><!-- /tiles -->
-                        </aside>
-
-                        {{ render(controller("VyperSiteBundle:Event:nextEvent")) }}
-
-
-
-
-
-
-                        <aside class="widget">
-                            <div class="widget-title"><h4>Suivez-nous</h4></div>
-                            <div class="fb-like-box" data-href="https://www.facebook.com/japanfm" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
-                        </aside>
-
-                        <aside class="widget">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- sidebar -->
-                            <ins class="adsbygoogle"
-                                 style="display:inline-block;width:300px;height:250px"
-                                 data-ad-client="ca-pub-3070362287154347"
-                                 data-ad-slot="7520447913"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        </aside>
-
-
-                    </section>
-                </div>
-            </div>
+<div class="row">
+    <div class="large-12 columns">
+        <div class="nav-bar right">
+            <ul class="button-group">
+                <li><a href="#" class="button">Link 1</a></li>
+                <li><a href="#" class="button">Link 2</a></li>
+                <li><a href="#" class="button">Link 3</a></li>
+                <li><a href="#" class="button">Link 4</a></li>
+            </ul>
         </div>
+        <h1>Blog <small>This is my blog. It's awesome.</small></h1>
+        <hr/>
     </div>
 </div>
 
 
 
 
-<footer>
-    <div class="container">
 
 
-        <div class="row">
-            <div class="col-md-12 footer">
-                <ul>
-                    <li>
-                        <a href="{{ path('mentions_legales') }}">Mentions légales</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('cgu') }}">CG d'Utilisation</a>
-                    </li>
+<div class="row">
 
-                    <li>
 
-                    </li>
-                </ul>
+    <div class="large-9 columns" role="content">
+
+        <article>
+
+            <h3><a href="#">Blog Post Title</a></h3>
+            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
+                    <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+                </div>
+                <div class="large-6 columns">
+                    <img src="http://placehold.it/400x240&text=[img]"/>
+                </div>
             </div>
-        </div>
+
+            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+
+            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+
+        </article>
+
+        <hr/>
+
+        <article>
+
+            <h3><a href="#">Blog Post Title</a></h3>
+            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
+
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
+                    <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+                </div>
+                <div class="large-6 columns">
+                    <img src="http://placehold.it/400x240&text=[img]"/>
+                </div>
+            </div>
+
+            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+
+            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
+
+        </article>
 
     </div>
 
+
+
+
+
+
+    <aside class="large-3 columns">
+
+        <h5>Categories</h5>
+        <ul class="side-nav">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Fun</a></li>
+            <li><a href="#">Weasels</a></li>
+        </ul>
+
+        <div class="panel">
+            <h5>Featured</h5>
+            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+            <a href="#">Read More →</a>
+        </div>
+
+    </aside>
+
+
+</div>
+
+
+
+
+
+
+<footer class="row">
+    <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+            <div class="large-6 columns">
+                <p>© Copyright no one at all. Go to town.</p>
+            </div>
+            <div class="large-6 columns">
+                <ul class="inline-list right">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
 
-
-
-{# Marquee logic #}
-<script>
-    $(document).ready(function() {
-        $('.marquee').marquee({
-            duration: 10000,
-            pauseOnHover: true
-        });
-    });
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-{# Include all compiled plugins (below), or include individual files as needed #}
-{# Latest compiled and minified JavaScript #}
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-{# Marquee #}
-<script type='text/javascript' src='http://cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
-
-
-
-{# Jquery UI #}
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
-
-
-
-{% javascripts
-    'assets/js/vendor/moment.min.js'
-    'assets/js/fullcalendar/fullcalendar.min.js'
-    'assets/js/owl-carousel/owl.carousel.min.js'
-    'assets/js/prettyPhoto/prettyPhoto.js'
-    'assets/bootstrap-star-rating/js/star-rating.min.js'
-    'assets/js/jquery.isotope.js'
-%}
-
-
-
-<script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
-
-{#
-<!-- Full calendar -->
-<script src="{{ asset('assets/js/vendor/moment.min.js') }}"></script>
-<script src="{{ asset('assets/js/fullcalendar/fullcalendar.min.js') }}"></script>
-
-<!-- Owl Carousel -->
-<script src="{{ asset('assets/js/owl-carousel/owl.carousel.min.js') }}"></script>
-
-
-
-<!-- Pretty Photo -->
-<script type='text/javascript' src='{{ asset('assets/js/prettyPhoto/prettyPhoto.js') }}'></script>
-
-<!-- Star Rating -->
-<script src="{{ asset('assets/bootstrap-star-rating/js/star-rating.min.js') }}" type="text/javascript"></script>
-
-
-
-<!-- Isotope -->
-<script type='text/javascript' src='{{ asset('assets/js/jquery.isotope.js') }}'></script>
-
-
-<!-- Jplayer -->
-<script type="text/javascript" src="{{ asset('assets/js/jplayer/jfm-jplayer.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/jplayer/jquery.jplayer.min.js') }}"></script>
-<script type="text/javascript" src="{{  asset('assets/js/jplayer/jquery.jplayer.inspector.min.js') }}"></script>
-#}
-
-
-
-{# Top Scroll #}
-<script>
-
-
-    $(document).ready(function(){
-
-        //Check to see if the window is top if not then display button
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > 100) {
-                $('#top-link').fadeIn();
-            } else {
-                $('#top-link').fadeOut();
-            }
-        });
-
-        //Click event to scroll to top
-        $('#top-link').click(function(){
-            $('html, body').animate({scrollTop : 0},800);
-            return false;
-        });
-
-    });
-
-
-</script>
-
-
-
-{# Nav fixed #}
-<script>
-
-
-    $(document).ready(function(){
-
-        $(function() {
-            $(window).scroll(function(){
-                if ($(this).scrollTop() > 400) {
-                    $('#bar-fixed').hide();
-                    $('#nav-fixed').addClass('fixed-the-nav');
-                    $('#logo').addClass('logo-soft');
-                    $('#player-button').removeClass('rock_controls_default').addClass('rock_controls');
-                    $('#flash-news').hide();
-                    $('#spacer').show();
-                    $('#header-social').hide();
-                } else {
-                    $('#bar-fixed').show();
-                    $('#nav-fixed').removeClass('fixed-the-nav');
-                    $('#logo').removeClass('logo-soft');
-                    $('#player-button').removeClass('rock_controls').addClass('rock_controls_default');
-                    $('#flash-news').show();
-                    $('#spacer').hide();
-                    $('#header-social').show();
-                }
-            });
-        });
-
-    });
-
-
-</script>
 
 
 </body>
