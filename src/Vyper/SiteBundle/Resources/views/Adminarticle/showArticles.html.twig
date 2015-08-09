@@ -43,7 +43,7 @@
                                 <th>Date</th>
                                 <th>Type</th>
                                 <th>Title</th>
-                                <th>Preview</th>
+                                <th>User</th>
                                 <th>Modify</th>
                                 {% if user_role == 'admin' %}
                                 <th>Delete</th>
@@ -60,7 +60,7 @@
                                     <td>{{ article.getModified|date('Y-m-d') }}</td>
                                     <td>{{ article.getArticleType.getName }}</td>
                                     <td>{{ article.getTitle }}</td>
-                                    <td><a class="btn btn-success" href="#"><i class="icon-zoom-in "></i></a></td>
+                                    <td>{{ article.getUser.getUsername }}</td>
                                     <td><a class="btn btn-info" href="{{ path('admin_update_article', {'id': article.getId}) }}"><i class="icon-edit "></i></a></td>
                                     {% if user_role == 'admin' %}
                                     <td><a class="btn btn-danger" href="{{ path('admin_delete_article', {'id': article.getId}) }}"><i class="icon-trash "></i> </a></td>
