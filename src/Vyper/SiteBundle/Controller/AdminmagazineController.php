@@ -47,6 +47,7 @@ class AdminMagazineController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_magazine', true)
         ;
 
@@ -89,6 +90,7 @@ class AdminMagazineController extends AdminCommonController {
         $view
             ->set('magazine', $magazine)
             ->set('artists', $artists)
+            ->set('user_role', $this->getUserRole())
             ->set('active_magazine', true)
             ->set('form', $form->createView())
         ;
