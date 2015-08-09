@@ -19,7 +19,7 @@ class AdminArtistController extends AdminCommonController {
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function showArtistsAction(Request $request)
     {
@@ -38,6 +38,11 @@ class AdminArtistController extends AdminCommonController {
         return $this->render('VyperSiteBundle:Adminartist:showArtists.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addArtistAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -79,7 +84,7 @@ class AdminArtistController extends AdminCommonController {
      * @param Request $request
      * @param Artist $artist
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateArtistAction(Request $request, Artist $artist)
     {
