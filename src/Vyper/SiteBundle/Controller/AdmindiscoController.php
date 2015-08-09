@@ -50,6 +50,7 @@ class AdminDiscoController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_disco', true)
         ;
 
@@ -102,6 +103,7 @@ class AdminDiscoController extends AdminCommonController {
             ->set('artists', $artists)
             ->set('titles', $titles)
             ->set('active_disco', true)
+            ->set('user_role', $this->getUserRole())
             ->set('form', $form->createView())
         ;
 
