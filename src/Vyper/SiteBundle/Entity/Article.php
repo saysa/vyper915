@@ -647,6 +647,7 @@ class Article
     {
 
         $this->setDeleted(false);
+        $this->setLive(false);
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
     }
