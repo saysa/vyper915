@@ -40,7 +40,6 @@
                                 <th>Name</th>
                                 <th>Credit</th>
                                 <th>Preview</th>
-                                <th>Modify</th>
                                 <th>Delete</th>
                             </tr>
                             </thead>
@@ -54,9 +53,6 @@
                                     <td>{{ picture.getName }}</td>
                                     <td>{{ picture.getPhotoCredit }}</td>
                                     <td><a class="btn btn-success" href="{{ asset(picture.getPath()) }}"><i class="icon-zoom-in "></i></a></td>
-                                    <td><a class="btn btn-info" href="#">
-                                            <i class="icon-edit "></i>
-                                        </a></td>
                                     <td><a class="btn btn-danger" href="{{ path('admin_delete_picture', {'id': picture.getId}) }}">
                                             <i class="icon-trash "></i>
                                         </a></td>
