@@ -50,6 +50,11 @@ class AdminArticleController extends AdminCommonController {
         return $this->render('VyperSiteBundle:AdminArticle:showArticles.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_REDAC')")
+     */
     public function addArticleAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -99,7 +104,7 @@ class AdminArticleController extends AdminCommonController {
      * @param Request $request
      * @param Article $article
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_REDAC')")
      */
     public function updateArticleAction(Request $request, Article $article)
     {
