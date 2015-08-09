@@ -48,6 +48,7 @@ class AdminVideoController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_video', true)
         ;
 
@@ -89,6 +90,7 @@ class AdminVideoController extends AdminCommonController {
             ->set('video', $video)
             ->set('artists', $artists)
             ->set('active_video', true)
+            ->set('user_role', $this->getUserRole())
             ->set('form', $form->createView())
         ;
 
