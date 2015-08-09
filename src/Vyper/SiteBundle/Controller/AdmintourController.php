@@ -43,6 +43,7 @@ class AdminTourController extends AdminCommonController {
 
         $view
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
             ->set('active_tour', true)
         ;
 
@@ -74,6 +75,7 @@ class AdminTourController extends AdminCommonController {
 
         $view
             ->set('tour', $tour)
+            ->set('user_role', $this->getUserRole())
             ->set('active_tour', true)
             ->set('form', $form->createView())
         ;
