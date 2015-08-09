@@ -118,4 +118,22 @@ class AdminEventController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:Adminevent:showEvents.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @param Event $event
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction(Request $request, Event $event)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $em->remove($event);
+        $em->flush();
+
+        $request->getSession()->getFlashBag()->add('info', 'Event deleted.');
+
+        return $this->redirect($this->generateUrl('admin_show_events'));
+    }
 } 
