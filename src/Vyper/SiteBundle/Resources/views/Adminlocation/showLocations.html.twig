@@ -50,7 +50,7 @@
                                     <td>{{ location.getName }}</td>
                                     <td>{{ location.getTown }}</td>
                                     <td><a class="btn btn-info" href="{{ path('admin_update_location', {'id': location.getId}) }}"><i class="icon-edit "></i>  </a></td>
-                                    <td><a class="btn btn-danger" href="#"><i class="icon-trash "></i> </a></td>
+                                    <td><a class="btn btn-danger" href="{{ path('admin_delete_location', {'id': location.getId}) }}"><i class="icon-trash "></i> </a></td>
                                 </tr>
                             {% endfor %}
                             </tbody>

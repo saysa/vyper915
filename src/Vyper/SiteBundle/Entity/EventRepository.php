@@ -38,6 +38,19 @@ class EventRepository extends EntityRepository
         return $results;
     }
 
+    public function getByLocationId($locationID)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.location = :locationID')
+            ->setParameter('locationID', $locationID)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('p');

@@ -100,4 +100,29 @@ class AdminLocationController extends AdminCommonController {
 
         return $this->render('VyperSiteBundle:Adminlocation:showLocations.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @param Location $location
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function deleteAction(Request $request, Location $location)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $events = $em->getRepository('VyperSiteBundle:Event')->getByLocationId($location->getId());
+
+        if (sizeof($events)>0) {
+            $request->getSession()->getFlashBag()->add('info', 'The Location is used in Event.');
+        } else {
+
+            $em->remove($location);
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add('info', 'Location deleted.');
+        }
+
+        return $this->redirect($this->generateUrl('admin_show_locations'));
+    }
 } 

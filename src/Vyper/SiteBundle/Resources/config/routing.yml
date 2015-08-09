@@ -311,6 +311,12 @@ admin_update_location:
     requirements:
         id: \d+
 
+admin_delete_location:
+    path:     /_admin_/location/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminLocation:delete }
+    requirements:
+        id: \d+
+
 admin_add_theme:
     path:     /_admin_/themes/add
     defaults: { _controller: VyperSiteBundle:AdminTheme:addTheme }
