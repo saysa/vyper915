@@ -23,10 +23,11 @@ class AdminPictureController extends AdminCommonController {
     public function showPicturesAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
+        $em = $this->getDoctrine()->getManager();
 
         // Get all the articles not deleted
-        $pictures  = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->myFindAll();
-        $albums    = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Album')  ->myFindAll();
+        $pictures  = $em->getRepository('VyperSiteBundle:Picture')->myFindAll();
+        $albums    = $em->getRepository('VyperSiteBundle:Album')  ->myFindAll();
 
         $view->set('albums',         $albums);
         $view->set('pictures',       $pictures);

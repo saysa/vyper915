@@ -86,17 +86,17 @@ class AdminPartnerController extends AdminCommonController {
 
         if ($request->getMethod() == 'POST') {
 
+            $em = $this->getDoctrine()->getManager();
             $post_data = $request->request->get('vyper_sitebundle_partner');
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $partner->setPicture($picture);
 
             if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
                 $em->persist($partner);
                 $em->flush();
 

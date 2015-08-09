@@ -16,12 +16,13 @@ class AdminThemeController extends AdminCommonController {
 
     public function deleteThemeAction(Theme $theme)
     {
-        $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
+
+        $em = $this->getDoctrine()->getManager();
+        $theme_repository = $em->getRepository('VyperSiteBundle:Theme');
         $theme = $theme_repository->findOneBy(array(
             "id" => $theme->getId()
         ));
 
-        $em = $this->getDoctrine()->getManager();
         $em->remove($theme);
         $em->flush();
 
@@ -35,9 +36,11 @@ class AdminThemeController extends AdminCommonController {
             return $this->redirect($this->generateUrl('login'));
         }
 
+        $em = $this->getDoctrine()->getManager();
+
         $view = $this->container->get('saysa_view');
 
-        $theme_repository = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Theme');
+        $theme_repository = $em->getRepository('VyperSiteBundle:Theme');
         $theme = $theme_repository->findOneBy(array(
             "id" => $theme->getId()
         ));
@@ -52,7 +55,7 @@ class AdminThemeController extends AdminCommonController {
 
             $theme = $form->getData();
 
-            $em = $this->getDoctrine()->getManager();
+
             $em->flush();
 
         }

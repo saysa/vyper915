@@ -32,7 +32,7 @@ class AdminVideoController extends AdminCommonController {
             $post_data = $request->request->get('vyper_sitebundle_video');
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
             $video->setPicture($picture);
 
             if ($form->isValid()) {

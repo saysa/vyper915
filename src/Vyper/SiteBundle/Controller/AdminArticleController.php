@@ -63,11 +63,12 @@ class AdminArticleController extends AdminCommonController {
 
         if ($request->getMethod() == 'POST') {
 
+            $em = $this->getDoctrine()->getManager();
             $post_data = $request->request->get('vyper_sitebundle_article');
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
             $article->setUser($this->getUser());
             $article->setPicture($picture);
 
@@ -82,7 +83,6 @@ class AdminArticleController extends AdminCommonController {
 
             if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
                 $em->persist($article);
                 $em->flush();
 

@@ -28,17 +28,17 @@ class AdminEventController extends AdminCommonController {
 
         if ($request->getMethod() == 'POST') {
 
+            $em = $this->getDoctrine()->getManager();
             $post_data = $request->request->get('vyper_sitebundle_event');
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $event->setPicture($picture);
 
             if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
                 $em->persist($event);
                 $em->flush();
 
