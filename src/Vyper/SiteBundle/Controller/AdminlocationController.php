@@ -15,6 +15,11 @@ use Vyper\SiteBundle\Form\LocationType;
 
 class AdminLocationController extends AdminCommonController {
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addLocationAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -47,7 +52,7 @@ class AdminLocationController extends AdminCommonController {
      * @param Request $request
      * @param Location $location
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateLocationAction(Request $request, Location $location)
     {
@@ -75,6 +80,11 @@ class AdminLocationController extends AdminCommonController {
         return $this->render('VyperSiteBundle:Adminlocation:updateLocation.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function showLocationsAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
