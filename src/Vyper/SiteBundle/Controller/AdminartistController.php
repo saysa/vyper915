@@ -50,18 +50,18 @@ class AdminArtistController extends AdminCommonController {
         $form = $this->createForm(new ArtistType, $artist);
 
         if ($request->getMethod() == 'POST') {
-
+            $em = $this->getDoctrine()->getManager();
             $post_data = $request->request->get('vyper_sitebundle_artist');
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $artist->setPicture($picture);
 
             if ($form->isValid()) {
 
-                $em = $this->getDoctrine()->getManager();
+
                 $em->persist($artist);
                 $em->flush();
 
@@ -100,12 +100,12 @@ class AdminArtistController extends AdminCommonController {
 
             $form->submit($request);
 
-            $picture = $this->getDoctrine()->getManager()->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
             $artist->setPicture($picture);
 
             if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
+
                 $em->flush();
             }
 
