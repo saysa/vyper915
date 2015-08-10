@@ -8,12 +8,14 @@
 
 namespace Vyper\SiteBundle\DataFixtures\ORM;
 
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Vyper\SiteBundle\Entity\EventType;
 
 
-class EventTypes implements FixtureInterface {
+class EventTypes extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -33,8 +35,15 @@ class EventTypes implements FixtureInterface {
             $list_continents[$i]->setName($name);
 
             $manager->persist($list_continents[$i]);
+
+            $this->addReference('event-type-'.$i, $list_continents[$i]);
         }
 
         $manager->flush();
+    }
+
+    public function getOrder()
+    {
+        return 1;
     }
 }

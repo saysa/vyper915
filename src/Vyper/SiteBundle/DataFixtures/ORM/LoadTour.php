@@ -39,6 +39,8 @@ class LoadTour extends AbstractFixture implements FixtureInterface, OrderedFixtu
             $list[$i]->setEnd(new \DateTime("2014-12-01"));
 
             $manager->persist($list[$i]);
+
+            $this->addReference('tour-'.$i, $list[$i]);
         }
 
         $manager->flush();
