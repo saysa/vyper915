@@ -9,20 +9,20 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{% block title %}Vyper FM | Toute la J-music, une seule web radio | Radio Japonaise{% endblock %}</title>
+    <title>{% block title %}Vyper Japanese Music{% endblock %}</title>
     <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
     {% block meta_description %}
-        <meta name="description" content="Japan FM : Toute la J-music, une seule web radio. Japan FM est la 1ère webradio japonaise de France. Tous les hits et toute l'actu Jpop sont sur Japan FM !" />
+        <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
     {% endblock %}
 
 
     {% if article.metaKeywords is defined and article.metaKeywords is not empty %}
         <meta name="keywords" content="{{ article.metaKeywords }}" />
     {% else %}
-        <meta name="keywords" content="actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+        <meta name="keywords" content="magazine, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
     {% endif %}
-    <meta name="author" content="japanfm.fr" />
+    <meta name="author" content="vyper-jmusic.com" />
     <meta name="ROBOTS" content="index,follow" />
 
     <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="{{ app.request.getSchemeAndHttpHost() }}/rss_fil_info.xml" />
