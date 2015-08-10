@@ -18,35 +18,8 @@ class EventController extends Controller
         $view = $this->container->get('saysa_view');
 
         $events = $em->getRepository('VyperSiteBundle:Event')->myFindAll();
-        $programs = $em->getRepository('VyperSiteBundle:Program')->findAll();
 
         $json = array();
-
-        foreach ($programs as $program) {
-
-            $background = '#D35F5F';
-            $border = '#891F1F';
-
-            $date = $program->getDate()->format("Y-m-d");
-            $startTime = $program->getStartTime()->format("H:i:s");
-            $timeEnd = $program->getEndTime()->format("H:i:s");
-
-            $opt = array(
-                'title' => $program->getTitle(),
-                'start' => $date.'T'.$startTime,
-                'end' => $date.'T'.$timeEnd,
-                'date_info' => StringMethods::sqlDateToCustom($date),
-                'startTime_info' => $startTime,
-                'endTime_info' => $timeEnd,
-                'borderColor' => $border,
-                'backgroundColor' => $background,
-                'description' => $program->getDescription(),
-                'lang' => $program->getLang(),
-                'present' => $program->getPresent(),
-            );
-
-            $json[] = $opt;
-        }
 
         foreach ($events as $event) {
             $timeEnd = '';
