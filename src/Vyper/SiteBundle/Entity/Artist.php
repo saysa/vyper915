@@ -113,6 +113,13 @@ class Artist
     /**
      * @var boolean
      *
+     * @ORM\Column(name="vyper", type="boolean")
+     */
+    private $vyper;
+
+    /**
+     * @var boolean
+     *
      * @ORM\Column(name="live", type="boolean")
      */
     private $live;
@@ -331,6 +338,29 @@ class Artist
     public function getLive()
     {
         return $this->live;
+    }
+
+    /**
+     * Set vyper
+     *
+     * @param boolean $vyper
+     * @return Artist
+     */
+    public function setVyper($vyper)
+    {
+        $this->vyper = $vyper;
+
+        return $this;
+    }
+
+    /**
+     * Get vyper
+     *
+     * @return boolean
+     */
+    public function getVyper()
+    {
+        return $this->vyper;
     }
 
     /**
