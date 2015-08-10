@@ -33,7 +33,9 @@ class ArtistRepository extends EntityRepository
         if (!is_object($type[0])) {
 
         } else {
-            $queryBuilder->andWhere('a.type = :type')
+            $queryBuilder
+                ->andWhere('a.type = :type')
+                ->andWhere('a.vyper = true')
                 ->setParameter('type', $type);
         }
         $queryBuilder->orderBy('a.name', 'ASC');
