@@ -133,4 +133,13 @@ class StatiqueController extends Controller
         return array();
     }
 
+    /**
+     * @return array
+     * @Template
+     */
+    public function jobsAction()
+    {
+        return array();
+    }
+
 }

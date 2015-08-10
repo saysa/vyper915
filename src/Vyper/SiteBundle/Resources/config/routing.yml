@@ -12,6 +12,10 @@ ajax_general:
     requirements:
         _method:  POST
 
+vyper_site_jobs:
+    path:     /jobs
+    defaults: { _controller: VyperSiteBundle:Statique:jobs }
+
 a_propos:
     path:     /a-propos
     defaults: { _controller: VyperSiteBundle:Statique:aPropos }
