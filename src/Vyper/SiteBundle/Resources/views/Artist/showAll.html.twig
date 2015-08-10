@@ -45,14 +45,7 @@
 
             </div>
 
-            {#
-            <div class="button-group" data-filter-group="a-type">
-                <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
-                {% for artistType in artistTypes %}
-                    <a href="javascript: void(0);" data-filter=".at-{{ artistType.id }}" class="iso">{{ artistType.name }}</a>
-                {% endfor %}
-            </div>
-            #}
+
 
         </div>
 
@@ -63,7 +56,7 @@
                 {% else %}
                     {% set bg = asset(artist.picture.getPath('290-180')) %}
                 {% endif %}
-                <div class="color-shape {{ artist.name|first|lower }} at-{{ artist.type.id }} {{ artist.type.name }} col-md-4 col-sm-6 padding-off artist-all-container">
+                <div class="color-shape {{ artist.name|first|lower }} col-md-4 col-sm-6 padding-off artist-all-container">
                     <div class="thumb artist-thumbnail" style="background: url('{{ bg }}') no-repeat center;">
                         <div class="hover-effect">
                             <div class="gallery-info">
