@@ -73,7 +73,29 @@
         </div>
 
 
+        <script>
+            $(document).ready(function() {
+                $( ".vyper" ).on("click", function() {
 
+                    var artistId = $(this).data('artistid');
+                    var checkboxValue = $(this).is(':checked');
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{{ path('ajax_switch_artist_vyper') }}",
+                        dataType: "json",
+                        data:{
+                            artist_id : artistId,
+                            checkboxValue : checkboxValue
+                        },
+                        success: function(data){
+                            console.log("changed :)");
+                        }
+                    });
+
+                });
+            });
+        </script>
 
 
     {% endblock %}

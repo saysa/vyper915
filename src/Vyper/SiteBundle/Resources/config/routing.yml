@@ -447,6 +447,10 @@ get_device:
     path:     /ajax/get_device
     defaults: { _controller: VyperSiteBundle:Ajax:getDevice }
 
+ajax_switch_artist_vyper:
+    path:     /_admin_/ajax/switch_artist_vyper
+    defaults: { _controller: VyperSiteBundle:AdminAjax:switchArtistVyper }
+
 ajax_switch_article_highlight:
     path:     /_admin_/ajax/switch_article_highlight
     defaults: { _controller: VyperSiteBundle:AdminAjax:switchArticleHighlight }

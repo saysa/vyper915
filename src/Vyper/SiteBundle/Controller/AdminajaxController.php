@@ -292,6 +292,23 @@ class AdminAjaxController extends AdminCommonController {
         return new Response();
     }
 
+    public function switchArtistVyperAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $artist = $em->getRepository('VyperSiteBundle:Artist')->find($request->request->get('artist_id'));
+
+        if ($request->request->get('checkboxValue') == "true") {
+            $artist->setVyper(true);
+        } else {
+            $artist->setVyper(false);
+        }
+
+        $em->persist($artist);
+        $em->flush();
+
+        return new Response();
+    }
+
     public function switchArticleHighlightAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
