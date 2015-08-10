@@ -1,8 +1,8 @@
-index:
+vyper_site_index:
     path:     /
     defaults: { _controller: VyperSiteBundle:Index:index }
 
-home:
+vyper_site_home:
     path:     /home
     defaults: { _controller: VyperSiteBundle:Index:index }
 
@@ -20,11 +20,11 @@ l_equipe:
     path:     /l-equipe
     defaults: { _controller: VyperSiteBundle:Statique:lEquipe }
 
-contact:
+vyper_site_contact:
     path:     /contact
     defaults: { _controller: VyperSiteBundle:Statique:contact }
 
-partenaires:
+vyper_site_partenaires:
     path:     /partenaires
     defaults: { _controller: VyperSiteBundle:Statique:partenaires }
 
@@ -40,7 +40,7 @@ mentions_legales:
     path:     /mentions-legales
     defaults: { _controller: VyperSiteBundle:Statique:mentionsLegales }
 
-showAllArticles:
+vyper_site_showAllArticles:
     path:    /actualites/{page}
     defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: actualites }
     requirements:
@@ -106,13 +106,13 @@ showArticle:
     requirements:
         id: \d+
 
-showAllArtist:
+vyper_site_showAllArtist:
     path:    /artistes/{page}
     defaults: { _controller: VyperSiteBundle:Artist:showAll, page: 1 }
     requirements:
         page: \d*
 
-showAllEvent:
+vyper_site_showAllEvent:
     path:    /events
     defaults: { _controller: VyperSiteBundle:Event:showAll }
 
