@@ -33,6 +33,7 @@
 
     {% stylesheets filter='cssrewrite'
         'bundles/vypersite/foundation/stylesheet/app.css'
+        'bundles/vypersite/css/fullcalendar/fullcalendar.css'
     %}
         <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -197,7 +198,12 @@
     </div>
 </footer>
 
+{% javascripts
+'bundles/vypersite/js/fullcalendar/fullcalendar.min.js'
+%}
 
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
 
 </body>
 </html>
