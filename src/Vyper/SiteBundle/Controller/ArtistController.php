@@ -52,13 +52,9 @@ class ArtistController extends Controller
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
         $articles_per_page = $this->container->getParameter('artists_per_page');
-        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
-        # var_dump($type); // array 0 => objet ArtistType
-        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
-        #$artistTypes = $em->getRepository('VyperSiteBundle:ArtistType')->findAll();
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll();
 
         $view
-            #->set('artistTypes', $artistTypes)
             ->set('current_artists', true)
             ->set('artists', $artists)
             ->set('page', $page)

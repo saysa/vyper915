@@ -26,18 +26,13 @@ class ArtistRepository extends EntityRepository
         return $results;
     }
 
-    public function myFindAll($type)
+    public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('a');
-        $queryBuilder->where('a.deleted = false');
-        if (!is_object($type[0])) {
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.vyper = true');
 
-        } else {
-            $queryBuilder
-                ->andWhere('a.type = :type')
-                ->andWhere('a.vyper = true')
-                ->setParameter('type', $type);
-        }
         $queryBuilder->orderBy('a.name', 'ASC');
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();

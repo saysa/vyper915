@@ -26,10 +26,6 @@ class ArtistType extends AbstractType
             ->add('translator', 'text', array('required' => false, 'attr' => array('placeholder' => 'Translator')))
             ->add('keywords', 'text', array('attr' => array('placeholder' => 'Keywords')))
             ->add('pictureID', 'text', array('required' => false, 'attr' => array('placeholder' => 'Picture ID')))
-            ->add('type', 'entity', array(
-                'class' => 'VyperSiteBundle:ArtistType',
-                'property' => 'name',
-            ))
             ->add('officialWebsite', 'text', array('required' => false, 'attr' => array('placeholder' => 'Official Website')))
         ;
 

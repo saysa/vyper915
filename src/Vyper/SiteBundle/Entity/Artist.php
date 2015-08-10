@@ -87,12 +87,6 @@ class Artist
     private $keywords;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\ArtistType")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $type;
-
-    /**
      * @var string
      * @Gedmo\Slug(fields={"name"})
      * @ORM\Column(type="string", length=255, unique=true)
@@ -504,29 +498,6 @@ class Artist
     public function getSlug()
     {
         return $this->slug;
-    }
-
-    /**
-     * Set type
-     *
-     * @param \Vyper\SiteBundle\Entity\ArtistType $type
-     * @return Artist
-     */
-    public function setType(\Vyper\SiteBundle\Entity\ArtistType $type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return \Vyper\SiteBundle\Entity\ArtistType 
-     */
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**

@@ -28,8 +28,7 @@ class AdminArtistController extends AdminCommonController {
         $view = $this->container->get('saysa_view');
 
         // Get all the articles not deleted
-        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
-        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll();
 
         $view->set('artists', $artists);
         $view->set('user_role', $this->getUserRole());

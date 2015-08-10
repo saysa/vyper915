@@ -91,7 +91,6 @@ class LoadArtist extends AbstractFixture implements FixtureInterface, OrderedFix
             $list[$i]->setName($name);
             $list[$i]->setProfile($name);
             $list[$i]->setKeywords($name);
-            $list[$i]->setType($this->getReference('artist-type-'.$rand));
             $list[$i]->setPicture($this->getReference('picture-'.$randPic));
             $list[$i]->setSlug(uniqid());
 
