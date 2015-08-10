@@ -35,6 +35,7 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Vyper</th>
                                 <th>Date</th>
                                 <th>Name</th>
                                 <th>Modify</th>
@@ -46,6 +47,7 @@
                             {% for artist in artists %}
                                 <tr>
                                     <td>{{ artist.getId }}</td>
+                                    <td><input type="checkbox" class="vyper" data-artistid="{{ artist.getId }}" {% if artist.getVyper == 1 %}checked="checked"{% endif %} /></td>
                                     <td>{{ artist.getModified|date('Y-m-d') }}</td>
                                     <td>{{ artist.getName }}</td>
                                     <td><a class="btn btn-info" href="{{ path('admin_update_artist', {'id': artist.getId}) }}"><i class="icon-edit "></i>  </a></td>
