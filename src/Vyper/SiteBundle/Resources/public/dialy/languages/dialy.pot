@@ -1,0 +1,1931 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dialy Magazine\n"
+"POT-Creation-Date: 2014-06-10 16:21+0200\n"
+"PO-Revision-Date: 2014-06-10 16:21+0200\n"
+"Last-Translator: \n"
+"Language-Team: Different Themes <support@different-themes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:12
+msgid "404 Page"
+msgstr ""
+
+#: 404.php:15
+msgid "404"
+msgstr ""
+
+#: 404.php:16
+msgid "Something went terribly wrong..."
+msgstr ""
+
+#: 404.php:17
+msgid ""
+"But don't worry, it can happen to the best of us - and it just happened to "
+"you!<br> You can search something else or read this text one more time."
+msgstr ""
+
+#: 404.php:19
+msgid "Search..."
+msgstr ""
+
+#: category.php:58 search.php:58 template-contact.php:69
+#: includes/gallery-single.php:44 includes/news-single.php:76
+#: includes/news.php:58 includes/page-single.php:31
+#: includes/page-woocommerce.php:11
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: comments.php:6
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:19
+msgid "0 <strong>Comments</strong>"
+msgstr ""
+
+#: comments.php:19
+msgid "1 <strong>Comment</strong>"
+msgstr ""
+
+#: comments.php:19
+msgid "% <strong>Comments</strong>"
+msgstr ""
+
+#: comments.php:29
+msgid "No comments!"
+msgstr ""
+
+#: comments.php:30
+msgid ""
+"There are no comments yet, but you can be first to comment this article."
+msgstr ""
+
+#: comments.php:39
+msgid "Leave <strong>reply</strong>"
+msgstr ""
+
+#: comments.php:43
+#, php-format
+msgid "Only <a href=\"%1$s\"> registered </a> users can comment."
+msgstr ""
+
+#: comments.php:47
+msgid "Comment:"
+msgstr ""
+
+#: comments.php:47
+msgid "Your comment.."
+msgstr ""
+
+#: comments.php:55
+msgid "Post a comment"
+msgstr ""
+
+#: footer.php:62
+msgid "Theme made by "
+msgstr ""
+
+#: header.php:33
+#, php-format
+msgid "%s latest posts"
+msgstr ""
+
+#: header.php:34
+#, php-format
+msgid "%s latest comments"
+msgstr ""
+
+#: searchform.php:3
+msgid "To search type and hit enter"
+msgstr ""
+
+#: template-contact.php:34
+msgid "Attention! Please correct the errors below and try again."
+msgstr ""
+
+#: template-contact.php:36
+msgid "Your name is <strong>required</strong>."
+msgstr ""
+
+#: template-contact.php:37
+msgid "Your e-mail address is <strong>required</strong>."
+msgstr ""
+
+#: template-contact.php:38
+msgid "You must <strong>enter a message</strong> to send."
+msgstr ""
+
+#: template-contact.php:41
+msgid "Email sent successfully!"
+msgstr ""
+
+#: template-contact.php:50
+msgid "Name"
+msgstr ""
+
+#: template-contact.php:54
+msgid "Email"
+msgstr ""
+
+#: template-contact.php:58 lib/js/scripts.php:79
+msgid "Message"
+msgstr ""
+
+#: template-contact.php:62
+msgid "Submit"
+msgstr ""
+
+#: template-gallery.php:27
+msgid "All"
+msgstr ""
+
+#: template-gallery.php:57
+#, php-format
+msgid "%1$s Images"
+msgstr ""
+
+#: template-gallery.php:77
+msgid "No items were found"
+msgstr ""
+
+#: template-homepage.php:72 template-homepage.php:124
+msgid "No posts were found"
+msgstr ""
+
+#: functions/ajax.php:253
+msgid "From"
+msgstr ""
+
+#: functions/ajax.php:253
+msgid "Contact Page"
+msgstr ""
+
+#: functions/ajax.php:267
+msgid "Message:"
+msgstr ""
+
+#: functions/ajax.php:269 functions/filters.php:210
+msgid "Name:"
+msgstr ""
+
+#: functions/ajax.php:270 functions/filters.php:211
+msgid "E-mail:"
+msgstr ""
+
+#: functions/ajax.php:271
+msgid "IP Address:"
+msgstr ""
+
+#: functions/custom-admin-menu.php:124
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: functions/custom-admin-menu.php:128
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: functions/custom-admin-menu.php:169
+msgid "Edit Menu Item"
+msgstr ""
+
+#: functions/custom-admin-menu.php:178
+msgid "URL"
+msgstr ""
+
+#: functions/custom-admin-menu.php:185
+msgid "Navigation Label"
+msgstr ""
+
+#: functions/custom-admin-menu.php:191
+msgid "Title Attribute"
+msgstr ""
+
+#: functions/custom-admin-menu.php:198
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: functions/custom-admin-menu.php:203
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: functions/custom-admin-menu.php:209
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: functions/custom-admin-menu.php:215
+msgid "Description"
+msgstr ""
+
+#: functions/custom-admin-menu.php:217
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: functions/custom-admin-menu.php:229
+msgid "Show The Color Line In Main Menu Parent Item (Only Pages/Categories)"
+msgstr ""
+
+#: functions/custom-admin-menu.php:234
+msgid ""
+"Main menu type ( only menu parent item, more info <a href=\"http://novomag."
+"orange-themes.com/documentation/#mega-menu\" target=\"_blank\">here</a> )"
+msgstr ""
+
+#: functions/custom-admin-menu.php:236 includes/theme-config.php:1706
+msgid "Default"
+msgstr ""
+
+#: functions/custom-admin-menu.php:237
+msgid "Mega Menu"
+msgstr ""
+
+#: functions/custom-admin-menu.php:243
+msgid "Menu Icon (Only for main menu and only menu parent items)"
+msgstr ""
+
+#: functions/custom-admin-menu.php:263
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: functions/custom-admin-menu.php:276
+#: functions/tax-meta-class/tax-meta-class.php:582
+#: functions/tax-meta-class/tax-meta-class.php:629
+msgid "Remove"
+msgstr ""
+
+#: functions/custom-admin-menu.php:277
+msgid "Cancel"
+msgstr ""
+
+#: functions/dialy-menu.php:13
+msgid "Settings"
+msgstr ""
+
+#: functions/dialy-menu.php:26
+msgid "General"
+msgstr ""
+
+#: functions/dialy-menu.php:33
+msgid "Post/Page Settings"
+msgstr ""
+
+#: functions/dialy-menu.php:39 functions/dialy-menu.php:760
+msgid "Sidebar"
+msgstr ""
+
+#: functions/dialy-menu.php:59
+msgid "Blog Style"
+msgstr ""
+
+#: functions/dialy-menu.php:66
+msgid "Default Layout:"
+msgstr ""
+
+#: functions/dialy-menu.php:67
+msgid "Grid Layout:"
+msgstr ""
+
+#: functions/dialy-menu.php:85
+msgid "Share Buttons"
+msgstr ""
+
+#: functions/dialy-menu.php:93 functions/dialy-menu.php:121
+#: functions/dialy-menu.php:147 functions/dialy-menu.php:173
+#: functions/dialy-menu.php:199 functions/dialy-menu.php:225
+#: functions/dialy-menu.php:251 functions/dialy-menu.php:278
+#: functions/dialy-menu.php:307 functions/dialy-menu.php:390
+#: functions/dialy-menu.php:416 functions/dialy-menu.php:609
+#: functions/dialy-menu.php:630 includes/admin/general.php:248
+#: includes/admin/general.php:270 includes/admin/general.php:293
+#: includes/admin/general.php:315 includes/admin/general.php:337
+#: includes/admin/general.php:360 includes/admin/general.php:382
+#: includes/admin/general.php:404 includes/admin/general.php:428
+#: includes/admin/general.php:476 includes/admin/general.php:500
+msgid "Show:"
+msgstr ""
+
+#: functions/dialy-menu.php:94 functions/dialy-menu.php:122
+#: functions/dialy-menu.php:148 functions/dialy-menu.php:174
+#: functions/dialy-menu.php:200 functions/dialy-menu.php:226
+#: functions/dialy-menu.php:252 functions/dialy-menu.php:279
+#: functions/dialy-menu.php:308 functions/dialy-menu.php:391
+#: functions/dialy-menu.php:417 includes/admin/general.php:249
+#: includes/admin/general.php:271 includes/admin/general.php:294
+#: includes/admin/general.php:316 includes/admin/general.php:338
+#: includes/admin/general.php:361 includes/admin/general.php:383
+#: includes/admin/general.php:405 includes/admin/general.php:429
+#: includes/admin/general.php:477 includes/admin/general.php:501
+msgid "Hide:"
+msgstr ""
+
+#: functions/dialy-menu.php:114
+msgid "Post Controls (prev/next buttons)"
+msgstr ""
+
+#: functions/dialy-menu.php:140 includes/admin/general.php:286
+msgid "Show Post Author"
+msgstr ""
+
+#: functions/dialy-menu.php:166 includes/admin/general.php:308
+msgid "Show Post Date"
+msgstr ""
+
+#: functions/dialy-menu.php:192 includes/admin/general.php:330
+msgid "Show Post Comment Count"
+msgstr ""
+
+#: functions/dialy-menu.php:218 includes/admin/general.php:353
+msgid "Show Post Categories"
+msgstr ""
+
+#: functions/dialy-menu.php:244 includes/admin/general.php:375
+msgid "Show Post Tags"
+msgstr ""
+
+#: functions/dialy-menu.php:271
+msgid "Show Post Views Count"
+msgstr ""
+
+#: functions/dialy-menu.php:299
+msgid "Show Image In Single Post / News Page"
+msgstr ""
+
+#: functions/dialy-menu.php:330 includes/admin/general.php:517
+msgid "Single Image Size"
+msgstr ""
+
+#: functions/dialy-menu.php:338 includes/admin/general.php:524
+msgid "Default:"
+msgstr ""
+
+#: functions/dialy-menu.php:339 includes/admin/general.php:525
+msgid "Full Width:"
+msgstr ""
+
+#: functions/dialy-menu.php:359
+msgid "Page Title Color"
+msgstr ""
+
+#: functions/dialy-menu.php:364
+msgid "Color"
+msgstr ""
+
+#: functions/dialy-menu.php:383
+msgid "\"About Author\" Block In Post"
+msgstr ""
+
+#: functions/dialy-menu.php:409
+msgid "\"Similar News\" Block In Post"
+msgstr ""
+
+#: functions/dialy-menu.php:435
+msgid "Show Homepage Main Slider/News Blocks?"
+msgstr ""
+
+#: functions/dialy-menu.php:440
+msgid "Show"
+msgstr ""
+
+#: functions/dialy-menu.php:442
+msgid "Homepage Slider + 2 Blocks:"
+msgstr ""
+
+#: functions/dialy-menu.php:443
+msgid "6 News Blocks:"
+msgstr ""
+
+#: functions/dialy-menu.php:444
+msgid "Off:"
+msgstr ""
+
+#: functions/dialy-menu.php:452
+msgid "Set Main News Slider Categories"
+msgstr ""
+
+#: functions/dialy-menu.php:462
+msgid "Set Main News Block Categories"
+msgstr ""
+
+#: functions/dialy-menu.php:472
+msgid "Slide Count"
+msgstr ""
+
+#: functions/dialy-menu.php:475
+msgid "1 Slide"
+msgstr ""
+
+#: functions/dialy-menu.php:476
+msgid "2 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:477
+msgid "3 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:478
+msgid "4 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:479
+msgid "5 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:480
+msgid "6 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:481
+msgid "7 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:482
+msgid "8 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:483
+msgid "9 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:484
+msgid "10 Slides"
+msgstr ""
+
+#: functions/dialy-menu.php:495
+msgid "Block Count"
+msgstr ""
+
+#: functions/dialy-menu.php:498
+msgid "3 Blocks"
+msgstr ""
+
+#: functions/dialy-menu.php:499
+msgid "6 Blocks"
+msgstr ""
+
+#: functions/dialy-menu.php:511
+msgid "Auto Start"
+msgstr ""
+
+#: functions/dialy-menu.php:521
+msgid "Slide Time"
+msgstr ""
+
+#: functions/dialy-menu.php:545
+msgid "Slide Animation"
+msgstr ""
+
+#: functions/dialy-menu.php:583
+msgid "Post Subtitle"
+msgstr ""
+
+#: functions/dialy-menu.php:588
+msgid "Subtitle:"
+msgstr ""
+
+#: functions/dialy-menu.php:604
+msgid "Show This Post In Main Slider?"
+msgstr ""
+
+#: functions/dialy-menu.php:625
+msgid "Show This Post In Main News Block?"
+msgstr ""
+
+#: functions/dialy-menu.php:646
+msgid "Show Title in Single View?"
+msgstr ""
+
+#: functions/dialy-menu.php:654
+msgid "Yes:"
+msgstr ""
+
+#: functions/dialy-menu.php:655
+msgid "No:"
+msgstr ""
+
+#: functions/dialy-menu.php:675
+msgid "Ratings"
+msgstr ""
+
+#: functions/dialy-menu.php:677
+msgid ""
+"Enter the ratings like this - Graphics:5; Gameplay:4,5; Sound:3; Storyline:4"
+msgstr ""
+
+#: functions/dialy-menu.php:691
+msgid "Contact Page Email"
+msgstr ""
+
+#: functions/dialy-menu.php:696
+msgid "Email:"
+msgstr ""
+
+#: functions/dialy-menu.php:711
+msgid "Contact Page Google Map"
+msgstr ""
+
+#: functions/dialy-menu.php:716
+msgid "Map Url:"
+msgstr ""
+
+#: functions/dialy-menu.php:742
+msgid "Sidebar Side"
+msgstr ""
+
+#: functions/dialy-menu.php:748
+msgid "Right:"
+msgstr ""
+
+#: functions/dialy-menu.php:749
+msgid "Left:"
+msgstr ""
+
+#: functions/dialy-menu.php:756
+msgid "Sidebar Name"
+msgstr ""
+
+#: functions/dialy-menu.php:792
+msgid "Post Custom Settings"
+msgstr ""
+
+#: functions/dialy-menu.php:883
+msgid "Security check"
+msgstr ""
+
+#: functions/dialy-menu.php:939
+msgid "Main Slider/News Block Image"
+msgstr ""
+
+#: functions/dialy-menu.php:939
+msgid "Image:"
+msgstr ""
+
+#: functions/dialy-menu.php:940
+msgid "SoundCloud Embed Code"
+msgstr ""
+
+#: functions/dialy-menu.php:940
+msgid "Code:"
+msgstr ""
+
+#: functions/dialy-menu.php:941
+msgid " Vimeo/YouTube Video url"
+msgstr ""
+
+#: functions/dialy-menu.php:941
+msgid "URL:"
+msgstr ""
+
+#: functions/dialy-menu.php:942
+msgid "Post Slider Images"
+msgstr ""
+
+#: functions/dialy-menu.php:946
+msgid "Gallery Images"
+msgstr ""
+
+#: functions/dialy-menu.php:954
+msgid "Homepage Builder"
+msgstr ""
+
+#: functions/drag-drop.php:12
+msgid "Homepage Blocks:"
+msgstr ""
+
+#: functions/drag-drop.php:16 functions/drag-drop.php:36
+#: functions/drag-drop.php:69 functions/drag-drop.php:119
+msgid "Latest News Blocks"
+msgstr ""
+
+#: functions/drag-drop.php:19 functions/drag-drop.php:142
+msgid "Six small news with image & title."
+msgstr ""
+
+#: functions/drag-drop.php:22 functions/drag-drop.php:41
+#: functions/drag-drop.php:75 functions/drag-drop.php:95
+#: functions/drag-drop.php:125 functions/drag-drop.php:145
+#: functions/drag-drop.php:164 functions/drag-drop.php:198
+#: functions/drag-drop.php:218 functions/drag-drop.php:237
+#: includes/widgets/widget-ad300x250.php:118
+#: includes/widgets/widget-dialy-comments.php:25
+#: includes/widgets/widget-dialy-latest-posts.php:25
+#: includes/widgets/widget-dialy-popular-posts.php:23
+#: includes/widgets/widget-dialy-reviews.php:27
+#: includes/widgets/widget-dialy-tags.php:19
+msgid "Title:"
+msgstr ""
+
+#: functions/drag-drop.php:23 functions/drag-drop.php:44
+#: functions/drag-drop.php:56 functions/drag-drop.php:76
+#: functions/drag-drop.php:96 functions/drag-drop.php:126
+#: functions/drag-drop.php:146 functions/drag-drop.php:167
+#: functions/drag-drop.php:179 functions/drag-drop.php:199
+#: functions/drag-drop.php:219 functions/drag-drop.php:238
+#: includes/widgets/widget-dialy-latest-posts.php:26
+msgid "Count:"
+msgstr ""
+
+#: functions/drag-drop.php:31 functions/drag-drop.php:52
+#: functions/drag-drop.php:64 functions/drag-drop.php:84
+#: functions/drag-drop.php:114 functions/drag-drop.php:134
+#: functions/drag-drop.php:154 functions/drag-drop.php:175
+#: functions/drag-drop.php:187 functions/drag-drop.php:207
+#: functions/drag-drop.php:227 functions/drag-drop.php:256
+msgid ""
+"From which post should start the loop (for example 4 ), for default leave it "
+"empty, or add 0. (Offset):"
+msgstr ""
+
+#: functions/drag-drop.php:39 functions/drag-drop.php:162
+msgid "Two news blocks."
+msgstr ""
+
+#: functions/drag-drop.php:43 functions/drag-drop.php:166
+msgid "Block 1"
+msgstr ""
+
+#: functions/drag-drop.php:55 functions/drag-drop.php:178
+msgid "Block 2"
+msgstr ""
+
+#: functions/drag-drop.php:72 functions/drag-drop.php:195
+msgid "Two column news."
+msgstr ""
+
+#: functions/drag-drop.php:89
+msgid "Reviews News Blocks"
+msgstr ""
+
+#: functions/drag-drop.php:92
+msgid "Latest & top reviews."
+msgstr ""
+
+#: functions/drag-drop.php:122 functions/drag-drop.php:215
+msgid "Default Blog Style"
+msgstr ""
+
+#: functions/drag-drop.php:139 functions/drag-drop.php:159
+#: functions/drag-drop.php:192 functions/drag-drop.php:212
+msgid "Popular News Blocks"
+msgstr ""
+
+#: functions/drag-drop.php:232
+msgid "Shop Items"
+msgstr ""
+
+#: functions/drag-drop.php:235
+msgid "Latest/Featured Shop Items"
+msgstr ""
+
+#: functions/drag-drop.php:249
+#: includes/lib/class-tgm-plugin-activation.php:1293
+msgid "Type"
+msgstr ""
+
+#: functions/drag-drop.php:251
+msgid "Latest Items"
+msgstr ""
+
+#: functions/drag-drop.php:252
+msgid "Fetured Items"
+msgstr ""
+
+#: functions/drag-drop.php:260
+msgid "HTML Code"
+msgstr ""
+
+#: functions/drag-drop.php:263
+msgid "Custom HTML/Shortcodes Block"
+msgstr ""
+
+#: functions/drag-drop.php:265 functions/drag-drop.php:274
+msgid "HTML Code:"
+msgstr ""
+
+#: functions/drag-drop.php:269
+msgid "Banner Block"
+msgstr ""
+
+#: functions/drag-drop.php:272
+msgid "Supports HTML,CSS and Javascript."
+msgstr ""
+
+#: functions/filters.php:210
+msgid "Name.."
+msgstr ""
+
+#: functions/filters.php:211
+msgid "E-mail.."
+msgstr ""
+
+#: functions/filters.php:223
+msgid "Your email address will not be published. Required fields are marked "
+msgstr ""
+
+#: functions/nav.php:45
+msgid "PREV"
+msgstr ""
+
+#: functions/nav.php:46
+msgid "NEXT"
+msgstr ""
+
+#: functions/nav.php:95
+msgid "Previous"
+msgstr ""
+
+#: functions/other.php:40 includes/admin/general.php:227
+msgid "Default Layout"
+msgstr ""
+
+#: functions/other.php:40 includes/admin/general.php:228
+msgid "Grid Layout"
+msgstr ""
+
+#: functions/other.php:40
+msgid "Category Style "
+msgstr ""
+
+#: functions/other.php:41
+msgid "Main Sidebar Position "
+msgstr ""
+
+#: functions/other.php:42
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions/other.php:193 functions/other.php:225
+#: includes/widgets/widget-dialy-latest-posts.php:107
+#: includes/widgets/widget-dialy-popular-posts.php:90
+#: includes/widgets/widget-dialy-reviews.php:163
+#: includes/widgets/widget-dialy-triple-box.php:127
+#: includes/widgets/widget-dialy-triple-box.php:168
+msgid "No posts where found"
+msgstr ""
+
+#: functions/other.php:196 functions/other.php:229
+msgid "Please Insert A category"
+msgstr ""
+
+#: functions/other.php:617
+msgid "Moderate or heavy snow in area with thunder"
+msgstr ""
+
+#: functions/other.php:621
+msgid "Patchy light snow in area with thunder"
+msgstr ""
+
+#: functions/other.php:625
+msgid "Moderate or heavy snow showers"
+msgstr ""
+
+#: functions/other.php:629
+msgid "Light snow showers"
+msgstr ""
+
+#: functions/other.php:633
+msgid "Ice pellets"
+msgstr ""
+
+#: functions/other.php:637
+msgid "Heavy snow"
+msgstr ""
+
+#: functions/other.php:641
+msgid "Patchy heavy snow"
+msgstr ""
+
+#: functions/other.php:645
+msgid "Moderate snow"
+msgstr ""
+
+#: functions/other.php:649
+msgid "Patchy moderate snow"
+msgstr ""
+
+#: functions/other.php:653
+msgid "Light snow"
+msgstr ""
+
+#: functions/other.php:657
+msgid "Patchy light snow"
+msgstr ""
+
+#: functions/other.php:661
+msgid "Moderate or heavy sleet"
+msgstr ""
+
+#: functions/other.php:665
+msgid "Light sleet"
+msgstr ""
+
+#: functions/other.php:669
+msgid "Heavy freezing drizzle"
+msgstr ""
+
+#: functions/other.php:673
+msgid "Freezing drizzle"
+msgstr ""
+
+#: functions/other.php:677
+msgid "Light drizzle"
+msgstr ""
+
+#: functions/other.php:681
+msgid "Patchy light drizzle"
+msgstr ""
+
+#: functions/other.php:685
+msgid "Blizzard"
+msgstr ""
+
+#: functions/other.php:689
+msgid "Blowing snow"
+msgstr ""
+
+#: functions/other.php:693
+msgid "Moderate or heavy rain in area with thunder"
+msgstr ""
+
+#: functions/other.php:697
+msgid "Patchy light rain in area with thunder"
+msgstr ""
+
+#: functions/other.php:701
+msgid "Thundery outbreaks in nearby"
+msgstr ""
+
+#: functions/other.php:705
+msgid "Moderate or heavy showers of ice pellets"
+msgstr ""
+
+#: functions/other.php:709
+msgid "Light showers of ice pellets"
+msgstr ""
+
+#: functions/other.php:713
+msgid "Moderate or heavy sleet showers"
+msgstr ""
+
+#: functions/other.php:717
+msgid "Light sleet showers"
+msgstr ""
+
+#: functions/other.php:721
+msgid "Torrential rain shower"
+msgstr ""
+
+#: functions/other.php:725
+msgid "Moderate or heavy rain shower"
+msgstr ""
+
+#: functions/other.php:729
+msgid "Light rain shower"
+msgstr ""
+
+#: functions/other.php:733
+msgid "Moderate or Heavy freezing rain"
+msgstr ""
+
+#: functions/other.php:737
+msgid "Light freezing rain"
+msgstr ""
+
+#: functions/other.php:741
+msgid "Heavy rain"
+msgstr ""
+
+#: functions/other.php:745
+msgid "Heavy rain at times"
+msgstr ""
+
+#: functions/other.php:749
+msgid "Moderate rain"
+msgstr ""
+
+#: functions/other.php:753
+msgid "Moderate rain at times"
+msgstr ""
+
+#: functions/other.php:757
+msgid "Light rain"
+msgstr ""
+
+#: functions/other.php:761
+msgid "Patchy light rain"
+msgstr ""
+
+#: functions/other.php:765
+msgid "Patchy freezing drizzle nearby"
+msgstr ""
+
+#: functions/other.php:769
+msgid "Patchy snow nearby"
+msgstr ""
+
+#: functions/other.php:773
+msgid "Patchy rain nearby"
+msgstr ""
+
+#: functions/other.php:777
+msgid "Freezing fog"
+msgstr ""
+
+#: functions/other.php:781
+msgid "Fog"
+msgstr ""
+
+#: functions/other.php:785
+msgid "Mist"
+msgstr ""
+
+#: functions/other.php:789
+msgid "Overcast"
+msgstr ""
+
+#: functions/other.php:793
+msgid "Cloudy"
+msgstr ""
+
+#: functions/other.php:797
+msgid "Partly Cloudy"
+msgstr ""
+
+#: functions/other.php:801
+msgid "Sunny"
+msgstr ""
+
+#: functions/other.php:805
+msgid "Patchy sleet nearby"
+msgstr ""
+
+#: functions/other.php:809
+msgid "Can't get any data."
+msgstr ""
+
+#: functions/other.php:822 functions/other.php:835
+msgid "Something went wrong with the connection!"
+msgstr ""
+
+#: functions/other.php:839
+msgid "This option doesn't work on localhost!"
+msgstr ""
+
+#: functions/other.php:844
+msgid "Please set up your API key!"
+msgstr ""
+
+#: functions/other.php:1358 includes/home-blocks/reviews.php:76
+#: includes/single/post-ratings.php:46
+msgid "Rating: "
+msgstr ""
+
+#: functions/other.php:1728
+msgid "Search Results for"
+msgstr ""
+
+#: functions/other.php:1736
+msgid "Posts From"
+msgstr ""
+
+#: functions/other.php:1739
+msgid "Tag"
+msgstr ""
+
+#: functions/other.php:1741
+msgid "Archive"
+msgstr ""
+
+#: functions/other.php:2039 functions/other.php:2099
+msgid "Delete image"
+msgstr ""
+
+#: functions/other.php:2039 functions/other.php:2099
+#: functions/tax-meta-class/tax-meta-class.php:250
+#: functions/tax-meta-class/tax-meta-class.php:882
+#: includes/theme-config.php:555
+msgid "Delete"
+msgstr ""
+
+#: functions/other.php:2050
+msgid "Add images"
+msgstr ""
+
+#: functions/other.php:2076
+msgid "Add Images to Product Gallery"
+msgstr ""
+
+#: functions/other.php:2078
+msgid "Add to gallery"
+msgstr ""
+
+#: functions/other.php:2377
+msgid "Avatar"
+msgstr ""
+
+#: functions/other.php:2381
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: functions/other.php:2386
+msgid "Reply"
+msgstr ""
+
+#: functions/register.php:13
+msgid "Top Menu"
+msgstr ""
+
+#: functions/register.php:14
+msgid "Main Menu"
+msgstr ""
+
+#: functions/register.php:26
+msgid "Add New Item"
+msgstr ""
+
+#: functions/register.php:27
+msgid "Edit Item"
+msgstr ""
+
+#: functions/register.php:28
+msgid "New Gallery Item"
+msgstr ""
+
+#: functions/register.php:29
+msgid "View Item"
+msgstr ""
+
+#: functions/register.php:30
+msgid "Search Gallery Items"
+msgstr ""
+
+#: functions/register.php:31
+msgid "No Gallery items found"
+msgstr ""
+
+#: functions/register.php:32
+msgid "No Gallery items found in Trash"
+msgstr ""
+
+#: functions/register.php:73
+msgid "The default page sidebar."
+msgstr ""
+
+#: functions/register.php:74
+msgid "Footer widget area, supports up to 4 widgets."
+msgstr ""
+
+#: functions/register.php:77
+msgid "BBpress page sidebar."
+msgstr ""
+
+#: functions/register.php:80
+msgid "BuddyPress page sidebar."
+msgstr ""
+
+#: functions/register.php:83
+msgid "Woocommerce page sidebar."
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:250
+msgid "Delete this image"
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:357
+msgid "Cannot delete file. Something's wrong."
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:595
+msgid "Add"
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:878
+msgid "Uploaded files"
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:889
+msgid "Upload new files"
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:895
+msgid "Add more files"
+msgstr ""
+
+#: functions/tax-meta-class/tax-meta-class.php:947
+msgid "Select a color"
+msgstr ""
+
+#: includes/news-single.php:33
+msgid "Author"
+msgstr ""
+
+#: includes/news-single.php:36
+msgid "Published"
+msgstr ""
+
+#: includes/news-single.php:40
+msgid "Comments <a href=\"#comments\">0</a>"
+msgstr ""
+
+#: includes/news-single.php:40
+msgid "Comments <a href=\"#comments\">1</a>"
+msgstr ""
+
+#: includes/news-single.php:40
+msgid "Comments <a href=\"#comments\">%</a>"
+msgstr ""
+
+#: includes/news-single.php:52 includes/page-single.php:13
+msgid "Pages:"
+msgstr ""
+
+#: includes/news-single.php:57 includes/page-single.php:18
+msgid "Next page"
+msgstr ""
+
+#: includes/news-single.php:58 includes/page-single.php:19
+msgid "Previous page"
+msgstr ""
+
+#: includes/theme-config.php:554
+msgid "Edit"
+msgstr ""
+
+#: includes/theme-config.php:753
+msgid "Select A List"
+msgstr ""
+
+#: includes/theme-config.php:763
+msgid ""
+"This AWeber account doesn't currently have any lists or your authorization "
+"code is incorrect!"
+msgstr ""
+
+#: includes/theme-config.php:815
+msgid "Choose File"
+msgstr ""
+
+#: includes/theme-config.php:1099
+msgid "You didn't create a slider yet."
+msgstr ""
+
+#: includes/theme-config.php:1312
+msgid "Select a category name"
+msgstr ""
+
+#: includes/theme-config.php:1368
+msgid "Latest News"
+msgstr ""
+
+#: includes/theme-config.php:1380
+msgid "Please create a category"
+msgstr ""
+
+#: includes/theme-config.php:1497
+msgid ""
+"This options is disabled, to enable it you must set this option in "
+"<strong>theme management panel</strong> to custom."
+msgstr ""
+
+#: includes/theme-config.php:1707
+msgid "Off"
+msgstr ""
+
+#: includes/top.php:81
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: includes/admin/general.php:66
+msgid "Works only if you leve the logo image field empty."
+msgstr ""
+
+#: includes/admin/general.php:69
+msgid "None character in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:70
+msgid "1 character in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:71
+msgid "2 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:72
+msgid "3 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:73
+msgid "4 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:74
+msgid "5 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:75
+msgid "6 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:76
+msgid "7 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:77
+msgid "8 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:78
+msgid "9 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:79
+msgid "10 characters in theme color scheme color"
+msgstr ""
+
+#: includes/admin/general.php:241
+msgid "Show Post Share Buttons in Single Post"
+msgstr ""
+
+#: includes/admin/general.php:250 includes/admin/general.php:272
+#: includes/admin/general.php:295 includes/admin/general.php:317
+#: includes/admin/general.php:339 includes/admin/general.php:362
+#: includes/admin/general.php:384 includes/admin/general.php:406
+#: includes/admin/general.php:430
+msgid "Custom For Each Post:"
+msgstr ""
+
+#: includes/admin/general.php:263
+msgid "Show Post Controls (prev/next buttons) in Single Post"
+msgstr ""
+
+#: includes/admin/general.php:397
+msgid "Show Post Views"
+msgstr ""
+
+#: includes/admin/general.php:421
+msgid "Show \"Similar News\" In Single Post"
+msgstr ""
+
+#: includes/admin/general.php:469
+msgid "Show \"About Author\" In Single Post/Page"
+msgstr ""
+
+#: includes/admin/general.php:478 includes/admin/general.php:502
+#: includes/admin/general.php:526
+msgid "Custom For Each Post/Page:"
+msgstr ""
+
+#: includes/admin/general.php:493
+msgid "Show thumbnail in open post/page"
+msgstr ""
+
+#: includes/admin/style.php:40
+msgid "Fonts"
+msgstr ""
+
+#: includes/admin/style.php:45
+msgid "Body, Site logo title, Single post subtitle:"
+msgstr ""
+
+#: includes/admin/style.php:54
+msgid ""
+"Headings, Widgets title, Drop cap first letter, Paragraph title ,Tabs title, "
+"Single post controls (previous and next), Accordion title, Logo title span:"
+msgstr ""
+
+#: includes/admin/style.php:72
+msgid "Font Character Sets"
+msgstr ""
+
+#: includes/admin/style.php:77
+msgid "Cyrillic Extended (cyrillic-ext):"
+msgstr ""
+
+#: includes/admin/style.php:82
+msgid "Cyrillic (cyrillic):"
+msgstr ""
+
+#: includes/admin/style.php:87
+msgid "Greek Extended (greek-ext):"
+msgstr ""
+
+#: includes/admin/style.php:92
+msgid "Greek (greek):"
+msgstr ""
+
+#: includes/admin/style.php:97
+msgid "Vietnamese (vietnamese):"
+msgstr ""
+
+#: includes/admin/style.php:102
+msgid "Latin Extended (latin-ext):"
+msgstr ""
+
+#: includes/admin/style.php:156
+msgid "Main Color Scheme:"
+msgstr ""
+
+#: includes/admin/style.php:162
+msgid ""
+"Tag cloud buttons, pagination, onsale label, shop price slider etc.. "
+"background:"
+msgstr ""
+
+#: includes/admin/style.php:168
+msgid "Border color:"
+msgstr ""
+
+#: includes/admin/style.php:184
+msgid "Main Navigation Style:"
+msgstr ""
+
+#: includes/admin/style.php:190 includes/admin/style.php:211
+#: includes/admin/style.php:232
+msgid "Light:"
+msgstr ""
+
+#: includes/admin/style.php:191 includes/admin/style.php:212
+#: includes/admin/style.php:233
+msgid "Dark:"
+msgstr ""
+
+#: includes/admin/style.php:205
+msgid "Top Navigation Style:"
+msgstr ""
+
+#: includes/admin/style.php:226
+msgid "Header Style:"
+msgstr ""
+
+#: includes/admin/style.php:416
+msgid "Page Layout"
+msgstr ""
+
+#: includes/admin/style.php:423
+msgid "Wide:"
+msgstr ""
+
+#: includes/admin/style.php:424
+msgid "Boxed:"
+msgstr ""
+
+#: includes/admin/style.php:466
+msgid "Main Menu Style"
+msgstr ""
+
+#: includes/admin/style.php:473
+msgid "Sticky:"
+msgstr ""
+
+#: includes/admin/style.php:474
+msgid "Normal:"
+msgstr ""
+
+#: includes/admin/functions/default-values.php:109
+#: includes/lib/class-tgm-plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr ""
+
+#: includes/admin/functions/default-values.php:110
+#: includes/lib/class-tgm-plugin-activation.php:156
+msgid "Install Plugins"
+msgstr ""
+
+#: includes/admin/functions/default-values.php:111
+#: includes/lib/class-tgm-plugin-activation.php:157
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: includes/admin/functions/default-values.php:112
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: includes/admin/functions/default-values.php:123
+#: includes/lib/class-tgm-plugin-activation.php:169
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: includes/admin/functions/default-values.php:124
+#: includes/lib/class-tgm-plugin-activation.php:171
+#: includes/lib/class-tgm-plugin-activation.php:1840
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: includes/admin/functions/default-values.php:125
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: includes/home-blocks/block-2.php:70 includes/home-blocks/block-3.php:67
+#: includes/home-blocks/block-4.php:73 includes/loop/post-meta.php:20
+msgid "No Comments"
+msgstr ""
+
+#: includes/home-blocks/block-2.php:70 includes/home-blocks/block-3.php:67
+#: includes/home-blocks/block-4.php:73 includes/loop/post-meta.php:20
+msgid "1 Comment"
+msgstr ""
+
+#: includes/home-blocks/block-2.php:70 includes/home-blocks/block-3.php:67
+#: includes/home-blocks/block-4.php:73 includes/loop/post-meta.php:20
+msgid "% Comments"
+msgstr ""
+
+#: includes/home-blocks/shop-items.php:37
+msgid "out of 5"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:158
+msgid "Something went wrong."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:172
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1085
+msgid "External Link"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1090
+msgid "Private Repository"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1093
+msgid "Pre-Packaged"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1097
+msgid "WordPress Repository"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1100
+msgid "Required"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1100
+msgid "Recommended"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1103
+msgid "Not Installed"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1105
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1275
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1291
+msgid "Plugin"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1292
+msgid "Source"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1294
+msgid "Status"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1312
+msgid "Install"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1313
+msgid "Activate"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1823
+msgid "Install package not available."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1824
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1825
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1826
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1827
+msgid "Plugin install failed."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1828
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1839
+msgid "Plugin activation failed."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1949
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1950
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1950
+#: includes/lib/class-tgm-plugin-activation.php:1959
+msgid "Show Details"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1950
+#: includes/lib/class-tgm-plugin-activation.php:1959
+msgid "Hide Details"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1951
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1952
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1956
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1959
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1960
+msgid "All installations have been completed."
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:1961
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: includes/lib/class-tgm-plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: includes/shortcodes/gallery-box.php:41
+msgid "View all"
+msgstr ""
+
+#: includes/shortcodes/gallery-box.php:42
+msgid "photos"
+msgstr ""
+
+#: includes/single/post-info.php:18
+msgid "Tags"
+msgstr ""
+
+#: includes/single/post-info.php:31
+msgid "Category"
+msgstr ""
+
+#: includes/single/post-info.php:49
+msgid "Views"
+msgstr ""
+
+#: includes/single/post-ratings.php:8
+#: includes/widgets/widget-dialy-reviews.php:130
+msgid "Excellent"
+msgstr ""
+
+#: includes/single/post-ratings.php:10
+#: includes/widgets/widget-dialy-reviews.php:132
+msgid "Good"
+msgstr ""
+
+#: includes/single/post-ratings.php:12
+#: includes/widgets/widget-dialy-reviews.php:134
+msgid "Average"
+msgstr ""
+
+#: includes/single/post-ratings.php:14
+#: includes/widgets/widget-dialy-reviews.php:136
+msgid "Fair"
+msgstr ""
+
+#: includes/single/post-ratings.php:16
+#: includes/widgets/widget-dialy-reviews.php:138
+msgid "Poor"
+msgstr ""
+
+#: includes/single/post-ratings.php:18
+#: includes/widgets/widget-dialy-reviews.php:140
+msgid "Very Poor"
+msgstr ""
+
+#: includes/single/post-related.php:34
+msgid "Related <strong>posts</strong>"
+msgstr ""
+
+#: includes/single/post-share.php:10
+msgid "Share this post:"
+msgstr ""
+
+#: includes/single/post-share.php:13
+msgid "Share on Twitter!"
+msgstr ""
+
+#: includes/single/post-share.php:19
+msgid "Share on Facebook!"
+msgstr ""
+
+#: includes/single/post-share.php:25
+msgid "Share on Google+!"
+msgstr ""
+
+#: includes/single/post-share.php:31
+msgid "Share on Pinterest!"
+msgstr ""
+
+#: includes/single/post-share.php:37
+msgid "Share on LinkedIn!"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:36
+msgid "Link 1:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:37
+msgid "Image Url 1:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:39
+msgid "Link 2:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:40
+msgid "Image Url 2:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:42
+msgid "Link 3:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:43
+msgid "Image Url 3:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:45
+msgid "Link 4:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:46
+msgid "Image Url 4:"
+msgstr ""
+
+#: includes/widgets/widget-ad125x125.php:87
+msgid "Banner"
+msgstr ""
+
+#: includes/widgets/widget-ad300x250.php:35
+msgid ""
+"A widget that allows the display and configuration of of a single 300x250 "
+"Banner."
+msgstr ""
+
+#: includes/widgets/widget-ad300x250.php:41
+msgid " Custom 300x250 Ad"
+msgstr ""
+
+#: includes/widgets/widget-ad300x250.php:124
+msgid "Ad image url:"
+msgstr ""
+
+#: includes/widgets/widget-ad300x250.php:130
+msgid "Ad link url:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-comments.php:6
+msgid "Recent comments"
+msgstr ""
+
+#: includes/widgets/widget-dialy-comments.php:26
+#: includes/widgets/widget-dialy-triple-box.php:44
+msgid "Comment count:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-comments.php:27
+#: includes/widgets/widget-dialy-triple-box.php:45
+msgid "Show Comment Avatar:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-comments.php:29
+#: includes/widgets/widget-dialy-latest-posts.php:48
+#: includes/widgets/widget-dialy-popular-posts.php:27
+#: includes/widgets/widget-dialy-reviews.php:37
+#: includes/widgets/widget-dialy-triple-box.php:33
+#: includes/widgets/widget-dialy-triple-box.php:40
+#: includes/widgets/widget-dialy-triple-box.php:47
+msgid "Yes"
+msgstr ""
+
+#: includes/widgets/widget-dialy-comments.php:30
+#: includes/widgets/widget-dialy-latest-posts.php:49
+#: includes/widgets/widget-dialy-popular-posts.php:28
+#: includes/widgets/widget-dialy-reviews.php:38
+#: includes/widgets/widget-dialy-triple-box.php:34
+#: includes/widgets/widget-dialy-triple-box.php:41
+#: includes/widgets/widget-dialy-triple-box.php:48
+msgid "No"
+msgstr ""
+
+#: includes/widgets/widget-dialy-latest-posts.php:6
+msgid "Latest post widget."
+msgstr ""
+
+#: includes/widgets/widget-dialy-latest-posts.php:12
+msgid "Latests Posts"
+msgstr ""
+
+#: includes/widgets/widget-dialy-latest-posts.php:38
+#: includes/widgets/widget-dialy-reviews.php:52
+msgid "Category:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-latest-posts.php:40
+#: includes/widgets/widget-dialy-reviews.php:54
+msgid "Latest Posts"
+msgstr ""
+
+#: includes/widgets/widget-dialy-latest-posts.php:46
+#: includes/widgets/widget-dialy-popular-posts.php:25
+#: includes/widgets/widget-dialy-reviews.php:35
+msgid "Show Thumbnail:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-popular-posts.php:6
+msgid " most popular posts by view count."
+msgstr ""
+
+#: includes/widgets/widget-dialy-popular-posts.php:12
+msgid "Popular Posts"
+msgstr ""
+
+#: includes/widgets/widget-dialy-popular-posts.php:24
+#: includes/widgets/widget-dialy-reviews.php:28
+msgid "Post count:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-reviews.php:6
+msgid " reviews widget, shows all posts, that have a review."
+msgstr ""
+
+#: includes/widgets/widget-dialy-reviews.php:12
+msgid "Latest Reviews"
+msgstr ""
+
+#: includes/widgets/widget-dialy-reviews.php:29
+msgid "Type:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-reviews.php:31
+msgid "Latests"
+msgstr ""
+
+#: includes/widgets/widget-dialy-reviews.php:32
+msgid "Top"
+msgstr ""
+
+#: includes/widgets/widget-dialy-tags.php:6
+msgid "Custom Tag Style."
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:6
+msgid "Recent Comments, Posts & Popular Posts"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:30
+msgid "Popular Post count:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:31
+msgid "Popular Posts Thumbnail:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:37
+msgid "Recent Post count:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:38
+msgid "Recent Posts Thumbnail:"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:85
+msgid "Popular"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:86
+msgid "Recent"
+msgstr ""
+
+#: includes/widgets/widget-dialy-triple-box.php:87
+msgid "Comments"
+msgstr ""
+
+#: lib/js/scripts.php:52
+msgid "Nickname"
+msgstr ""
+
+#: lib/js/scripts.php:52
+msgid "First Name"
+msgstr ""
+
+#: lib/js/scripts.php:53
+msgid "You didn't enter Your First Name."
+msgstr ""
+
+#: lib/js/scripts.php:55
+msgid "First Name is the wrong length."
+msgstr ""
+
+#: lib/js/scripts.php:66
+msgid "You didn't enter an email address."
+msgstr ""
+
+#: lib/js/scripts.php:68
+msgid "The email address contains illegal characters."
+msgstr ""
+
+#: lib/js/scripts.php:80
+msgid "You didn't enter Your message."
+msgstr ""
+
+#: lib/js/scripts.php:82
+msgid "The message is to short."
+msgstr ""
+
+#: lib/js/scripts.php:94
+msgid "You didn't enter Your last name."
+msgstr ""
+
+#: lib/js/scripts.php:96
+msgid "Last Name is the wrong length."
+msgstr ""
+
+#: lib/js/scripts.php:107
+msgid "You didn't enter Your phone number."
+msgstr ""
+
+#: lib/js/scripts.php:109
+msgid "Please enter a valid phone number."
+msgstr ""

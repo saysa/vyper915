@@ -1,0 +1,93 @@
+Version 1.1.1
+* Edited Files
+style.css
+lib/js/init.js
+
+Version 1.1.0
+* Edited Files
+style.css
+functions/filters.php
+functions/other.php
+includes/single/about-author.php
+includes/widgets/widget-dialy-comments.php
+includes/widgetswidget-dialy-triple-box.php
+
+Version 1.0.9
+*Edited Files
+style.css
+lib/css/stickykit.min.js
+woocommerce/single-product/product-thumbnails.php
+
+Version 1.0.8
+*Edited Files
+style.css
+includes/admin/general.php
+
+
+Version 1.0.8
+*Edited Files
+style.css
+includes/admin/buttons-formatting/custom-editor-style.css
+includes/admin/buttons-formatting/editor-plugin.js
+
+
+Version 1.0.7
+* Edited Files
+style.css
+function/ajax.php
+
+
+Version 1.0.6
+* Edited Files
+style.css
+function/other.php
+includes/admin/general.php
+
+Version 1.0.5V
+* Edited Files
+style.css
+includes/home-blocks/shop-items.php
+includes/theme-config.php
+lib/css/admin/main-stylesheet.css
+lib/css/admin/post.css
+lib/js/admin/options.js
+lib/js/admin/ajaxupload.js
+includes/admin/functions/jquery-css-include.php
+includes/admin/functions/general.php
+functions/ajax.php
+includes/theme-config.php
+includes/admin/general.php
+
+Version 1.0.4V
+* Edited Files
+style.css
+includes/single/image-full.php
+includes/single/image.php
+
+Version 1.0.3V
+* Edited Files
+style.css
+includes/homepage-blocks.php
+
+Version 1.0.2V
+* Edited Files
+style.css
+lib/css/layout.css
+functions/other.php
+includes/home-blocks/shop-items.php
+
+Version 1.0.1V
+* Edited Files
+style.css
+lib/css/layout.css
+lib/js/scripts.php
+functions/jquery-css-include.php
+dialy-menu.php
+lib/img/control-panel-images/logo-differentthemes-1.png
+lib/img/control-panel-images/logo-differentthemes-2.png
+
+
+Version 1.0.0V
+* Initial Release
+
+

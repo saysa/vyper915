@@ -1,0 +1,2136 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dialy Magazine\n"
+"POT-Creation-Date: 2014-11-18 18:49+0100\n"
+"PO-Revision-Date: 2014-11-19 19:24+0100\n"
+"Last-Translator: \n"
+"Language-Team: Different Themes <support@different-themes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: dialy-2014.11.10/dialy-theme/404.php:12
+msgid "404 Page"
+msgstr "Page 404"
+
+#: dialy-2014.11.10/dialy-theme/404.php:15
+msgid "404"
+msgstr "404"
+
+#: dialy-2014.11.10/dialy-theme/404.php:16
+msgid "Something went terribly wrong..."
+msgstr "Quelque chose n'a pas fonctionn&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/404.php:17
+msgid ""
+"But don't worry, it can happen to the best of us - and it just happened to "
+"you!<br> You can search something else or read this text one more time."
+msgstr ""
+"Mais pas de panique, cela peut arriver aux meilleurs d'entre nous - et ça "
+"vous est arriv&eacute; &agrave; vous lol <br> Vous pouvez chercher un autre "
+"article ou revenir &agrave; la page précédente"
+
+#: dialy-2014.11.10/dialy-theme/404.php:19
+msgid "Search..."
+msgstr "Recherche..."
+
+#: dialy-2014.11.10/dialy-theme/category.php:58
+#: dialy-2014.11.10/dialy-theme/search.php:58
+#: dialy-2014.11.10/dialy-theme/template-contact.php:69
+#: dialy-2014.11.10/dialy-theme/includes/gallery-single.php:44
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:76
+#: dialy-2014.11.10/dialy-theme/includes/news.php:58
+#: dialy-2014.11.10/dialy-theme/includes/page-single.php:31
+#: dialy-2014.11.10/dialy-theme/includes/page-woocommerce.php:11
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+"D&eacute;sol&eacute;, il n'y a aucun article correspondant &agrave; votre "
+"recherche"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:6
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Cet article est prot&eacute;g&eacute; par un mot de passe. Renseignez le mot "
+"de passe pour voir les commentaires."
+
+#: dialy-2014.11.10/dialy-theme/comments.php:19
+msgid "0 <strong>Comments</strong>"
+msgstr "0 <strong>Commentaires</strong>"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:19
+msgid "1 <strong>Comment</strong>"
+msgstr "1 <strong>Commentaire</strong>"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:19
+msgid "% <strong>Comments</strong>"
+msgstr "% <strong>Commentaires</strong>"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:29
+msgid "No comments!"
+msgstr "Pas de commentaires!"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:30
+msgid ""
+"There are no comments yet, but you can be first to comment this article."
+msgstr ""
+"Il n'y a pas de commentaire pour l'instant mais vous pouvez &ecirc;tre le "
+"premier &agrave; en soumettre un ;)"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:39
+msgid "Leave <strong>reply</strong>"
+msgstr "Laisser <strong>un commentaire</strong>"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:43
+#, php-format
+msgid "Only <a href=\"%1$s\"> registered </a> users can comment."
+msgstr ""
+"Seuls les utilisateurs <a href=\"%1$s\"> enregistr&eacute;s </a> peuvent "
+"commenter."
+
+#: dialy-2014.11.10/dialy-theme/comments.php:47
+msgid "Comment:"
+msgstr "Commentaire:"
+
+#: dialy-2014.11.10/dialy-theme/comments.php:47
+msgid "Your comment.."
+msgstr "Votre commentaire..."
+
+#: dialy-2014.11.10/dialy-theme/comments.php:55
+msgid "Post a comment"
+msgstr "Laisser un commentaire"
+
+#: dialy-2014.11.10/dialy-theme/footer.php:62
+msgid "Theme made by "
+msgstr "Th&egrave;me r&eacute;alis&eacute; par "
+
+#: dialy-2014.11.10/dialy-theme/header.php:33
+#, php-format
+msgid "%s latest posts"
+msgstr "%s derniers articles"
+
+#: dialy-2014.11.10/dialy-theme/header.php:34
+#, php-format
+msgid "%s latest comments"
+msgstr "%s derniers commentaires"
+
+#: dialy-2014.11.10/dialy-theme/searchform.php:3
+msgid "To search type and hit enter"
+msgstr "Tapez votre recherche puis Entrer"
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:34
+msgid "Attention! Please correct the errors below and try again."
+msgstr "Attention! Corrigez les erreurs ci-dessous et essayez &agrave; nouveau"
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:36
+msgid "Your name is <strong>required</strong>."
+msgstr "Merci de renseigner votre <strong>nom</strong>."
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:37
+msgid "Your e-mail address is <strong>required</strong>."
+msgstr "Merci de renseigner votre <strong>email</strong>."
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:38
+msgid "You must <strong>enter a message</strong> to send."
+msgstr "Vous devez taper <strong>un message</strong> pour envoyer."
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:41
+msgid "Email sent successfully!"
+msgstr "Email envoy&eacute;!"
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:50
+msgid "Name"
+msgstr "Nom"
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:54
+msgid "Email"
+msgstr "Email"
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:58
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:52
+msgid "Message"
+msgstr "Message"
+
+#: dialy-2014.11.10/dialy-theme/template-contact.php:62
+msgid "Submit"
+msgstr "Envoyer"
+
+#: dialy-2014.11.10/dialy-theme/template-gallery.php:27
+msgid "All"
+msgstr "Tous"
+
+#: dialy-2014.11.10/dialy-theme/template-gallery.php:57
+#, php-format
+msgid "%1$s Images"
+msgstr "%1$s Images"
+
+#: dialy-2014.11.10/dialy-theme/template-gallery.php:77
+msgid "No items were found"
+msgstr "Aucun &eacute;l&eacute;ment trouv&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/template-homepage.php:72
+#: dialy-2014.11.10/dialy-theme/template-homepage.php:124
+msgid "No posts were found"
+msgstr "Aucun article trouv&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/template-homepage.php:154
+msgid ""
+"Seems that this block doesn't exist anymore, please remove it, and try to "
+"add a new."
+msgstr ""
+"Il semblerait que ce bloc n'existe plus, merci de le supprimer, et &eacute;"
+"soyez d'en ajouter un nouveau."
+
+#: dialy-2014.11.10/dialy-theme/functions/ajax.php:387
+msgid "From"
+msgstr "De"
+
+#: dialy-2014.11.10/dialy-theme/functions/ajax.php:387
+msgid "Contact Page"
+msgstr "Page de contact"
+
+#: dialy-2014.11.10/dialy-theme/functions/ajax.php:401
+msgid "Message:"
+msgstr "Message:"
+
+#: dialy-2014.11.10/dialy-theme/functions/ajax.php:403
+#: dialy-2014.11.10/dialy-theme/functions/filters.php:210
+msgid "Name:"
+msgstr "Nom:"
+
+#: dialy-2014.11.10/dialy-theme/functions/ajax.php:404
+#: dialy-2014.11.10/dialy-theme/functions/filters.php:211
+msgid "E-mail:"
+msgstr "E-mail:"
+
+#: dialy-2014.11.10/dialy-theme/functions/ajax.php:405
+msgid "IP Address:"
+msgstr "Adresse IP:"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:124
+#, php-format
+msgid "%s (Invalid)"
+msgstr "%s (Invalide)"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:128
+#, php-format
+msgid "%s (Pending)"
+msgstr "%s (En attente)"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:169
+msgid "Edit Menu Item"
+msgstr "Editer l'&eacute;l&eacute;ment de menu"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:178
+msgid "URL"
+msgstr "URL"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:185
+msgid "Navigation Label"
+msgstr "Onglet de navigation"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:191
+msgid "Title Attribute"
+msgstr "Attribut de titre"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:198
+msgid "Open link in a new window/tab"
+msgstr "Ouvrir le lien dans un nouvel onglet/une nouvelle fen&ecirc;tre"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:203
+msgid "CSS Classes (optional)"
+msgstr "Classes CSS (optionnel)"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:209
+msgid "Link Relationship (XFN)"
+msgstr "Link Relationship (XFN)"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:215
+msgid "Description"
+msgstr "Description"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:217
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+"La description sera affichée dans le menu si le th&egrave;me le permet."
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:229
+msgid "Show The Color Line In Main Menu Parent Item (Only Pages/Categories)"
+msgstr ""
+"Faire apparaitre la couleur dans le menu principal (seulement pages/"
+"cat&eacute;gories)"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:234
+msgid ""
+"Main menu type ( only menu parent item, more info <a href=\"http://novomag."
+"orange-themes.com/documentation/#mega-menu\" target=\"_blank\">here</a> )"
+msgstr ""
+"Type menu Principal (seulement pour les éléments parent, plus d'info <a href="
+"\"http://novomag.orange-themes.com/documentation/#mega-menu\" target=\"_blank"
+"\">ici</a> )"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:236
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1824
+msgid "Default"
+msgstr "D&eacute;faut"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:237
+msgid "Mega Menu"
+msgstr "Mega Menu"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:243
+msgid "Menu Icon (Only for main menu and only menu parent items)"
+msgstr ""
+"Icone menu (Seulement pour le menu principal et uniquement pour les &eacute;"
+"l&eacute;ments parent)"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:263
+#, php-format
+msgid "Original: %s"
+msgstr "Original: %s"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:276
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:583
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:630
+msgid "Remove"
+msgstr "Retirer"
+
+#: dialy-2014.11.10/dialy-theme/functions/custom-admin-menu.php:277
+msgid "Cancel"
+msgstr "Annuler"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:13
+msgid "Settings"
+msgstr "Param&egrave;tres"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:26
+msgid "General"
+msgstr "G&eacute;n&eacute;ral"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:33
+msgid "Post/Page Settings"
+msgstr "Param&egrave;très pages/articles"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:39
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:792
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:59
+msgid "Blog Style"
+msgstr "Style du blog"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:66
+msgid "Default Layout:"
+msgstr "Mise en page par d&eacute;faut:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:67
+msgid "Grid Layout:"
+msgstr "Apparence grille:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:85
+msgid "Share Buttons"
+msgstr "Boutons de partage"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:93
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:121
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:147
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:173
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:199
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:225
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:251
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:278
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:307
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:390
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:416
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:641
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:662
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:274
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:296
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:319
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:341
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:363
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:386
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:408
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:430
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:454
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:502
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:526
+msgid "Show:"
+msgstr "Afficher:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:94
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:122
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:148
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:174
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:200
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:226
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:252
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:279
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:308
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:391
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:417
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:275
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:297
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:320
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:342
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:364
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:387
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:409
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:431
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:455
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:503
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:527
+msgid "Hide:"
+msgstr "Cacher:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:114
+msgid "Post Controls (prev/next buttons)"
+msgstr "Boutons articles pr&eacute;c&eacute;dent/suivant"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:140
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:312
+msgid "Show Post Author"
+msgstr "Afficher l'auteur"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:166
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:334
+msgid "Show Post Date"
+msgstr "Afficher la date"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:192
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:356
+msgid "Show Post Comment Count"
+msgstr "Afficher le nombre de commentaires"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:218
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:379
+msgid "Show Post Categories"
+msgstr "Afficher les cat&eacute;gories"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:244
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:401
+msgid "Show Post Tags"
+msgstr "Afficher les mots-clef"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:271
+msgid "Show Post Views Count"
+msgstr "Afficher le nombre de vues"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:299
+msgid "Show Image In Single Post / News Page"
+msgstr "Afficher l'image dans l'article / la page news"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:330
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:543
+msgid "Single Image Size"
+msgstr "Taille des images dans les articles"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:338
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:550
+msgid "Default:"
+msgstr "D&eacute;faut:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:339
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:551
+msgid "Full Width:"
+msgstr "Pleine largeur:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:359
+msgid "Page Title Color"
+msgstr "Couleur du titre de la page"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:364
+msgid "Color"
+msgstr "Couleur"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:383
+msgid "\"About Author\" Block In Post"
+msgstr "Bloc \"A propos de l'auteur\" dans les articles"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:409
+msgid "\"Similar News\" Block In Post"
+msgstr "Bloc \"Articles similaires\" dans les articles"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:435
+msgid "Show Homepage Main Slider/News Blocks?"
+msgstr "Afficher le Slider/News bloc sur la page d'accueil?"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:440
+msgid "Show"
+msgstr "Afficher"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:442
+msgid "Homepage Slider + 2 Blocks:"
+msgstr "Slider + 2 bloc sur la page d'accueil"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:443
+msgid "6 News Blocks:"
+msgstr "6 blocs News:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:444
+msgid "Off:"
+msgstr "Ne pas afficher:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:452
+msgid "Set Main News Slider Categories"
+msgstr "Param&eacute;trer les cat&eacute;glories du News slider"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:462
+msgid "Set Main News Block Categories"
+msgstr "Param&eacute;trer les cat&eacute;glories des blocs News"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:472
+msgid "Slide Count"
+msgstr "Nombre de slide"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:475
+msgid "1 Slide"
+msgstr "1 Slide"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:476
+msgid "2 Slides"
+msgstr "2 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:477
+msgid "3 Slides"
+msgstr "3 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:478
+msgid "4 Slides"
+msgstr "4 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:479
+msgid "5 Slides"
+msgstr "5 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:480
+msgid "6 Slides"
+msgstr "6 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:481
+msgid "7 Slides"
+msgstr "7 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:482
+msgid "8 Slides"
+msgstr "8 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:483
+msgid "9 Slides"
+msgstr "9 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:484
+msgid "10 Slides"
+msgstr "10 Slides"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:495
+msgid "Block Count"
+msgstr "Nombre de blocs"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:498
+msgid "3 Blocks"
+msgstr "3 Blocs"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:499
+msgid "6 Blocks"
+msgstr "6 Blocs"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:511
+msgid "Auto Start"
+msgstr "D&eacute;mariage automatique"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:521
+msgid "Slide Time"
+msgstr "Temps slider"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:545
+msgid "Slide Animation"
+msgstr "Animation slider"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:561
+msgid "Slider Style"
+msgstr "Style clider"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:577
+msgid "Post Grid Style"
+msgstr "Article façon grille"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:615
+msgid "Post Subtitle"
+msgstr "Sous-titre de l'article"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:620
+msgid "Subtitle:"
+msgstr "Sous-titre:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:636
+msgid "Show This Post In Main Slider?"
+msgstr "Afficher cet article dans le Slider?"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:657
+msgid "Show This Post In Main News Block?"
+msgstr "Afficher cet article dans les blocs News?"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:678
+msgid "Show Title in Single View?"
+msgstr "Afficher le titre dans la vue article?"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:686
+msgid "Yes:"
+msgstr "Oui:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:687
+msgid "No:"
+msgstr "Non:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:707
+msgid "Ratings"
+msgstr "Notes"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:709
+msgid ""
+"Enter the ratings like this - Graphics:5; Gameplay:4,5; Sound:3; Storyline:4"
+msgstr ""
+"Saisissez les notes ainsi - Gaphisme:5; Jouabilit&eacute;:4,5; Son:3; "
+"Histoire:4"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:723
+msgid "Contact Page Email"
+msgstr "Email de la page de contact"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:728
+msgid "Email:"
+msgstr "Email:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:743
+msgid "Contact Page Google Map"
+msgstr "Google Map pour la page de contact"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:748
+msgid "Map Url:"
+msgstr "Url de la carte:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:774
+msgid "Sidebar Side"
+msgstr "Côté d'affichage de la Sidebar"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:780
+msgid "Right:"
+msgstr "Doite:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:781
+msgid "Left:"
+msgstr "Gauche:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:788
+msgid "Sidebar Name"
+msgstr "Nom de la Sidebar"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:824
+msgid "Post Custom Settings"
+msgstr "Param&egrave;tres personalis&eacute; des articles"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:915
+msgid "Security check"
+msgstr "Controle de s&eacute;curit&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:971
+msgid "Main Slider/News Block Image"
+msgstr "Image du Slider/Bloc News"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:971
+msgid "Image:"
+msgstr "Image:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:972
+msgid "SoundCloud Embed Code"
+msgstr "Code Embed SoundCloud"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:972
+msgid "Code:"
+msgstr "Code:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:973
+msgid " Vimeo/YouTube Video url"
+msgstr "Url Vid&eacute;o Vimeo/YouTube"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:973
+msgid "URL:"
+msgstr "URL:"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:974
+msgid "Post Slider Images"
+msgstr "Images du slider"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:978
+msgid "Gallery Images"
+msgstr "Images de la galerie"
+
+#: dialy-2014.11.10/dialy-theme/functions/dialy-menu.php:986
+msgid "Homepage Builder"
+msgstr "Builder Page d'accueil"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:12
+msgid "Homepage Blocks:"
+msgstr "Blocs page d'accueil:"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:16
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:36
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:69
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:119
+msgid "Latest News Blocks"
+msgstr "Blocs derniers articles"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:19
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:142
+msgid "Six small news with image & title."
+msgstr "Six petites news avec image et titre."
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:22
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:41
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:75
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:95
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:125
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:145
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:164
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:198
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:218
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:237
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad300x250.php:118
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-comments.php:25
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:25
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:23
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:27
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-tags.php:19
+msgid "Title:"
+msgstr "Titre:"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:23
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:44
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:56
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:76
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:96
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:126
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:146
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:167
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:179
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:199
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:219
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:238
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:26
+msgid "Count:"
+msgstr "Nombre:"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:31
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:52
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:64
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:84
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:114
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:134
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:154
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:175
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:187
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:207
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:227
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:256
+msgid ""
+"From which post should start the loop (for example 4 ), for default leave it "
+"empty, or add 0. (Offset):"
+msgstr ""
+"A partir de quel article commencer la boucle (par exemple 4), par d&eacute;"
+"faut laisser vide ou mettre 0. (Offset):"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:39
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:162
+msgid "Two news blocks."
+msgstr "Deux blocs news."
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:43
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:166
+msgid "Block 1"
+msgstr "Bloc 1"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:55
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:178
+msgid "Block 2"
+msgstr "Bloc 2"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:72
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:195
+msgid "Two column news."
+msgstr "News sur deux colonnes"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:89
+msgid "Reviews News Blocks"
+msgstr "Blocs nouvelles review"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:92
+msgid "Latest & top reviews."
+msgstr "Dernières et top reviews"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:122
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:215
+msgid "Default Blog Style"
+msgstr "Style par d&eacute;faut"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:139
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:159
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:192
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:212
+msgid "Popular News Blocks"
+msgstr "Bloc news populaires"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:232
+msgid "Shop Items"
+msgstr "El&eacute;mets de la boutique"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:235
+msgid "Latest/Featured Shop Items"
+msgstr "Derniers/Mis en avant &eacute;l&eacute;ments de la boutique"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:249
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1293
+msgid "Type"
+msgstr "Type"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:251
+msgid "Latest Items"
+msgstr "Derniers &eacute;l&eacute;ments"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:252
+msgid "Fetured Items"
+msgstr "El&eacute;mets mis en avant"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:260
+msgid "HTML Code"
+msgstr "Code HTML"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:263
+msgid "Custom HTML/Shortcodes Block"
+msgstr "Bloc HTML personnalis&eacute;/shortcodes"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:265
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:274
+msgid "HTML Code:"
+msgstr "Code HTML:"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:269
+msgid "Banner Block"
+msgstr "Bloc banni&egrave;re pub"
+
+#: dialy-2014.11.10/dialy-theme/functions/drag-drop.php:272
+msgid "Supports HTML,CSS and Javascript."
+msgstr "Supporte HTML,CSS et Javascript."
+
+#: dialy-2014.11.10/dialy-theme/functions/filters.php:210
+msgid "Name.."
+msgstr "Nom..."
+
+#: dialy-2014.11.10/dialy-theme/functions/filters.php:211
+msgid "E-mail.."
+msgstr "E-mail.."
+
+#: dialy-2014.11.10/dialy-theme/functions/filters.php:223
+msgid "Your email address will not be published. Required fields are marked "
+msgstr ""
+"Votre adresse mail ne sera pas publi&eacute;e. Les champs marqu&eacute;s "
+"sont obligatoires"
+
+#: dialy-2014.11.10/dialy-theme/functions/nav.php:45
+msgid "PREV"
+msgstr "PRECEDENT"
+
+#: dialy-2014.11.10/dialy-theme/functions/nav.php:46
+msgid "NEXT"
+msgstr "SUIVANT"
+
+#: dialy-2014.11.10/dialy-theme/functions/nav.php:95
+msgid "Previous"
+msgstr "Pr&eacute;c&eacute;dent"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:40
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:253
+msgid "Default Layout"
+msgstr "Mise en page par d&eacute;faut"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:40
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:254
+msgid "Grid Layout"
+msgstr "Mise en page grille"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:40
+msgid "Category Style "
+msgstr "Style des cat&eacute;gories"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:41
+msgid "Main Sidebar Position "
+msgstr "Position de la Sidebar principale"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:42
+msgid "Main Sidebar"
+msgstr "Sidebar principale"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:225
+#: dialy-2014.11.10/dialy-theme/functions/other.php:257
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:107
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:90
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:163
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:127
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:168
+msgid "No posts where found"
+msgstr "Aucun article trouv&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:228
+#: dialy-2014.11.10/dialy-theme/functions/other.php:261
+msgid "Please Insert A category"
+msgstr "Merci de renseigner une cat&eacute;gorie"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:652
+msgid "Moderate or heavy snow in area with thunder"
+msgstr "Neige modérée à forte avec tonnerre"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:656
+msgid "Patchy light snow in area with thunder"
+msgstr "Neige fine &eacute;parse avec tonnerre"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:660
+msgid "Moderate or heavy snow showers"
+msgstr "Chutes de neige mod&eacute;r&eacute;es à fortes"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:664
+msgid "Light snow showers"
+msgstr "Faibles chutes de neige"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:668
+msgid "Ice pellets"
+msgstr "Grelons"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:672
+msgid "Heavy snow"
+msgstr "Neige lourde"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:676
+msgid "Patchy heavy snow"
+msgstr "Neige lourde &eacute;parse"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:680
+msgid "Moderate snow"
+msgstr "Neige mod&eacute;r&eacute;e"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:684
+msgid "Patchy moderate snow"
+msgstr "Neige mod&eacute;r&eacute;e"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:688
+msgid "Light snow"
+msgstr "Neige faible"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:692
+msgid "Patchy light snow"
+msgstr "Neige faible &eacute;parse"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:696
+msgid "Moderate or heavy sleet"
+msgstr "Neige fondue mod&eacute;r&eacute;e à forte"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:700
+msgid "Light sleet"
+msgstr "Faible neige fondue"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:704
+msgid "Heavy freezing drizzle"
+msgstr "Forte pluie verglassante"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:708
+msgid "Freezing drizzle"
+msgstr "Pluis verglassante"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:712
+msgid "Light drizzle"
+msgstr "Fine bruine"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:716
+msgid "Patchy light drizzle"
+msgstr "Fine bruine &eacute;parse"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:720
+msgid "Blizzard"
+msgstr "Blizzard"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:724
+msgid "Blowing snow"
+msgstr "Poudreuse"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:728
+msgid "Moderate or heavy rain in area with thunder"
+msgstr "Pluies mod&eacute;r&eacute;es à forte avec des orages"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:732
+msgid "Patchy light rain in area with thunder"
+msgstr "Fables pluies &eacute;parses avec orages"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:736
+msgid "Thundery outbreaks in nearby"
+msgstr "Averses"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:740
+msgid "Moderate or heavy showers of ice pellets"
+msgstr "Chute de grelons mod&eacute;r&eacute;es à fortes"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:744
+msgid "Light showers of ice pellets"
+msgstr "Faibles chutes de grelons"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:748
+msgid "Moderate or heavy sleet showers"
+msgstr "Neige fondue mod&eacute;r&eacute;e à forte"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:752
+msgid "Light sleet showers"
+msgstr "Faibles chutes de neige fondue"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:756
+msgid "Torrential rain shower"
+msgstr "Très fortes pluies"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:760
+msgid "Moderate or heavy rain shower"
+msgstr "Pluies mod&eacute;r&eacute;es à fortes"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:764
+msgid "Light rain shower"
+msgstr "Faible spluies"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:768
+msgid "Moderate or Heavy freezing rain"
+msgstr "Pluies verglassantes mod&eacute;r&eacute;es à fortes"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:772
+msgid "Light freezing rain"
+msgstr "Faibles pluies verglassantes"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:776
+msgid "Heavy rain"
+msgstr "Pluie très forte"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:780
+msgid "Heavy rain at times"
+msgstr "Averses"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:784
+msgid "Moderate rain"
+msgstr "Pluis mod&eacute;r&eacute;e"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:788
+msgid "Moderate rain at times"
+msgstr "Averses mod&eacute;r&eacute;es"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:792
+msgid "Light rain"
+msgstr "Faibles pluies"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:796
+msgid "Patchy light rain"
+msgstr "Faibles pluies &eacute;parses"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:800
+msgid "Patchy freezing drizzle nearby"
+msgstr "Pluies verglassantes &eacute;parses"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:804
+msgid "Patchy snow nearby"
+msgstr "Neige &eacute;parse"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:808
+msgid "Patchy rain nearby"
+msgstr "Pluies &eacute;parses"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:812
+msgid "Freezing fog"
+msgstr "Brouillard givrant"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:816
+msgid "Fog"
+msgstr "Brouillard"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:820
+msgid "Mist"
+msgstr "Brouillard"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:824
+msgid "Overcast"
+msgstr "Couvert"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:828
+msgid "Cloudy"
+msgstr "Nuageux"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:832
+msgid "Partly Cloudy"
+msgstr "Partiellement nuageux"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:836
+msgid "Sunny"
+msgstr "Ensoleill&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:840
+msgid "Patchy sleet nearby"
+msgstr "Neige fondue &eacute;parse"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:844
+msgid "Can't get any data."
+msgstr "Aucune donn&eacute;e disponible"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:857
+#: dialy-2014.11.10/dialy-theme/functions/other.php:870
+msgid "Something went wrong with the connection!"
+msgstr "Quelque chose n'a pas fonctionn&eacute; avec la connexion!"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:874
+msgid "This option doesn't work on localhost!"
+msgstr "Cette option ne fonctionne pas en local!"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:879
+msgid "Please set up your API key!"
+msgstr "Merci de renseigner votre clef API!"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:1393
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/reviews.php:76
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:46
+msgid "Rating: "
+msgstr "Note:"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:1763
+msgid "Search Results for"
+msgstr "R&eacute;sultats de recherche pour"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:1771
+msgid "Posts From"
+msgstr "Articles de"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:1774
+msgid "Tag"
+msgstr "Mot-clef"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:1776
+msgid "Archive"
+msgstr "Archive"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2028
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2088
+msgid "Delete image"
+msgstr "Effacer l'image"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2028
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2088
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:251
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:883
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:562
+msgid "Delete"
+msgstr "Effacer"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2039
+msgid "Add images"
+msgstr "Ajouter des images"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2065
+msgid "Add Images to Product Gallery"
+msgstr "Ajouter des images à la galerie produits"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2067
+msgid "Add to gallery"
+msgstr "Ajouter des images à la galerie"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2366
+msgid "Avatar"
+msgstr "Avatar"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2370
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: dialy-2014.11.10/dialy-theme/functions/other.php:2375
+msgid "Reply"
+msgstr "R&eacute;pondre"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:13
+msgid "Top Menu"
+msgstr "Menu Header"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:14
+msgid "Main Menu"
+msgstr "Menu Principal"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:26
+msgid "Add New Item"
+msgstr "Ajouter un nouvel &eacute;l&eacute;ment"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:27
+msgid "Edit Item"
+msgstr "Editer l'&eacute;l&eacute;ment"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:28
+msgid "New Gallery Item"
+msgstr "Nouvel &eacute;l&eacute;ment de galerie"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:29
+msgid "View Item"
+msgstr "Voir l'&eacute;l&eacute;ment"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:30
+msgid "Search Gallery Items"
+msgstr "Chercher les &eacute;l&eacute;ments de gallerie"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:31
+msgid "No Gallery items found"
+msgstr "Aucun &eacute;l&eacute;ment de galerie trouve&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:32
+msgid "No Gallery items found in Trash"
+msgstr ""
+"Aucun &eacute;l&eacute;ment de galerie trouve&eacute; dans la corbeille"
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:73
+msgid "The default page sidebar."
+msgstr "Sidebar de la page par d&eacute;faut."
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:74
+msgid "Footer widget area, supports up to 4 widgets."
+msgstr "Le footer supporte 4 widgets."
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:77
+msgid "BBpress page sidebar."
+msgstr "Sidebar page BBpress."
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:80
+msgid "BuddyPress page sidebar."
+msgstr "Sidebar page BuddyPress."
+
+#: dialy-2014.11.10/dialy-theme/functions/register.php:83
+msgid "Woocommerce page sidebar."
+msgstr "Sidebar page Woocommerce."
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:251
+msgid "Delete this image"
+msgstr "Effacer cette image"
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:358
+msgid "Cannot delete file. Something's wrong."
+msgstr ""
+"Le fichier ne peut pas &ecirc;tre effac&eacute;. Quelque chose n'a pas "
+"fonctionn&eacute;."
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:596
+msgid "Add"
+msgstr "Ajouter"
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:879
+msgid "Uploaded files"
+msgstr "Fichiers t&eacute;l&eacute;charg&eacute;s"
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:890
+msgid "Upload new files"
+msgstr "T&eacute;l&eacute;charger de nouveaux fichiers"
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:896
+msgid "Add more files"
+msgstr "Ajouter plus de fichiers"
+
+#: dialy-2014.11.10/dialy-theme/functions/tax-meta-class/tax-meta-class.php:948
+msgid "Select a color"
+msgstr "Choisir une couleur"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:33
+msgid "Author"
+msgstr "Auteur"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:36
+msgid "Published"
+msgstr "Publi&eacute;"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:40
+msgid "Comments <a href=\"#comments\">0</a>"
+msgstr "Commentaires <a href=\"#comments\">0</a>"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:40
+msgid "Comments <a href=\"#comments\">1</a>"
+msgstr "Commentaires <a href=\"#comments\">1</a>"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:40
+msgid "Comments <a href=\"#comments\">%</a>"
+msgstr "Commentaires <a href=\"#comments\">%</a>"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:52
+#: dialy-2014.11.10/dialy-theme/includes/page-single.php:13
+msgid "Pages:"
+msgstr "Pages:"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:57
+#: dialy-2014.11.10/dialy-theme/includes/page-single.php:18
+msgid "Next page"
+msgstr "Page suivante"
+
+#: dialy-2014.11.10/dialy-theme/includes/news-single.php:58
+#: dialy-2014.11.10/dialy-theme/includes/page-single.php:19
+msgid "Previous page"
+msgstr "Page pr&eacute;c&eacute;dente"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:561
+msgid "Edit"
+msgstr "Editer"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:604
+msgid "Pagebuilder Import/Export"
+msgstr "Pagebuilder Import/Export"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:609
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:116
+msgid "Export Settings"
+msgstr "Paramètres d'Export"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:615
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:123
+msgid "Import Settings"
+msgstr "Paramètres d'import"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:777
+msgid "Select A List"
+msgstr "Choisir une liste"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:787
+msgid ""
+"This AWeber account doesn't currently have any lists or your authorization "
+"code is incorrect!"
+msgstr ""
+"Ce compte AWeber n'a actuellement pas de liste ou vous n'avez pas "
+"correctement renseign&eacute; votre code."
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:832
+msgid "Export"
+msgstr "Export"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:877
+msgid "Import"
+msgstr "Import"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:933
+msgid "Choose File"
+msgstr "Choisir un fichier"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1217
+msgid "You didn't create a slider yet."
+msgstr "Vous n'avez pas cr&eacute;&eacute; de slider"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1430
+msgid "Select a category name"
+msgstr "Choisir un nom de cat&eacute;gorie"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1486
+msgid "Latest News"
+msgstr "Derni&egrave;res news"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1498
+msgid "Please create a category"
+msgstr "Merci de cr&eacute;er une cat&eacute;gorie"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1615
+msgid ""
+"This options is disabled, to enable it you must set this option in "
+"<strong>theme management panel</strong> to custom."
+msgstr ""
+"Cette option est d&eacute;active&eacute;e, pour l'activer rendez-vous dans "
+"le <strong>panneau de gestion du site </strong> pour personnaliser cette "
+"option."
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1726
+msgid "Add/Save"
+msgstr "Ajouter/Sauvegarder"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1726
+msgid "Adding..."
+msgstr "Ajout..."
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1825
+msgid "Off"
+msgstr "Eteint"
+
+#: dialy-2014.11.10/dialy-theme/includes/theme-config.php:1951
+msgid "Saving..."
+msgstr "Sauvegarde..."
+
+#: dialy-2014.11.10/dialy-theme/includes/top.php:81
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:66
+msgid "Works only if you leve the logo image field empty."
+msgstr "Ne fonctionne que si vous laissez le champ logo vide."
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:69
+msgid "None character in theme color scheme color"
+msgstr "Aucune lettre dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:70
+msgid "1 character in theme color scheme color"
+msgstr "1 lettre dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:71
+msgid "2 characters in theme color scheme color"
+msgstr "2 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:72
+msgid "3 characters in theme color scheme color"
+msgstr "3 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:73
+msgid "4 characters in theme color scheme color"
+msgstr "4 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:74
+msgid "5 characters in theme color scheme color"
+msgstr "5 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:75
+msgid "6 characters in theme color scheme color"
+msgstr "6 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:76
+msgid "7 characters in theme color scheme color"
+msgstr "7 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:77
+msgid "8 characters in theme color scheme color"
+msgstr "8 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:78
+msgid "9 characters in theme color scheme color"
+msgstr "9 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:79
+msgid "10 characters in theme color scheme color"
+msgstr "10 lettres dans la couleur du theme"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:111
+msgid "Export/Import Theme Settings"
+msgstr "Exporter/Importer les paramètres du thème"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:267
+msgid "Show Post Share Buttons in Single Post"
+msgstr "Afficher les boutons de partage dans les articles"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:276
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:298
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:321
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:343
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:365
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:388
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:410
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:432
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:456
+msgid "Custom For Each Post:"
+msgstr "Personnalisé pour chaque article:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:289
+msgid "Show Post Controls (prev/next buttons) in Single Post"
+msgstr "Afficher les boutons précédent/suivant à chaque article"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:423
+msgid "Show Post Views"
+msgstr "Afficher les vues par article"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:447
+msgid "Show \"Similar News\" In Single Post"
+msgstr "Afficher \"News similaires\" dans les articles"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:495
+msgid "Show \"About Author\" In Single Post/Page"
+msgstr "Afficher \"A propos de l'auteur\" dans les articles / pages"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:504
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:528
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:552
+msgid "Custom For Each Post/Page:"
+msgstr "Personnalisé pour chaque Article/Page:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/general.php:519
+msgid "Show thumbnail in open post/page"
+msgstr "Afficher la vignette dans l'article/page en cours"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:40
+msgid "Fonts"
+msgstr "Polices"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:45
+msgid "Body, Site logo title, Single post subtitle:"
+msgstr "Corps de texte, Titre du site, sous-titre des articles:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:54
+msgid ""
+"Headings, Widgets title, Drop cap first letter, Paragraph title ,Tabs title, "
+"Single post controls (previous and next), Accordion title, Logo title span:"
+msgstr ""
+"Entêtes, Titres des Widgets, Lettrines, Titre de paragraphe,Titre d'onglets, "
+"Contrôleurs articles (précédent et suivant), Titre Accordeon, Titre logo "
+"span:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:72
+msgid "Font Character Sets"
+msgstr "Jeux de caractères"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:77
+msgid "Cyrillic Extended (cyrillic-ext):"
+msgstr "Cyrillic Extended (cyrillic-ext):"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:82
+msgid "Cyrillic (cyrillic):"
+msgstr "Cyrillic (cyrillic):"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:87
+msgid "Greek Extended (greek-ext):"
+msgstr "Greek Extended (greek-ext):"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:92
+msgid "Greek (greek):"
+msgstr "Greek (greek):"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:97
+msgid "Vietnamese (vietnamese):"
+msgstr "Vietnamese (vietnamese):"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:102
+msgid "Latin Extended (latin-ext):"
+msgstr "Latin Extended (latin-ext):"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:156
+msgid "Main Color Scheme:"
+msgstr "Principal schema de couleurs:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:162
+msgid ""
+"Tag cloud buttons, pagination, onsale label, shop price slider etc.. "
+"background:"
+msgstr ""
+"Boutons du nuage de mots-clefs, pagination, onglet \"promotion\", slider de "
+"prix boutique etc.. fond d'écran:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:168
+msgid "Border color:"
+msgstr "Couleur de bordure:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:184
+msgid "Main Navigation Style:"
+msgstr "Style navigation principale:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:190
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:211
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:232
+msgid "Light:"
+msgstr "Clair:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:191
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:212
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:233
+msgid "Dark:"
+msgstr "Sombre:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:205
+msgid "Top Navigation Style:"
+msgstr "Style menu header:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:226
+msgid "Header Style:"
+msgstr "Style entête:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:416
+msgid "Page Layout"
+msgstr "Param&eacute;tre de mise en page"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:423
+msgid "Wide:"
+msgstr "Large:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:424
+msgid "Boxed:"
+msgstr "Boxed:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:466
+msgid "Main Menu Style"
+msgstr "Style du menu principal"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:473
+msgid "Sticky:"
+msgstr "Sticky:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/style.php:474
+msgid "Normal:"
+msgstr "Normal:"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:110
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr "Installer les plugins nécessaires"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:111
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:156
+msgid "Install Plugins"
+msgstr "Installer les Plugins"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:112
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:157
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Installation du Plugin: %s"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:113
+msgid "Something went wrong with the plugin API."
+msgstr "Quelque chose n'a pas fonctionné avec le code API du plugin."
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:124
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:169
+msgid "Return to Required Plugins Installer"
+msgstr "Revenir aux plugins nécessaires"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:125
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:171
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1840
+msgid "Plugin activated successfully."
+msgstr "Plugin activé avec succès."
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/default-values.php:126
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Tous les plugins ont été installés et activés. %s"
+
+#: dialy-2014.11.10/dialy-theme/includes/admin/functions/general.php:204
+msgid " Management"
+msgstr " Management"
+
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-2.php:70
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-3.php:67
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-4.php:73
+#: dialy-2014.11.10/dialy-theme/includes/loop/post-meta.php:20
+msgid "No Comments"
+msgstr "Pas de commentaires"
+
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-2.php:70
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-3.php:67
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-4.php:73
+#: dialy-2014.11.10/dialy-theme/includes/loop/post-meta.php:20
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-2.php:70
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-3.php:67
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/block-4.php:73
+#: dialy-2014.11.10/dialy-theme/includes/loop/post-meta.php:20
+msgid "% Comments"
+msgstr "% Comments"
+
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/shop-items.php:36
+msgid "out of 5"
+msgstr "de 5"
+
+#: dialy-2014.11.10/dialy-theme/includes/home-blocks/shop-items.php:52
+msgid "Please set up WooCommerce Plugin"
+msgstr "Merci de paramétrer le plugin WooCommerce"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:158
+msgid "Something went wrong."
+msgstr "Quelque chose n'a pas fonctionn&eacute;."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr "Revenir au tableau de bord"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:172
+msgid "The following plugin was activated successfully:"
+msgstr "Le plugin suivant a été activé avec succès:"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Tous les plugins sont installés et activés avec succès. %1$s"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr "ne plus voir cette information"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1085
+msgid "External Link"
+msgstr "Lien externe"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1090
+msgid "Private Repository"
+msgstr "Private Repository"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1093
+msgid "Pre-Packaged"
+msgstr "Pre-Packaged"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1097
+msgid "WordPress Repository"
+msgstr "WordPress Repository"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1100
+msgid "Required"
+msgstr "Requis"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1100
+msgid "Recommended"
+msgstr "Recommandé"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1103
+msgid "Not Installed"
+msgstr "Non installé"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1105
+msgid "Installed But Not Activated"
+msgstr "Installé mais non activé"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1275
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"Aucun plugin à installer ou à activer. <a href=\"%1$s\" title=\"Return to "
+"the Dashboard\">Revenir au tableau de bord</a>"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1291
+msgid "Plugin"
+msgstr "Plugin"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1292
+msgid "Source"
+msgstr "Source"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1294
+msgid "Status"
+msgstr "Statuts"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1312
+msgid "Install"
+msgstr "Installer"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1313
+msgid "Activate"
+msgstr "Activer"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1823
+msgid "Install package not available."
+msgstr "Installation du package non disponible."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1824
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+"Téléchargement du package d'installation de <span class=\"code\">%s</"
+"span>&#8230;"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1825
+msgid "Unpacking the package&#8230;"
+msgstr "Décompression du package&#8230;"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1826
+msgid "Installing the plugin&#8230;"
+msgstr "Installation du plugin&#8230;"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1827
+msgid "Plugin install failed."
+msgstr "L'installation du plugin a échoué."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1828
+msgid "Plugin installed successfully."
+msgstr "Plugin installé avec succès."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1839
+msgid "Plugin activation failed."
+msgstr "L'activation du plugin a échoué."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1949
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Le processus d'installation et d'activation a démarré. Ce processus peut "
+"prendre un certain temps avec certains hébergeurs, merci de patienter."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1950
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s installé et activé avec succès."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1950
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1959
+msgid "Show Details"
+msgstr "Montrer les détails"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1950
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1959
+msgid "Hide Details"
+msgstr "Cacher les détails"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1951
+msgid "All installations and activations have been completed."
+msgstr "Toutes les installations et activations sont terminées."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1952
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation et activation du plugin %1$s (%2$d/%3$d)"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1956
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Le processus d'installation et d'activation a démarré. Ce processus peut "
+"prendre un certain temps avec certains hébergeurs, merci de patienter."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1957
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+"Une erreur est apparue durant l'installation %1$s: <strong>%2$s</strong>."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1958
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "L'installation de %1$s a échouée."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1959
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s installé avec succès."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1960
+msgid "All installations have been completed."
+msgstr "Toutes les installations sont terminées."
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:1961
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation du plugin %1$s (%2$d/%3$d)"
+
+#: dialy-2014.11.10/dialy-theme/includes/lib/class-tgm-plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr "Revenir au tableau de bord"
+
+#: dialy-2014.11.10/dialy-theme/includes/shortcodes/gallery-box.php:41
+msgid "View all"
+msgstr "Voir tout"
+
+#: dialy-2014.11.10/dialy-theme/includes/shortcodes/gallery-box.php:42
+msgid "photos"
+msgstr "photos"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-info.php:18
+msgid "Tags"
+msgstr "Mots-clefs"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-info.php:31
+msgid "Category"
+msgstr "Cat&eacute;gories"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-info.php:49
+msgid "Views"
+msgstr "Vues"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:8
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:130
+msgid "Excellent"
+msgstr "Excellent"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:10
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:132
+msgid "Good"
+msgstr "Bon"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:12
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:134
+msgid "Average"
+msgstr "Moyenne"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:14
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:136
+msgid "Fair"
+msgstr "Faible"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:16
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:138
+msgid "Poor"
+msgstr "Mauvais"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-ratings.php:18
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:140
+msgid "Very Poor"
+msgstr "Tr&egrave;s mauvais"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-related.php:34
+msgid "Related <strong>posts</strong>"
+msgstr "Vous <strong>aimerez</strong> aussi"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-share.php:10
+msgid "Share this post:"
+msgstr "Partager cet article:"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-share.php:13
+msgid "Share on Twitter!"
+msgstr "Partager sur Twitter!"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-share.php:19
+msgid "Share on Facebook!"
+msgstr "Partager sur Facebook!"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-share.php:25
+msgid "Share on Google+!"
+msgstr "Partager sur Google+!"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-share.php:31
+msgid "Share on Pinterest!"
+msgstr "Partager sur Pinterest!"
+
+#: dialy-2014.11.10/dialy-theme/includes/single/post-share.php:37
+msgid "Share on LinkedIn!"
+msgstr "Partager sur LinkedIn!"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:36
+msgid "Link 1:"
+msgstr "Lien 1:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:37
+msgid "Image Url 1:"
+msgstr "Url Image 1:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:39
+msgid "Link 2:"
+msgstr "Lien 2:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:40
+msgid "Image Url 2:"
+msgstr "Url Image 2:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:42
+msgid "Link 3:"
+msgstr "Lien 3:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:43
+msgid "Image Url 3:"
+msgstr "Url Image 3:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:45
+msgid "Link 4:"
+msgstr "Lien 4:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:46
+msgid "Image Url 4:"
+msgstr "Url Image 4:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad125x125.php:87
+msgid "Banner"
+msgstr "Banni&egrave;re"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad300x250.php:35
+msgid ""
+"A widget that allows the display and configuration of of a single 300x250 "
+"Banner."
+msgstr ""
+"Widget qui permet d'afficher et configurer une bannière unique de 300x250."
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad300x250.php:41
+msgid " Custom 300x250 Ad"
+msgstr "Publicité personnalisée de 300x250"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad300x250.php:124
+msgid "Ad image url:"
+msgstr "url image publicité:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-ad300x250.php:130
+msgid "Ad link url:"
+msgstr "url lien publicité:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-comments.php:6
+msgid "Recent comments"
+msgstr "Commentaires r&eacute;cents"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-comments.php:26
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:44
+msgid "Comment count:"
+msgstr "Nombre de commentaires:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-comments.php:27
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:45
+msgid "Show Comment Avatar:"
+msgstr "Afficher l'avatar des commentaires:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-comments.php:29
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:48
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:27
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:37
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:33
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:40
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:47
+msgid "Yes"
+msgstr "Oui"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-comments.php:30
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:49
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:28
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:38
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:34
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:41
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:48
+msgid "No"
+msgstr "Non"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:6
+msgid "Latest post widget."
+msgstr "Widget Derniers articles."
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:12
+msgid "Latests Posts"
+msgstr "Derniers articles"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:38
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:52
+msgid "Category:"
+msgstr "Cat&eacute;gorie:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:40
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:54
+msgid "Latest Posts"
+msgstr "Derniers articles"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-latest-posts.php:46
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:25
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:35
+msgid "Show Thumbnail:"
+msgstr "Afficher la vignette:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:6
+msgid " most popular posts by view count."
+msgstr "articles les plus populaires par nombre de vues."
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:12
+msgid "Popular Posts"
+msgstr "Articles populaires"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-popular-posts.php:24
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:28
+msgid "Post count:"
+msgstr "Nombre d'articles:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:6
+msgid " reviews widget, shows all posts, that have a review."
+msgstr "Widget Review, affiche tous les articles avec une notation."
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:12
+msgid "Latest Reviews"
+msgstr "Derni&egrave;res notations"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:29
+msgid "Type:"
+msgstr "Type:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:31
+msgid "Latests"
+msgstr "Derniers"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-reviews.php:32
+msgid "Top"
+msgstr "Haut"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-tags.php:6
+msgid "Custom Tag Style."
+msgstr "Style Mot-clef personnalisé."
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:6
+msgid "Recent Comments, Posts & Popular Posts"
+msgstr "Derniers commentaires, articles et articles populaires"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:30
+msgid "Popular Post count:"
+msgstr "Nombre d'articles populaires:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:31
+msgid "Popular Posts Thumbnail:"
+msgstr "Vignette des articles populaires:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:37
+msgid "Recent Post count:"
+msgstr "Nombre d'article récent:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:38
+msgid "Recent Posts Thumbnail:"
+msgstr "Vignette articles récents:"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:85
+msgid "Popular"
+msgstr "Populaire"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:86
+msgid "Recent"
+msgstr "R&eacute;cent"
+
+#: dialy-2014.11.10/dialy-theme/includes/widgets/widget-dialy-triple-box.php:87
+msgid "Comments"
+msgstr "Commentaires"
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:25
+msgid "Nickname"
+msgstr "Pseudo"
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:25
+msgid "First Name"
+msgstr "Nom"
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:26
+msgid "You didn't enter Your First Name."
+msgstr "Vous n'avez pas renseign&eacute; votre pr&eacute;nom"
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:28
+msgid "First Name is the wrong length."
+msgstr "Probl&egrave;me de longueur de ligne"
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:39
+msgid "You didn't enter an email address."
+msgstr "Vous n'avez pas renseign&eacute; d'adresse mail."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:41
+msgid "The email address contains illegal characters."
+msgstr "Votre adresse mail contient des caract&egrave;res interdits."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:53
+msgid "You didn't enter Your message."
+msgstr "Vous n'avez pas entr&eacute; de messages."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:55
+msgid "The message is to short."
+msgstr "Votre message est trop court."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:67
+msgid "You didn't enter Your last name."
+msgstr "Vous n'avez pas renseign&eacute; votre nom."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:69
+msgid "Last Name is the wrong length."
+msgstr "Probl&egrave;me de longueur du pr&eacute;nom."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:80
+msgid "You didn't enter Your phone number."
+msgstr ""
+"Vous n'avez pas renseign&eacute; votre num&eacute;ro de t&eacute;l&eacute;"
+"phone."
+
+#: dialy-2014.11.10/dialy-theme/lib/js/scripts.php:82
+msgid "Please enter a valid phone number."
+msgstr "Merci de renseigner votre num&eacute;ro de t&eacute;l&eacute;phone"
