@@ -63,10 +63,12 @@ class ArticleController extends Controller
         $articles_per_page = $this->container->getParameter('articles_per_page');
 
         $articles  = $em->getRepository('VyperSiteBundle:Article')->myFindByTheme($articles_per_page, $page, $theme);
+        $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
         $view
             ->set('articles', $articles)
             ->set('page', $page)
             ->set('total_articles', ceil(count($articles)/$articles_per_page))
+            ->set('themes_in_menu', $themesInMenu)
             ->set('article_type', $theme->getTitle())
         ;
 
