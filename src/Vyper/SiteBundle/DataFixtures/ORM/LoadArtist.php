@@ -24,73 +24,20 @@ class LoadArtist extends AbstractFixture implements FixtureInterface, OrderedFix
      */
     public function load(ObjectManager $manager)
     {
-        $names = array(
-            'Antoine',
-            'Amelie',
-            'Aurelie',
-            'Anousack',
-            'Arnaud',
-            'Audrey',
-            'Amaury',
-            'Benoit',
-            'Bruno',
-            'Brigitte',
-            'Bernard',
-            'Bernd',
-            'Broly',
-            'Celine',
-            'Cecile',
-            'Emile',
-            'Melanie',
-            'Gazette',
-            'Gerard',
-            'Zao',
-            'ALI PROJECT',
-'Alice Nine',
-'An Cafe',
-'Ayabie',
-'D',
-'DaizyStripper',
-'Deathgaze',
-'Deluhi',
-'D\'espairsRay',
-'Dio - Distraught Overlord',
-'Dir en grey',
-'Dolly',
-'Galneryus',
-'Ghost',
-'Girugämesh',
-'Guniw Tools',
-'Gackt',
-'Golden Bomber',
-'Malice Mizer',
-'Madeth Gray\'ll',
-'Matenrou Opera',
-'Merry',
-'Miyavi',
-'Moi dix Mois',
-'MUCC',
-'Schwarz Stein',
-'Shazna',
-'Sid',
-'Sincrea',
-'SuG',
-'VAMPS',
-'Versailles',
-'Vidoll',
-'Vistlip',
-            '12012',
-        );
+
+        $names = json_decode(file_get_contents('src/Vyper/SiteBundle/DataFixtures/ORM/json/artist.json'));
 
         foreach ($names as $i => $name)
         {
             $randPic = mt_rand(0, 4);
 
             $list[$i] = new Artist();
-            $list[$i]->setName($name);
-            $list[$i]->setProfile($name);
-            $list[$i]->setKeywords($name);
-            $list[$i]->setVyper(false);
+            $list[$i]->setName($name->name);
+            $list[$i]->setRealName($name->realName);
+            $list[$i]->setProfile($name->profile);
+            $list[$i]->setBiography($name->biography);
+            $list[$i]->setKeywords($name->keywords);
+            $list[$i]->setVyper(true);
             $list[$i]->setPicture($this->getReference('picture-'.$randPic));
             $list[$i]->setSlug(uniqid());
 

@@ -103,7 +103,7 @@ class LoadDisco extends AbstractFixture implements FixtureInterface, OrderedFixt
         for ($j=0;$j<=10;$j++) {
             foreach ($names as $i => $name)
             {
-                $randArtist = mt_rand(0, 54);
+                $randArtist = mt_rand(0, 11);
                 $randPic = mt_rand(5, 8);
                 $year = $years[array_rand($years)];
                 $month = array_rand($months);
