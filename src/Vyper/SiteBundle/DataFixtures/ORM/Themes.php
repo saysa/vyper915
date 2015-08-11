@@ -29,6 +29,7 @@ class Themes extends AbstractFixture implements FixtureInterface {
         {
             $list[$i] = new Theme();
             $list[$i]->setTitle($name);
+            $list[$i]->setSlug(uniqid());
 
             $manager->persist($list[$i]);
         }

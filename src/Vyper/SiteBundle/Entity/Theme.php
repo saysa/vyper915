@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Theme
@@ -36,6 +37,13 @@ class Theme
      * @ORM\Column(name="showInMenu", type="boolean")
      */
     private $showInMenu;
+
+    /**
+     * @var string
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $slug;
 
     /**
      * @var boolean
@@ -212,6 +220,29 @@ class Theme
     public function getShowInMenu()
     {
         return $this->showInMenu;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Artist
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**
