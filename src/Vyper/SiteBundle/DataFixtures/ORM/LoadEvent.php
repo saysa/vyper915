@@ -41,6 +41,7 @@ class LoadEvent extends AbstractFixture implements FixtureInterface, OrderedFixt
         foreach ($names as $i => $name)
         {
             $randLocation = mt_rand(0, 20);
+            $randCalendar = mt_rand(0, 2);
 
             $list[$i] = new Event();
             $list[$i]->setTitle($name);
@@ -51,6 +52,7 @@ class LoadEvent extends AbstractFixture implements FixtureInterface, OrderedFixt
             $list[$i]->setLocation($this->getReference('location-'.$randLocation));
             $list[$i]->setTour($this->getReference('tour-0'));
             $list[$i]->setType($this->getReference('event-type-0'));
+            $list[$i]->setCalendar($this->getReference('event-calendar-'.$randCalendar));
             $list[$i]->setSlug(uniqid());
 
             $manager->persist($list[$i]);
