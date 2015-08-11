@@ -24,19 +24,19 @@ class LoadTour extends AbstractFixture implements FixtureInterface, OrderedFixtu
      */
     public function load(ObjectManager $manager)
     {
-        $names = array(
-            'Gazette Tour 2014',
-        );
+        $names = json_decode(file_get_contents('src/Vyper/SiteBundle/DataFixtures/ORM/json/tour.json'));
 
         foreach ($names as $i => $name)
         {
             $list[$i] = new Tour();
             $list[$i]->setType($this->getReference('tour-type'));
             $list[$i]->setContinent($this->getReference('continent'));
-            $list[$i]->setTitle($name);
-            $list[$i]->setDescription($name);
-            $list[$i]->setStart(new \DateTime("2014-07-01"));
-            $list[$i]->setEnd(new \DateTime("2014-12-01"));
+            $list[$i]->setTitle($name->title);
+            $list[$i]->setRealTitle($name->realTitle);
+            $list[$i]->setDescription($name->description);
+            $list[$i]->setStart(new \DateTime($name->start));
+            $list[$i]->setEnd(new \DateTime($name->end));
+            $list[$i]->setArtistsKeywords($name->artistsKeywords);
 
             $manager->persist($list[$i]);
 
