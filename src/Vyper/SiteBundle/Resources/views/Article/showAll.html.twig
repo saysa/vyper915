@@ -77,10 +77,6 @@
                             <a href="{{ path('musique-chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Interviews' %}
                             <a href="{{ path('musique-interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Jeux Vidéos' %}
-                            <a href="{{ path('jeuxvideos', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Culture' %}
-                            <a href="{{ path('culture', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Actualités' %}
                             <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Archives' %}
