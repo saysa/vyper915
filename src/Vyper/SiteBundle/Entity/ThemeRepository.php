@@ -21,4 +21,18 @@ class ThemeRepository extends EntityRepository
 
         return $results;
     }
+
+    public function getShowInMenu()
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.deleted = false')
+            ->andWhere('t.showInMenu = true');
+
+        $queryBuilder->orderBy('t.title', 'ASC');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

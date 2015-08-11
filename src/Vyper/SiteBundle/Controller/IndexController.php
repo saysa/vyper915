@@ -56,11 +56,14 @@ class IndexController extends Controller
 
         $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
 
+        $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
+
         $view
             ->set('latest_actu', $latest_actu)
             ->set('articles_carousel', $articles_carousel)
             ->set('latest_news', $latest_news)
             ->set('last_videos', $last_videos)
+            ->set('themes_in_menu', $themesInMenu)
             ->set('front_page_index', true)
             ->set('user_id', $user)
         ;

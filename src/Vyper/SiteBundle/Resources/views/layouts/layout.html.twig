@@ -229,6 +229,13 @@
                 <li id="menu-item-329" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/fashion/" style="border-color: #c50298; ">Features</a></li>
                 <li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/technology/" style="border-color: #4A86B8; ">Contests</a></li>
                 <li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArtist') }}" style="border-color: #ccc700; ">Artists</a></li>
+                {% if themes_in_menu|length > 0 %}
+
+                    {% for theme in themes_in_menu %}
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="#">{{ theme.title }}</a></li>
+                    {% endfor %}
+
+                {% endif %}
             </ul>
 
         </div>
