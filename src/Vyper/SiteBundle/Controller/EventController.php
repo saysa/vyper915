@@ -63,10 +63,13 @@ class EventController extends Controller
 
         $defaultDate = date('Y-m-d', time());
 
+        $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
+
         $view
             ->set('current_event', true)
             ->set('events', json_encode($json))
             ->set('defaultDate', $defaultDate)
+            ->set('themes_in_menu', $themesInMenu)
         ;
 
         if ($request->isXmlHttpRequest()) {

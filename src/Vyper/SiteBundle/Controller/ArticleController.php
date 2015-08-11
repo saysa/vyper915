@@ -50,8 +50,11 @@ class ArticleController extends Controller
             $view->set("img_type_news", "true");
         }
 
+        $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
+
         $view->set('user_id', $user);
         $view->set('article', $article);
+        $view->set('themes_in_menu', $themesInMenu);
 
         return $this->render('VyperSiteBundle:Article:showArticle.html.twig', $view->getView());
     }
@@ -154,10 +157,12 @@ class ArticleController extends Controller
         }
 
         $articles  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page, $page, $type);
+        $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
         $view
             ->set('articles', $articles)
             ->set('page', $page)
             ->set('total_articles', ceil(count($articles)/$articles_per_page))
+            ->set('themes_in_menu', $themesInMenu)
         ;
 
         return $this->render('VyperSiteBundle:Article:showAll.html.twig', $view->getView());
