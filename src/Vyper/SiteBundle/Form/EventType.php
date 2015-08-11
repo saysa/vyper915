@@ -23,6 +23,10 @@ class EventType extends AbstractType
                 'class' => 'VyperSiteBundle:EventType',
                 'property' => 'name',
             ))
+            ->add('calendar', 'entity', array(
+                'class' => 'VyperSiteBundle:EventCalendar',
+                'property' => 'name',
+            ))
             ->add('tour', 'entity', array(
                 'required' => false,
                 'class' => 'VyperSiteBundle:Tour',

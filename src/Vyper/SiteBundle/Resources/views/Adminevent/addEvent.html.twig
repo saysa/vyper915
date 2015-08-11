@@ -169,6 +169,15 @@
 
                                     </div>
                                     <div class="col-lg-4">
+                                        <!-- Calendar -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9">
+                                                {{ form_label(form.calendar, "Calendar") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.calendar, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
