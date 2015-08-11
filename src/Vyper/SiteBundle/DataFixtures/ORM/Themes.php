@@ -23,7 +23,7 @@ class Themes extends AbstractFixture implements FixtureInterface {
      */
     public function load(ObjectManager $manager)
     {
-        $names = array('Japan Expo 2014', 'Top Oricon 2014');
+        $names = array('Japan Expo', 'Japan Night');
 
         foreach ($names as $i => $name)
         {
