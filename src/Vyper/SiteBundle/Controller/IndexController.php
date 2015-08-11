@@ -44,8 +44,6 @@ class IndexController extends Controller
 
         $type = array(
             '',
-            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Jeux Vidéos"),
-            $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Culture"),
             $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
             $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
             $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
@@ -55,10 +53,6 @@ class IndexController extends Controller
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'musique : news'));
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Jeux Vidéos'));
-        $latest_jeux_videos = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'Culture'));
-        $latest_culture = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
 
         $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
 
@@ -66,8 +60,6 @@ class IndexController extends Controller
             ->set('latest_actu', $latest_actu)
             ->set('articles_carousel', $articles_carousel)
             ->set('latest_news', $latest_news)
-            ->set('latest_jeux_videos', $latest_jeux_videos)
-            ->set('latest_culture', $latest_culture)
             ->set('last_videos', $last_videos)
             ->set('front_page_index', true)
             ->set('user_id', $user)
