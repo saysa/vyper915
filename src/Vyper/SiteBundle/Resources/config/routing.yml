@@ -165,7 +165,7 @@ playerradio:
     path:    /radio
     defaults: { _controller: VyperSiteBundle:Statique:radio }
 
-showTheme:
+vyper_site_showTheme:
     path:    /theme/{slug}/{id}/{page}
     defaults: { _controller: VyperSiteBundle:Article:showTheme, page: 1 }
 
