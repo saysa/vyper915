@@ -82,11 +82,11 @@
                         {% elseif article_type == 'Culture' %}
                             <a href="{{ path('culture', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Actualités' %}
-                            <a href="{{ path('showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                            <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Archives' %}
                             <a href="{{ path('musique-news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% else %}
-                            <a href="{{ path('showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                            <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% endif %}
 
 
