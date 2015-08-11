@@ -93,6 +93,12 @@ class Event
     private $type;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\EventCalendar")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $calendar;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Tour")
      * @ORM\JoinColumn(nullable=true)
      */
@@ -458,6 +464,29 @@ class Event
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set calendar
+     *
+     * @param \Vyper\SiteBundle\Entity\EventCalendar $calendar
+     * @return Event
+     */
+    public function setCalendar(\Vyper\SiteBundle\Entity\EventCalendar $calendar)
+    {
+        $this->calendar = $calendar;
+
+        return $this;
+    }
+
+    /**
+     * Get calendar
+     *
+     * @return \Vyper\SiteBundle\Entity\EventCalendar
+     */
+    public function getCalendar()
+    {
+        return $this->calendar;
     }
 
     /**
