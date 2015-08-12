@@ -1,0 +1,102 @@
+
+
+
+/*==============================================================================
+    Color (Blue)
+===============================================================================*/
+a,
+h1#site-logo,
+h1#site-logo a,
+.weather-report .report,
+#sidebar h3.widget-title,
+.tabs .ui-tabs-nav li.ui-state-active a,
+article .post-meta span:before,
+.post-info span:before,
+.post-controls a:hover,
+.post-controls a span i,
+.accordion .title.ui-state-active,
+.above-the-fold h2.page-title,
+.page404 h2,
+#groups-list-options a.selected,
+#members-list-options a.selected {color: #4A86B8 }
+
+
+/*==============================================================================
+    Background color (Blue)
+===============================================================================*/
+.tagcloud a:hover,
+.tagcloud-custom a:hover,
+#footer .tagcloud a:hover,
+ul.page-numbers li span.current,
+ul.page-numbers li a:hover,
+.onsale,
+.price_slider_wrapper .ui-slider-range,
+a.selected-gallery-filter,
+.block-layout-one .item span,
+.post-box-text span,
+.block-layout-two .main-item .post-img span,
+.block-layout-three .main-item .post-img span,
+.block-layout-four .main-item .post-img span,
+.block-layout-five .main-item .post-img span,
+table.cart td.actions .coupon .button,
+ul.top-rated .rating-total strong {background-color: #4A86B8 }
+
+
+/*==============================================================================
+    Border color (Blue)
+===============================================================================*/
+.price_slider_wrapper .ui-slider-handle,
+.block-layout-three .item img,
+.block-layout-two .item img,
+.block-layout-one .item img {border-color: #4A86B8 }
+
+
+
+/* POPUP BANNER */
+
+
+
+/* ==========================================================================
+   Body
+   ========================================================================== */
+body {
+    background-color: #DDDDDD;
+}
+/*==============================================================================
+    Open Sans
+===============================================================================*/
+body,
+h1#site-logo,
+.single-post h3.lead {
+    font-family: 'Open Sans', 'sans-serif';
+}
+
+/*==============================================================================
+    Droid Serif
+===============================================================================*/
+h1, h2, h3, h4, h5, h6,
+h3.widget-title,
+.dropcap:first-letter,
+p.title,
+.ui-tabs-nav,
+.post-controls a p,
+.accordion .title,
+h1#site-logo span,
+#groups-list-options,
+#members-list-options,
+ul#groups-list li .item a,
+ul#members-list li .item a {
+    font-family: 'Roboto Condensed', serif;
+}
+
+h1.post-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 0em;
+    word-spacing: 0em;
+    line-height: 1.4;
+}
