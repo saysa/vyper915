@@ -1,0 +1,362 @@
+# Desc: /a-propos
+a_propos: /a-propos   # FIXME
+
+# Desc: /_admin_/album/add
+admin_add_album: /_admin_/album/add   # FIXME
+
+# Desc: /_admin_/article/add
+admin_add_article: /_admin_/article/add   # FIXME
+
+# Desc: /_admin_/artist/add
+admin_add_artist: /_admin_/artist/add   # FIXME
+
+# Desc: /_admin_/disco/add
+admin_add_disco: /_admin_/disco/add   # FIXME
+
+# Desc: /_admin_/event/add
+admin_add_event: /_admin_/event/add   # FIXME
+
+# Desc: /_admin_/flashnew/add
+admin_add_flashnew: /_admin_/flashnew/add   # FIXME
+
+# Desc: /_admin_/location/add
+admin_add_location: /_admin_/location/add   # FIXME
+
+# Desc: /_admin_/magazine/add
+admin_add_magazine: /_admin_/magazine/add   # FIXME
+
+# Desc: /_admin_/partner/add
+admin_add_partner: /_admin_/partner/add   # FIXME
+
+# Desc: /_admin_/picture/add
+admin_add_picture: /_admin_/picture/add   # FIXME
+
+# Desc: /_admin_/themes/add
+admin_add_theme: /_admin_/themes/add   # FIXME
+
+# Desc: /_admin_/tour/add
+admin_add_tour: /_admin_/tour/add   # FIXME
+
+# Desc: /_admin_/tourType/add
+admin_add_tourType: /_admin_/tourType/add   # FIXME
+
+# Desc: /_admin_/video/add
+admin_add_video: /_admin_/video/add   # FIXME
+
+# Desc: /_admin_/article/delete/{id}
+admin_delete_article: '/_admin_/article/delete/{id}'   # FIXME
+
+# Desc: /_admin_/artist/delete/{id}
+admin_delete_artist: '/_admin_/artist/delete/{id}'   # FIXME
+
+# Desc: /_admin_/disco/delete/{id}
+admin_delete_disco: '/_admin_/disco/delete/{id}'   # FIXME
+
+# Desc: /_admin_/event/delete/{id}
+admin_delete_event: '/_admin_/event/delete/{id}'   # FIXME
+
+# Desc: /_admin_/flashnew/delete/{id}
+admin_delete_flashnew: '/_admin_/flashnew/delete/{id}'   # FIXME
+
+# Desc: /_admin_/location/delete/{id}
+admin_delete_location: '/_admin_/location/delete/{id}'   # FIXME
+
+# Desc: /_admin_/magazine/delete/{id}
+admin_delete_magazine: '/_admin_/magazine/delete/{id}'   # FIXME
+
+# Desc: /_admin_/partner/delete/{id}
+admin_delete_partner: '/_admin_/partner/delete/{id}'   # FIXME
+
+# Desc: /_admin_/picture/delete/{id}
+admin_delete_picture: '/_admin_/picture/delete/{id}'   # FIXME
+
+# Desc: /_admin_/themes/delete/{id}
+admin_delete_theme: '/_admin_/themes/delete/{id}'   # FIXME
+
+# Desc: /_admin_/tour/delete/{id}
+admin_delete_tour: '/_admin_/tour/delete/{id}'   # FIXME
+
+# Desc: /_admin_/articles
+admin_show_articles: /_admin_/articles   # FIXME
+
+# Desc: /_admin_/artists
+admin_show_artists: /_admin_/artists   # FIXME
+
+# Desc: /_admin_/discos
+admin_show_discos: /_admin_/discos   # FIXME
+
+# Desc: /_admin_/editables
+admin_show_editables: /_admin_/editables   # FIXME
+
+# Desc: /_admin_/events
+admin_show_events: /_admin_/events   # FIXME
+
+# Desc: /_admin_/locations
+admin_show_locations: /_admin_/locations   # FIXME
+
+# Desc: /_admin_/magazines
+admin_show_magazines: /_admin_/magazines   # FIXME
+
+# Desc: /_admin_/partners
+admin_show_partners: /_admin_/partners   # FIXME
+
+# Desc: /_admin_/pictures
+admin_show_pictures: /_admin_/pictures   # FIXME
+
+# Desc: /_admin_/tours
+admin_show_tours: /_admin_/tours   # FIXME
+
+# Desc: /_admin_/videos
+admin_show_videos: /_admin_/videos   # FIXME
+
+# Desc: /_admin_/ajax/switch_theme_show_in_menu
+admin_switchThemeShowInMenu: /_admin_/ajax/switch_theme_show_in_menu   # FIXME
+
+# Desc: /_admin_/album/update/{id}
+admin_update_album: '/_admin_/album/update/{id}'   # FIXME
+
+# Desc: /_admin_/article/update/{id}
+admin_update_article: '/_admin_/article/update/{id}'   # FIXME
+
+# Desc: /_admin_/artist/update/{id}
+admin_update_artist: '/_admin_/artist/update/{id}'   # FIXME
+
+# Desc: /_admin_/disco/update/{id}
+admin_update_disco: '/_admin_/disco/update/{id}'   # FIXME
+
+# Desc: /_admin_/editable/update/{id}
+admin_update_editable: '/_admin_/editable/update/{id}'   # FIXME
+
+# Desc: /_admin_/event/update/{id}
+admin_update_event: '/_admin_/event/update/{id}'   # FIXME
+
+# Desc: /_admin_/flashnew/update/{id}
+admin_update_flashnew: '/_admin_/flashnew/update/{id}'   # FIXME
+
+# Desc: /_admin_/location/update/{id}
+admin_update_location: '/_admin_/location/update/{id}'   # FIXME
+
+# Desc: /_admin_/magazine/update/{id}
+admin_update_magazine: '/_admin_/magazine/update/{id}'   # FIXME
+
+# Desc: /_admin_/partner/update/{id}
+admin_update_partner: '/_admin_/partner/update/{id}'   # FIXME
+
+# Desc: /_admin_/theme/update/{id}
+admin_update_theme: '/_admin_/theme/update/{id}'   # FIXME
+
+# Desc: /_admin_/tour/update/{id}
+admin_update_tour: '/_admin_/tour/update/{id}'   # FIXME
+
+# Desc: /_admin_/tourType/update/{id}
+admin_update_tourType: '/_admin_/tourType/update/{id}'   # FIXME
+
+# Desc: /_admin_/video/update/{id}
+admin_update_video: '/_admin_/video/update/{id}'   # FIXME
+
+# Desc: /_admin_/ajax/add_title_to_disco
+ajax_addTitleDisco: /_admin_/ajax/add_title_to_disco   # FIXME
+
+# Desc: /_admin_/ajax/album_artist_link
+ajax_albumArtistLink: /_admin_/ajax/album_artist_link   # FIXME
+
+# Desc: /_admin_/ajax/album_artist_link_delete
+ajax_albumArtistLinkDelete: /_admin_/ajax/album_artist_link_delete   # FIXME
+
+# Desc: /_admin_/ajax/article_artist_link
+ajax_articleArtistLink: /_admin_/ajax/article_artist_link   # FIXME
+
+# Desc: /_admin_/ajax/article_artist_link_delete
+ajax_articleArtistLinkDelete: /_admin_/ajax/article_artist_link_delete   # FIXME
+
+# Desc: /_admin_/ajax/disco_artist_link
+ajax_discoArtistLink: /_admin_/ajax/disco_artist_link   # FIXME
+
+# Desc: /_admin_/ajax/disco_artist_link_delete
+ajax_discoArtistLinkDelete: /_admin_/ajax/disco_artist_link_delete   # FIXME
+
+# Desc: /_admin_/ajax/event_artist_link
+ajax_eventArtistLink: /_admin_/ajax/event_artist_link   # FIXME
+
+# Desc: /_admin_/ajax/event_artist_link_delete
+ajax_eventArtistLinkDelete: /_admin_/ajax/event_artist_link_delete   # FIXME
+
+# Desc: /ajax/general
+ajax_general: /ajax/general   # FIXME
+
+# Desc: /_admin_/ajax/magazine_artist_link
+ajax_magazineArtistLink: /_admin_/ajax/magazine_artist_link   # FIXME
+
+# Desc: /_admin_/ajax/magazine_artist_link_delete
+ajax_magazineArtistLinkDelete: /_admin_/ajax/magazine_artist_link_delete   # FIXME
+
+# Desc: /_admin_/ajax/remove_title_to_disco
+ajax_removeTitleDisco: /_admin_/ajax/remove_title_to_disco   # FIXME
+
+# Desc: /_admin_/ajax/switch_article_highlight
+ajax_switch_article_highlight: /_admin_/ajax/switch_article_highlight   # FIXME
+
+# Desc: /_admin_/ajax/switch_article_published
+ajax_switch_article_published: /_admin_/ajax/switch_article_published   # FIXME
+
+# Desc: /_admin_/ajax/switch_artist_vyper
+ajax_switch_artist_vyper: /_admin_/ajax/switch_artist_vyper   # FIXME
+
+# Desc: /_admin_/ajax/video_artist_link
+ajax_videoArtistLink: /_admin_/ajax/video_artist_link   # FIXME
+
+# Desc: /_admin_/ajax/video_artist_link_delete
+ajax_videoArtistLinkDelete: /_admin_/ajax/video_artist_link_delete   # FIXME
+
+# Desc: /ajax/vyper-jmusic-magazines
+ajax_vyper: /ajax/vyper-jmusic-magazines   # FIXME
+
+# Desc: /artist-discography/{slug}/{id}.html/{page}
+artistDiscography: '/artist-discography/{slug}/{id}.html/{page}'   # FIXME
+
+# Desc: /conditions-utilisation
+cgu: /conditions-utilisation   # FIXME
+
+# Desc: /conditions-utilisation-sms
+cgu_sms: /conditions-utilisation-sms   # FIXME
+
+# Desc: /culture/{page}
+culture: '/culture/{page}'   # FIXME
+
+# Desc: /profile/change-password
+fos_user_change_password: /profile/change-password   # FIXME
+
+# Desc: /profile/edit
+fos_user_profile_edit: /profile/edit   # FIXME
+
+# Desc: /profile/
+fos_user_profile_show: /profile/   # FIXME
+
+# Desc: /register/check-email
+fos_user_registration_check_email: /register/check-email   # FIXME
+
+# Desc: /register/confirm/{token}
+fos_user_registration_confirm: '/register/confirm/{token}'   # FIXME
+
+# Desc: /register/confirmed
+fos_user_registration_confirmed: /register/confirmed   # FIXME
+
+# Desc: /register/
+fos_user_registration_register: /register/   # FIXME
+
+# Desc: /resetting/check-email
+fos_user_resetting_check_email: /resetting/check-email   # FIXME
+
+# Desc: /resetting/request
+fos_user_resetting_request: /resetting/request   # FIXME
+
+# Desc: /resetting/reset/{token}
+fos_user_resetting_reset: '/resetting/reset/{token}'   # FIXME
+
+# Desc: /resetting/send-email
+fos_user_resetting_send_email: /resetting/send-email   # FIXME
+
+# Desc: /login_check
+fos_user_security_check: /login_check   # FIXME
+
+# Desc: /login
+fos_user_security_login: /login   # FIXME
+
+# Desc: /logout
+fos_user_security_logout: /logout   # FIXME
+
+# Desc: /ajax/get_device
+get_device: /ajax/get_device   # FIXME
+
+# Desc: /ajax/get_playlist
+get_playlist: /ajax/get_playlist   # FIXME
+
+# Desc: /is/artist-discography
+infiniteScrollArtistDiscography: /is/artist-discography   # FIXME
+
+# Desc: /jeux-videos/{page}
+jeuxvideos: '/jeux-videos/{page}'   # FIXME
+
+# Desc: /l-equipe
+l_equipe: /l-equipe   # FIXME
+
+# Desc: /mentions-legales
+mentions_legales: /mentions-legales   # FIXME
+
+# Desc: /musique-chroniques/{page}
+musique-chroniques: '/musique-chroniques/{page}'   # FIXME
+
+# Desc: /musique-interviews/{page}
+musique-interviews: '/musique-interviews/{page}'   # FIXME
+
+# Desc: /musique-live-reports/{page}
+musique-live-reports: '/musique-live-reports/{page}'   # FIXME
+
+# Desc: /musique-archives/{page}
+musique-news: '/musique-archives/{page}'   # FIXME
+
+# Desc: /radio
+playerradio: /radio   # FIXME
+
+# Desc: /album/{slug}/{id}.html
+showAlbum: '/album/{slug}/{id}.html'   # FIXME
+
+# Desc: /galerie/{page}
+showAlbums: '/galerie/{page}'   # FIXME
+
+# Desc: /vyper-jmusic-magazines/{page}
+showAllMagazine: '/vyper-jmusic-magazines/{page}'   # FIXME
+
+# Desc: /article/{slug}/{id}.html
+showArticle: '/article/{slug}/{id}.html'   # FIXME
+
+# Desc: /artiste/{slug}/{id}.html
+showArtist: '/artiste/{slug}/{id}.html'   # FIXME
+
+# Desc: /disco/{slug}/{id}.html
+showDisco: '/disco/{slug}/{id}.html'   # FIXME
+
+# Desc: /event/{slug}/{id}.html
+showEvent: '/event/{slug}/{id}.html'   # FIXME
+
+# Desc: /breve/{slug}/{id}.html
+showFlashnew: '/breve/{slug}/{id}.html'   # FIXME
+
+# Desc: /vyper-jmusic-magazine/{slug}/{id}.html
+showMagazine: '/vyper-jmusic-magazine/{slug}/{id}.html'   # FIXME
+
+# Desc: /video/{slug}/{id}
+showVideo: '/video/{slug}/{id}'   # FIXME
+
+# Desc: /ajax/vote_picture
+vote_picture: /ajax/vote_picture   # FIXME
+
+# Desc: /ajax/vote_song
+vote_song: /ajax/vote_song   # FIXME
+
+# Desc: /contact
+vyper_site_contact: /contact   # FIXME
+
+# Desc: /home
+vyper_site_home: /home   # FIXME
+
+# Desc: /
+vyper_site_index: /   # FIXME
+
+# Desc: /jobs
+vyper_site_jobs: /jobs   # FIXME
+
+# Desc: /partenaires
+vyper_site_partenaires: /partenaires   # FIXME
+
+# Desc: /actualites/{page}
+vyper_site_showAllArticles: '/actualites/{page}'   # FIXME
+
+# Desc: /artistes/{page}
+vyper_site_showAllArtist: '/artistes/{page}'   # FIXME
+
+# Desc: /events
+vyper_site_showAllEvent: /events   # FIXME
+
+# Desc: /theme/{slug}/{id}/{page}
+vyper_site_showTheme: '/theme/{slug}/{id}/{page}'   # FIXME
