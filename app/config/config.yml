@@ -91,3 +91,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: Vyper\UserBundle\Entity\User
+
+jms_i18n_routing:
+    default_locale: %locale%
+    locales: [en, fr]
+    strategy: prefix
+
