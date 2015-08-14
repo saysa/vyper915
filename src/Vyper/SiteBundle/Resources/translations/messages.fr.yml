@@ -2,4 +2,6 @@
 
 main:
     menu:
-        artists: ArtistesFR
+        artists: Artistes
+        contests: Concours
+        features: Vidéos

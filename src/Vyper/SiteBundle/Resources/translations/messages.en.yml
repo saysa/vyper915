@@ -2,4 +2,6 @@
 
 main:
     menu:
-        artists: ArtistsEN
+        artists: Artists
+        contests: Contests
+        features: Features
