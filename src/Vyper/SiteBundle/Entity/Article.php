@@ -53,6 +53,13 @@ class Article
     /**
      * @var string
      *
+     * @ORM\Column(name="lcoale", type="string", length=15)
+     */
+    private $locale;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="text")
      */
     private $description;
@@ -268,6 +275,29 @@ class Article
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param string $locale
+     * @return Article
+     */
+    public function setLocale($locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Get locale
+     *
+     * @return string
+     */
+    public function getLocale()
+    {
+        return $this->locale;
     }
 
     /**

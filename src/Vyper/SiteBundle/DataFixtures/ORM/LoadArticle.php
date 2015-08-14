@@ -49,6 +49,7 @@ class LoadArticle extends AbstractFixture implements FixtureInterface, OrderedFi
                 $list[$i]->setPicture($this->getReference('picture-'.$randPic));
                 $list[$i]->setSlug(uniqid());
                 $list[$i]->setLive($name->live);
+                $list[$i]->setLocale('fr');
 
                 $manager->persist($list[$i]);
             }
