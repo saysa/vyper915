@@ -51,9 +51,8 @@ class Article
     private $title;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="lcoale", type="string", length=15)
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\LocaleType")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $locale;
 
@@ -275,29 +274,6 @@ class Article
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * Set locale
-     *
-     * @param string $locale
-     * @return Article
-     */
-    public function setLocale($locale)
-    {
-        $this->locale = $locale;
-
-        return $this;
-    }
-
-    /**
-     * Get locale
-     *
-     * @return string
-     */
-    public function getLocale()
-    {
-        return $this->locale;
     }
 
     /**
@@ -726,6 +702,29 @@ class Article
     public function getContinent()
     {
         return $this->continent;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param \Vyper\SiteBundle\Entity\LocaleType $locale
+     * @return Article
+     */
+    public function setLocale(\Vyper\SiteBundle\Entity\LocaleType $locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Get locale
+     *
+     * @return \Vyper\SiteBundle\Entity\LocaleType
+     */
+    public function getLocale()
+    {
+        return $this->locale;
     }
 
     /**

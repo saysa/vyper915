@@ -55,6 +55,10 @@ class ArticleType extends AbstractType
                 'property' => 'title',
                 'multiple' => true,
             ))
+            ->add('locale', 'entity', array(
+                'class' => 'VyperSiteBundle:LocaleType',
+                'property' => 'name',
+            ))
             ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
 
         ;

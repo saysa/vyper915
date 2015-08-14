@@ -20,6 +20,16 @@
 
                         <fieldset class="col-sm-12">
 
+                            <!-- Locale -->
+                            <div class="row">
+                                <div class="form-group col-lg-9">
+                                    {{ form_label(form.locale, "Language") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.locale, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Continent -->
                             <div class="row">
                                 <div class="form-group col-lg-9">
