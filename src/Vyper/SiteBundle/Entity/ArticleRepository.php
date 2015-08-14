@@ -52,15 +52,17 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
-    public function carousel()
+    public function carousel($locale)
     {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.live = true')
             ->andWhere('a.highlight = true')
+            ->andWhere('a.locale = :locale')
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(8)
+            ->setParameter('locale', $locale)
         ;
 
         $query = $queryBuilder->getQuery();

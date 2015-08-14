@@ -15,6 +15,8 @@ class IndexController extends Controller
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
+
         $view = $this->container->get('saysa_view');
         $session = $request->getSession();
         $user = $session->get('user');
@@ -35,7 +37,7 @@ class IndexController extends Controller
         }
         $em->flush();
 
-        $articles_carousel = $em->getRepository('VyperSiteBundle:Article')->carousel();
+        $articles_carousel = $em->getRepository('VyperSiteBundle:Article')->carousel($locale);
 
         foreach ($articles_carousel as $article) {
             $w = new Wordwrap();
