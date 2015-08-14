@@ -453,10 +453,21 @@
 {% javascripts
 'bundles/vypersite/js/vendor/moment.min.js'
 'bundles/vypersite/js/fullcalendar/fullcalendar.min.js'
+'bundles/vypersite/dialy/lib/js/flexslider.min.js'
 %}
 
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
+
+<script>
+    // Flexslider
+    jQuery(".flexslider").flexslider({
+        animation: "fade",
+        slideshow: true,
+        slideshowSpeed: 5000,
+        controlNav: false
+    });
+</script>
 
 </body>
 </html>
