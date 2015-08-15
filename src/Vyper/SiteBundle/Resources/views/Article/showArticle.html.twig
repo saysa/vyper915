@@ -22,39 +22,8 @@
 
     {% block content %}
 
-        <div class="single-post">
-            <div class="post-wrap">
                 <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
-                    <header class="entry-header">
-                        <h1 class="post-title">{{ article.getTitle }}</h1>
-
-                        <div class="entry-meta">
-                            <!-- AddThis Button BEGIN -->
-                            <div class="addthis_toolbox addthis_default_style ">
-                                <a class="addthis_button_preferred_1"></a>
-                                <a class="addthis_button_preferred_2"></a>
-                                <a class="addthis_button_preferred_3"></a>
-                                <a class="addthis_button_preferred_4"></a>
-                                <a class="addthis_button_compact"></a>
-                                <a class="addthis_counter addthis_bubble_style"></a>
-                            </div>
-                            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
-                            <!-- AddThis Button END -->
-                            <div class="left">
-                                <span>{{ article.author }}</span>, le <span class="date"><i class="icon-calendar"></i> {{ article.getReleaseDateFrontFormat() }}</span>
-
-
-
-
-                            </div>
-
-
-                        </div>
-                    </header>
-
-
-                    <div class="entry-content-wrap">
+                    <div class="featured">
                         <div class="entry-image">
                             {% if img_type_news is defined %}
                                 <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('article')) }}" alt="{{ article.getTitle|escape }}">
@@ -64,69 +33,109 @@
 
                             {% endif %}
 
-
                         </div>
+                    </div>
 
-                        <div class="entry-content">
+                    <h1 class="post-title">{{ article.getTitle }}</h1>
+                    <h3 class="lead">{{ article.getDescription }}</h3>
 
-                            {% if (article.textEN is not null or article.textJP is not null)  %}
-                                <script>
-                                    $(function() {
-                                        $( "#lang-tabs" ).tabs();
-                                    });
-                                </script>
+                    <div class="post-meta">
+                        <span class="author">{{ 'article.author'|trans }} <a href="#">{{ article.author }}</a></span>
+                        <span class="date">{{ 'article.published'|trans }} <a href="#month">{{ article.getReleaseDateFrontFormat() }}</a></span>
 
-                                <div id="lang-tabs">
-                                    <ul>
-                                        <li><a href="#tabs-1">FR <img src="{{ asset('assets/css/images/france.ico') }}" /></a></li>
-                                        {% if article.textEN is not null %}
-                                        <li><a href="#tabs-2">EN <img src="{{ asset('assets/css/images/uk.ico') }}" /></a></li>
-                                        {% endif %}
-                                        {% if article.textJP is not null %}
-                                        <li><a href="#tabs-3">JP <img src="{{ asset('assets/css/images/japan.ico') }}" /></a></li>
-                                        {% endif %}
-                                    </ul>
-                                    <div id="tabs-1">
-                                        {{ article.text|raw }}
-                                    </div>
+                    </div>
+
+                    <div class="post-container">
+                        {% if (article.textEN is not null or article.textJP is not null)  %}
+                            <script>
+                                $(function() {
+                                    $( "#lang-tabs" ).tabs();
+                                });
+                            </script>
+
+                            <div id="lang-tabs">
+                                <ul>
+                                    <li><a href="#tabs-1">FR <img src="{{ asset('assets/css/images/france.ico') }}" /></a></li>
                                     {% if article.textEN is not null %}
+                                        <li><a href="#tabs-2">EN <img src="{{ asset('assets/css/images/uk.ico') }}" /></a></li>
+                                    {% endif %}
+                                    {% if article.textJP is not null %}
+                                        <li><a href="#tabs-3">JP <img src="{{ asset('assets/css/images/japan.ico') }}" /></a></li>
+                                    {% endif %}
+                                </ul>
+                                <div id="tabs-1">
+                                    {{ article.text|raw }}
+                                </div>
+                                {% if article.textEN is not null %}
                                     <div id="tabs-2" lang="en">
                                         {{ article.textEN|raw }}
                                     </div>
-                                    {% endif %}
-                                    {% if article.textJP is not null %}
+                                {% endif %}
+                                {% if article.textJP is not null %}
                                     <div id="tabs-3" lang="ja">
                                         {{ article.textJP|raw }}
                                     </div>
-                                    {% endif %}
-                                </div>
-                            {% else %}
-                                {{ article.text|raw }}
-                            {% endif %}
-
-
-
-                            {% if article.source != '' %}
-                                {% if article.sourceURL != '' %}
-                                    <p>
-                                        Source : <a href="{{ article.sourceURL }}">{{ article.source }}</a>
-                                    </p>
-                                {% else %}
-                                    <p>
-                                        Source : {{ article.source }}
-                                    </p>
                                 {% endif %}
-                            {% endif %}
-                        </div>
-                        <!-- /entry-content -->
+                            </div>
+                        {% else %}
+                            {{ article.text|raw }}
+                        {% endif %}
 
+
+
+                        {% if article.source != '' %}
+                            {% if article.sourceURL != '' %}
+                                <p>
+                                    Source : <a href="{{ article.sourceURL }}">{{ article.source }}</a>
+                                </p>
+                            {% else %}
+                                <p>
+                                    Source : {{ article.source }}
+                                </p>
+                            {% endif %}
+                        {% endif %}
                     </div>
-                    <!-- /entry-content-wrap -->
+
+                    <div class="post-share">
+                        <span class="share-text">Share this post:</span>
+                        <ul>
+                            <li>
+                                <a data-hashtags="" data-url="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" data-via="VYPER_JMusic" data-text="{{ article.getTitle }}" data-tip="{{ 'social.share.twitter'|trans }}" href="https://twitter.com/intent/tweet?hashtags=&amp;original_referer={{ url('showArticle', {'id': article.getId, 'slug': article.slug})|url_encode }}&amp;source=tweetbutton&amp;text={{ article.getTitle }}&amp;url={{ url('showArticle', {'id': article.getId, 'slug': article.slug})|url_encode }}&amp;via=VYPER_JMusic" class="twitter df-tweet" target="_blank">
+                                    <span class="socicon">a</span>
+                                </a>
+                                <p class="count-number">0</p>
+                            </li>
+                            <li>
+                                <a href="http://www.facebook.com/sharer/sharer.php?u={{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" data-url="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" data-tip="{{ 'social.share.facebook'|trans }}" class="facebook df-share">
+                                    <span class="socicon">b</span>
+                                </a>
+                                <p class="count-number">0</p>
+                            </li>
+                            <li>
+                                <a data-tip="{{ 'social.share.googlep'|trans }}" href="https://plus.google.com/share?url={{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" class="google df-pluss">
+                                    <span class="socicon">c</span>
+                                </a>
+                                <p>0</p>
+                            </li>
+                            <li>
+                                <a data-tip="{{ 'social.share.pinterest'|trans }}" href="http://pinterest.com/pin/create/button/?url={{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}&amp;media={{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}&amp;description={{ article.getTitle }}" data-url="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" class="google df-pin">
+                                    <span class="socicon">d</span>
+                                </a>
+                                <p class="count-number">0</p>
+                            </li>
+                            <li>
+                                <a data-tip="{{ 'social.share.linkedin'|trans }}" href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}&amp;title={{ article.getTitle }}" data-url="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" class="linkedin df-link">
+                                    <span class="socicon">j</span>
+                                </a>
+                                <p class="count-number">0</p>
+                            </li>
+                        </ul>
+                    </div>
+
 
                 </article>
-            </div>
-            <!-- /post-wrap -->
-        </div>
+
+
 
 
 

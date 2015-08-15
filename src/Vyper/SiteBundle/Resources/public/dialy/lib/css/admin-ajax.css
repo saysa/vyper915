@@ -2,7 +2,7 @@
 
 
 /*==============================================================================
-    Color (Blue)
+    Color (Red)
 ===============================================================================*/
 a,
 h1#site-logo,
@@ -18,7 +18,7 @@ article .post-meta span:before,
 .above-the-fold h2.page-title,
 .page404 h2,
 #groups-list-options a.selected,
-#members-list-options a.selected {color: #4A86B8 }
+#members-list-options a.selected {color: #D54858 }
 
 
 /*==============================================================================
