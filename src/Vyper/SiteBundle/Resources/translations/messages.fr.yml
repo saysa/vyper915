@@ -2,6 +2,7 @@
 
 main:
     menu:
+        home: Accueil
         artists: Artistes
         contests: Concours
         features: Vidéos

@@ -2,6 +2,7 @@
 
 main:
     menu:
+        home: Home
         artists: Artists
         contests: Contests
         features: Features
