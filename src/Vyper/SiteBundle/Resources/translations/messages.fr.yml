@@ -7,6 +7,10 @@ main:
         contests: Concours
         features: Vidéos
 
+article:
+    author: Auteur
+    published: Publié le
+
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - Tous droits réservés
 

@@ -7,6 +7,11 @@ main:
         contests: Contests
         features: Features
 
+article:
+    author: Author
+    published: Published
+
+
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - All rights reserved.
 
