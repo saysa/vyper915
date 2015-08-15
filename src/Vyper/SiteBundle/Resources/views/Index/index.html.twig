@@ -492,3 +492,26 @@
 
 
     {% endblock %}
+
+    {% block javascripts_footer %}
+
+        {{ parent() }}
+
+        {% javascripts
+        'bundles/vypersite/dialy/lib/js/flexslider.min.js'
+        %}
+
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        <script>
+            // Flexslider
+            jQuery(".flexslider").flexslider({
+                animation: "fade",
+                slideshow: true,
+                slideshowSpeed: 5000,
+                controlNav: false
+            });
+        </script>
+
+    {% endblock %}

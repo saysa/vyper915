@@ -1,49 +1,7 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="{{ app.request.getLocale() }}" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="{{ app.request.getLocale() }}" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="{{ app.request.getLocale() }}" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="{{ app.request.getLocale() }}" class="no-js"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <title>{% block title %}VYPER Japanese Music | Visual Pop Rock{% endblock %}</title>
-    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
-
-    {% block meta_description %}
-        <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
-    {% endblock %}
+{% extends 'VyperSiteBundle:layouts:basis.html.twig' %}
 
 
-    {% if article.metaKeywords is defined and article.metaKeywords is not empty %}
-        <meta name="keywords" content="{{ article.metaKeywords }}" />
-    {% else %}
-        <meta name="keywords" content="magazine, concert, tour, tournée, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
-    {% endif %}
-    <meta name="author" content="vyper-jmusic.com" />
-    <meta name="ROBOTS" content="index,follow" />
-
-    <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="{{ app.request.getSchemeAndHttpHost() }}/rss_fil_info.xml" />
-
-    {% block social_card %}{% endblock %}
-
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css' media='all' />
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed' type='text/css' media='all' />
-
-    {% stylesheets filter='cssrewrite'
-        'bundles/vypersite/css/fullcalendar/fullcalendar.css'
-        'bundles/vypersite/dialy/lib/css/normalize.css'
-        'bundles/vypersite/dialy/lib/css/style.css'
-        'bundles/vypersite/dialy/lib/css/layout.css'
-        'bundles/vypersite/dialy/lib/css/admin-ajax.css'
-        'bundles/vypersite/dialy/lib/css/fontawesome.css'
-        'bundles/vypersite/dialy/lib/css/1200.css'
-        'bundles/vypersite/dialy/style.css'
-    %}
-        <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+{% block title %}VYPER Japanese Music | Visual Pop Rock{% endblock %}
 
     {#
     {% stylesheets filter='cssrewrite'
@@ -71,8 +29,6 @@
     <link href="{{ asset('assets/css/owl-carousel/owl.theme.css') }}" rel="stylesheet">
 #}
 
-
-
     {# Font awesome
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     #}
@@ -86,23 +42,37 @@
         <link href="{{ asset('assets/bootstrap-star-rating/css/star-rating.min.css') }}" media="all" rel="stylesheet" type="text/css" />
 
 
-
-    {# Jplayer #}
-    {#
-    <link href="{{ asset('assets/css/jplayer/prettify-jPlayer.css') }}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('assets/css/jplayer/jfm-jplayer.css') }}">
-    #}
-    {# Jquery UI #}
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
-
-
-
-
 {#
     <link href="{{ asset('assets/css/reset.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" />
  #}
 
+
+
+{% block stylesheets %}
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css' media='all' />
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed' type='text/css' media='all' />
+
+    {% stylesheets filter='cssrewrite'
+    'bundles/vypersite/dialy/lib/css/normalize.css'
+    'bundles/vypersite/dialy/lib/css/style.css'
+    'bundles/vypersite/dialy/lib/css/layout.css'
+    'bundles/vypersite/dialy/lib/css/admin-ajax.css'
+    'bundles/vypersite/dialy/lib/css/fontawesome.css'
+    'bundles/vypersite/dialy/lib/css/1200.css'
+    'bundles/vypersite/dialy/style.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {# Jquery UI #}
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
+
+
+{% endblock %}
+
+{% block javascripts_header %}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -114,347 +84,326 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <![endif]-->
+{% endblock %}
 
+{% block body %}
+    <div id="wrapper" class="boxed">
+        <header id="header" class="light">
+            <div class="inner-wrapper row">
+                <div id="logo">
+                    <h1 id="site-logo">
+                        <a href="{{ path('vyper_site_index') }}">
+                            <img src="http://vyper-jmusic.com/bundles/vypersite/img/logo.png" alt="Vyper Japanese Music" height="120" />
+                        </a>
+                    </h1>
+                </div>
 
-
-</head>
-<body>
-<div id="wrapper" class="boxed">
-    <header id="header" class="light">
-        <div class="inner-wrapper row">
-            <div id="logo">
-                <h1 id="site-logo">
-                    <a href="{{ path('vyper_site_index') }}">
-                        <img src="http://vyper-jmusic.com/bundles/vypersite/img/logo.png" alt="Vyper Japanese Music" height="120" />
-                    </a>
-                </h1>
+                <div class="ad-banner-728x90">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- footer-leaderboard -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:728px;height:90px"
+                         data-ad-client="ca-pub-3070362287154347"
+                         data-ad-slot="5037213511"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
             </div>
 
-            <div class="ad-banner-728x90">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- footer-leaderboard -->
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:728px;height:90px"
-                     data-ad-client="ca-pub-3070362287154347"
-                     data-ad-slot="5037213511"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </div>
-
-        <div style="visibility: hidden; display: none; width: 1220px; height: 55px; margin: 0px; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto;"></div>
-        <nav class="primary-menu dark" role="navigation" id="primary-menu">
-        <div class="inner-wrapper">
-            <!-- Responsive menu -->
-            <a class="click-to-open-menu"><i class="fa fa-align-justify"></i></a>
-            <ul class="main-menu"><li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-has-children df-dropdown"><a href="{{ path('vyper_site_index') }}" style="border-color: #8F408A; "><span>{{ 'main.menu.home'|trans }}</span></a>
-                    <ul class="sub-menu">
-                        <li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-2/">Home 2</a></li>
-                        <li id="menu-item-267" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-3/">Home 3</a></li>
-                        <li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-4/">Home 4</a></li>
-                        <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-5/">Home 5</a></li>
-                        <li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://themeforest.net/item/dialymagazine-clean-flat-magazine-theme/7973037?ref=different-themes">Build your own now!</a></li>
-                    </ul>
-                </li>
-                <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children df-dropdown mega-menu-full"><a href="http://dialy.different-themes.com/blog/" style="border-color: #38CFCA; "><span><i class="fa fa-outdent"></i> Magazine</span></a>
-                    <ul class="menu-blocks row">
-                        <li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children df-dropdown grid_4 1-1">
-                            <ul class="menu-content category-menu">
-                                <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item"><a href="http://dialy.different-themes.com/">Homepage</a></li>
-                                <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/gallery-full-width/">Gallery Full Width</a></li>
-                                <li id="menu-item-101" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/technology/">Technology</a></li>
-                                <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/shop/">Shop Page</a></li>
-                                <li id="menu-item-102" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a></li>
-                                <li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/business/">Business</a></li>
-                                <li id="menu-item-103" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/culture/">Culture</a></li>
-                                <li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/health/">Health</a></li>
+            <div style="visibility: hidden; display: none; width: 1220px; height: 55px; margin: 0px; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto;"></div>
+            <nav class="primary-menu dark" role="navigation" id="primary-menu">
+                <div class="inner-wrapper">
+                    <!-- Responsive menu -->
+                    <a class="click-to-open-menu"><i class="fa fa-align-justify"></i></a>
+                    <ul class="main-menu"><li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-has-children df-dropdown"><a href="{{ path('vyper_site_index') }}" style="border-color: #8F408A; "><span>{{ 'main.menu.home'|trans }}</span></a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-2/">Home 2</a></li>
+                                <li id="menu-item-267" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-3/">Home 3</a></li>
+                                <li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-4/">Home 4</a></li>
+                                <li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-5/">Home 5</a></li>
+                                <li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://themeforest.net/item/dialymagazine-clean-flat-magazine-theme/7973037?ref=different-themes">Build your own now!</a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 2-1">
-                            <ul class="menu-content featured-post">
-                                <li id="menu-item-104" class="menu-item menu-item-type-taxonomy menu-item-object-category"><div class="block-layout-two">
-                                        <div class="main-item">
-                                            <div class="post-img">
-                                                <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">
-                                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-479410-close-up-of-a-pink-high-heels-with-diamons-m-338x250_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">
-                                                </a><span style="background-color: #222222">
+                        <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children df-dropdown mega-menu-full"><a href="http://dialy.different-themes.com/blog/" style="border-color: #38CFCA; "><span><i class="fa fa-outdent"></i> Magazine</span></a>
+                            <ul class="menu-blocks row">
+                                <li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children df-dropdown grid_4 1-1">
+                                    <ul class="menu-content category-menu">
+                                        <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item"><a href="http://dialy.different-themes.com/">Homepage</a></li>
+                                        <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/gallery-full-width/">Gallery Full Width</a></li>
+                                        <li id="menu-item-101" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/technology/">Technology</a></li>
+                                        <li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/shop/">Shop Page</a></li>
+                                        <li id="menu-item-102" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a></li>
+                                        <li id="menu-item-100" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/business/">Business</a></li>
+                                        <li id="menu-item-103" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/culture/">Culture</a></li>
+                                        <li id="menu-item-99" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/health/">Health</a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 2-1">
+                                    <ul class="menu-content featured-post">
+                                        <li id="menu-item-104" class="menu-item menu-item-type-taxonomy menu-item-object-category"><div class="block-layout-two">
+                                                <div class="main-item">
+                                                    <div class="post-img">
+                                                        <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">
+                                                            <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-479410-close-up-of-a-pink-high-heels-with-diamons-m-338x250_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">
+                                                        </a><span style="background-color: #222222">
 		                    							<a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a>
 		                    						</span></div>
-                                            <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">The Homesman rides, The Expendables assemble</a></h3><p class="date">June 10, 2014</p></div>
-                                    </div></li>
+                                                    <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">The Homesman rides, The Expendables assemble</a></h3><p class="date">June 10, 2014</p></div>
+                                            </div></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 3-1">
+                                    <ul class="menu-content article-list">
+                                        <li id="menu-item-105" class="menu-item menu-item-type-taxonomy menu-item-object-category"><ul class="recent-posts">    <li>
+                                                    <div class="image">
+                                                        <a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/">
+                                                            <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-4107116-meeting-m-80x65_c.jpg" alt="Is Brixton London’s next tech hipster hub?" title="Is Brixton London’s next tech hipster hub?">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h3><a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/">Is Brixton London’s next tech hipster hub?</a></h3><p class="date">June 10, 2014</p></div>
+                                                </li>    <li>
+                                                    <div class="image">
+                                                        <a href="http://dialy.different-themes.com/scented-candles-how-i-learned-to-stop-worrying-and-smell-the-bluebells/">
+                                                            <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-1472069-woman-playing-tennis-m-80x65_c.jpg" alt="Scented candles: how I learned to stop worrying and smell the bluebells" title="Scented candles: how I learned to stop worrying and smell the bluebells">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h3><a href="http://dialy.different-themes.com/scented-candles-how-i-learned-to-stop-worrying-and-smell-the-bluebells/">Scented candles: how I learned to stop worrying and smell the bluebells</a></h3><p class="date">June 9, 2014</p></div>
+                                                </li>    <li>
+                                                    <div class="image">
+                                                        <a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">
+                                                            <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-1557278-tower-bridge-london-m-80x65_c.jpg" alt="Paris fashion week AW14: the 10 key trends – in pictures" title="Paris fashion week AW14: the 10 key trends – in pictures">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h3><a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">Paris fashion week AW14: the 10 key trends – in pictures</a></h3><p class="date">June 9, 2014</p></div>
+                                                </li>    <li>
+                                                    <div class="image">
+                                                        <a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">
+                                                            <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/0-80x65_c.jpg" alt="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung" title="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h3><a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung</a></h3><p class="date">June 9, 2014</p></div>
+                                                </li>    <li>
+                                                    <div class="image">
+                                                        <a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years/">
+                                                            <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-6422230-sunset-l-80x65_c.jpg" alt="Savers offered fixes of up to seven years" title="Savers offered fixes of up to seven years">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text">
+                                                        <h3><a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years/">Savers offered fixes of up to seven years</a></h3><p class="date">June 9, 2014</p></div>
+                                                </li></ul></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 3-1">
-                            <ul class="menu-content article-list">
-                                <li id="menu-item-105" class="menu-item menu-item-type-taxonomy menu-item-object-category"><ul class="recent-posts">    <li>
-                                            <div class="image">
-                                                <a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/">
-                                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-4107116-meeting-m-80x65_c.jpg" alt="Is Brixton London’s next tech hipster hub?" title="Is Brixton London’s next tech hipster hub?">
-                                                </a>
-                                            </div>
-                                            <div class="text">
-                                                <h3><a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/">Is Brixton London’s next tech hipster hub?</a></h3><p class="date">June 10, 2014</p></div>
-                                        </li>    <li>
-                                            <div class="image">
-                                                <a href="http://dialy.different-themes.com/scented-candles-how-i-learned-to-stop-worrying-and-smell-the-bluebells/">
-                                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-1472069-woman-playing-tennis-m-80x65_c.jpg" alt="Scented candles: how I learned to stop worrying and smell the bluebells" title="Scented candles: how I learned to stop worrying and smell the bluebells">
-                                                </a>
-                                            </div>
-                                            <div class="text">
-                                                <h3><a href="http://dialy.different-themes.com/scented-candles-how-i-learned-to-stop-worrying-and-smell-the-bluebells/">Scented candles: how I learned to stop worrying and smell the bluebells</a></h3><p class="date">June 9, 2014</p></div>
-                                        </li>    <li>
-                                            <div class="image">
-                                                <a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">
-                                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-1557278-tower-bridge-london-m-80x65_c.jpg" alt="Paris fashion week AW14: the 10 key trends – in pictures" title="Paris fashion week AW14: the 10 key trends – in pictures">
-                                                </a>
-                                            </div>
-                                            <div class="text">
-                                                <h3><a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">Paris fashion week AW14: the 10 key trends – in pictures</a></h3><p class="date">June 9, 2014</p></div>
-                                        </li>    <li>
-                                            <div class="image">
-                                                <a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">
-                                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/0-80x65_c.jpg" alt="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung" title="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung">
-                                                </a>
-                                            </div>
-                                            <div class="text">
-                                                <h3><a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung</a></h3><p class="date">June 9, 2014</p></div>
-                                        </li>    <li>
-                                            <div class="image">
-                                                <a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years/">
-                                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-6422230-sunset-l-80x65_c.jpg" alt="Savers offered fixes of up to seven years" title="Savers offered fixes of up to seven years">
-                                                </a>
-                                            </div>
-                                            <div class="text">
-                                                <h3><a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years/">Savers offered fixes of up to seven years</a></h3><p class="date">June 9, 2014</p></div>
-                                        </li></ul></li>
-                            </ul>
-                        </li>
+                        <li id="menu-item-332" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArticles') }}" style="border-color: #fe7316; ">Articles</a></li>
+                        <li id="menu-item-326" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllEvent') }}" style="border-color: #dd030e; ">Events</a></li>
+                        <li id="menu-item-329" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/fashion/" style="border-color: #c50298; ">{{ 'main.menu.features'|trans }}</a></li>
+                        <li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/technology/" style="border-color: #4A86B8; ">{{ 'main.menu.contests'|trans }}</a></li>
+                        <li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArtist') }}" style="border-color: #ccc700; ">{{ 'main.menu.artists'|trans }}</a></li>
+                        {% if themes_in_menu|length > 0 %}
+
+                            {% for theme in themes_in_menu %}
+                                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showTheme', {'id': theme.id, 'slug': theme.slug}) }}">{{ theme.title }}</a></li>
+                            {% endfor %}
+
+                        {% endif %}
                     </ul>
-                </li>
-                <li id="menu-item-332" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArticles') }}" style="border-color: #fe7316; ">Articles</a></li>
-                <li id="menu-item-326" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllEvent') }}" style="border-color: #dd030e; ">Events</a></li>
-                <li id="menu-item-329" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/fashion/" style="border-color: #c50298; ">{{ 'main.menu.features'|trans }}</a></li>
-                <li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/technology/" style="border-color: #4A86B8; ">{{ 'main.menu.contests'|trans }}</a></li>
-                <li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArtist') }}" style="border-color: #ccc700; ">{{ 'main.menu.artists'|trans }}</a></li>
-                {% if themes_in_menu|length > 0 %}
 
-                    {% for theme in themes_in_menu %}
-                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showTheme', {'id': theme.id, 'slug': theme.slug}) }}">{{ theme.title }}</a></li>
-                    {% endfor %}
+                </div>
+            </nav>
 
-                {% endif %}
-            </ul>
+        </header>
 
-        </div>
-        </nav>
+        {% if front_page_index is defined %}
+            <div id="above-the-fold" class="above-the-fold light">
+                <div class="inner-wrapper">
 
-    </header>
+                    <!-- Flexslider -->
+                    <div class="flexslider">
+                        <ul class="slides">
+                            {% for article in articles_carousel %}
+                                <li{% if loop.index == 1 %} class="flex-active-slide"{% endif %}>
+                                    <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}" draggable="false">
+                                    <div class="post-box-text">
+                                        <span style="background-color: #dd030e"><a href="#">Lifestyle</a></span>
+                                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                                        <p>{{ article.getReleaseDateFrontFormat(article.getId) }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
 
-    {% if front_page_index is defined %}
-    <div id="above-the-fold" class="above-the-fold light">
-        <div class="inner-wrapper">
-
-            <!-- Flexslider -->
-            <div class="flexslider">
-                <ul class="slides">
-                    {% for article in articles_carousel %}
-                        <li{% if loop.index == 1 %} class="flex-active-slide"{% endif %}>
-                            <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}" draggable="false">
+                    <!-- Block with 2 posts -->
+                    <div class="block-with-two-posts">
+                        <div class="post-block">
+                            <a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">
+                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/slider_1-785x505_c.jpg" alt="Paris fashion week AW14: the 10 key trends – in pictures" title="Paris fashion week AW14: the 10 key trends – in pictures">
+                            </a>
                             <div class="post-box-text">
-                                <span style="background-color: #dd030e"><a href="#">Lifestyle</a></span>
-                                <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
-                                <p>{{ article.getReleaseDateFrontFormat(article.getId) }}</p>
+                                <span style="background-color: #ccc700"><a href="http://dialy.different-themes.com/category/video/">Video</a></span>
+                                <h3><a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">Paris fashion week AW14: the 10 key trends – in pictures</a></h3>
+                                <p>June 9, 2014</p>
+                            </div>
+                        </div>
+                        <div class="post-block">
+                            <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble/">
+                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-665271-rockstar-playing-solo-s-785x505_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">
+                            </a>
+                            <div class="post-box-text">
+                                <span style="background-color: #4A86B8"><a href="http://dialy.different-themes.com/category/technology/">Technology</a></span>
+                                <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble/">The Homesman rides, The Expendables assemble</a></h3>
+                                <p>June 9, 2014</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        {% endif %}
+
+        <section id="section">
+            <div class="inner-wrapper">
+
+                <!-- Main -->
+                <div id="main" class="left" role="main">
+
+                    <!-- Start template -->
+                    {% block content %}{% endblock %}
+                    <!-- End template -->
+
+
+                </div>
+                <!-- Aside -->
+                <aside id="sidebar" role="complementary">
+                    <!-- END Sidebar -->
+                </aside>
+
+            </div>
+        </section>
+
+        <footer id="footer" role="contentinfo">
+            <div class="inner-wrapper">
+                <aside class="widget-1 first widget"><h3 class="widget-title">About Dialy</h3>			<div class="textwidget">DialyMagazine is clean &amp; professional Html5/Css3 magazine WordPress theme. It is full responsive so it adapts to any device it’s viewed on. It’s loaded with few header styles, different layouts, mega menu, fixed navigation and more...</div>
+                </aside>
+                <aside class="widget-2 widget">			<h3 class="widget-title">Recent Comments</h3>           	<ul class="recent-comments">
+                        <li>
+                            <p class="author">Different Themes</p>
+                            <h3><a href="http://dialy.different-themes.com/can-you-afford-a-1000-bill-for-your-childs-prom/#comment-5">Nullam non elit sed diam varius convallis et nec felis. ..</a></h3>
+                        </li>
+
+                        <li>
+                            <p class="author">Different Themes</p>
+                            <h3><a href="http://dialy.different-themes.com/can-you-afford-a-1000-bill-for-your-childs-prom/#comment-4">Donec viverra sed elit in tempor. Duis lacus libero, mollis ..</a></h3>
+                        </li>
+
+                        <li>
+                            <p class="author">Different Themes</p>
+                            <h3><a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/#comment-3">Etiam in tellus vitae purus posuere vestibulum a sed nunc. ..</a></h3>
+                        </li>
+
+
+                    </ul>
+
+
+                </aside>
+                <aside class="widget-3 widget">		<h3 class="widget-title">Popular Posts</h3>			<ul class="recent-posts">
+                        <li>
+                            <div class="image">
+                                <a href="http://dialy.different-themes.com/sali-hughes-on-facial-sunblocks-2/">
+                                    <img src="http://dialy.different-themes.com/wp-content/themes/dialy-theme/lib/img/80x65.gif" alt="Sali Hughes on facial sunblocks" title="Sali Hughes on facial sunblocks">		                        </a>
+                            </div>
+                            <div class="text">
+                                <h3><a href="http://dialy.different-themes.com/sali-hughes-on-facial-sunblocks-2/">Sali Hughes on facial sunblocks</a></h3>
+                                <p class="date">June 9, 2014</p>
                             </div>
                         </li>
-                    {% endfor %}
-                </ul>
-                <ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
-
-            <!-- Block with 2 posts -->
-            <div class="block-with-two-posts">
-                <div class="post-block">
-                    <a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">
-                        <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/slider_1-785x505_c.jpg" alt="Paris fashion week AW14: the 10 key trends – in pictures" title="Paris fashion week AW14: the 10 key trends – in pictures">
-                    </a>
-                    <div class="post-box-text">
-                        <span style="background-color: #ccc700"><a href="http://dialy.different-themes.com/category/video/">Video</a></span>
-                        <h3><a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">Paris fashion week AW14: the 10 key trends – in pictures</a></h3>
-                        <p>June 9, 2014</p>
-                    </div>
-                </div>
-                <div class="post-block">
-                    <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble/">
-                        <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-665271-rockstar-playing-solo-s-785x505_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">
-                    </a>
-                    <div class="post-box-text">
-                        <span style="background-color: #4A86B8"><a href="http://dialy.different-themes.com/category/technology/">Technology</a></span>
-                        <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble/">The Homesman rides, The Expendables assemble</a></h3>
-                        <p>June 9, 2014</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    {% endif %}
-
-    <section id="section">
-    <div class="inner-wrapper">
-
-    <!-- Main -->
-    <div id="main" class="left" role="main">
-
-        <!-- Start template -->
-        {% block content %}{% endblock %}
-        <!-- End template -->
+                        <li>
+                            <div class="image">
+                                <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">
+                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-479410-close-up-of-a-pink-high-heels-with-diamons-m-80x65_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">		                        </a>
+                            </div>
+                            <div class="text">
+                                <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">The Homesman rides, The Expendables assemble</a></h3>
+                                <p class="date">June 10, 2014</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image">
+                                <a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">
+                                    <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/0-80x65_c.jpg" alt="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung" title="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung">		                        </a>
+                            </div>
+                            <div class="text">
+                                <h3><a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung</a></h3>
+                                <p class="date">June 9, 2014</p>
+                            </div>
+                        </li>
+                    </ul>
 
 
-    </div>
-    <!-- Aside -->
-    <aside id="sidebar" role="complementary">
-    <!-- END Sidebar -->
-    </aside>
+                </aside>
 
-    </div>
-    </section>
+                <aside class="widget-4 last widget"><h3 class="widget-title">Categories</h3>		<ul>
+                        <li class="cat-item cat-item-15"><a href="http://dialy.different-themes.com/category/business/">Business</a> (7)
+                        </li>
+                        <li class="cat-item cat-item-21"><a href="http://dialy.different-themes.com/category/culture/">Culture</a> (6)
+                        </li>
+                        <li class="cat-item cat-item-20"><a href="http://dialy.different-themes.com/category/design/">Design</a> (9)
+                        </li>
+                        <li class="cat-item cat-item-16"><a href="http://dialy.different-themes.com/category/fashion/">Fashion</a> (3)
+                        </li>
+                        <li class="cat-item cat-item-13"><a href="http://dialy.different-themes.com/category/fun/">Fun</a> (6)
+                        </li>
+                        <li class="cat-item cat-item-24"><a href="http://dialy.different-themes.com/category/game/">Game</a> (6)
+                        </li>
+                        <li class="cat-item cat-item-14"><a href="http://dialy.different-themes.com/category/health/">Health</a> (7)
+                        </li>
+                        <li class="cat-item cat-item-23"><a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a> (7)
+                        </li>
+                        <li class="cat-item cat-item-18"><a href="http://dialy.different-themes.com/category/music/">Music</a> (4)
+                        </li>
+                        <li class="cat-item cat-item-22"><a href="http://dialy.different-themes.com/category/show/">Show</a> (4)
+                        </li>
+                        <li class="cat-item cat-item-17"><a href="http://dialy.different-themes.com/category/technology/">Technology</a> (6)
+                        </li>
+                        <li class="cat-item cat-item-19"><a href="http://dialy.different-themes.com/category/video/">Video</a> (11)
+                        </li>
+                    </ul>
+                </aside>                </div>
 
-    <footer id="footer" role="contentinfo">
-        <div class="inner-wrapper">
-            <aside class="widget-1 first widget"><h3 class="widget-title">About Dialy</h3>			<div class="textwidget">DialyMagazine is clean &amp; professional Html5/Css3 magazine WordPress theme. It is full responsive so it adapts to any device it’s viewed on. It’s loaded with few header styles, different layouts, mega menu, fixed navigation and more...</div>
-            </aside>
-            <aside class="widget-2 widget">			<h3 class="widget-title">Recent Comments</h3>           	<ul class="recent-comments">
-                    <li>
-                        <p class="author">Different Themes</p>
-                        <h3><a href="http://dialy.different-themes.com/can-you-afford-a-1000-bill-for-your-childs-prom/#comment-5">Nullam non elit sed diam varius convallis et nec felis. ..</a></h3>
-                    </li>
-
-                    <li>
-                        <p class="author">Different Themes</p>
-                        <h3><a href="http://dialy.different-themes.com/can-you-afford-a-1000-bill-for-your-childs-prom/#comment-4">Donec viverra sed elit in tempor. Duis lacus libero, mollis ..</a></h3>
-                    </li>
-
-                    <li>
-                        <p class="author">Different Themes</p>
-                        <h3><a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/#comment-3">Etiam in tellus vitae purus posuere vestibulum a sed nunc. ..</a></h3>
-                    </li>
-
-
-                </ul>
-
-
-            </aside>
-            <aside class="widget-3 widget">		<h3 class="widget-title">Popular Posts</h3>			<ul class="recent-posts">
-                    <li>
-                        <div class="image">
-                            <a href="http://dialy.different-themes.com/sali-hughes-on-facial-sunblocks-2/">
-                                <img src="http://dialy.different-themes.com/wp-content/themes/dialy-theme/lib/img/80x65.gif" alt="Sali Hughes on facial sunblocks" title="Sali Hughes on facial sunblocks">		                        </a>
+            <!-- Copyright -->
+            <div id="copyright">
+                <div class="inner-wrapper">
+                    <div class="row">
+                        <div class="grid_6">{{ 'footer.copyright'|trans }}</div>
+                        <div class="grid_6">
+                            <ul class="inline-list right">
+                                <li><a href="{{ path('vyper_site_partenaires') }}">Partenaires</a></li>
+                                <li><a href="{{ path('vyper_site_contact') }}">Contact</a></li>
+                                <li><a href="{{ path('vyper_site_jobs') }}">Jobs</a></li>
+                                <li><a href="#">Link 4</a></li>
+                            </ul>
                         </div>
-                        <div class="text">
-                            <h3><a href="http://dialy.different-themes.com/sali-hughes-on-facial-sunblocks-2/">Sali Hughes on facial sunblocks</a></h3>
-                            <p class="date">June 9, 2014</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image">
-                            <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">
-                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-479410-close-up-of-a-pink-high-heels-with-diamons-m-80x65_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">		                        </a>
-                        </div>
-                        <div class="text">
-                            <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">The Homesman rides, The Expendables assemble</a></h3>
-                            <p class="date">June 10, 2014</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="image">
-                            <a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">
-                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/0-80x65_c.jpg" alt="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung" title="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung">		                        </a>
-                        </div>
-                        <div class="text">
-                            <h3><a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung</a></h3>
-                            <p class="date">June 9, 2014</p>
-                        </div>
-                    </li>
-                </ul>
-
-
-            </aside>
-
-            <aside class="widget-4 last widget"><h3 class="widget-title">Categories</h3>		<ul>
-                    <li class="cat-item cat-item-15"><a href="http://dialy.different-themes.com/category/business/">Business</a> (7)
-                    </li>
-                    <li class="cat-item cat-item-21"><a href="http://dialy.different-themes.com/category/culture/">Culture</a> (6)
-                    </li>
-                    <li class="cat-item cat-item-20"><a href="http://dialy.different-themes.com/category/design/">Design</a> (9)
-                    </li>
-                    <li class="cat-item cat-item-16"><a href="http://dialy.different-themes.com/category/fashion/">Fashion</a> (3)
-                    </li>
-                    <li class="cat-item cat-item-13"><a href="http://dialy.different-themes.com/category/fun/">Fun</a> (6)
-                    </li>
-                    <li class="cat-item cat-item-24"><a href="http://dialy.different-themes.com/category/game/">Game</a> (6)
-                    </li>
-                    <li class="cat-item cat-item-14"><a href="http://dialy.different-themes.com/category/health/">Health</a> (7)
-                    </li>
-                    <li class="cat-item cat-item-23"><a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a> (7)
-                    </li>
-                    <li class="cat-item cat-item-18"><a href="http://dialy.different-themes.com/category/music/">Music</a> (4)
-                    </li>
-                    <li class="cat-item cat-item-22"><a href="http://dialy.different-themes.com/category/show/">Show</a> (4)
-                    </li>
-                    <li class="cat-item cat-item-17"><a href="http://dialy.different-themes.com/category/technology/">Technology</a> (6)
-                    </li>
-                    <li class="cat-item cat-item-19"><a href="http://dialy.different-themes.com/category/video/">Video</a> (11)
-                    </li>
-                </ul>
-            </aside>                </div>
-
-        <!-- Copyright -->
-        <div id="copyright">
-            <div class="inner-wrapper">
-                <div class="row">
-                    <div class="grid_6">{{ 'footer.copyright'|trans }}</div>
-                    <div class="grid_6">
-                        <ul class="inline-list right">
-                            <li><a href="{{ path('vyper_site_partenaires') }}">Partenaires</a></li>
-                            <li><a href="{{ path('vyper_site_contact') }}">Contact</a></li>
-                            <li><a href="{{ path('vyper_site_jobs') }}">Jobs</a></li>
-                            <li><a href="#">Link 4</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </footer>
+        </footer>
 
-</div>
-
-
+    </div>
+{% endblock %}
 
 
 
+{% block javascripts_footer %}
 
+    {{ parent() }}
 
-{# Jquery UI #}
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
-{% javascripts
-'bundles/vypersite/js/vendor/moment.min.js'
-'bundles/vypersite/js/fullcalendar/fullcalendar.min.js'
-'bundles/vypersite/dialy/lib/js/flexslider.min.js'
-%}
-
-<script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
-
-<script>
-    // Flexslider
-    jQuery(".flexslider").flexslider({
-        animation: "fade",
-        slideshow: true,
-        slideshowSpeed: 5000,
-        controlNav: false
-    });
-</script>
-
-</body>
-</html>
+    {# Jquery UI #}
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+{% endblock %}

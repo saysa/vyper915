@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="{{ app.request.getLocale() }}" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="{{ app.request.getLocale() }}" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="{{ app.request.getLocale() }}" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="{{ app.request.getLocale() }}" class="no-js"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="{{ asset('bundles/vypersite/img/logo.png') }}" />
+    <title>{% block title %}{% endblock %}</title>
+    <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
+
+    {% block meta_description %}
+        <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
+    {% endblock %}
+
+
+    {% if article.metaKeywords is defined and article.metaKeywords is not empty %}
+        <meta name="keywords" content="{{ article.metaKeywords }}" />
+    {% else %}
+        <meta name="keywords" content="magazine, concert, tour, tournée, actu, jmusic, j-music, jpop, j-pop, jrock, j-rock, visual kei, visu, oshare kei, oshare, actu jmusic, actu jpop, musique japonaise, youtube, forum, vyper" />
+    {% endif %}
+    <meta name="author" content="vyper-jmusic.com" />
+    <meta name="ROBOTS" content="index,follow" />
+
+    <link rel="alternate" type="application/rss+xml" title="Flux RSS" href="{{ app.request.getSchemeAndHttpHost() }}/rss_fil_info.xml" />
+
+    {% block social_card %}{% endblock %}
+    {% block stylesheets %}
+    {% endblock %}
+    {% block javascripts_header %}
+    {% endblock %}
+
+
+</head>
+<body>
+{% block body %}
+{% endblock %}
+{% block javascripts_footer %}
+{% endblock %}
+</body>
+</html>
