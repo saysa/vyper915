@@ -258,38 +258,16 @@
             <!-- Flexslider -->
             <div class="flexslider">
                 <ul class="slides">
-                    <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
-                        <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/slider_3-785x505_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble" draggable="false">
-                        <div class="post-box-text">
-                            <span style="background-color: #222222"><a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a></span>
-                            <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">The Homesman rides, The Expendables assemble</a></h3>
-                            <p>June 10, 2014</p>
-                        </div>
-                    </li>
-                    <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
-                        <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/slider_2-785x505_c.jpg" alt="Savers offered fixes of up to seven years" title="Savers offered fixes of up to seven years" draggable="false">
-                        <div class="post-box-text">
-                            <span style="background-color: #0030c7"><a href="http://dialy.different-themes.com/category/culture/">Culture</a></span>
-                            <h3><a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years-2/">Savers offered fixes of up to seven years</a></h3>
-                            <p>June 10, 2014</p>
-                        </div>
-                    </li>
-                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-                        <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/slider_1-785x505_c.jpg" alt="Paris fashion week AW14: the 10 key trends – in pictures" title="Paris fashion week AW14: the 10 key trends – in pictures" draggable="false">
-                        <div class="post-box-text">
-                            <span style="background-color: #07cc00"><a href="http://dialy.different-themes.com/category/design/">Design</a></span>
-                            <h3><a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">Paris fashion week AW14: the 10 key trends – in pictures</a></h3>
-                            <p>June 9, 2014</p>
-                        </div>
-                    </li>
-                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;" class="">
-                        <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-665271-rockstar-playing-solo-s-785x505_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble" draggable="false">
-                        <div class="post-box-text">
-                            <span style="background-color: #dd030e"><a href="http://dialy.different-themes.com/category/business/">Business</a></span>
-                            <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble/">The Homesman rides, The Expendables assemble</a></h3>
-                            <p>June 9, 2014</p>
-                        </div>
-                    </li>
+                    {% for article in articles_carousel %}
+                        <li{% if loop.index == 1 %} class="flex-active-slide"{% endif %}>
+                            <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}" draggable="false">
+                            <div class="post-box-text">
+                                <span style="background-color: #dd030e"><a href="#">Lifestyle</a></span>
+                                <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                                <p>{{ article.getReleaseDateFrontFormat(article.getId) }}</p>
+                            </div>
+                        </li>
+                    {% endfor %}
                 </ul>
                 <ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
 

@@ -13,47 +13,6 @@
         #}
 
 
-        <script>
-            jQuery(document).ready(function($) {
-                $(".main-slider").show();
-                $(".main-slider").owlCarousel({
-                    navigation : false,
-                    pagination: false,
-                    autoPlay : 5000,
-                    slideSpeed : 400,
-                    paginationSpeed : 400,
-                    singleItem: true
-                });
-            });
-        </script>
-        <div class="main-slider section">
-            {% for article in articles_carousel %}
-                <div class="item">
-                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}" >
-                        <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" class="attachment-fp780_400 wp-post-image" alt="{{ article.getTitle }}" />
-                    </a>
-
-                    <div class="post-info">
-                        <div class="post-excerpt">
-                            <div class="title">
-                                <h2><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h2>
-                                <div class="sep"></div>
-                            </div>
-
-                            <div class="main-slider-description">
-                                {{ article.excerpt }}
-                            </div>
-
-                            <div class="read-more">
-                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">En savoir plus</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <!-- /main-slider -->
-
         <section class="row">
         <!-- category1 -->
 
