@@ -9,3 +9,22 @@ main:
 
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - Tous droits réservés
+
+title:
+    partners: Partenaires
+    events: Événements
+
+calendar:
+    monthNames:
+        january: Janvier
+        february: Février
+        march: Mars
+        april: Avril
+        may: Mai
+        june: Juin
+        july: Juillet
+        august: Août
+        september: Septembre
+        october: Octobre
+        november: Novembre
+        december: Décembre

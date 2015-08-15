@@ -1,6 +1,6 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}Events | {{ parent() }}{% endblock %}
+{% block title %}{{ 'title.events'|trans }} | {{ parent() }}{% endblock %}
 
     {% block content %}
         <header class="archive-header">
@@ -44,7 +44,7 @@
                     firstDay:1,
                     height: 'auto',
                     minTime : '06:00:00',
-                    monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre'],
+                    monthNames: ['{{ 'calendar.monthNames.january'|trans }}','{{ 'calendar.monthNames.february'|trans }}','{{ 'calendar.monthNames.march'|trans }}','{{ 'calendar.monthNames.april'|trans }}','{{ 'calendar.monthNames.may'|trans }}','{{ 'calendar.monthNames.june'|trans }}','{{ 'calendar.monthNames.july'|trans }}','{{ 'calendar.monthNames.august'|trans }}','{{ 'calendar.monthNames.september'|trans }}','{{ 'calendar.monthNames.october'|trans }}','{{ 'calendar.monthNames.november'|trans }}','{{ 'calendar.monthNames.december'|trans }}'],
                     monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Juin','Juil','Aout','Sep','Oct','Nov','Dec'],
                     dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
                     dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],

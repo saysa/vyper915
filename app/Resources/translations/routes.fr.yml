@@ -347,7 +347,7 @@ vyper_site_index: /   # FIXME
 vyper_site_jobs: /jobs   # FIXME
 
 # Desc: /partenaires
-vyper_site_partenaires: /partenaires   # FIXME
+vyper_site_partenaires: /partenaires
 
 # Desc: /actualites/{page}
 vyper_site_showAllArticles: '/actualites/{page}'   # FIXME
@@ -356,7 +356,7 @@ vyper_site_showAllArticles: '/actualites/{page}'   # FIXME
 vyper_site_showAllArtist: '/artistes/{page}'   # FIXME
 
 # Desc: /events
-vyper_site_showAllEvent: /events   # FIXME
+vyper_site_showAllEvent: /evenements   # FIXME
 
 # Desc: /theme/{slug}/{id}/{page}
 vyper_site_showTheme: '/theme/{slug}/{id}/{page}'   # FIXME

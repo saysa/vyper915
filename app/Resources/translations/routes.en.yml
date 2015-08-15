@@ -347,7 +347,7 @@ vyper_site_index: /   # FIXME
 vyper_site_jobs: /jobs   # FIXME
 
 # Desc: /partenaires
-vyper_site_partenaires: /partenaires   # FIXME
+vyper_site_partenaires: /partners
 
 # Desc: /actualites/{page}
 vyper_site_showAllArticles: '/actualites/{page}'   # FIXME
