@@ -33,10 +33,10 @@
                         right: 'prevYear,month,agendaWeek,agendaDay'
                     },
                     buttonText: {
-                        today: "Aujourd'hui",
-                        month: 'Mois',
-                        week: 'Semaine',
-                        day: 'Jour'
+                        today: '{{ 'calendar.today'|trans }}',
+                        month: '{{ 'calendar.month'|trans }}',
+                        week: '{{ 'calendar.week'|trans }}',
+                        day: '{{ 'calendar.day'|trans }}'
                     },
                     columnFormat:{
                         month: 'ddd '    // Mon
@@ -45,9 +45,9 @@
                     height: 'auto',
                     minTime : '06:00:00',
                     monthNames: ['{{ 'calendar.monthNames.january'|trans }}','{{ 'calendar.monthNames.february'|trans }}','{{ 'calendar.monthNames.march'|trans }}','{{ 'calendar.monthNames.april'|trans }}','{{ 'calendar.monthNames.may'|trans }}','{{ 'calendar.monthNames.june'|trans }}','{{ 'calendar.monthNames.july'|trans }}','{{ 'calendar.monthNames.august'|trans }}','{{ 'calendar.monthNames.september'|trans }}','{{ 'calendar.monthNames.october'|trans }}','{{ 'calendar.monthNames.november'|trans }}','{{ 'calendar.monthNames.december'|trans }}'],
-                    monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Juin','Juil','Aout','Sep','Oct','Nov','Dec'],
-                    dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
-                    dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+                    monthNamesShort: ['{{ 'calendar.monthNamesShort.jan'|trans }}','{{ 'calendar.monthNamesShort.feb'|trans }}','{{ 'calendar.monthNamesShort.mar'|trans }}','{{ 'calendar.monthNamesShort.apr'|trans }}','{{ 'calendar.monthNamesShort.may'|trans }}','{{ 'calendar.monthNamesShort.jun'|trans }}','{{ 'calendar.monthNamesShort.jul'|trans }}','{{ 'calendar.monthNamesShort.aug'|trans }}','{{ 'calendar.monthNamesShort.sep'|trans }}','{{ 'calendar.monthNamesShort.oct'|trans }}','{{ 'calendar.monthNamesShort.nov'|trans }}','{{ 'calendar.monthNamesShort.dec'|trans }}'],
+                    dayNames: ['{{ 'calendar.dayNames.sun'|trans }}','{{ 'calendar.dayNames.mon'|trans }}','{{ 'calendar.dayNames.tue'|trans }}','{{ 'calendar.dayNames.wed'|trans }}','{{ 'calendar.dayNames.thu'|trans }}','{{ 'calendar.dayNames.fri'|trans }}','{{ 'calendar.dayNames.sat'|trans }}'],
+                    dayNamesShort: ['{{ 'calendar.dayNamesShort.sun'|trans }}','{{ 'calendar.dayNamesShort.mon'|trans }}','{{ 'calendar.dayNamesShort.tue'|trans }}','{{ 'calendar.dayNamesShort.wed'|trans }}','{{ 'calendar.dayNamesShort.thu'|trans }}','{{ 'calendar.dayNamesShort.fri'|trans }}','{{ 'calendar.dayNamesShort.sat'|trans }}'],
                     allDaySlot: false,
                     axisFormat : 'H:mm',
                     timeFormat: 'H:mm',

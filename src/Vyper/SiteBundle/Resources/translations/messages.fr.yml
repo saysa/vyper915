@@ -19,6 +19,10 @@ title:
     events: Événements
 
 calendar:
+    today: "Aujourd´hui"
+    month: Mois
+    week: Semaine
+    day: Jour
     monthNames:
         january: Janvier
         february: Février
@@ -32,3 +36,32 @@ calendar:
         october: Octobre
         november: Novembre
         december: Décembre
+    monthNamesShort:
+        jan: Jan
+        feb: Fev
+        mar: Mar
+        apr: Avr
+        may: Mai
+        jun: Juin
+        jul: Juil
+        aug: Août
+        sep: Sep
+        oct: Oct
+        nov: Nov
+        dec: Déc
+    dayNames:
+        mon: Lundi
+        tue: Mardi
+        wed: Mercredi
+        thu: Jeudi
+        fri: Vendredi
+        sat: Samedi
+        sun: Dimanche
+    dayNamesShort:
+        mon: Lun
+        tue: Mar
+        wed: Mer
+        thu: Jeu
+        fri: Ven
+        sat: Sam
+        sun: Dim

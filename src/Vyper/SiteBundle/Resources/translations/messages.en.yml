@@ -11,7 +11,6 @@ article:
     author: Author
     published: Published
 
-
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - All rights reserved.
 
@@ -20,6 +19,10 @@ title:
     events: Events
 
 calendar:
+    today: Today
+    month: Month
+    week: Week
+    day: Day
     monthNames:
         january: January
         february: February
@@ -33,3 +36,32 @@ calendar:
         october: October
         november: November
         december: December
+    monthNamesShort:
+            jan: Jan
+            feb: Feb
+            mar: Mar
+            apr: Apr
+            may: May
+            jun: Jun
+            jul: Jul
+            aug: Aug
+            sep: Sep
+            oct: Oct
+            nov: Nov
+            dec: Dec
+    dayNames:
+        mon: Monday
+        tue: Tuesday
+        wed: Wednesday
+        thu: Thusday
+        fri: Friday
+        sat: Saturday
+        sun: Sunday
+    dayNamesShort:
+        mon: Mon
+        tue: Tue
+        wed: Wed
+        thu: Thu
+        fri: Fri
+        sat: Sat
+        sun: Sun
