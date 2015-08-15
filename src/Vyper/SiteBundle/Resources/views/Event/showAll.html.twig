@@ -4,20 +4,20 @@
 
     {% block content %}
         <header class="archive-header">
-            <h2 class="archive-title">Events</h2>
+            <h2 class="archive-title">{{ 'title.events'|trans }}</h2>
         </header><!-- /archive-header -->
 
         <div id="eventContent" title="Event Details" style="display:none;">
             <strong class="main-color">Date:</strong> <span id="dateInfo"></span><br>
-            <strong class="main-color">Début:</strong> <span id="startTime"></span><br>
-            <strong class="main-color">Fin:</strong> <span id="endTime"></span><br><br>
+            <strong class="main-color">{{ 'event.start'|trans }}:</strong> <span id="startTime"></span><br>
+            <strong class="main-color">{{ 'event.end'|trans }}:</strong> <span id="endTime"></span><br><br>
             <span id="langInfo"></span>
             <span id="presentInfo"></span>
             <p id="eventInfo"></p>
 
             <div id="map"></div>
 
-            <p><strong><a id="eventLink" href="">En savoir plus</a></strong></p>
+            <p><strong><a id="eventLink" href="">{{ 'event.more'|trans }}</a></strong></p>
         </div>
 
         <div id='calendar'></div>

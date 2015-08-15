@@ -18,6 +18,10 @@ social:
     share.pinterest: Partager sur Pinterest !
     share.googlep: Partager sur Google+ !
 
+event:
+    start: Début
+    end: Fin
+    more: En savoir plus
 
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - Tous droits réservés
