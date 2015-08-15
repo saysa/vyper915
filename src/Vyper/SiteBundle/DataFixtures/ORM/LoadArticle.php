@@ -31,7 +31,7 @@ class LoadArticle extends AbstractFixture implements FixtureInterface, OrderedFi
             {
 
 
-                $randAT = mt_rand(0, 6);
+                $randAT = mt_rand(0, 4);
                 $randPic = mt_rand(0, 4);
 
                 $list[$i] = new Article();
