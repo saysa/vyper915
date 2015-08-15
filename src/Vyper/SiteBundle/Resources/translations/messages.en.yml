@@ -23,6 +23,10 @@ event:
     end: End
     more: More
 
+discography:
+    discography: Discography
+    buy: Buy now
+
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - All rights reserved.
 
