@@ -1,0 +1,206 @@
+{
+    "debug_mode": false,
+    "retina": true,
+    "jpg_quality": 100,
+    "jpg_quality_retina": 100,
+    "browser_cache": 604800,
+    "cache_path": "cache/pip",
+    "sharpen": false,
+    "resolutions": {
+        "mobile": 0,
+        "medium": 1000,
+        "large": 1300
+
+    },
+    "setup": {
+        "article": {
+            "dimensions": {
+                "0": {
+                    "h": 256
+                }
+            }
+        },
+        "cover-mag-front": {
+            "dimensions": {
+                "0": {
+                    "w": 142,
+                    "h": 218
+                }
+            }
+        },
+        "admin-mag": {
+            "dimensions": {
+                "0": {
+                    "h": 100
+                }
+            }
+        },
+        "album-cover": {
+            "dimensions": {
+                "0": {
+                    "h": 300
+                }
+            }
+        },
+        "album-cover-2": {
+            "dimensions": {
+                "0": {
+                    "h": 248
+                }
+            }
+        },
+        "galerie": {
+            "dimensions": {
+                "0": {
+                    "h": 400
+                }
+            }
+        },
+        "gallery-thumb": {
+            "dimensions": {
+                "0": {
+                    "w": 204
+                }
+            },
+            "crop": 204
+        },
+        "75-75": {
+            "dimensions": {
+                "0": {
+                    "w": 75
+                }
+            },
+            "crop": 75
+        },
+        "130-130": {
+            "dimensions": {
+                "0": {
+                    "w": 130
+                }
+            },
+            "crop": 130
+        },
+        "152": {
+            "dimensions": {
+                "0": {
+                    "w": 152
+                }
+            }
+        },
+        "162-108": {
+            "dimensions": {
+                "0": {
+                    "w": 162
+                }
+            }
+        },
+        "220": {
+            "dimensions": {
+                "0": {
+                    "w": 220
+                }
+            }
+        },
+        "290-180": {
+            "dimensions": {
+                "0": {
+                    "w": 290,
+                    "h": 180
+                }
+            }
+        },
+        "303-162": {
+            "dimensions": {
+                "0": {
+                    "w": 303,
+                    "h": 162
+                }
+            }
+        },
+        "374-200": {
+            "dimensions": {
+                "0": {
+                    "w": 374,
+                    "h": 200
+                }
+            }
+        },
+        "flux-rss": {
+            "dimensions": {
+                "mobile": {
+                    "w": 150
+                },
+                "large": {
+                    "w": 150
+                }
+            }
+        },
+        "homepage-slider": {
+            "dimensions": {
+                "0": {
+                    "w": 637,
+                    "h": 327
+                }
+            }
+        },
+        "podcast": {
+            "dimensions": {
+                "0": {
+                    "w": 236,
+                    "h": 135
+                }
+            }
+        },
+        "partner": {
+            "dimensions": {
+                "0": {
+                    "w": 130
+                }
+            }
+        },
+        "top1": {
+            "dimensions": {
+                "0": {
+                    "w": 290,
+                    "h": 290
+                }
+            }
+        },
+        "top-2-plus": {
+            "dimensions": {
+                "0": {
+                    "w": 96,
+                    "h": 96
+                }
+            }
+        },
+        "video-daily": {
+            "dimensions": {
+                "0": {
+                    "w": 137
+                }
+            },
+            "crop": 137
+        },
+        "example": {
+            "dimensions": {
+                "mobile": {
+                    "w": 150
+                },
+                "large": {
+                    "w": 150
+                }
+            },
+            "filter": {
+                "IMG_FILTER_GRAYSCALE": true,
+                "IMG_FILTER_COLORIZE": [
+                    100,
+                    50,
+                    0
+                ],
+                "IMG_FILTER_NEGATE": false,
+                "IMG_FILTER_BRIGHTNESS": 0
+            }
+        }
+    }
+}
