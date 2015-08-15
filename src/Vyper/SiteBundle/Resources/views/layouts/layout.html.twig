@@ -282,8 +282,16 @@
                 </div>
                 <!-- Aside -->
                 <aside id="sidebar" role="complementary">
+
+                    <aside class="widget"><div class="ad-banner-300x250">
+                            <a href="http://www.different-themes.com" target="_blank"><img src="http://dialy.different-themes.com/wp-content/themes/dialy-theme/lib/img/300x250.jpg" alt="Banner"></a></div>
+                    </aside>
+
                     <!-- END Sidebar -->
                 </aside>
+
+                {% block sidebar_context %}
+                {% endblock %}
 
             </div>
         </section>
