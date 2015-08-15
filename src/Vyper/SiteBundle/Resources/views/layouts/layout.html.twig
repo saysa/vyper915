@@ -51,6 +51,7 @@
 
 {% block stylesheets %}
 
+    <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans' type='text/css' media='all' />
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed' type='text/css' media='all' />
 
@@ -116,7 +117,7 @@
                 <div class="inner-wrapper">
                     <!-- Responsive menu -->
                     <a class="click-to-open-menu"><i class="fa fa-align-justify"></i></a>
-                    <ul class="main-menu"><li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-has-children df-dropdown"><a href="{{ path('vyper_site_index') }}" style="border-color: #8F408A; "><span>{{ 'main.menu.home'|trans }}</span></a>
+                    <ul class="main-menu"><li id="menu-item-50" class="df-dropdown"><a href="{{ path('vyper_site_index') }}" class="impact" style="border-color: #8F408A; "><span>{{ 'main.menu.home'|trans }}</span></a>
                             <ul class="sub-menu">
                                 <li id="menu-item-268" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-2/">Home 2</a></li>
                                 <li id="menu-item-267" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://dialy.different-themes.com/home-3/">Home 3</a></li>
@@ -125,7 +126,7 @@
                                 <li id="menu-item-283" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://themeforest.net/item/dialymagazine-clean-flat-magazine-theme/7973037?ref=different-themes">Build your own now!</a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children df-dropdown mega-menu-full"><a href="http://dialy.different-themes.com/blog/" style="border-color: #38CFCA; "><span><i class="fa fa-outdent"></i> Magazine</span></a>
+                        <li id="menu-item-95" class="df-dropdown mega-menu-full"><a href="http://dialy.different-themes.com/blog/" class="impact" style="border-color: #38CFCA; "><span><i class="fa fa-outdent"></i> Magazine</span></a>
                             <ul class="menu-blocks row">
                                 <li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children df-dropdown grid_4 1-1">
                                     <ul class="menu-content category-menu">
@@ -200,11 +201,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <li id="menu-item-332" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArticles') }}" style="border-color: #fe7316; ">Articles</a></li>
-                        <li id="menu-item-326" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllEvent') }}" style="border-color: #dd030e; ">Events</a></li>
-                        <li id="menu-item-329" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/fashion/" style="border-color: #c50298; ">{{ 'main.menu.features'|trans }}</a></li>
-                        <li id="menu-item-336" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://dialy.different-themes.com/category/technology/" style="border-color: #4A86B8; ">{{ 'main.menu.contests'|trans }}</a></li>
-                        <li id="menu-item-338" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showAllArtist') }}" style="border-color: #ccc700; ">{{ 'main.menu.artists'|trans }}</a></li>
+                        <li id="menu-item-332"><a href="{{ path('vyper_site_showAllArticles') }}" class="impact" style="border-color: #fe7316; ">Articles</a></li>
+                        <li id="menu-item-326"><a href="{{ path('vyper_site_showAllEvent') }}" class="impact" style="border-color: #dd030e; ">Events</a></li>
+                        <li id="menu-item-329"><a href="http://dialy.different-themes.com/category/fashion/" class="impact" style="border-color: #c50298; ">{{ 'main.menu.features'|trans }}</a></li>
+                        <li id="menu-item-336"><a href="http://dialy.different-themes.com/category/technology/" class="impact" style="border-color: #4A86B8; ">{{ 'main.menu.contests'|trans }}</a></li>
+                        <li id="menu-item-338"><a href="{{ path('vyper_site_showAllArtist') }}" class="impact" style="border-color: #ccc700; ">{{ 'main.menu.artists'|trans }}</a></li>
                         {% if themes_in_menu|length > 0 %}
 
                             {% for theme in themes_in_menu %}

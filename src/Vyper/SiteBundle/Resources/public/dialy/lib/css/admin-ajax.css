@@ -100,3 +100,10 @@ h1.post-title {
     word-spacing: 0em;
     line-height: 1.4;
 }
+
+nav a.impact {
+    font-family: 'Lato' !important;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+}
