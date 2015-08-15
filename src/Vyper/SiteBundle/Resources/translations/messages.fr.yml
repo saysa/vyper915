@@ -11,6 +11,14 @@ article:
     author: Auteur
     published: Publié le
 
+social:
+    share.twitter: Partager sur Twitter !
+    share.facebook: Partager sur Facebook !
+    share.linkedin: Partager sur LinkedIn !
+    share.pinterest: Partager sur Pinterest !
+    share.googlep: Partager sur Google+ !
+
+
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - Tous droits réservés
 
