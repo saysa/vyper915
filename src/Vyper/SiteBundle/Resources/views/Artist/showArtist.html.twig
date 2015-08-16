@@ -45,7 +45,11 @@
 
                     </div>
                     <div class="one-half last">
-                        {{ artist.getProfile }}
+                        {% if app.request.getLocale() == 'fr' %}
+                            {{ artist.getProfile }}
+                        {% elseif app.request.getLocale() == 'en' %}
+                            {{ artist.getProfileEn }}
+                        {% endif %}
                     </div>
 
 
@@ -59,7 +63,7 @@
         </div>
         <!-- /post-wrap -->
 
-        {% if artist.getBiography %}
+        {% if artist.getBiography and app.request.getLocale() == 'fr' %}
 
             <div class="content-title main-color-reverse" id="toggle-biography">
                 <h4>Biographie</h4>
@@ -67,6 +71,14 @@
 
             <div class="entry-content" id="toggle-target-biography">
                 {{ artist.getBiography|raw }}
+            </div>
+        {% elseif artist.getBiographyEn and app.request.getLocale() == 'en' %}
+            <div class="content-title main-color-reverse" id="toggle-biography">
+                <h4>Biographie</h4>
+            </div>
+
+            <div class="entry-content" id="toggle-target-biography">
+                {{ artist.getBiographyEn|raw }}
             </div>
         {% endif %}
 
