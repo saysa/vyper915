@@ -36,6 +36,7 @@ class VideoController extends Controller
         $videos = $em->getRepository('VyperSiteBundle:Video')->showAll($videos_per_page, $page);
 
         $view
+            ->set('current_videos', true)
             ->set('videos', $videos)
             ->set('page', $page)
             ->set('total_videos', ceil(count($videos)/$videos_per_page))

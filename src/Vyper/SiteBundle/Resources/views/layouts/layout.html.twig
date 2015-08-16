@@ -187,7 +187,7 @@
             <div class="inner-wrapper">
 
                 <!-- Main -->
-                <div id="main" class="left" role="main">
+                <div id="main" role="main" {% if current_videos is defined %}{% else %}class="left"{% endif %}>
 
                     <!-- Start template -->
                     {% block content %}{% endblock %}
@@ -195,6 +195,9 @@
 
 
                 </div>
+
+                {% if current_videos is defined %}
+                {% else %}
                 <!-- Aside -->
                 <aside id="sidebar" role="complementary">
 
@@ -208,6 +211,7 @@
                         <script>
                             (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>
+                        </div>
                     </aside>
 
 
@@ -221,6 +225,7 @@
 
                     <!-- END Sidebar -->
                 </aside>
+                {% endif %}
 
             </div>
         </section>

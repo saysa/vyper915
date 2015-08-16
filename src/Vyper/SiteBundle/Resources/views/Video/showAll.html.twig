@@ -13,17 +13,34 @@
     {% block content %}
 
 
+        {% for video in videos %}
+            {% if loop.index%2!=0 %}<div class="block-layout-two row">{% endif %}
+            <div class="grid_6 post-70 post type-post format-standard">
+                <div class="main-item">
+                    <div class="post-img element-fade-in videoWrapper">
+                        <iframe width="422" height="280" src="//www.youtube.com/embed/{{ video.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
 
-        <div class="listing-block">
-            <div class="releases-listing">
-                {% for key, video in videos %}
-                    ici on affiche la vdeio
-                {% endfor %}
+                    </div>
 
-                <div class="clear"></div>
+                    <h3><a href="">{{ video.getTitle }}</a></h3>
+                    <div class="post-dca">
+                        <span class="date">{{ video.getReleaseDateFrontFormat(video.getId) }}</span>
+                        <ul class="rating-list">
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p>{{ video.getDescription }}</p>
+                </div>
             </div>
+            {% if loop.index%2==0 %}</div><!-- end row -->{% endif %}
+        {% endfor %}
 
-        </div><!--/ listing block-->
+
+
+
 
 
 
