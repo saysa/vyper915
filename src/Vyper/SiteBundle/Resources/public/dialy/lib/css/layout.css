@@ -1394,6 +1394,7 @@ p.title:after {
 }
 .post-dca .date,
 .post-dca .comments,
+.post-dca .theme,
 .post-dca .author {
     display: inline-block;
     color: #999;
@@ -1420,6 +1421,9 @@ p.date:before {
 }
 .post-dca .author:before {
     content: '\f007';
+}
+.post-dca .theme:before {
+    content: '\f016';
 }
 
 
@@ -1713,6 +1717,10 @@ article .post-meta span {
 article .post-meta span.author {}
 article .post-meta span.author:before {
     content: "\f007"
+}
+article .post-meta span.theme {}
+article .post-meta span.theme:before {
+    content: "\f016"
 }
 article .post-meta span.date {}
 article .post-meta span.date:before {

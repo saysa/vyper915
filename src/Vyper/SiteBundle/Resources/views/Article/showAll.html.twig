@@ -2,64 +2,49 @@
 
 {% block title %}{{ article_type }} | {{ parent() }}{% endblock %}
 
+    {% block above_the_fold %}
+    <div id="above-the-fold" class="above-the-fold light">
+        <div class="inner-wrapper">
+            <h2 class="page-title">{{ article_type|upper }}</h2>
+        </div>
+    </div>
+    {% endblock %}
+
     {% block content %}
 
-        <header class="archive-header">
-            <h2 class="archive-title">{{ article_type }}</h2>
-        </header><!-- /archive-header -->
+        <div class="block-layout-five">
 
-        <div class="archive-postlist">
             {% for article in articles %}
-                {% if loop.index%2!=0 %}
-                    <div class="row">
-                {% endif %}
 
-                <div class="one-half{% if loop.index%2==0 %} last{% endif %} col-lg-6">
-                    <article class="post type-post status-publish format-standard hentry category-graphics tag-cars tag-characters tag-girl tag-man">
-
-                        {% if article.getYoutube %}
-                            <div class="thumb-wrap video-thumb">
-                                <iframe width="290" height="180" src="//www.youtube.com/embed/{{ article.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
-                            </div>
-                        {% else %}
-                            <div class="thumb-wrap">
-                                <div class="thumb">
-                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><img src="{{ asset(article.picture.getPath('303-162')) }}" class="attachment-fp374_200 wp-post-image" alt=""></a>
-                                </div>
+                <!-- Post -->
+                <div class="main-item post-109 post type-post status-publish format-standard has-post-thumbnail hentry category-culture category-fun category-lifestyle tag-css3 tag-development">
+                    <div class="post-img">
+                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                            <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
+                    </div>
 
 
-
-                                <div class="overlay">
-                                    <a class="post-link" href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}"><i class="icon-link"></i></a>
-                                </div>
-                            </div>
-                        {% endif %}
-
-
-                        <header class="entry-header">
-                            <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
-                            <div class="entry-meta">
-                                <span class="date"><i class="fa fa-calendar"></i> {{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                    <div class="post-meta ">
+                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                        <div class="post-dca">
+                            <span class="date">{{ article.getReleaseDateFrontFormat(article.getId) }}</span>
+                            <span class="theme"><a href="#">{{ article.getArticleType.getName }}</a></span>
+                            <span class="author"><a href="#" title="Posts by Different Themes" rel="author">{{ article.getAuthor }}</a></span>
 
 
-                            </div>
-                        </header>
-
-                        <div class="entry-excerpt">
-                            <p>{{ article.getDescription }}</p>
                         </div>
-                    </article>
-                </div>
 
-                {% if loop.index%2==0 %}
+                        {#
+                        <span class="disqus-comment-count" data-disqus-url="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">First article</span>
+                        #}
+                        <p>{{ article.getDescription }}</p>
+                    </div>
                 </div>
-                <!-- end row -->
-                {% endif %}
-
 
             {% endfor %}
-        </div>
 
+
+        </div>
 
 
 
@@ -93,3 +78,20 @@
 
 
     {% endblock %}
+
+{% block javascripts_footer %}
+    {{ parent() }}
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'vyper'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+{% endblock %}

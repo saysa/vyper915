@@ -117,6 +117,8 @@
 
         </header>
 
+        {% block above_the_fold %}
+
         {% if front_page_index is defined %}
             <div id="above-the-fold" class="above-the-fold light">
                 <div class="inner-wrapper">
@@ -164,6 +166,7 @@
                 </div>
             </div>
         {% endif %}
+        {% endblock %}
 
         <section id="section">
             <div class="inner-wrapper">
