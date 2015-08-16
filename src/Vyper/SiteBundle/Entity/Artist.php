@@ -61,9 +61,23 @@ class Artist
     /**
      * @var string
      *
+     * @ORM\Column(name="profileEn", type="text", nullable=true)
+     */
+    private $profileEn;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="biography", type="text", nullable=true)
      */
     private $biography;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="biographyEn", type="text", nullable=true)
+     */
+    private $biographyEn;
 
     /**
      * @var string
@@ -220,6 +234,29 @@ class Artist
     }
 
     /**
+     * Set profileEn
+     *
+     * @param string $profileEn
+     * @return Artist
+     */
+    public function setProfileEn($profileEn)
+    {
+        $this->profileEn = $profileEn;
+
+        return $this;
+    }
+
+    /**
+     * Get profileEn
+     *
+     * @return string
+     */
+    public function getProfileEn()
+    {
+        return $this->profileEn;
+    }
+
+    /**
      * Set biography
      *
      * @param string $biography
@@ -240,6 +277,29 @@ class Artist
     public function getBiography()
     {
         return $this->biography;
+    }
+
+    /**
+     * Set biographyEn
+     *
+     * @param string $biographyEn
+     * @return Artist
+     */
+    public function setBiographyEn($biographyEn)
+    {
+        $this->biographyEn = $biographyEn;
+
+        return $this;
+    }
+
+    /**
+     * Get biographyEn
+     *
+     * @return string
+     */
+    public function getBiographyEn()
+    {
+        return $this->biographyEn;
     }
 
     /**
