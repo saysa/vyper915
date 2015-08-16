@@ -110,47 +110,24 @@
                     </li>
                     <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 3-1">
                         <ul class="menu-content article-list">
-                            <li id="menu-item-105" class="menu-item menu-item-type-taxonomy menu-item-object-category"><ul class="recent-posts">    <li>
-                                        <div class="image">
-                                            <a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/">
-                                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-4107116-meeting-m-80x65_c.jpg" alt="Is Brixton London’s next tech hipster hub?" title="Is Brixton London’s next tech hipster hub?">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="http://dialy.different-themes.com/is-brixton-londons-next-tech-hipster-hub-2/">Is Brixton London’s next tech hipster hub?</a></h3><p class="date">June 10, 2014</p></div>
-                                    </li>    <li>
-                                        <div class="image">
-                                            <a href="http://dialy.different-themes.com/scented-candles-how-i-learned-to-stop-worrying-and-smell-the-bluebells/">
-                                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-1472069-woman-playing-tennis-m-80x65_c.jpg" alt="Scented candles: how I learned to stop worrying and smell the bluebells" title="Scented candles: how I learned to stop worrying and smell the bluebells">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="http://dialy.different-themes.com/scented-candles-how-i-learned-to-stop-worrying-and-smell-the-bluebells/">Scented candles: how I learned to stop worrying and smell the bluebells</a></h3><p class="date">June 9, 2014</p></div>
-                                    </li>    <li>
-                                        <div class="image">
-                                            <a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">
-                                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-1557278-tower-bridge-london-m-80x65_c.jpg" alt="Paris fashion week AW14: the 10 key trends – in pictures" title="Paris fashion week AW14: the 10 key trends – in pictures">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="http://dialy.different-themes.com/paris-fashion-week-aw14-the-10-key-trends-in-pictures/">Paris fashion week AW14: the 10 key trends – in pictures</a></h3><p class="date">June 9, 2014</p></div>
-                                    </li>    <li>
-                                        <div class="image">
-                                            <a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">
-                                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/0-80x65_c.jpg" alt="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung" title="Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="http://dialy.different-themes.com/thinking-of-buying-dungarees-just-dont-expect-them-to-transform-you-into-alexa-chung/">Thinking of buying dungarees? Just don’t expect them to transform you into Alexa Chung</a></h3><p class="date">June 9, 2014</p></div>
-                                    </li>    <li>
-                                        <div class="image">
-                                            <a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years/">
-                                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-6422230-sunset-l-80x65_c.jpg" alt="Savers offered fixes of up to seven years" title="Savers offered fixes of up to seven years">
-                                            </a>
-                                        </div>
-                                        <div class="text">
-                                            <h3><a href="http://dialy.different-themes.com/savers-offered-fixes-of-up-to-seven-years/">Savers offered fixes of up to seven years</a></h3><p class="date">June 9, 2014</p></div>
-                                    </li></ul></li>
+                            <li id="menu-item-105" class="menu-item menu-item-type-taxonomy menu-item-object-category"><ul class="recent-posts">
+
+                                    {% for article in highlight_in_menu %}
+                                        {% if loop.index > 1 and loop.index <6 %}
+                                            <li>
+                                                <div class="image">
+                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                                        <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('80-65')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">
+                                                    </a>
+                                                </div>
+                                                <div class="text">
+                                                    <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3><p class="date">{{ article.getReleaseDateFrontFormat() }}</p></div>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+
+
+                                       </ul></li>
                         </ul>
                     </li>
                 </ul>
