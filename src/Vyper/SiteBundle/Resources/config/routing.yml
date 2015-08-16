@@ -56,9 +56,9 @@ musique-news:
     requirements:
         page: \d*
 
-musique-interviews:
-    path:    /musique-interviews/{page}
-    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-interviews }
+vyper_site_interviews:
+    path:    /interviews/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: interview }
     requirements:
         page: \d*
 

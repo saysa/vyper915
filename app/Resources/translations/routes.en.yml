@@ -286,8 +286,8 @@ mentions_legales: /mentions-legales   # FIXME
 # Desc: /musique-chroniques/{page}
 musique-chroniques: '/musique-chroniques/{page}'   # FIXME
 
-# Desc: /musique-interviews/{page}
-musique-interviews: '/musique-interviews/{page}'   # FIXME
+# Desc: /interviews/{page}
+vyper_site_interviews: '/interviews/{page}'   # FIXME
 
 # Desc: /musique-live-reports/{page}
 musique-live-reports: '/musique-live-reports/{page}'   # FIXME
