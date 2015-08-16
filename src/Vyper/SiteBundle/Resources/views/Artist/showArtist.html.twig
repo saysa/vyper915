@@ -364,3 +364,17 @@
         </script>
 
     {% endblock %}
+
+{% block javascripts_footer %}
+
+    {{ parent() }}
+
+    <script type="text/javascript" src="http://wms-eu.amazon-adsystem.com/20070822/FR/js/link-enhancer-common.js?tag=vyjamu-21">
+    </script>
+    <noscript>
+        <img src="http://wms-eu.amazon-adsystem.com/20070822/FR/img/noscript.gif?tag=vyjamu-21" alt="" />
+    </noscript>
+
+
+
+{% endblock %}
