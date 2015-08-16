@@ -66,7 +66,7 @@
         {% if artist.getBiography and app.request.getLocale() == 'fr' %}
 
             <div class="content-title main-color-reverse" id="toggle-biography">
-                <h4>Biographie</h4>
+                <h4 id="biography">{{ 'artist.biography'|trans }}</h4>
             </div>
 
             <div class="entry-content" id="toggle-target-biography">
@@ -74,7 +74,7 @@
             </div>
         {% elseif artist.getBiographyEn and app.request.getLocale() == 'en' %}
             <div class="content-title main-color-reverse" id="toggle-biography">
-                <h4>Biographie</h4>
+                <h4 id="biography">{{ 'artist.biography'|trans }}</h4>
             </div>
 
             <div class="entry-content" id="toggle-target-biography">

@@ -241,7 +241,11 @@
                         </div>
                         <div class="">
                             <ul>
-                                <li><a href="#">{{ 'artist.biography'|trans }}</a></li>
+                                {% if artist.getBiography and app.request.getLocale() == 'fr' %}
+                                    <li><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}#biography">{{ 'artist.biography'|trans }}</a></li>
+                                {% elseif artist.getBiographyEn and app.request.getLocale() == 'en' %}
+                                    <li><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}#biography">{{ 'artist.biography'|trans }}</a></li>
+                                {% endif %}
                                 <li><a href="#">{{ 'artist.discography'|trans }}</a></li>
                                 <li><a href="#">{{ 'artist.official.website'|trans }}</a></li>
                             </ul>
