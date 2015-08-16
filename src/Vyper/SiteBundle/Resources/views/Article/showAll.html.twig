@@ -72,7 +72,7 @@
                     {% else %}
 
                         {% if article_type == 'Live Reports' %}
-                            <a href="{{ path('musique-live-reports', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                            <a href="{{ path('vyper_site_liveReports', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Review' %}
                             <a href="{{ path('musique-chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Interviews' %}

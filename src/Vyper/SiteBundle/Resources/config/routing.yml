@@ -62,9 +62,9 @@ vyper_site_interviews:
     requirements:
         page: \d*
 
-musique-live-reports:
-    path:    /musique-live-reports/{page}
-    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-live-reports }
+vyper_site_liveReports:
+    path:    /live-reports/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: live-reports }
     requirements:
         page: \d*
 

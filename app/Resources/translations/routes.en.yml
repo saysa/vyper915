@@ -289,8 +289,8 @@ musique-chroniques: '/musique-chroniques/{page}'   # FIXME
 # Desc: /interviews/{page}
 vyper_site_interviews: '/interviews/{page}'   # FIXME
 
-# Desc: /musique-live-reports/{page}
-musique-live-reports: '/musique-live-reports/{page}'   # FIXME
+# Desc: /live-reports/{page}
+vyper_site_liveReports: '/live-reports/{page}'   # FIXME
 
 # Desc: /musique-archives/{page}
 musique-news: '/musique-archives/{page}'   # FIXME
