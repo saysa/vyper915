@@ -145,7 +145,7 @@
                                 <li{% if loop.index == 1 %} class="flex-active-slide"{% endif %}>
                                     <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}" draggable="false">
                                     <div class="post-box-text">
-                                        <span style="background-color: #dd030e"><a href="#">Lifestyle</a></span>
+                                        <span style="background-color: #dd030e"><a href="#">{{ article.getArticleType.getName }}</a></span>
                                         <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
                                         <p>{{ article.getReleaseDateFrontFormat(article.getId) }}</p>
                                     </div>
