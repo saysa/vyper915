@@ -79,8 +79,8 @@
                             <a href="{{ path('vyper_site_interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Actualités' %}
                             <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Archives' %}
-                            <a href="{{ path('musique-news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'News' %}
+                            <a href="{{ path('vyper_site_news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% else %}
                             <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% endif %}

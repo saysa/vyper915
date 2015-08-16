@@ -102,19 +102,6 @@ class ArticleController extends Controller
                     ->set('current_actualites', true)
                 ;
                 break;
-            case "musique-news":
-                $type = array(
-                    '',
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
-                    #$em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
-                );
-                $view
-                    ->set('article_type', "Archives")
-                    ->set('current_musique', true)
-                ;
-                break;
             case "interview":
                 $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Interview");
                 $view
@@ -151,7 +138,7 @@ class ArticleController extends Controller
                 ;
                 break;
             case "news":
-                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("news");
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("News");
                 $view->set('article_type', "News");
                 break;
         }

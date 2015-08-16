@@ -292,8 +292,8 @@ vyper_site_interviews: '/interviews/{page}'
 # Desc: /live-reports/{page}
 vyper_site_liveReports: '/live-reports/{page}'
 
-# Desc: /musique-archives/{page}
-musique-news: '/musique-archives/{page}'   # FIXME
+# Desc: /archives/{page}
+vyper_site_news: '/archives/{page}'
 
 # Desc: /radio
 playerradio: /radio   # FIXME

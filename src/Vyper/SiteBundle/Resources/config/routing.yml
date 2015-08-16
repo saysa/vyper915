@@ -50,9 +50,9 @@ vyper_site_showAllArticles:
     requirements:
         page: \d*
 
-musique-news:
-    path:    /musique-archives/{page}
-    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: musique-news }
+vyper_site_news:
+    path:    /archives/{page}
+    defaults: { _controller: VyperSiteBundle:Article:showAll, page: 1, type: news }
     requirements:
         page: \d*
 
