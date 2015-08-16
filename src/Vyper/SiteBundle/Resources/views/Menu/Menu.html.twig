@@ -90,16 +90,22 @@
                     </li>
                     <li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 2-1">
                         <ul class="menu-content featured-post">
-                            <li id="menu-item-104" class="menu-item menu-item-type-taxonomy menu-item-object-category"><div class="block-layout-two">
+                            <li id="menu-item-104" class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                                {% for article in highlight_in_menu %}
+                                {% if loop.index == 1 %}
+                                <div class="block-layout-two">
                                     <div class="main-item">
                                         <div class="post-img">
-                                            <a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">
-                                                <img src="http://dialy.different-themes.com/wp-content/uploads/2014/06/photodune-479410-close-up-of-a-pink-high-heels-with-diamons-m-338x250_c.jpg" alt="The Homesman rides, The Expendables assemble" title="The Homesman rides, The Expendables assemble">
+                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" data-size="338x250" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">
                                             </a><span style="background-color: #222222">
-		                    							<a href="http://dialy.different-themes.com/category/lifestyle/">Lifestyle</a>
+		                    							<a href="#">{{ article.getArticleType.getName }}</a>
 		                    						</span></div>
-                                        <h3><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/">The Homesman rides, The Expendables assemble</a></h3><p class="date">June 10, 2014</p></div>
-                                </div></li>
+                                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3><p class="date">{{ article.getReleaseDateFrontFormat() }}</p></div>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                            </li>
                         </ul>
                     </li>
                     <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children df-dropdown grid_4 3-1">
