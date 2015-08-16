@@ -535,6 +535,7 @@ class Artist
         $this->setDeleted(false);
         $this->setCreated(new \DateTime('now'));
         $this->setmodified(new \DateTime('now'));
+        $this->setVyper(false);
     }
 
     /**

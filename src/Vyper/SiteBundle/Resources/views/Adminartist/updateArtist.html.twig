@@ -54,7 +54,7 @@
                                 <!-- Profile -->
                                 <div class="row">
                                     <div class="form-group col-lg-9{%if error_profile is defined %} has-error{% endif %}">
-                                        {{ form_label(form.profile, "Profile") }}
+                                        {{ form_label(form.profile, "Profile FR") }}
                                         <div class="controls">
                                             {{ form_widget(form.profile, {  'attr': {'class': 'form-control'} }) }}
                                             {{ form_errors(form.profile) }}
@@ -62,12 +62,32 @@
                                     </div>
                                 </div>
 
+                                <!-- Profile EN -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{%if error_profile is defined %} has-error{% endif %}">
+                                        {{ form_label(form.profileEn, "Profile EN") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.profileEn, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.profileEn) }}
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- Biography -->
                                 <div class="form-group hidden-phone{%if error_biography is defined %} has-error{% endif %}">
-                                    {{ form_label(form.biography, "Biography") }}
+                                    {{ form_label(form.biography, "Biography FR") }}
                                     <div class="controls">
                                         {{ form_widget(form.biography, {  'attr': {'class': 'cleditor'} }) }}
                                         {{ form_errors(form.biography) }}
+                                    </div>
+                                </div>
+
+                                <!-- Biography -->
+                                <div class="form-group hidden-phone{%if error_biography is defined %} has-error{% endif %}">
+                                    {{ form_label(form.biographyEn, "Biography EN") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.biographyEn, {  'attr': {'class': 'cleditor'} }) }}
+                                        {{ form_errors(form.biographyEn) }}
                                     </div>
                                 </div>
 
