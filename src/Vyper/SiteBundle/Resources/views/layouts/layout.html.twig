@@ -88,6 +88,21 @@
 {% endblock %}
 
 {% block body %}
+    <!--[if lt IE 9]>
+    <p class="chromeframe">Notre site est optimisé pour les navigateurs plus récents. <a data-bypass href="http://browsehappy.com/">Mets le tien à jour !</a></p>
+    <![endif]-->
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=1470537739827941";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
+
     <div id="wrapper" class="boxed">
         <header id="header" class="light">
             <div class="inner-wrapper row">
@@ -184,14 +199,28 @@
                 <aside id="sidebar" role="complementary">
 
                     <aside class="widget"><div class="ad-banner-300x250">
-                            <a href="http://www.different-themes.com" target="_blank"><img src="http://dialy.different-themes.com/wp-content/themes/dialy-theme/lib/img/300x250.jpg" alt="Banner"></a></div>
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- sidebar -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:250px"
+                             data-ad-client="ca-pub-3070362287154347"
+                             data-ad-slot="7520447913"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </aside>
+
+
+                {% block sidebar_context %}
+                {% endblock %}
+
+                    <aside class="widget">
+                        <div class="widget-title"><h4>Suivez-nous</h4></div>
+                        <div class="fb-like-box" data-href="https://www.facebook.com/vyperjmusic" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
                     </aside>
 
                     <!-- END Sidebar -->
                 </aside>
-
-                {% block sidebar_context %}
-                {% endblock %}
 
             </div>
         </section>
