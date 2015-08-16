@@ -132,6 +132,12 @@ showVideo:
     requirements:
         id: \d+
 
+vyper_site_showAllVideos:
+    path:    /videos/{page}
+    defaults: { _controller: VyperSiteBundle:Video:showAll, page: 1 }
+    requirements:
+        page: \d*
+
 showDisco:
     path:    /disco/{slug}/{id}.html
     defaults: { _controller: VyperSiteBundle:Disco:showDisco }

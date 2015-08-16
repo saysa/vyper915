@@ -3,6 +3,7 @@
 namespace Vyper\SiteBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 
 /**
  * VideoRepository
@@ -61,5 +62,27 @@ class VideoRepository extends EntityRepository
         $results = $query->getResult();
 
         return $results;
+    }
+
+    public function showAll($videos_per_page, $page)
+    {
+        if ($page < 1) {
+            throw new \InvalidArgumentException('Can not be < 1');
+        }
+
+        $queryBuilder = $this->createQueryBuilder('v');
+        $queryBuilder
+            ->where('v.deleted = false')
+            ->orderBy('v.created', 'DESC')
+        ;
+        $query = $queryBuilder->getQuery();
+
+
+        $query
+            ->setFirstResult(($page-1) * $videos_per_page)
+            ->setMaxResults($videos_per_page)
+        ;
+
+        return new Paginator($query);
     }
 }

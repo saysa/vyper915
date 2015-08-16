@@ -22,4 +22,26 @@ class VideoController extends Controller
         return $view->getView();
     }
 
+    /**
+     * @param $page
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Template()
+     */
+    public function showAllAction($page)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $view = $this->container->get('saysa_view');
+        $videos_per_page = $this->container->getParameter('videos_per_page');
+
+        $videos = $em->getRepository('VyperSiteBundle:Video')->showAll($videos_per_page, $page);
+
+        $view
+            ->set('videos', $videos)
+            ->set('page', $page)
+            ->set('total_videos', ceil(count($videos)/$videos_per_page))
+        ;
+
+        return $view->getView();
+    }
+
 }

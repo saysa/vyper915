@@ -2,6 +2,7 @@ parameters:
     articles_per_page: 8
     albums_per_page: 32
     magazines_per_page: 12
+    videos_per_page: 12
     artists_per_page: 12
     big_format_picture:
         interview: musique : interview

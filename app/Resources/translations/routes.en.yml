@@ -328,6 +328,9 @@ showMagazine: '/vyper-jmusic-magazine/{slug}/{id}.html'   # FIXME
 # Desc: /video/{slug}/{id}
 showVideo: '/video/{slug}/{id}'   # FIXME
 
+# Desc: /videos/{page}
+vyper_site_showAllVideos: /videos/{page}
+
 # Desc: /ajax/vote_picture
 vote_picture: /ajax/vote_picture   # FIXME
 
