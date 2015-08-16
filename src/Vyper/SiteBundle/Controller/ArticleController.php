@@ -89,13 +89,10 @@ class ArticleController extends Controller
             case "actualites":
                 $type = array(
                     '',
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Jeux Vidéos"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Culture"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : chronique"),
-                    #$em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : interview"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : live report"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
-                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("news"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Chronique"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Interview"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Live report"),
+                    $em->getRepository('VyperSiteBundle:ArticleType')->findByName("News"),
                 );
                 $view
                     ->set('article_type', "Actualités")
@@ -121,20 +118,6 @@ class ArticleController extends Controller
                 $view
                     ->set('article_type', "Chronique")
                     ->set('current_musique', true)
-                ;
-                break;
-            case "jeux-videos":
-                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Jeux Vidéos");
-                $view
-                    ->set('article_type', "Jeux Vidéos")
-                    ->set('current_jeuxvideos', true)
-                ;
-                break;
-            case "culture":
-                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Culture");
-                $view
-                    ->set('article_type', "Culture")
-                    ->set('current_culture', true)
                 ;
                 break;
             case "news":
