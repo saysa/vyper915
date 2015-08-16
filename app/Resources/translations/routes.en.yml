@@ -283,14 +283,14 @@ l_equipe: /l-equipe   # FIXME
 # Desc: /mentions-legales
 mentions_legales: /mentions-legales   # FIXME
 
-# Desc: /musique-chroniques/{page}
-musique-chroniques: '/musique-chroniques/{page}'   # FIXME
+# Desc: /chroniques/{page}
+vyper_site_chroniques: '/chroniques/{page}'
 
 # Desc: /interviews/{page}
-vyper_site_interviews: '/interviews/{page}'   # FIXME
+vyper_site_interviews: '/interviews/{page}'
 
 # Desc: /live-reports/{page}
-vyper_site_liveReports: '/live-reports/{page}'   # FIXME
+vyper_site_liveReports: '/live-reports/{page}'
 
 # Desc: /musique-archives/{page}
 musique-news: '/musique-archives/{page}'   # FIXME

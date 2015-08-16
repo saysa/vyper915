@@ -73,8 +73,8 @@
 
                         {% if article_type == 'Live Reports' %}
                             <a href="{{ path('vyper_site_liveReports', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Review' %}
-                            <a href="{{ path('musique-chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Chronique' %}
+                            <a href="{{ path('vyper_site_chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Interviews' %}
                             <a href="{{ path('vyper_site_interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Actualités' %}
