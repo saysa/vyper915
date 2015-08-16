@@ -10,6 +10,11 @@ main:
 article:
     author: Author
     published: Published
+    type:
+        news: News
+        chronique: Chronique
+        live.report: Live Report
+        interview: Interview
 
 social:
     share.twitter: Share on sur Twitter!

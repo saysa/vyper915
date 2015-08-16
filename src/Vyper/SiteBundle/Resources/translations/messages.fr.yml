@@ -10,6 +10,11 @@ main:
 article:
     author: Auteur
     published: Publié le
+    type:
+        news: News
+        chronique: Chronique
+        live.report: Live Report
+        interview: Interview
 
 social:
     share.twitter: Partager sur Twitter !
