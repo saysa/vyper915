@@ -107,3 +107,7 @@ nav a.impact {
     font-weight: 900;
     font-size: 20px;
 }
+
+a.special {
+    color: #FFD073!important;
+}
