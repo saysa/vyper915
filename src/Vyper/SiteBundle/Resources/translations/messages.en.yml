@@ -23,6 +23,11 @@ event:
     end: End
     more: More
 
+artist:
+    biography: Biography
+    discography: Discography
+    official.website: Officiel website
+
 discography:
     discography: Discography
     buy: Buy now
