@@ -38,10 +38,24 @@
             <p><strong><a id="eventLink" href="">{{ 'event.more'|trans }}</a></strong></p>
         </div>
 
-        <div id='calendar'></div>
+        <div class="calendar" id="cal-europe">
+            <div id='calendar'></div>
+        </div>
+        <div class="calendar" id="cal-us">Cal US</div>
+        <div class="calendar" id="cal-asie">Cal Asie</div>
+
+
 
 
     {% endblock %}
+
+{% block sidebar_context %}
+    <ul>
+        <li><a href="#" class="toggle-cal" data-cal="cal-europe">Europe</a></li>
+        <li><a href="#" class="toggle-cal" data-cal="cal-us">US</a></li>
+        <li><a href="#" class="toggle-cal" data-cal="cal-asie">Asie</a></li>
+    </ul>
+{% endblock %}
 
 {% block javascripts_footer %}
 
@@ -54,6 +68,28 @@
 
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
+
+    <script>
+
+        $(window).load(function() {
+
+            var calendars = $(".calendar");
+            calendars.hide();
+            $('#cal-europe').show();
+
+
+            $(".toggle-cal").on("click", function(e) {
+
+                e.preventDefault();
+
+                $(".calendar").hide();
+                var geo = $(this).data('cal');
+                console.log(geo);
+                $('#'+geo).show();
+            });
+        });
+
+    </script>
 
     <script>
 
