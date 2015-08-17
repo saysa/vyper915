@@ -13,10 +13,17 @@
     {% endstylesheets %}
 {% endblock %}
 
+{% block above_the_fold %}
+    <div id="above-the-fold" class="above-the-fold light">
+        <div class="inner-wrapper">
+            <h2 class="page-title">{{ 'title.events'|trans|upper }}</h2>
+        </div>
+    </div>
+{% endblock %}
+
+
     {% block content %}
-        <header class="archive-header">
-            <h2 class="archive-title">{{ 'title.events'|trans }}</h2>
-        </header><!-- /archive-header -->
+
 
         <div id="eventContent" title="Event Details" style="display:none;">
             <strong class="main-color">Date:</strong> <span id="dateInfo"></span><br>
