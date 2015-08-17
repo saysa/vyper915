@@ -331,6 +331,9 @@ showVideo: '/video/{slug}/{id}'   # FIXME
 # Desc: /videos/{page}
 vyper_site_showAllVideos: /videos/{page}
 
+# Desc: /magazine/actualites/{page}
+vyper_site_magazine_news: /magazine/news/{page}
+
 # Desc: /ajax/vote_picture
 vote_picture: /ajax/vote_picture   # FIXME
 

@@ -120,6 +120,13 @@ class ArticleController extends Controller
                     ->set('current_musique', true)
                 ;
                 break;
+            case "magazines":
+                $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Magazine");
+                $view
+                    ->set('article_type', "Magazine")
+                    ->set('current_musique', true)
+                ;
+                break;
             case "news":
                 $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("News");
                 $view->set('article_type', "News");

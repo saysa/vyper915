@@ -60,6 +60,8 @@
                             <a href="{{ path('vyper_site_liveReports', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Chronique' %}
                             <a href="{{ path('vyper_site_chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                        {% elseif article_type == 'Magazine' %}
+                            <a href="{{ path('vyper_site_magazine_news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Interviews' %}
                             <a href="{{ path('vyper_site_interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a>
                         {% elseif article_type == 'Actualités' %}
