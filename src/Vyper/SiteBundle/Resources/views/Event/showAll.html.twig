@@ -41,8 +41,12 @@
         <div class="calendar" id="cal-europe">
             <div id='calendar'></div>
         </div>
-        <div class="calendar" id="cal-us">Cal US</div>
-        <div class="calendar" id="cal-asie">Cal Asie</div>
+        <div class="calendar" id="cal-us">
+            <div id='calendarUS'></div>
+        </div>
+        <div class="calendar" id="cal-asie">
+            <div id='calendarJP'></div>
+        </div>
 
 
 
@@ -157,6 +161,134 @@
                     });
                 },
                 events: {{ eventsEU|raw }}
+            });
+
+            $('#calendarUS').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'prevYear,month,agendaWeek,agendaDay'
+                },
+                buttonText: {
+                    today: '{{ 'calendar.today'|trans }}',
+                    month: '{{ 'calendar.month'|trans }}',
+                    week: '{{ 'calendar.week'|trans }}',
+                    day: '{{ 'calendar.day'|trans }}'
+                },
+                columnFormat:{
+                    month: 'ddd '    // Mon
+                },
+                firstDay:1,
+                height: 'auto',
+                minTime : '06:00:00',
+                monthNames: ['{{ 'calendar.monthNames.january'|trans }}','{{ 'calendar.monthNames.february'|trans }}','{{ 'calendar.monthNames.march'|trans }}','{{ 'calendar.monthNames.april'|trans }}','{{ 'calendar.monthNames.may'|trans }}','{{ 'calendar.monthNames.june'|trans }}','{{ 'calendar.monthNames.july'|trans }}','{{ 'calendar.monthNames.august'|trans }}','{{ 'calendar.monthNames.september'|trans }}','{{ 'calendar.monthNames.october'|trans }}','{{ 'calendar.monthNames.november'|trans }}','{{ 'calendar.monthNames.december'|trans }}'],
+                monthNamesShort: ['{{ 'calendar.monthNamesShort.jan'|trans }}','{{ 'calendar.monthNamesShort.feb'|trans }}','{{ 'calendar.monthNamesShort.mar'|trans }}','{{ 'calendar.monthNamesShort.apr'|trans }}','{{ 'calendar.monthNamesShort.may'|trans }}','{{ 'calendar.monthNamesShort.jun'|trans }}','{{ 'calendar.monthNamesShort.jul'|trans }}','{{ 'calendar.monthNamesShort.aug'|trans }}','{{ 'calendar.monthNamesShort.sep'|trans }}','{{ 'calendar.monthNamesShort.oct'|trans }}','{{ 'calendar.monthNamesShort.nov'|trans }}','{{ 'calendar.monthNamesShort.dec'|trans }}'],
+                dayNames: ['{{ 'calendar.dayNames.sun'|trans }}','{{ 'calendar.dayNames.mon'|trans }}','{{ 'calendar.dayNames.tue'|trans }}','{{ 'calendar.dayNames.wed'|trans }}','{{ 'calendar.dayNames.thu'|trans }}','{{ 'calendar.dayNames.fri'|trans }}','{{ 'calendar.dayNames.sat'|trans }}'],
+                dayNamesShort: ['{{ 'calendar.dayNamesShort.sun'|trans }}','{{ 'calendar.dayNamesShort.mon'|trans }}','{{ 'calendar.dayNamesShort.tue'|trans }}','{{ 'calendar.dayNamesShort.wed'|trans }}','{{ 'calendar.dayNamesShort.thu'|trans }}','{{ 'calendar.dayNamesShort.fri'|trans }}','{{ 'calendar.dayNamesShort.sat'|trans }}'],
+                allDaySlot: false,
+                axisFormat : 'H:mm',
+                timeFormat: 'H:mm',
+                defaultDate: '{{ defaultDate }}',
+                editable: false,
+                eventLimit: true, // allow "more" link when too many events
+                eventRender: function (event, element) {
+                    element.attr('href', 'javascript:void(0);');
+                    element.click(function() {
+
+                        console.log(event);
+
+
+                        $("#dateInfo").html(event.date_info);
+                        $("#startTime").html(event.startTime_info);
+                        $("#eventInfo").html(event.description);
+                        if (event.endTime_info != undefined) {
+                            $("#endTime").html(event.endTime_info);
+                        } else {
+                            $("#endTime").html('-');
+                        }
+                        if (event.googlemap != undefined) {
+                            $("#map").html('<iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + event.googlemap + '&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>');
+                        } else {
+                            $("#map").html('');
+                        }
+
+                        if (event.lang != undefined) {
+                            $("#langInfo").html('<strong class="main-color">Langue: </strong>'+event.lang+'<br />');
+                        } else $("#langInfo").html('');
+
+                        if (event.present != undefined) {
+                            $("#presentInfo").html('<strong class="main-color">Cadeau(x): </strong>'+event.present+'<br />');
+                        } else $("#presentInfo").html('');
+
+                        $("#eventLink").attr('href', event.url);
+                        $("#eventContent").dialog({ modal: true, title: event.title, width:500});
+                    });
+                },
+                events: {{ eventsUS|raw }}
+            });
+
+            $('#calendarJP').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'prevYear,month,agendaWeek,agendaDay'
+                },
+                buttonText: {
+                    today: '{{ 'calendar.today'|trans }}',
+                    month: '{{ 'calendar.month'|trans }}',
+                    week: '{{ 'calendar.week'|trans }}',
+                    day: '{{ 'calendar.day'|trans }}'
+                },
+                columnFormat:{
+                    month: 'ddd '    // Mon
+                },
+                firstDay:1,
+                height: 'auto',
+                minTime : '06:00:00',
+                monthNames: ['{{ 'calendar.monthNames.january'|trans }}','{{ 'calendar.monthNames.february'|trans }}','{{ 'calendar.monthNames.march'|trans }}','{{ 'calendar.monthNames.april'|trans }}','{{ 'calendar.monthNames.may'|trans }}','{{ 'calendar.monthNames.june'|trans }}','{{ 'calendar.monthNames.july'|trans }}','{{ 'calendar.monthNames.august'|trans }}','{{ 'calendar.monthNames.september'|trans }}','{{ 'calendar.monthNames.october'|trans }}','{{ 'calendar.monthNames.november'|trans }}','{{ 'calendar.monthNames.december'|trans }}'],
+                monthNamesShort: ['{{ 'calendar.monthNamesShort.jan'|trans }}','{{ 'calendar.monthNamesShort.feb'|trans }}','{{ 'calendar.monthNamesShort.mar'|trans }}','{{ 'calendar.monthNamesShort.apr'|trans }}','{{ 'calendar.monthNamesShort.may'|trans }}','{{ 'calendar.monthNamesShort.jun'|trans }}','{{ 'calendar.monthNamesShort.jul'|trans }}','{{ 'calendar.monthNamesShort.aug'|trans }}','{{ 'calendar.monthNamesShort.sep'|trans }}','{{ 'calendar.monthNamesShort.oct'|trans }}','{{ 'calendar.monthNamesShort.nov'|trans }}','{{ 'calendar.monthNamesShort.dec'|trans }}'],
+                dayNames: ['{{ 'calendar.dayNames.sun'|trans }}','{{ 'calendar.dayNames.mon'|trans }}','{{ 'calendar.dayNames.tue'|trans }}','{{ 'calendar.dayNames.wed'|trans }}','{{ 'calendar.dayNames.thu'|trans }}','{{ 'calendar.dayNames.fri'|trans }}','{{ 'calendar.dayNames.sat'|trans }}'],
+                dayNamesShort: ['{{ 'calendar.dayNamesShort.sun'|trans }}','{{ 'calendar.dayNamesShort.mon'|trans }}','{{ 'calendar.dayNamesShort.tue'|trans }}','{{ 'calendar.dayNamesShort.wed'|trans }}','{{ 'calendar.dayNamesShort.thu'|trans }}','{{ 'calendar.dayNamesShort.fri'|trans }}','{{ 'calendar.dayNamesShort.sat'|trans }}'],
+                allDaySlot: false,
+                axisFormat : 'H:mm',
+                timeFormat: 'H:mm',
+                defaultDate: '{{ defaultDate }}',
+                editable: false,
+                eventLimit: true, // allow "more" link when too many events
+                eventRender: function (event, element) {
+                    element.attr('href', 'javascript:void(0);');
+                    element.click(function() {
+
+                        console.log(event);
+
+
+                        $("#dateInfo").html(event.date_info);
+                        $("#startTime").html(event.startTime_info);
+                        $("#eventInfo").html(event.description);
+                        if (event.endTime_info != undefined) {
+                            $("#endTime").html(event.endTime_info);
+                        } else {
+                            $("#endTime").html('-');
+                        }
+                        if (event.googlemap != undefined) {
+                            $("#map").html('<iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=' + event.googlemap + '&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>');
+                        } else {
+                            $("#map").html('');
+                        }
+
+                        if (event.lang != undefined) {
+                            $("#langInfo").html('<strong class="main-color">Langue: </strong>'+event.lang+'<br />');
+                        } else $("#langInfo").html('');
+
+                        if (event.present != undefined) {
+                            $("#presentInfo").html('<strong class="main-color">Cadeau(x): </strong>'+event.present+'<br />');
+                        } else $("#presentInfo").html('');
+
+                        $("#eventLink").attr('href', event.url);
+                        $("#eventContent").dialog({ modal: true, title: event.title, width:500});
+                    });
+                },
+                events: {{ eventsJP|raw }}
             });
 
         });

@@ -19,8 +19,12 @@ class EventController extends Controller
 
         $calendar = $em->getRepository('VyperSiteBundle:EventCalendar')->findByName("Europe");
         $eventsEU = $em->getRepository('VyperSiteBundle:Event')->myFindAll($calendar);
+        $calendar = $em->getRepository('VyperSiteBundle:EventCalendar')->findByName("US");
+        $eventsUS = $em->getRepository('VyperSiteBundle:Event')->myFindAll($calendar);
+        $calendar = $em->getRepository('VyperSiteBundle:EventCalendar')->findByName("Asie/Japon");
+        $eventsJP = $em->getRepository('VyperSiteBundle:Event')->myFindAll($calendar);
 
-        $json = array();
+        $jsonEU = array();
 
         foreach ($eventsEU as $event) {
             $timeEnd = '';
@@ -57,7 +61,87 @@ class EventController extends Controller
                 $opt['endTime_info'] = $timeEnd;
             }
 
-            $json[] = $opt;
+            $jsonEU[] = $opt;
+        }
+
+        $jsonUS = array();
+
+        foreach ($eventsUS as $event) {
+            $timeEnd = '';
+            $type = $event->getType()->getName();
+            switch ($type) {
+                case "Concert":
+                    $background = '#414140';
+                    $border = '#272727';
+                    break;
+                default:
+                    $background = '#A60000';
+                    $border = '#6C0000';
+            }
+
+            $date = $event->getDate()->format("Y-m-d");
+            $startTime = $event->getTime()->format("H:i:s");
+            if (!is_null($event->getTimeEnd())) {
+                $timeEnd = $event->getTimeEnd()->format("H:i:s");
+            }
+
+            $opt = array(
+                'title' => $event->getTitle(),
+                'start' => $date.'T'.$startTime,
+                'date_info' => StringMethods::sqlDateToCustom($date),
+                'startTime_info' => $startTime,
+                'borderColor' => $border,
+                'backgroundColor' => $background,
+                'description' => $event->getDescription(),
+                'googlemap' => $event->getLocation()->getGooglemap(),
+                'url' => $this->get('router')->generate('showEvent', array('id' => $event->getId(), 'slug' => $event->getSlug()))
+            );
+            if (isset($timeEnd)) {
+                $opt['end'] = $date.'T'.$timeEnd;
+                $opt['endTime_info'] = $timeEnd;
+            }
+
+            $jsonUS[] = $opt;
+        }
+
+        $jsonJP = array();
+
+        foreach ($eventsJP as $event) {
+            $timeEnd = '';
+            $type = $event->getType()->getName();
+            switch ($type) {
+                case "Concert":
+                    $background = '#414140';
+                    $border = '#272727';
+                    break;
+                default:
+                    $background = '#A60000';
+                    $border = '#6C0000';
+            }
+
+            $date = $event->getDate()->format("Y-m-d");
+            $startTime = $event->getTime()->format("H:i:s");
+            if (!is_null($event->getTimeEnd())) {
+                $timeEnd = $event->getTimeEnd()->format("H:i:s");
+            }
+
+            $opt = array(
+                'title' => $event->getTitle(),
+                'start' => $date.'T'.$startTime,
+                'date_info' => StringMethods::sqlDateToCustom($date),
+                'startTime_info' => $startTime,
+                'borderColor' => $border,
+                'backgroundColor' => $background,
+                'description' => $event->getDescription(),
+                'googlemap' => $event->getLocation()->getGooglemap(),
+                'url' => $this->get('router')->generate('showEvent', array('id' => $event->getId(), 'slug' => $event->getSlug()))
+            );
+            if (isset($timeEnd)) {
+                $opt['end'] = $date.'T'.$timeEnd;
+                $opt['endTime_info'] = $timeEnd;
+            }
+
+            $jsonJP[] = $opt;
         }
 
 
@@ -68,7 +152,9 @@ class EventController extends Controller
 
         $view
             ->set('current_event', true)
-            ->set('eventsEU', json_encode($json))
+            ->set('eventsEU', json_encode($jsonEU))
+            ->set('eventsUS', json_encode($jsonUS))
+            ->set('eventsJP', json_encode($jsonJP))
             ->set('defaultDate', $defaultDate)
             ->set('themes_in_menu', $themesInMenu)
         ;
