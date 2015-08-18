@@ -66,6 +66,13 @@ class Magazine
     private $content;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="shopLink", type="string", length=255)
+     */
+    private $shopLink;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Vyper\SiteBundle\Entity\Artist", cascade={"persist"})
      */
     private $artists;
@@ -155,6 +162,29 @@ class Magazine
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set shopLink
+     *
+     * @param string $shopLink
+     * @return Magazine
+     */
+    public function setShopLink($shopLink)
+    {
+        $this->shopLink = $shopLink;
+
+        return $this;
+    }
+
+    /**
+     * Get shopLink
+     *
+     * @return string
+     */
+    public function getShopLink()
+    {
+        return $this->shopLink;
     }
 
     /**
