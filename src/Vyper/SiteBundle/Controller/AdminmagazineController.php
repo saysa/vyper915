@@ -87,8 +87,7 @@ class AdminMagazineController extends AdminCommonController {
 
         }
 
-        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
-        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll();
 
         $view
             ->set('magazine', $magazine)
