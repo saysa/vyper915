@@ -121,19 +121,36 @@
                         </div>
 
 
-
-
                         <div class="row">
-                            <!-- Related Picture -->
-                            <div class="form-group col-lg-3">
-                                {{ form_label(form.pictureID, "Picture ID *") }}
-                                <div class="controls">
-                                    {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
-                                    <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>
-                                    {{ form_errors(form.pictureID) }}
+                            <div class="col-lg-4">
+                                <!-- International -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.pictureID, "Picture ID *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
+                                            <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>
+                                            {{ form_errors(form.pictureID) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <!-- Volume -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
+                                        {{ form_label(form.shopLink, "Shop link *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.shopLink, {  'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.shopLink) }}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+
+
 
                         <div class="form-actions">
                             <input type="hidden" name="add" value="add">
