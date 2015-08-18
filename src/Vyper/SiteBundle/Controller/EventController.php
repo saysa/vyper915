@@ -17,11 +17,12 @@ class EventController extends Controller
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
 
-        $events = $em->getRepository('VyperSiteBundle:Event')->myFindAll();
+        $calendar = $em->getRepository('VyperSiteBundle:EventCalendar')->findByName("Europe");
+        $eventsEU = $em->getRepository('VyperSiteBundle:Event')->myFindAll($calendar);
 
         $json = array();
 
-        foreach ($events as $event) {
+        foreach ($eventsEU as $event) {
             $timeEnd = '';
             $type = $event->getType()->getName();
             switch ($type) {
@@ -67,7 +68,7 @@ class EventController extends Controller
 
         $view
             ->set('current_event', true)
-            ->set('events', json_encode($json))
+            ->set('eventsEU', json_encode($json))
             ->set('defaultDate', $defaultDate)
             ->set('themes_in_menu', $themesInMenu)
         ;
