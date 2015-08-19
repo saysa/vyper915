@@ -22,7 +22,7 @@ article .post-meta span:before,
 
 
 /*==============================================================================
-    Background color (Blue)
+    Background color (Red)
 ===============================================================================*/
 .tagcloud a:hover,
 .tagcloud-custom a:hover,
@@ -39,16 +39,16 @@ a.selected-gallery-filter,
 .block-layout-four .main-item .post-img span,
 .block-layout-five .main-item .post-img span,
 table.cart td.actions .coupon .button,
-ul.top-rated .rating-total strong {background-color: #4A86B8 }
+ul.top-rated .rating-total strong {background-color: #D54858 }
 
 
 /*==============================================================================
-    Border color (Blue)
+    Border color (Red)
 ===============================================================================*/
 .price_slider_wrapper .ui-slider-handle,
 .block-layout-three .item img,
 .block-layout-two .item img,
-.block-layout-one .item img {border-color: #4A86B8 }
+.block-layout-one .item img {border-color: #D54858 }
 
 
 

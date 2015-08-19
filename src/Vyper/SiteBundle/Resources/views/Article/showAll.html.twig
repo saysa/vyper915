@@ -47,36 +47,35 @@
         </div>
 
 
+        <ul class="page-numbers">
+            {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+            {% for p in range(1, total_articles) %}
+                {% if p == page %}
+                    <li><span class="page-numbers current">{{ p }}</span></li>
+                {% else %}
 
-        <div class="pagination">
-
-                {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
-                {% for p in range(1, total_articles) %}
-                    {% if p == page %}
-                        <span class="page-numbers current">{{ p }}</span>
+                    {% if article_type == 'Live Reports' %}
+                        <li><a href="{{ path('vyper_site_liveReports', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
+                    {% elseif article_type == 'Chronique' %}
+                        <li><a href="{{ path('vyper_site_chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
+                    {% elseif article_type == 'Magazine' %}
+                        <li><a href="{{ path('vyper_site_magazine_news', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
+                    {% elseif article_type == 'Interviews' %}
+                        <li><a href="{{ path('vyper_site_interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
+                    {% elseif article_type == 'Actualités' %}
+                        <li><a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
+                    {% elseif article_type == 'News' %}
+                        <li><a href="{{ path('vyper_site_news', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
                     {% else %}
-
-                        {% if article_type == 'Live Reports' %}
-                            <a href="{{ path('vyper_site_liveReports', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Chronique' %}
-                            <a href="{{ path('vyper_site_chroniques', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Magazine' %}
-                            <a href="{{ path('vyper_site_magazine_news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Interviews' %}
-                            <a href="{{ path('vyper_site_interviews', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'Actualités' %}
-                            <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% elseif article_type == 'News' %}
-                            <a href="{{ path('vyper_site_news', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% else %}
-                            <a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a>
-                        {% endif %}
-
-
+                        <li><a href="{{ path('vyper_site_showAllArticles', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
                     {% endif %}
-                {% endfor %}
 
-        </div>
+
+                {% endif %}
+            {% endfor %}
+        </ul>
+
+
 
 
     {% endblock %}
