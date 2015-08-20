@@ -1678,6 +1678,44 @@ ul.rating-list li .rating-stars {
     margin-right: 0 !important;
 }
 
+.tip-cloud .tip-content {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.tip-cloud {
+    position: absolute;
+    z-index: 1000;
+    left: 60px;
+    top: 95%;
+    display: none;
+}
+
+.tip-cloud .tip-corner {
+    margin: 1px auto 0 auto;
+    width: 11px;
+    height: 6px;
+    background: url('../img/tip_cloud_bg.png') 0 0 no-repeat;
+    position: relative;
+    z-index: 10;
+}
+
+.tip-cloud .tip-content {
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    background: #fff;
+    width: 80px;
+    padding: 0.5em 10px;
+    overflow: hidden;
+}
+
+.tip-cloud ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 /*==============================================================================
     15. Single post
 ===============================================================================*/
