@@ -326,7 +326,14 @@
                 <li{% if active_disco  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_discos') }}"><i class="fa fa-music"></i><span class="hidden-sm"> Disco</span></a></li>
                 <li{% if active_location  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_locations') }}"><i class="icon-location-arrow"></i><span class="hidden-sm"> Locations</span></a></li>
                 <li{% if active_tour  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_tours') }}"><i class="fa fa-globe"></i><span class="hidden-sm"> Tours</span></a></li>
-                <li{% if active_event  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_events') }}"><i class="fa fa-calendar"></i><span class="hidden-sm"> Events</span></a></li>
+
+                <li{% if active_event is defined %} class="active"{% endif %}>
+                    <a class="dropmenu" href="#"><i class="fa fa-calendar"></i><span class="hidden-sm"> Events/Contests</span></a>
+                    <ul>
+                        <li><a class="submenu" href="{{ path('admin_show_events') }}"><i class="fa fa-calendar"></i><span class="hidden-sm"> Events</span></a></li>
+                        <li><a class="submenu" href="{{ path('vyper_site_admin_show_contests') }}"><i class="fa fa-calendar"></i><span class="hidden-sm"> Contests</span></a></li>
+                    </ul>
+                </li>
 
                 {#
                 <li{% if active_editable is defined %} class="active"{% endif %}>

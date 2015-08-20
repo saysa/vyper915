@@ -297,9 +297,17 @@ admin_show_events:
     path:     /_admin_/events
     defaults: { _controller: VyperSiteBundle:AdminEvent:showEvents }
 
+vyper_site_admin_show_contests:
+    path:     /_admin_/contests
+    defaults: { _controller: VyperSiteBundle:AdminContest:showContests }
+
 admin_add_event:
     path:     /_admin_/event/add
     defaults: { _controller: VyperSiteBundle:AdminEvent:addEvent }
+
+vyper_site_admin_add_contest:
+    path:     /_admin_/contest/add
+    defaults: { _controller: VyperSiteBundle:AdminContest:addContest }
 
 admin_update_event:
     path:     _admin_/event/update/{id}

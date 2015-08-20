@@ -16,6 +16,8 @@ admin_add_disco: /_admin_/disco/add   # FIXME
 # Desc: /_admin_/event/add
 admin_add_event: /_admin_/event/add   # FIXME
 
+vyper_site_admin_add_contest: /_admin_/contest/add
+
 # Desc: /_admin_/flashnew/add
 admin_add_flashnew: /_admin_/flashnew/add   # FIXME
 
@@ -90,6 +92,9 @@ admin_show_editables: /_admin_/editables   # FIXME
 
 # Desc: /_admin_/events
 admin_show_events: /_admin_/events   # FIXME
+
+# Desc: /_admin_/contests
+vyper_site_admin_show_contests: /_admin_/contests
 
 # Desc: /_admin_/locations
 admin_show_locations: /_admin_/locations   # FIXME
