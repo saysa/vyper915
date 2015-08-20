@@ -57,6 +57,8 @@ admin_delete_disco: '/_admin_/disco/delete/{id}'   # FIXME
 # Desc: /_admin_/event/delete/{id}
 admin_delete_event: '/_admin_/event/delete/{id}'   # FIXME
 
+vyper_site_admin_delete_contest: '/_admin_/contest/delete/{id}'
+
 # Desc: /_admin_/flashnew/delete/{id}
 admin_delete_flashnew: '/_admin_/flashnew/delete/{id}'   # FIXME
 

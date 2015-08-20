@@ -327,6 +327,12 @@ admin_delete_event:
     requirements:
         id: \d+
 
+vyper_site_admin_delete_contest:
+    path:     /_admin_/contest/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminContest:delete }
+    requirements:
+        id: \d+
+
 admin_show_locations:
     path:     /_admin_/locations
     defaults: { _controller: VyperSiteBundle:AdminLocation:showLocations }
