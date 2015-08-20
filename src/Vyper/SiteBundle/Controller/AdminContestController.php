@@ -120,19 +120,19 @@ class AdminContestController extends AdminCommonController {
 
     /**
      * @param Request $request
-     * @param Event $event
+     * @param Contest $contest
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      * @Security("has_role('ROLE_ADMIN')")
      */
-    public function deleteAction(Request $request, Event $event)
+    public function deleteAction(Request $request, Contest $contest)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $em->remove($event);
+        $em->remove($contest);
         $em->flush();
 
-        $request->getSession()->getFlashBag()->add('info', 'Event deleted.');
+        $request->getSession()->getFlashBag()->add('info', 'Contest deleted.');
 
-        return $this->redirect($this->generateUrl('admin_show_events'));
+        return $this->redirect($this->generateUrl('vyper_site_admin_show_contests'));
     }
 } 
