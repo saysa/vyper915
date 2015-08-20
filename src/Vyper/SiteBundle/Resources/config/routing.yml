@@ -315,6 +315,12 @@ admin_update_event:
     requirements:
         id: \d+
 
+vyper_site_admin_update_contest:
+    path:     _admin_/contest/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminContest:updateContest }
+    requirements:
+        id: \d+
+
 admin_delete_event:
     path:     /_admin_/event/delete/{id}
     defaults: { _controller: VyperSiteBundle:AdminEvent:delete }

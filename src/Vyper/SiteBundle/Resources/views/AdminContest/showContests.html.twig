@@ -47,7 +47,7 @@
                                     <td>{{ contest.getId }}</td>
                                     <td>{{ contest.getModified|date('Y-m-d') }}</td>
                                     <td>{{ contest.getTitle }}</td>
-                                    <td><a class="btn btn-info" href="{{ path('admin_update_event', {'id': contest.getId}) }}"><i class="icon-edit "></i>  </a></td>
+                                    <td><a class="btn btn-info" href="{{ path('vyper_site_admin_update_contest', {'id': contest.getId}) }}"><i class="icon-edit "></i>  </a></td>
                                     <td><a class="btn btn-danger" href="{{ path('admin_delete_event', {'id': contest.getId}) }}"><i class="icon-trash "></i> </a></td>
                                 </tr>
                             {% endfor %}

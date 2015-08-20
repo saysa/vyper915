@@ -1,0 +1,185 @@
+{% extends "VyperSiteBundle:layouts:admin.html.twig" %}
+
+{% block title "ADMIN" %}
+
+    {% block content %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h2><i class="icon-edit"></i>Update Contest : {{ contest.getTitle }}</h2>
+                        <div class="box-icon">
+                            <a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+                            <a href="#" class="btn-close"><i class="icon-remove"></i></a>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" method="post" {{ form_enctype(form) }}>
+
+                            {{ form_widget(form._token) }}
+
+                            <fieldset class="col-sm-12">
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <!-- Title -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.title, "Title *") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.title, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.title) }}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                        <!-- contestWinType -->
+                                        <div class="row">
+
+                                            {{ form_label(form.contestWinType, "How to win ?") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.contestWinType, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <!-- Description -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.description, "Description *") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.description, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.description) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <!-- Prizes  -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.prizes, "Prizes") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.prizes, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_errors(form.prizes) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <!-- Date  -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.date, "Date *") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.date, {  'attr': {'class': 'form-control datepicker'} }) }}
+                                                    {{ form_errors(form.date) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <!-- dateEnd -->
+                                        <div class="row">
+                                            <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
+                                                {{ form_label(form.dateEnd, "Date *") }}
+                                                <div class="controls">
+                                                    {{ form_widget(form.dateEnd, {  'attr': {'class': 'form-control datepicker'} }) }}
+                                                    {{ form_errors(form.dateEnd) }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <!-- Time -->
+                                        <div class="form-group col-lg-9{%if error_rel_date is defined %} has-error{% endif %}">
+                                            {{ form_label(form.time, "Time Start *") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.time, { 'attr': {'class': 'form-control timepicker'} }) }}
+                                                {{ form_errors(form.time) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-lg-1">
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <!-- Time End -->
+                                        <div class="form-group col-lg-9{%if error_rel_date is defined %} has-error{% endif %}">
+                                            {{ form_label(form.timeEnd, "Time End *") }}
+                                            <div class="controls">
+                                                {{ form_widget(form.timeEnd, { 'attr': {'class': 'form-control timepicker'} }) }}
+                                                {{ form_errors(form.timeEnd) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <!-- howMuchWinners -->
+                                        {{ form_label(form.howMuchWinners, "How Much Winners ? *") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.howMuchWinners, { 'attr': {'class': 'form-control'} }) }}
+                                            {{ form_errors(form.howMuchWinners) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <!-- Related Picture -->
+                                    <div class="form-group col-lg-3">
+                                        {{ form_label(form.pictureID, "Picture ID") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.pictureID, { 'attr': {'class': 'form-control'} }) }}
+                                            <a href="{{ path('admin_show_pictures') }}" target="_blank">View Pictures</a>
+                                            {{ form_errors(form.pictureID) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {%  if contest.picture is not null %}
+                                    <div class="row">
+                                        <img src="{{ asset(contest.picture.getPath()) }}" alt="Current picture" height="150" />
+                                    </div>
+                                {%  endif %}
+
+                                <div class="form-actions">
+                                    <input type="hidden" name="update" value="update">
+                                    <button type="submit" class="btn btn-primary">Save</button>
+
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}

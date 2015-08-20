@@ -29,7 +29,7 @@ class AdminContestController extends AdminCommonController {
         if ($request->getMethod() == 'POST') {
 
             $em = $this->getDoctrine()->getManager();
-            $post_data = $request->request->get('vyper_sitebundle_event');
+            $post_data = $request->request->get('vyper_sitebundle_contest');
 
             $form->submit($request);
 
@@ -59,26 +59,26 @@ class AdminContestController extends AdminCommonController {
 
     /**
      * @param Request $request
-     * @param Event $event
+     * @param Contest $contest
      * @return \Symfony\Component\HttpFoundation\Response
      * @Security("has_role('ROLE_ADMIN')")
      */
-    public function updateEventAction(Request $request, Event $event)
+    public function updateContestAction(Request $request, Contest $contest)
     {
         $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
 
-        $form = $this->createForm(new EventType, $event);
+        $form = $this->createForm(new ContestType, $contest);
 
         if ('POST' === $request->getMethod()) {
 
-            $post_data = $request->request->get('vyper_sitebundle_event');
+            $post_data = $request->request->get('vyper_sitebundle_contest');
 
             $form->submit($request);
 
             $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
 
-            $event->setPicture($picture);
+            $contest->setPicture($picture);
 
             if ($form->isValid()) {
                 $em->flush();
@@ -86,17 +86,14 @@ class AdminContestController extends AdminCommonController {
 
         }
 
-        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll();
-
         $view
-            ->set('event', $event)
-            ->set('artists', $artists)
+            ->set('contest', $contest)
             ->set('user_role', $this->getUserRole())
             ->set('active_event', true)
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminevent:updateEvent.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminContest:updateContest.html.twig', $view->getView());
     }
 
     /**

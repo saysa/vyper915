@@ -135,6 +135,8 @@ admin_update_editable: '/_admin_/editable/update/{id}'   # FIXME
 # Desc: /_admin_/event/update/{id}
 admin_update_event: '/_admin_/event/update/{id}'   # FIXME
 
+vyper_site_admin_update_contest: '/_admin_/contest/update/{id}'
+
 # Desc: /_admin_/flashnew/update/{id}
 admin_update_flashnew: '/_admin_/flashnew/update/{id}'   # FIXME
 

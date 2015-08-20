@@ -47,6 +47,6 @@ class ContestType extends AbstractType
      */
     public function getName()
     {
-        return 'vyper_sitebundle_event';
+        return 'vyper_sitebundle_contest';
     }
 }
