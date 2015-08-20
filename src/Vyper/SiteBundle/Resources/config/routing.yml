@@ -32,7 +32,7 @@ vyper_site_partenaires:
     path:     /partenaires
     defaults: { _controller: VyperSiteBundle:Statique:partenaires }
 
-cgu:
+vyper_site_cgu:
     path:     /conditions-utilisation
     defaults: { _controller: VyperSiteBundle:Statique:cgu }
 
