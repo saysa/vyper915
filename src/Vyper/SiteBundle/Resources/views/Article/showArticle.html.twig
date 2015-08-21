@@ -152,10 +152,10 @@
                 <div class="col-md-3 padding-off">
                     <div class="release-thumbnail">
                         <div class="release-cover">
-                            <a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
+                            <a href="{{ mag.getShopLink }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
                         </div>
 
-                        <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">Vyper Magazine</a></h4>
+                        <h4 class="release-title"><a href="{{ mag.getShopLink }}">Vyper Magazine</a></h4>
                         <h6 class="release-artist">Vol {{ mag.volume }}</h6>
                         <div class="release-meta">
 
