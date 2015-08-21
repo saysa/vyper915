@@ -63,6 +63,7 @@
     'bundles/vypersite/dialy/lib/css/fontawesome.css'
     'bundles/vypersite/dialy/lib/css/1200.css'
     'bundles/vypersite/dialy/style.css'
+    'bundles/vypersite/css/polyglot-language-switcher-2.css'
     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -112,6 +113,13 @@
                             <img src="http://vyper-jmusic.com/bundles/vypersite/img/logo.png" alt="Vyper Japanese Music" height="120" />
                         </a>
                     </h1>
+                </div>
+
+                <div class="polyglot-language-switcher" data-grid-columns="1" data-anim-effect="fade" data-open-mode="click">
+                    <ul style="display: none">
+                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/en" {% if app.request.getLocale() == 'en' %}class="pls-selected-locale"{% endif %} title="English" data-lang-id="en"> English</a></li>
+                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/fr" {% if app.request.getLocale() == 'fr' %}class="pls-selected-locale"{% endif %} title="French (France)" data-lang-id="fr"> Français (France)</a></li>
+                    </ul>
                 </div>
 
                 <div class="ad-banner-728x90">
@@ -351,4 +359,17 @@
 
     {# Jquery UI #}
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
+
+    {% javascripts
+    'bundles/vypersite/js/jquery-polyglot.language.switcher.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.polyglot-language-switcher').polyglotLanguageSwitcher();
+        });
+    </script>
+
 {% endblock %}
