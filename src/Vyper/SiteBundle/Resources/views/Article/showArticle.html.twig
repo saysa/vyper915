@@ -32,7 +32,9 @@
                                 <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="big-format" alt="{{ article.getTitle|escape }}">
 
                             {% endif %}
-
+                            <div>
+                                {{ article.picture.getPhotoCredit }}
+                            </div>
                         </div>
                     </div>
 
