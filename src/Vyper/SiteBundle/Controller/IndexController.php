@@ -53,7 +53,7 @@ class IndexController extends Controller
         );
         $latest_actu  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page=5, $page=1, $type);
 
-        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findBy(array('name' => 'musique : news'));
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("News");
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
 
         $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
