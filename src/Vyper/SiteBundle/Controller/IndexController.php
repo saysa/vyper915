@@ -56,12 +56,31 @@ class IndexController extends Controller
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("News");
         $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
 
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Chronique");
+        $latest_chroniques = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Interview");
+        $latest_interviews = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+
+        $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Live report");
+        $latest_livereports = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+
         $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
 
         $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
 
+        $big_news = array(
+            $latest_chroniques,
+            $latest_interviews,
+            $latest_livereports,
+        );
+
         $view
             ->set('latest_actu', $latest_actu)
+            ->set('latest_chroniques', $latest_chroniques)
+            ->set('latest_interviews', $latest_interviews)
+            ->set('latest_livereports', $latest_livereports)
+            ->set('big_news', $big_news[mt_rand(0,2)])
             ->set('articles_carousel', $articles_carousel)
             ->set('latest_news', $latest_news)
             ->set('last_videos', $last_videos)

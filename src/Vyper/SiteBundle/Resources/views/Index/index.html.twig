@@ -50,6 +50,40 @@
             </script>
         </div>
 
+        <div class="block-layout-five">
+
+            {% for article in big_news %}
+            {% if loop.index == 1 %}
+                <div class="main-item">
+                    <div class="post-img">
+                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                            <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}">
+                        </a>
+                                    <span style="background-color: #222222">
+                        <a href="#">{{ article.getArticleType.getName }}</a>
+                    </span>
+                    </div>
+                    <div class="post-meta">
+                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                        <div class="post-dca">
+                            <span class="date">June 10, 2014</span>
+                            <span class="comments"><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/#comments">No Comments</a></span>
+                            <span class="author"><a href="http://dialy.different-themes.com/author/admin/" title="Posts by Different Themes" rel="author">Different Themes</a></span>
+                            <ul class="rating-list">
+                                <li>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <p>{{ article.getDescription }}</p>
+                    </div>
+                </div>
+            {% endif %}
+            {% endfor %}
+
+
+        </div>
+
 
 
         <section class="row">
