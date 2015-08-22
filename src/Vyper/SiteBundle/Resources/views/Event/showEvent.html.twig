@@ -41,7 +41,7 @@
                 <div class="entry-content-wrap">
 
                     {% if event.picture is null %}
-                        <img  src="{{ asset('assets/css/images/artists-event.jpg?size=374-200') }}" class="wp-post-image artists-img" alt="">
+                        <img  src="{{ asset('bundles/vypersite/css/images/artists-event.jpg?size=374-200') }}" class="wp-post-image artists-img" alt="">
                     {% else %}
                         <img  src="{{ asset(event.picture.getPath('374-200')) }}" alt="{{ event.getTitle }}" />
                     {% endif %}
