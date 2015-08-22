@@ -44,6 +44,10 @@ title:
     partners: Partners
     events: Events
 
+sidebar:
+    title:
+        nextevent: Next Event
+
 calendar:
     today: Today
     month: Month

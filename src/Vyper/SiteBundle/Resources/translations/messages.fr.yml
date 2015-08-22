@@ -44,6 +44,10 @@ title:
     partners: Partenaires
     events: Événements
 
+sidebar:
+    title:
+        nextevent: Prochainement
+
 calendar:
     today: "Aujourd´hui"
     month: Mois
