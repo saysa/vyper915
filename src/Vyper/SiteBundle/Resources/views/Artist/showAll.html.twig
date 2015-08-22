@@ -35,21 +35,21 @@
                 {% if artist.picture is null %}
                     {% set bg = asset('assets/css/images/artists-music.jpg') %}
                 {% else %}
-                    {% set bg = asset(artist.picture.getPath('290-180')) %}
+                    {% set bg = asset(artist.picture.getPath('204')) %}
                 {% endif %}
 
                 {% if clear_count == 0 %}<div class="row">{% endif %}
-                <div class="color-shape {{ artist.name|first|lower }} artist-all-container grid_4">
+                <div class="color-shape {{ artist.name|first|lower }} artist-all-container grid_3">
+                    <div class="gallery-info">
+                        <p><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">{{ artist.name }}</a></p>
+                    </div>
+
                     <div class="thumb artist-thumbnail" style="background: url('{{ bg }}') no-repeat center;">
-                        <div class="hover-effect">
-                            <div class="gallery-info">
-                                <p><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">{{ artist.name }}</a></p>
-                            </div>
-                            <div class="artist-link">
-                                <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
-                                    <span>{{ artist.name }}</span>
-                                </a>
-                            </div>
+
+                        <div class="artist-link">
+                            <a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}">
+                                <span>{{ artist.name }}</span>
+                            </a>
                         </div>
                     </div>
 
@@ -70,6 +70,13 @@
 {% block javascripts_footer %}
 
     {{ parent() }}
+
+    {% javascripts
+    'bundles/vypersite/js/jquery.isotope.js'
+    %}
+
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 
     <script>
 

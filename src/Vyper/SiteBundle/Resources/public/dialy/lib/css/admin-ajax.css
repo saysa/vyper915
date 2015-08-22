@@ -157,3 +157,125 @@ aside h4 {
     border-top-right-radius: 1000px;
     border-bottom-right-radius: 1000px;
 }
+
+/* Artists */
+.artist-thumbnail {
+    width: 204px;
+    height: 120px;
+    background: no-repeat center fixed;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    overflow: hidden;
+    position: relative;
+}
+
+.artist-thumbnail .gallery-info {
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.artist-thumbnail .hover-effect .gallery-info a {
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.artist-link {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-link a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.artist-link a span {
+    display: none;
+}
+
+/* Albums */
+.album-thumbnail {
+    width: 173px;
+    height: 248px;
+    background: no-repeat center fixed;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-effect {
+    color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.hover-effect:hover {
+    background-color: rgba(0,0,0, 0);
+}
+
+.album-thumbnail .gallery-info {
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+
+.hover-effect .gallery-info p {
+    padding-bottom: 15px;
+}
+
+.hover-effect .gallery-info p, .hover-effect .gallery-info a {
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.album-thumbnail .hover-effect .gallery-info a {
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Album's Thumbs */
+
+.gallery .album-thumbs {
+    padding: 0;
+    margin-bottom: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.picture-hover {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    padding-left: 15px;
+    opacity: 0.5;
+}
