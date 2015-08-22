@@ -17,34 +17,12 @@
         <div id="filters" class="portfolioFilter">
 
             <div class="button-group" data-filter-group="a-alpha">
-                <a href="javascript: void(0);" data-filter="" class="iso current">Tous</a>
-                <a href="javascript: void(0);" data-filter=".a" class="iso">A</a>
-                <a href="javascript: void(0);" data-filter=".b" class="iso">B</a>
-                <a href="javascript: void(0);" data-filter=".c" class="iso">C</a>
-                <a href="javascript: void(0);" data-filter=".d" class="iso">D</a>
-                <a href="javascript: void(0);" data-filter=".e" class="iso">E</a>
-                <a href="javascript: void(0);" data-filter=".f" class="iso">F</a>
-                <a href="javascript: void(0);" data-filter=".g" class="iso">G</a>
-                <a href="javascript: void(0);" data-filter=".h" class="iso">H</a>
-                <a href="javascript: void(0);" data-filter=".i" class="iso">I</a>
-                <a href="javascript: void(0);" data-filter=".j" class="iso">J</a>
-                <a href="javascript: void(0);" data-filter=".k" class="iso">K</a>
-                <a href="javascript: void(0);" data-filter=".l" class="iso">L</a>
-                <a href="javascript: void(0);" data-filter=".m" class="iso">M</a>
-                <a href="javascript: void(0);" data-filter=".n" class="iso">N</a>
-                <a href="javascript: void(0);" data-filter=".o" class="iso">O</a>
-                <a href="javascript: void(0);" data-filter=".p" class="iso">P</a>
-                <a href="javascript: void(0);" data-filter=".q" class="iso">Q</a>
-                <a href="javascript: void(0);" data-filter=".r" class="iso">R</a>
-                <a href="javascript: void(0);" data-filter=".s" class="iso">S</a>
-                <a href="javascript: void(0);" data-filter=".t" class="iso">T</a>
-                <a href="javascript: void(0);" data-filter=".u" class="iso">U</a>
-                <a href="javascript: void(0);" data-filter=".v" class="iso">V</a>
-                <a href="javascript: void(0);" data-filter=".w" class="iso">W</a>
-                <a href="javascript: void(0);" data-filter=".x" class="iso">X</a>
-                <a href="javascript: void(0);" data-filter=".y" class="iso">Y</a>
-                <a href="javascript: void(0);" data-filter=".z" class="iso">Z</a>
-
+                <ul class="page-numbers">
+                    <li><a href="javascript: void(0);" data-filter="" class="iso current">Tous</a></li>
+                    {% for letter in 'a'..'z' %}
+                        <li><a href="javascript: void(0);" data-filter=".{{ letter }}" class="iso">{{ letter|upper }}</a></li>
+                    {% endfor %}
+                </ul>
             </div>
 
 
