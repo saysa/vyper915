@@ -2,14 +2,15 @@
 
 {% block title %}Artistes | {{ parent() }}{% endblock %}
 
+    {% block above_the_fold %}
+        <div id="above-the-fold" class="above-the-fold light">
+            <div class="inner-wrapper">
+                <h2 class="page-title">{{ 'title.artists'|trans|upper }}</h2>
+            </div>
+        </div>
+    {% endblock %}
+
     {% block content %}
-        <header class="archive-header">
-            <h2 class="archive-title">Artistes</h2>
-        </header><!-- /archive-header -->
-
-
-
-
 
 
         <div id="filters" class="portfolioFilter">
