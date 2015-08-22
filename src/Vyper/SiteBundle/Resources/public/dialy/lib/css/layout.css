@@ -1268,7 +1268,7 @@ html[xmlns] .slides {
     text-transform: uppercase;
     font-size: 22px;
     z-index: 1;
-    color: #333;
+    color: #D54858;
     position: relative
 }
 #main p.title {
@@ -1277,7 +1277,7 @@ html[xmlns] .slides {
     text-transform: uppercase;
     font-size: 22px;
     z-index: 1;
-    color: #333;
+    color: #D54858;
     position: relative
 }
 p.title:after {
