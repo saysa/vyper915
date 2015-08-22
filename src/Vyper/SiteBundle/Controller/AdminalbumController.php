@@ -47,7 +47,7 @@ class AdminAlbumController extends AdminCommonController {
      * @param Request $request
      * @param Album $album
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateAlbumAction(Request $request, Album $album)
     {
@@ -67,13 +67,13 @@ class AdminAlbumController extends AdminCommonController {
 
         }
 
-        $type = $em->getRepository('VyperSiteBundle:ArtistType')->findByName("Musique");
-        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll($type);
+        $artists  = $em->getRepository('VyperSiteBundle:Artist')->myFindAll();
 
         $view
             ->set('album', $album)
             ->set('artists', $artists)
             ->set('active_picture', true)
+            ->set('user_role', $this->getUserRole())
             ->set('form', $form->createView())
         ;
 
