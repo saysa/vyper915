@@ -50,13 +50,16 @@
         </div>
 
         <div class="portfolioContainer">
+            {% set clear_count = 0 %}
             {% for artist in artists %}
                 {% if artist.picture is null %}
                     {% set bg = asset('assets/css/images/artists-music.jpg') %}
                 {% else %}
                     {% set bg = asset(artist.picture.getPath('290-180')) %}
                 {% endif %}
-                <div class="color-shape {{ artist.name|first|lower }} col-md-4 col-sm-6 padding-off artist-all-container">
+
+                {% if clear_count == 0 %}<div class="row">{% endif %}
+                <div class="color-shape {{ artist.name|first|lower }} artist-all-container grid_4">
                     <div class="thumb artist-thumbnail" style="background: url('{{ bg }}') no-repeat center;">
                         <div class="hover-effect">
                             <div class="gallery-info">
@@ -71,6 +74,14 @@
                     </div>
 
                 </div>
+                {% if clear_count == 2 %}</div>{% endif %}
+
+                {% if clear_count==2 %}
+                    {% set clear_count = 0 %}
+                {% else %}
+                    {% set clear_count = clear_count + 1 %}
+                {% endif %}
+
             {% endfor %}
         </div>
 
