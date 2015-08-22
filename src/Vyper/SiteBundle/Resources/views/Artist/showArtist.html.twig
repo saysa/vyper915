@@ -2,12 +2,20 @@
 
 {% block title %}{{ artist.name }} | {{ parent() }}{% endblock %}
 
+    {% block above_the_fold %}
+        <div id="above-the-fold" class="above-the-fold light">
+            <div class="inner-wrapper">
+                <h2 class="page-title">{{ artist.getName }}{% if artist.getRealName %} - {{ artist.getRealName }}{% endif %}</h2>
+            </div>
+        </div>
+    {% endblock %}
+
+
     {% block content %}
 
         <div class="post-wrap">
             <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
                 <header class="entry-header">
-                    <h1>{{ artist.getName }}{% if artist.getRealName %} - {{ artist.getRealName }}{% endif %}</h1>
 
                     <div class="entry-meta">
                         <!-- AddThis Button BEGIN -->
@@ -34,9 +42,15 @@
                 </header>
 
 
-                <div class="entry-content-wrap">
-
-                    <div class="one-half">
+                <div class="block-layout-two row">
+                    <div class="grid_6">
+                        {% if app.request.getLocale() == 'fr' %}
+                            {{ artist.getProfile }}
+                        {% elseif app.request.getLocale() == 'en' %}
+                            {{ artist.getProfileEn }}
+                        {% endif %}
+                    </div>
+                    <div class="grid_6">
                         {% if artist.picture is null %}
                             <img  src="{{ asset('assets/css/images/artists-music.jpg?size=374-200') }}" class="wp-post-image artists-img" alt="">
                         {% else %}
@@ -44,17 +58,7 @@
                         {% endif %}
 
                     </div>
-                    <div class="one-half last">
-                        {% if app.request.getLocale() == 'fr' %}
-                            {{ artist.getProfile }}
-                        {% elseif app.request.getLocale() == 'en' %}
-                            {{ artist.getProfileEn }}
-                        {% endif %}
-                    </div>
-
-
                 </div>
-                <!-- /entry-content-wrap -->
 
             </article>
 
