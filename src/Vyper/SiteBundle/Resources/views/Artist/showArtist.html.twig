@@ -93,61 +93,50 @@
             </p>
 
             <div id="toggle-target-discos">
-                <div class="column">
-                    <div class="listing-block">
-                        <div class="releases-listing">
-                            {% for key, disco in discos %}
-                                {% if key < 4 %}
-                                    <div class="col-md-3 padding-off">
-                                        <div class="release-thumbnail">
-                                            <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
-                                                <img width="142" src="{{ asset(disco.picture.getPath('152')) }}" class="fullwidth" alt="">
-                                            </a>
 
-                                            <h6 class="release-artist">
-                                                <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">{{ disco.getTitle }}</a>
-                                            </h6>
-                                            <div class="release-meta">
-                                                {% if disco.getCdJapan or disco.getItunes or disco.getAmazon %}
-                                                    <div class="button-container tip-container">
-                                                        <a href="javascript: void(0);" class="button small buy" target="_blank"><span><i class="fa fa-shopping-cart"></i> Acheter</span></a>
-                                                        <div class="tip-cloud">
-                                                            <div class="tip-corner"></div>
-                                                            <div class="tip-content">
-                                                                <ul>
-                                                                    {% if disco.getCdJapan %}
-                                                                        <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
-                                                                    {% endif %}
-                                                                    {% if disco.getItunes %}
-                                                                        <li><a href="{{ disco.getItunes }}">iTunes</a></li>
-                                                                    {% endif %}
-                                                                    {% if disco.getAmazon %}
-                                                                        <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
-                                                                    {% endif %}
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                <ul class="products">
+                    {% set clear_count = 0 %}
+                    {% for key, disco in discos %}
+                        {% if key < 4 %}
+                            <li class="product{% if clear_count == 0 %} first{% endif %}{% if clear_count == 3 %} last{% endif %}">
+                                <a href="{{ path('showDisco', {'id': disco.getId, 'slug': disco.slug}) }}">
+                                    <img width="150" height="150" src="{{ asset(disco.picture.getPath('150')) }}" class="attachment-shop_catalog wp-post-image" alt="" />
+                                    <h3>{{ disco.getTitle }}</h3>
+                                </a>
+
+                                <div class="button-container tip-container">
+                                    <a href="#" rel="nofollow" class="btn btn-grey button add_to_cart_button product_type_simple buy"><i class="fa fa-shopping-cart"></i> {{ 'discography.buy'|trans }}</a>
+                                    <div class="tip-cloud">
+                                        <div class="tip-corner"></div>
+                                        <div class="tip-content">
+                                            <ul>
+                                                {% if disco.getCdJapan %}
+                                                    <li><a href="http://www.cdjapan.co.jp/aff/click.cgi/e86NDzbdSLQ/4902/A640425/detailview.html?KEY={{ disco.getCdJapan }}" target="_blank">CDJapan</a></li>
                                                 {% endif %}
-                                                <div class="release-info">{{ disco.date|date("d/m/Y") }}</div>
-                                                <div class="clear"></div>
-
-                                            </div>
+                                                {% if disco.getItunes %}
+                                                    <li><a href="{{ disco.getItunes }}">iTunes</a></li>
+                                                {% endif %}
+                                                {% if disco.getAmazon %}
+                                                    <li><a href="{{ disco.getAmazon }}" target="_blank">Amazon</a></li>
+                                                {% endif %}
+                                            </ul>
                                         </div>
-
                                     </div>
-                                {% endif %}
-                            {% endfor %}
+                                </div>
+                            </li>
 
+                            {% set clear_count = clear_count + 1 %}
 
-                            <div class="clear"></div>
-                        </div>
+                            {% if clear_count==4 %}
+                                {% set clear_count = 0 %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
 
-                    </div><!--/ listing block-->
-                </div>
+                </ul>
 
                 <p class="seemore-button">
-                    <a href="{{ path('artistDiscography', {'id': artist.getId, 'slug': artist.slug}) }}"><i class="icon-plus"></i> Toute la discographie</a>
+                    <a href="{{ path('artistDiscography', {'id': artist.getId, 'slug': artist.slug}) }}" class="btn btn-red"><i class="fa fa-plus"></i> {{ 'artist.seeAllDiscography'|trans }}</a>
                 </p>
             </div>
 
@@ -301,73 +290,68 @@
 
 
 
-
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>
-
-            $(document).ready(function() {
-
-                $(".tip-container").on("click", ".buy", function() {
-                    $(".tip-cloud").hide();
-                    var tipcloud = $(this).next();
-                    tipcloud.show();
-                });
-
-
-
-            });
-
-
-        </script>
-
-        {# Chat #}
-        <script>
-            $(document).ready(function() {
-                $( "#toggle-biography" ).on("click", function() {
-                    $('#toggle-target-biography').toggle('slow');
-                });
-                $('#toggle-target-biography').hide();
-
-
-                $( "#toggle-discos" ).on("click", function() {
-                    $('#toggle-target-discos').toggle('slow');
-                });
-                $('#toggle-target-discos').hide();
-
-                $( "#toggle-events" ).on("click", function() {
-                    $('#toggle-target-events').toggle('slow');
-                });
-                $('#toggle-target-events').hide();
-
-                $( "#toggle-articles" ).on("click", function() {
-                    $('#toggle-target-articles').toggle('slow');
-                });
-                $('#toggle-target-articles').hide();
-
-
-
-                $( "#toggle-albums" ).on("click", function() {
-                    $('#toggle-target-albums').toggle('slow');
-                });
-                $('#toggle-target-albums').hide();
-
-
-                $( "#toggle-links" ).on("click", function() {
-                    $('#toggle-target-links').toggle('slow');
-                });
-                $('#toggle-target-links').hide();
-
-            });
-
-        </script>
-
     {% endblock %}
 
 {% block javascripts_footer %}
 
     {{ parent() }}
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+
+        $(window).load(function() {
+
+            $(".tip-cloud").hide();
+
+            $(".tip-container").on("click", ".buy", function(e) {
+                e.preventDefault();
+                $(".tip-cloud").hide();
+                var tipcloud = $(this).next();
+                tipcloud.show();
+            });
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $( "#toggle-biography" ).on("click", function() {
+                $('#toggle-target-biography').toggle('slow');
+            });
+            $('#toggle-target-biography').hide();
+
+
+            $( "#toggle-discos" ).on("click", function() {
+                $('#toggle-target-discos').toggle('slow');
+            });
+            //$('#toggle-target-discos').hide();
+
+            $( "#toggle-events" ).on("click", function() {
+                $('#toggle-target-events').toggle('slow');
+            });
+            $('#toggle-target-events').hide();
+
+            $( "#toggle-articles" ).on("click", function() {
+                $('#toggle-target-articles').toggle('slow');
+            });
+            $('#toggle-target-articles').hide();
+
+
+
+            $( "#toggle-albums" ).on("click", function() {
+                $('#toggle-target-albums').toggle('slow');
+            });
+            $('#toggle-target-albums').hide();
+
+
+            $( "#toggle-links" ).on("click", function() {
+                $('#toggle-target-links').toggle('slow');
+            });
+            $('#toggle-target-links').hide();
+
+        });
+
+    </script>
 
     <script type="text/javascript" src="http://wms-eu.amazon-adsystem.com/20070822/FR/js/link-enhancer-common.js?tag=vyjamu-21">
     </script>
