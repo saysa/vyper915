@@ -134,3 +134,26 @@ a.special {
 .under-margin {
     margin-bottom: 30px;
 }
+
+aside h4 {
+    background: #dd030e;
+    padding-left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Lato' !important;
+    font-weight: normal;
+    font-size: 21px;
+    vertical-align: middle;
+    height: 36px;
+    line-height: 36px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    letter-spacing: -1px;
+    -webkit-border-top-right-radius: 1000px;
+    -webkit-border-bottom-right-radius: 1000px;
+    -moz-border-radius-topright: 1000px;
+    -moz-border-radius-bottomright: 1000px;
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+}
