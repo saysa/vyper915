@@ -107,6 +107,14 @@
     <div id="wrapper" class="boxed">
         <header id="header" class="light">
             <div class="inner-wrapper row">
+
+                <div class="polyglot-language-switcher" data-grid-columns="1" data-anim-effect="fade" data-open-mode="click">
+                    <ul style="display: none">
+                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/en" {% if app.request.getLocale() == 'en' %}class="pls-selected-locale"{% endif %} title="English" data-lang-id="en"> English</a></li>
+                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/fr" {% if app.request.getLocale() == 'fr' %}class="pls-selected-locale"{% endif %} title="French (France)" data-lang-id="fr"> Français (France)</a></li>
+                    </ul>
+                </div>
+
                 <div id="logo">
                     <h1 id="site-logo">
                         <a href="{{ path('vyper_site_index') }}">
@@ -115,12 +123,7 @@
                     </h1>
                 </div>
 
-                <div class="polyglot-language-switcher" data-grid-columns="1" data-anim-effect="fade" data-open-mode="click">
-                    <ul style="display: none">
-                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/en" {% if app.request.getLocale() == 'en' %}class="pls-selected-locale"{% endif %} title="English" data-lang-id="en"> English</a></li>
-                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/fr" {% if app.request.getLocale() == 'fr' %}class="pls-selected-locale"{% endif %} title="French (France)" data-lang-id="fr"> Français (France)</a></li>
-                    </ul>
-                </div>
+
 
                 <div class="ad-banner-728x90">
                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
