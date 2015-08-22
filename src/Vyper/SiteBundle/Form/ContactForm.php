@@ -1,44 +1,32 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: saysa
+ * Date: 10/03/15
+ * Time: 22:08
+ */
 
 namespace Vyper\SiteBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-
 
 class ContactForm extends AbstractType
 {
-     /**
+    /**
      * @param FormBuilderInterface $builder
      * @param array $options
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-
-            ->add('name', 'text', array('attr' => array('placeholder' => 'Votre nom et prénom')))
-            ->add('societe', 'text', array('required' => false, 'attr' => array('placeholder' => 'Société')))
-            ->add('sujet', 'text', array('attr' => array('placeholder' => 'Détail')))
-            ->add('email', 'email', array('attr' => array('placeholder' => 'Adresse e-mail')))
-            ->add('message', 'textarea', array('attr' => array('rows' => '5')))
+            ->add('firstname', 'text', array('attr' => array('placeholder' => 'Prénom *')))
+            ->add('lastname', 'text', array('attr' => array('placeholder' => 'Nom *')))
+            ->add('email', 'email', array('attr' => array('placeholder' => 'E-Mail *')))
+            ->add('website', 'text', array('required' => false, 'attr' => array('placeholder' => 'Site Internet')))
+            ->add('message', 'textarea', array('attr' => array('placeholder' => 'Message', 'rows' => '10')))
         ;
-
-        //setting the captcha
-        $settings=array(
-            'width'=>206,
-            'height'=>57,
-            'font_size'=>22,
-            'length'=>7,
-            'border_color'=>"cccccc"
-        );
-
-        //add captcha to builder
-        $builder->add('securitycod', 'genemu_captcha', $settings);
-        $builder->add('body', 'textarea');
     }
-    
-
 
     /**
      * @return string
@@ -47,4 +35,4 @@ class ContactForm extends AbstractType
     {
         return 'contact';
     }
-}
+} 

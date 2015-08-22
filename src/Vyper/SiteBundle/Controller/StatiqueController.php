@@ -43,53 +43,45 @@ class StatiqueController extends Controller
     }
 
     /**
-     * @param Request $request
+     * @param \Symfony\Component\HttpFoundation\Request $request
      * @return array
      * @Template
      */
     public function contactAction(Request $request)
     {
-        $view = $this->container->get('saysa_view');
-
         $form = $this->createForm(new ContactForm);
 
         if ($request->getMethod() == 'POST') {
-
             $form->submit($request);
             if ($form->isValid()) {
 
-                $sujet = $_POST['contact']['sujet'];
-                $name = $_POST['contact']['name'];
-                $societe = $_POST['contact']['societe'];
+                $name = $_POST['contact']['lastname'] . " " . $_POST['contact']['firstname'];
                 $from = $_POST['contact']['email'];
-                $msg = $_POST['contact']['message'];
-                $dest = $_POST['objet'] . '@japanfm.fr';
-                #$dest = 'saysa_bounkhong@hotmail.com';
+                $text = $_POST['contact']['message'];
+                #$dest = 'cyrielle@vyper-jmusic.com';
+                $dest = 'saysabou@gmail.com';
 
                 $corps = '
-                Nom et prénom : ' . $name . '<br />
-                Société : ' . $societe . '<br />
-                Corps : <br />
-                ' . nl2br($msg) . '
+                Nom : ' . $name . '<br />
+                E-Mail : ' . $from . '<br />
+                Site Internet : ' . $_POST['contact']['website'] . '<br />
+                Message : ' . $text . '<br />
+
                 ';
 
                 $message = \Swift_Message::newInstance()
-                    ->setSubject($sujet)
+                    ->setSubject('Message site web VYPER')
                     ->setFrom($from)
                     ->setTo($dest)
                     ->setBody($corps, 'text/html');
 
                 $this->get('mailer')->send($message);
 
-                $request->getSession()->getFlashBag()->add('info', 'Merci, nous vous répondrons dans les meilleurs délais!');
+                $request->getSession()->getFlashBag()->add('info', 'Merci, votre message a bien été envoyé!');
             }
-
         }
 
-        $view
-            ->set('form', $form->createView())
-        ;
-        return $view->getView();
+        return array('form' => $form->createView());
     }
 
     public function partenairesAction()

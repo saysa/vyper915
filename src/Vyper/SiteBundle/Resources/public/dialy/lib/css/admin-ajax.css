@@ -294,3 +294,36 @@ aside h4 {
     margin-left: 1.375rem; }
 .inline-list > li > * {
     display: block; }
+
+#contact form {
+    background: #f6f8fa;
+    padding: 40px;
+    border-radius: 3px;
+}
+
+#contact form h6 {
+    margin-bottom: 20px;
+}
+
+.half {
+    width: 49%;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.btn-contact {
+    font-weight: 500 !important;
+    height: 54px;
+    line-height: 48px;
+    text-align: center;
+    background: #D84E51;
+    border: 1px solid #D84E51;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 36px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    color: #fff;
+    width: 100%;
+}
