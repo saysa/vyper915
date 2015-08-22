@@ -31,7 +31,12 @@ event:
 artist:
     biography: Biography
     discography: Discography
+    events: Events
+    articles: News
+    gallery: Pictures
+    links: Links
     official.website: Officiel website
+    comments: Comments
 
 discography:
     discography: Discography

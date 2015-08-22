@@ -68,18 +68,17 @@
         <!-- /post-wrap -->
 
         {% if artist.getBiography and app.request.getLocale() == 'fr' %}
-
-            <div class="content-title main-color-reverse" id="toggle-biography">
-                <h4 id="biography">{{ 'artist.biography'|trans }}</h4>
-            </div>
+            <p class="title" id="toggle-biography">
+                <span id="biography"><strong>{{ 'artist.biography'|trans }}</strong></span>
+            </p>
 
             <div class="entry-content" id="toggle-target-biography">
                 {{ artist.getBiography|raw }}
             </div>
         {% elseif artist.getBiographyEn and app.request.getLocale() == 'en' %}
-            <div class="content-title main-color-reverse" id="toggle-biography">
-                <h4 id="biography">{{ 'artist.biography'|trans }}</h4>
-            </div>
+            <p class="title" id="toggle-biography">
+                <span id="biography"><strong>{{ 'artist.biography'|trans }}</strong></span>
+            </p>
 
             <div class="entry-content" id="toggle-target-biography">
                 {{ artist.getBiographyEn|raw }}
@@ -89,9 +88,9 @@
         <!-- /entry-content -->
 
         {% if discos is defined %}
-            <div class="content-title main-color-reverse" id="toggle-discos">
-                <h4>Discographie</h4>
-            </div>
+            <p class="title" id="toggle-discos">
+                <span><strong>{{ 'artist.discography'|trans }}</strong></span>
+            </p>
 
             <div id="toggle-target-discos">
                 <div class="column">
@@ -161,9 +160,9 @@
 
         <div class="clear"></div>
         {% if events is defined %}
-            <div class="content-title main-color-reverse" id="toggle-events">
-                <h4>événements</h4>
-            </div>
+            <p class="title" id="toggle-events">
+                <span><strong>{{ 'artist.events'|trans }}</strong></span>
+            </p>
 
 
             <ul class="list" id="toggle-target-events">
@@ -196,9 +195,9 @@
         {% endif %}
 
         {% if articles is defined %}
-            <div class="content-title main-color-reverse" id="toggle-articles">
-                <h4>Articles</h4>
-            </div>
+            <p class="title" id="toggle-articles">
+                <span><strong>{{ 'artist.articles'|trans }}</strong></span>
+            </p>
 
             <ul class="list" id="toggle-target-articles">
                 {% for key, article in articles %}
@@ -227,9 +226,9 @@
         {% endif %}
 
         {% if albums is defined %}
-            <div class="content-title main-color-reverse" id="toggle-albums">
-                <h4>Galerie</h4>
-            </div>
+            <p class="title" id="toggle-albums">
+                <span><strong>{{ 'artist.gallery'|trans }}</strong></span>
+            </p>
 
             <ul class="list" id="toggle-target-albums">
                 {% for key, album in albums %}
@@ -254,9 +253,9 @@
 
 
         {% if artist.youtubeChannel is not empty or artist.officialWebsite is not empty %}
-        <div class="content-title main-color-reverse" id="toggle-links">
-            <h4>Liens</h4>
-        </div>
+            <p class="title" id="toggle-links">
+                <span><strong>{{ 'artist.links'|trans }}</strong></span>
+            </p>
 
             <ul id="toggle-target-links">
                 {% if artist.officialWebsite is not empty %}<li><a href="{{ artist.officialWebsite }}">Site officiel</a></li>{% endif %}
@@ -278,12 +277,9 @@
 
         <div id="comments">
             <div class="cat-header">
-                <div class="cat-title second-color-bg">
-                    <div class="cat-icon">
-                        <i class="icon-rocket"></i>
-                    </div>
-                    <h4>Donnez votre avis</h4>
-                </div>
+                <p class="title">
+                    <span><strong>{{ 'artist.comments'|trans }}</strong></span>
+                </p>
             </div>
         </div>
         <!-- /comments -->
