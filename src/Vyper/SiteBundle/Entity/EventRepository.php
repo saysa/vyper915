@@ -51,14 +51,21 @@ class EventRepository extends EntityRepository
         return $results;
     }
 
-    public function myFindAll($eventCalendar)
+    public function myFindAll($eventCalendar = null)
     {
         $queryBuilder = $this->createQueryBuilder('p');
         $queryBuilder
             ->where('p.deleted = false')
-            ->andWhere('p.calendar = :eventCalendar')
-            ->setParameter('eventCalendar', $eventCalendar)
         ;
+
+        if (!is_null($eventCalendar)) {
+            $queryBuilder
+                ->andWhere('p.calendar = :eventCalendar')
+                ->setParameter('eventCalendar', $eventCalendar)
+            ;
+        }
+
+
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
 
