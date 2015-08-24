@@ -52,9 +52,6 @@ class LoadMagazine extends AbstractFixture implements FixtureInterface, OrderedF
             $list[$i] = new Magazine();
             $list[$i]->setTitle($name);
             $list[$i]->setVolume($name);
-            $list[$i]->setFormFrance($name);
-            $list[$i]->setFormOutremer($name);
-            $list[$i]->setFormInternational($name);
             $list[$i]->setContent($name);
             $list[$i]->setShopLink('http:://www.google.fr');
             $list[$i]->setDateRelease(new \DateTime($dates[$i]));
