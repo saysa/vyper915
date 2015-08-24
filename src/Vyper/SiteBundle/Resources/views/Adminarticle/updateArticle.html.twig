@@ -82,24 +82,6 @@
                                 </div>
                             </div>
 
-                            <!-- Text EN -->
-                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
-                                {{ form_label(form.textEN, "Text English") }}
-                                <div class="controls">
-                                    {{ form_widget(form.textEN, { 'attr': {'class': 'cleditor'} }) }}
-                                    {{ form_errors(form.textEN) }}
-                                </div>
-                            </div>
-
-                            <!-- Text JP -->
-                            <div class="form-group hidden-phone{%if error_text is defined %} has-error{% endif %}">
-                                {{ form_label(form.textJP, "Text Japanese") }}
-                                <div class="controls">
-                                    {{ form_widget(form.textJP, { 'attr': {'class': 'cleditor'} }) }}
-                                    {{ form_errors(form.textJP) }}
-                                </div>
-                            </div>
-
                             <!-- Youtube -->
                             <div class="row">
                                 <div class="form-group col-lg-9{%if error_youtube is defined %} has-error{% endif %}">

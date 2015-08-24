@@ -71,20 +71,6 @@ class Article
     private $text;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="textEN", type="text", nullable=true)
-     */
-    private $textEN;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="textJP", type="text", nullable=true)
-     */
-    private $textJP;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="releaseDate", type="date")
@@ -899,51 +885,5 @@ class Article
     public function getAlbum()
     {
         return $this->album;
-    }
-
-    /**
-     * Set textEN
-     *
-     * @param string $textEN
-     * @return Article
-     */
-    public function setTextEN($textEN)
-    {
-        $this->textEN = $textEN;
-
-        return $this;
-    }
-
-    /**
-     * Get textEN
-     *
-     * @return string 
-     */
-    public function getTextEN()
-    {
-        return $this->textEN;
-    }
-
-    /**
-     * Set textJP
-     *
-     * @param string $textJP
-     * @return Article
-     */
-    public function setTextJP($textJP)
-    {
-        $this->textJP = $textJP;
-
-        return $this;
-    }
-
-    /**
-     * Get textJP
-     *
-     * @return string 
-     */
-    public function getTextJP()
-    {
-        return $this->textJP;
     }
 }
