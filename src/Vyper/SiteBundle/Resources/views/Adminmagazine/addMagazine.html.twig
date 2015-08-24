@@ -47,46 +47,9 @@
                             </div>
                         </div>
 
-
                         <div class="row">
                             <div class="col-lg-4">
-                                <!-- France -->
-                                <div class="row">
-                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.formFrance, "Envoie en France *") }}
-                                        <div class="controls">
-                                            {{ form_widget(form.formFrance, {  'attr': {'class': 'form-control'} }) }}
-                                            {{ form_errors(form.formFrance) }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <!-- Outre Mer -->
-                                <div class="row">
-                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.formOutremer, "Envoie Outre Mer *") }}
-                                        <div class="controls">
-                                            {{ form_widget(form.formOutremer, {  'attr': {'class': 'form-control'} }) }}
-                                            {{ form_errors(form.formOutremer) }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <!-- International -->
-                                <div class="row">
-                                    <div class="form-group col-lg-9{% if error_name is defined %} has-error{% endif %}">
-                                        {{ form_label(form.formInternational, "Envoie à l'international *") }}
-                                        <div class="controls">
-                                            {{ form_widget(form.formInternational, {  'attr': {'class': 'form-control'} }) }}
-                                            {{ form_errors(form.formInternational) }}
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="col-lg-4">
                                 <!-- Volume -->

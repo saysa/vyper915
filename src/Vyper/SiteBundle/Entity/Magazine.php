@@ -40,27 +40,6 @@ class Magazine
     /**
      * @var string
      *
-     * @ORM\Column(name="formFrance", type="text")
-     */
-    private $formFrance;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="formOutremer", type="text")
-     */
-    private $formOutremer;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="formInternational", type="text")
-     */
-    private $formInternational;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="content", type="text")
      */
     private $content;
@@ -185,75 +164,6 @@ class Magazine
     public function getShopLink()
     {
         return $this->shopLink;
-    }
-
-    /**
-     * Set formFrance
-     *
-     * @param string $formFrance
-     * @return Magazine
-     */
-    public function setFormFrance($formFrance)
-    {
-        $this->formFrance = $formFrance;
-
-        return $this;
-    }
-
-    /**
-     * Get formFrance
-     *
-     * @return string 
-     */
-    public function getFormFrance()
-    {
-        return $this->formFrance;
-    }
-
-    /**
-     * Set formOutremer
-     *
-     * @param string $formOutremer
-     * @return Magazine
-     */
-    public function setFormOutremer($formOutremer)
-    {
-        $this->formOutremer = $formOutremer;
-
-        return $this;
-    }
-
-    /**
-     * Get formOutremer
-     *
-     * @return string 
-     */
-    public function getFormOutremer()
-    {
-        return $this->formOutremer;
-    }
-
-    /**
-     * Set formInternational
-     *
-     * @param string $formInternational
-     * @return Magazine
-     */
-    public function setFormInternational($formInternational)
-    {
-        $this->formInternational = $formInternational;
-
-        return $this;
-    }
-
-    /**
-     * Get formInternational
-     *
-     * @return string 
-     */
-    public function getFormInternational()
-    {
-        return $this->formInternational;
     }
 
     /**
