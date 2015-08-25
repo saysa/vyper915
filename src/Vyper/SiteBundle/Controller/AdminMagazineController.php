@@ -54,7 +54,7 @@ class AdminMagazineController extends AdminCommonController {
             ->set('active_magazine', true)
         ;
 
-        return $this->render('VyperSiteBundle:Adminmagazine:addMagazine.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminMagazine:addMagazine.html.twig', $view->getView());
     }
 
     /**
@@ -97,7 +97,7 @@ class AdminMagazineController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminmagazine:updateMagazine.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminMagazine:updateMagazine.html.twig', $view->getView());
     }
 
     /**
@@ -115,7 +115,7 @@ class AdminMagazineController extends AdminCommonController {
         $view->set('user_role', $this->getUserRole());
         $view->set("active_magazine", true);
 
-        return $this->render('VyperSiteBundle:Adminmagazine:showMagazines.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminMagazine:showMagazines.html.twig', $view->getView());
     }
 
     /**
