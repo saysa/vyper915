@@ -49,6 +49,7 @@
                                 <th>ID</th>
                                 <th>Highlight</th>
                                 <th>Published</th>
+                                <th>Locale</th>
                                 <th>Date</th>
                                 <th>Type</th>
                                 <th>Title</th>
@@ -66,6 +67,13 @@
                                     <td>{{ article.getId }}</td>
                                     <td><input type="checkbox" {% if user_role != 'admin' %}disabled="disabled"{% endif %} class="hightlight" data-articleid="{{ article.getId }}" {% if article.getHighlight == 1 %}checked="checked"{% endif %} /></td>
                                     <td><input type="checkbox" {% if user_role != 'admin' %}disabled="disabled"{% endif %} class="published"  data-articleid="{{ article.getId }}" {% if article.getLive == 1 %}checked="checked"{% endif %} /></td>
+                                    <td>
+                                        {% if article.getLocale.getName == 'fr' %}
+                                            <img src="{{ asset('bundles/vypersite/img/acme/img/fr.png') }}" alt="fr" />
+                                        {% elseif article.getLocale.getName == 'en' %}
+                                            <img src="{{ asset('bundles/vypersite/img/acme/img/us.png') }}" alt="en" />
+                                        {% endif %}
+                                    </td>
                                     <td>{{ article.getModified|date('Y-m-d') }}</td>
                                     <td>{{ article.getArticleType.getName }}</td>
                                     <td>{{ article.getTitle }}</td>
