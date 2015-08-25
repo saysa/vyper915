@@ -229,6 +229,8 @@ vyper_site_cgu: /conditions-utilisation   # FIXME
 # Desc: /conditions-utilisation-sms
 cgu_sms: /conditions-utilisation-sms   # FIXME
 
+vyper_site_magazine: /magazine
+
 # Desc: /culture/{page}
 culture: '/culture/{page}'   # FIXME
 

@@ -40,6 +40,10 @@ cgu_sms:
     path:     /conditions-utilisation-sms
     defaults: { _controller: VyperSiteBundle:Statique:cguSms }
 
+vyper_site_magazine:
+    path:     /magazine
+    defaults: { _controller: VyperSiteBundle:Statique:magazine }
+
 mentions_legales:
     path:     /mentions-legales
     defaults: { _controller: VyperSiteBundle:Statique:mentionsLegales }

@@ -120,6 +120,15 @@ class StatiqueController extends Controller
      * @return array
      * @Template
      */
+    public function magazineAction()
+    {
+        return array();
+    }
+
+    /**
+     * @return array
+     * @Template
+     */
     public function mentionsLegalesAction()
     {
         return array();
