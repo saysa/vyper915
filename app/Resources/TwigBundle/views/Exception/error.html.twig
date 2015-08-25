@@ -1,0 +1,37 @@
+{% extends 'TwigBundle:Exception:parent.html.twig' %}
+
+{% block title %}{{ 'title.404'|trans }} | {{ parent() }}{% endblock %}
+
+{% block above_the_fold %}
+    <div id="above-the-fold" class="above-the-fold light">
+        <div class="inner-wrapper">
+            <h2 class="page-title">{{ 'title.404'|trans|upper }}</h2>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    {% set page_404 = true %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="grid_6">
+            IMG
+        </div>
+        <div class="grid_6">
+            <h2>404</h2>
+            <h4>Something went terribly wrong...</h4>
+            But don't worry, it can happen to the best of us - and it just happened to you!<br> You can search something else or read this text one more time.
+            {#
+            <form method="get" action="http://dialy.different-themes.com">
+
+                <input type="text" placeholder="Search..." name="s" id="s">
+                <input type="submit" value="Search">
+            </form>
+            #}
+        </div>
+    </div>
+{% endblock %}
