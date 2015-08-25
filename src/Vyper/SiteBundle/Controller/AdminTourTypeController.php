@@ -44,7 +44,7 @@ class AdminTourTypeController extends AdminCommonController {
             ->set('active_tour', true)
         ;
 
-        return $this->render('VyperSiteBundle:Admintourtype:addTourType.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminTourType:addTourType.html.twig', $view->getView());
     }
 
     /**
@@ -77,7 +77,7 @@ class AdminTourTypeController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Admintourtype:updateTourType.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminTourType:updateTourType.html.twig', $view->getView());
     }
 
     /**
@@ -99,6 +99,6 @@ class AdminTourTypeController extends AdminCommonController {
         $view->set('user_role', $this->getUserRole());
         $view->set("active_tour", true);
 
-        return $this->render('VyperSiteBundle:Admintour:showTours.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminTour:showTours.html.twig', $view->getView());
     }
 } 

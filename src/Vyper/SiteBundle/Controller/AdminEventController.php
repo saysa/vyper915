@@ -54,7 +54,7 @@ class AdminEventController extends AdminCommonController {
             ->set('active_event', true)
         ;
 
-        return $this->render('VyperSiteBundle:Adminevent:addEvent.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminEvent:addEvent.html.twig', $view->getView());
     }
 
     /**
@@ -96,7 +96,7 @@ class AdminEventController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminevent:updateEvent.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminEvent:updateEvent.html.twig', $view->getView());
     }
 
     /**
@@ -115,7 +115,7 @@ class AdminEventController extends AdminCommonController {
         $view->set('user_role', $this->getUserRole());
         $view->set("active_event", true);
 
-        return $this->render('VyperSiteBundle:Adminevent:showEvents.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminEvent:showEvents.html.twig', $view->getView());
     }
 
     /**

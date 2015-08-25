@@ -40,7 +40,7 @@ class AdminAlbumController extends AdminCommonController {
             ->set('active_picture', true)
         ;
 
-        return $this->render('VyperSiteBundle:Adminalbum:addAlbum.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminAlbum:addAlbum.html.twig', $view->getView());
     }
 
     /**
@@ -77,6 +77,6 @@ class AdminAlbumController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminalbum:updateAlbum.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminAlbum:updateAlbum.html.twig', $view->getView());
     }
 } 

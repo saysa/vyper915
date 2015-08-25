@@ -48,7 +48,7 @@ class AdminFlashnewController extends AdminCommonController {
             ->set('active_article', true)
         ;
 
-        return $this->render('VyperSiteBundle:Adminflashnew:addFlashnew.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminFlashnew:addFlashnew.html.twig', $view->getView());
     }
 
     /**
@@ -80,6 +80,6 @@ class AdminFlashnewController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminflashnew:updateFlashnew.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminFlashnew:updateFlashnew.html.twig', $view->getView());
     }
 } 

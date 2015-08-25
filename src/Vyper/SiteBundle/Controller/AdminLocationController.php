@@ -46,7 +46,7 @@ class AdminLocationController extends AdminCommonController {
             ->set('active_location', true)
         ;
 
-        return $this->render('VyperSiteBundle:Adminlocation:addLocation.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminLocation:addLocation.html.twig', $view->getView());
     }
 
     /**
@@ -79,7 +79,7 @@ class AdminLocationController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminlocation:updateLocation.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminLocation:updateLocation.html.twig', $view->getView());
     }
 
     /**
@@ -98,7 +98,7 @@ class AdminLocationController extends AdminCommonController {
         $view->set('user_role', $this->getUserRole());
         $view->set("active_location", true);
 
-        return $this->render('VyperSiteBundle:Adminlocation:showLocations.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminLocation:showLocations.html.twig', $view->getView());
     }
 
     /**

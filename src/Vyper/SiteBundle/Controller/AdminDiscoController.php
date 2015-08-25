@@ -55,7 +55,7 @@ class AdminDiscoController extends AdminCommonController {
             ->set('active_disco', true)
         ;
 
-        return $this->render('VyperSiteBundle:Admindisco:addDisco.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminDisco:addDisco.html.twig', $view->getView());
     }
 
     /**
@@ -102,7 +102,7 @@ class AdminDiscoController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Admindisco:updateDisco.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminDisco:updateDisco.html.twig', $view->getView());
     }
 
     /**
@@ -121,7 +121,7 @@ class AdminDiscoController extends AdminCommonController {
         $view->set('user_role', $this->getUserRole());
         $view->set("active_disco", true);
 
-        return $this->render('VyperSiteBundle:Admindisco:showDiscos.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminDisco:showDiscos.html.twig', $view->getView());
     }
 
     /**

@@ -34,7 +34,7 @@ class AdminArtistController extends AdminCommonController {
         $view->set('user_role', $this->getUserRole());
         $view->set("active_artist", true);
 
-        return $this->render('VyperSiteBundle:Adminartist:showArtists.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminArtist:showArtists.html.twig', $view->getView());
     }
 
     /**
@@ -76,7 +76,7 @@ class AdminArtistController extends AdminCommonController {
             ->set('active_artist', true)
         ;
 
-        return $this->render('VyperSiteBundle:Adminartist:addArtist.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminArtist:addArtist.html.twig', $view->getView());
     }
 
     /**
@@ -117,7 +117,7 @@ class AdminArtistController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:Adminartist:updateArtist.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminArtist:updateArtist.html.twig', $view->getView());
     }
 
     /**

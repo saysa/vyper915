@@ -63,7 +63,7 @@ class AdminThemeController extends AdminCommonController {
         $view->set('theme', $theme);
         $view->set('form', $form->createView());
 
-        return $this->render('VyperSiteBundle:Admintheme:updateTheme.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminTheme:updateTheme.html.twig', $view->getView());
     }
 
     public function addThemeAction(Request $request)
@@ -95,6 +95,6 @@ class AdminThemeController extends AdminCommonController {
 
         $view->set('form', $form->createView());
 
-        return $this->render('VyperSiteBundle:Admintheme:addTheme.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminTheme:addTheme.html.twig', $view->getView());
     }
 } 
