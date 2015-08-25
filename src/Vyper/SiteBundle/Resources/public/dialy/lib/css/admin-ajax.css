@@ -327,3 +327,13 @@ aside h4 {
     color: #fff;
     width: 100%;
 }
+
+#switch-cals {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#switch-cals li a {
+    width: 100%;
+}
