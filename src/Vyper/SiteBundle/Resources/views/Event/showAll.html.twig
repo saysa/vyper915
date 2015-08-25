@@ -16,7 +16,9 @@
 {% block above_the_fold %}
     <div id="above-the-fold" class="above-the-fold light">
         <div class="inner-wrapper">
-            <h2 class="page-title">{{ 'title.events'|trans|upper }}</h2>
+            <h2 class="page-title" id="title-cal-europe">{{ 'event.title.calendar.eu'|trans|upper }}</h2>
+            <h2 class="page-title" id="title-cal-us">{{ 'event.title.calendar.us'|trans|upper }}</h2>
+            <h2 class="page-title" id="title-cal-asie">{{ 'event.title.calendar.asia'|trans|upper }}</h2>
         </div>
     </div>
 {% endblock %}
@@ -55,9 +57,9 @@
 
 {% block sidebar_context %}
     <ul id="switch-cals">
-        <li><a href="#" class="toggle-cal btn btn-large btn-radius" data-cal="cal-europe"><i class="fa fa-calendar"></i> Europe</a></li>
-        <li><a href="#" class="toggle-cal btn btn-large btn-radius" data-cal="cal-us"><i class="fa fa-calendar"></i> US</a></li>
-        <li><a href="#" class="toggle-cal btn btn-large btn-radius" data-cal="cal-asie"><i class="fa fa-calendar"></i> Asie</a></li>
+        <li><a href="#" class="toggle-cal btn btn-large btn-radius" data-cal="cal-europe"><i class="fa fa-calendar"></i> {{ 'event.title.calendar.eu'|trans|upper }}</a></li>
+        <li><a href="#" class="toggle-cal btn btn-large btn-radius" data-cal="cal-us"><i class="fa fa-calendar"></i> {{ 'event.title.calendar.us'|trans|upper }}</a></li>
+        <li><a href="#" class="toggle-cal btn btn-large btn-radius" data-cal="cal-asie"><i class="fa fa-calendar"></i> {{ 'event.title.calendar.asia'|trans|upper }}</a></li>
     </ul>
 {% endblock %}
 
@@ -77,6 +79,10 @@
 
         $(window).load(function() {
 
+            var titles = $('.page-title');
+            titles.hide();
+            $('#title-cal-europe').show();
+
             var calendars = $(".calendar");
             calendars.hide();
             $('#cal-europe').show();
@@ -88,8 +94,11 @@
 
                 $(".calendar").hide();
                 var geo = $(this).data('cal');
-                console.log(geo);
                 $('#'+geo).show();
+
+                $('.page-title').hide();
+                $('#title-'+geo).show();
+
             });
         });
 
@@ -131,7 +140,7 @@
                     element.attr('href', 'javascript:void(0);');
                     element.click(function() {
 
-                        console.log(event);
+                        //console.log(event);
 
 
                         $("#dateInfo").html(event.date_info);
@@ -195,7 +204,7 @@
                     element.attr('href', 'javascript:void(0);');
                     element.click(function() {
 
-                        console.log(event);
+                        //console.log(event);
 
 
                         $("#dateInfo").html(event.date_info);
@@ -259,7 +268,7 @@
                     element.attr('href', 'javascript:void(0);');
                     element.click(function() {
 
-                        console.log(event);
+                        //console.log(event);
 
 
                         $("#dateInfo").html(event.date_info);

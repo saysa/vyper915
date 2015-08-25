@@ -27,6 +27,9 @@ event:
     start: Start
     end: End
     more: More
+    title.calendar.eu: Calendar Europe
+    title.calendar.us: Calendar United States
+    title.calendar.asia: Calendar Asia
 
 artist:
     biography: Biography
