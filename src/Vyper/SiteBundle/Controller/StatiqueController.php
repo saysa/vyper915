@@ -142,7 +142,9 @@ class StatiqueController extends Controller
      */
     public function jobsAction()
     {
-        return array();
+        $view = $this->container->get('saysa_view');
+        $view->set('page_job', true);
+        return $view->getView();
     }
 
 }

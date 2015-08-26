@@ -337,3 +337,72 @@ aside h4 {
 #switch-cals li a {
     width: 100%;
 }
+
+.wpb_wrapper p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #888;-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.features-13 {
+    background: #A0505A;
+    color: #fff;
+    padding: 80px 0;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 70px;
+}
+
+.features-13 .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.features-13 h5 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Questrial',"Helvetica Neue",'Arimo', Helvetica, Arial, sans-serif;
+    padding: 0 50px;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.qbutton {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 23px;
+    border: 2px solid #FFF;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: left;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    text-shadow: none;
+    background-color: transparent;
+}
+
+.qbutton.white {
+    border-color: #fff;
+    color: #fff;
+    margin: 10px 0 0 10px;
+}
+
+.qbutton:hover {
+    background-color: #FFF;
+    border-color: #FFF;
+    color: #A0505A;
+}
+
