@@ -122,7 +122,9 @@ class StatiqueController extends Controller
      */
     public function magazineAction()
     {
-        return array();
+        $view = $this->container->get('saysa_view');
+        $view->set('page_magazine', true);
+        return $view->getView();
     }
 
     /**

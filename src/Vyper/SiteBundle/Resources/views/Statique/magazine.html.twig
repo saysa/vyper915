@@ -1,88 +1,229 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}Jobs | {{ parent() }}{% endblock %}
+{% block title %}Magazine | {{ parent() }}{% endblock %}
 
     {% block content %}
-        <header class="archive-header">
-            <h2 class="archive-title">Jobs</h2>
-        </header><!-- /archive-header -->
 
-        <section class="pricing pricing-1">
-            <div class="container">
+        <div class="main-container">
 
 
-                <div class=" full_section_inner clearfix">
-                    <div class="col-sm-6">
-                        <div class="wpb_wrapper">
-                            <h5>VYPER RECRUTE</h5>
-                            <div class="wpb_text_column wpb_content_element ">
-                                <div class="wpb_wrapper">
-                                    <p>
-                                        Le monde de la musique vous a toujours attiré ? Prendre la plume ne vous fait pas peur et il n’est pas rare que vous partagiez vos expériences via des textes ou des articles ? Alliez les deux en nous rejoignant et gagnez en expérience dans le monde de la j-music grâce à <strong>VYPER Japanese Music</strong>.
-                                        <br>
-                                        Nous ne demandons aucuns diplômes, aucunes connaissances en informatique. Une bonne dose de motivation ainsi qu’une très bonne connaissance de la langue française peut vous permettre de rejoindre notre équipe.
-                                        <br>
-                                        Différents postes sont à pourvoir, n’hésitez pas à nous contacter à cette adresse : <a class="hide-contact" href="#">contact</a> en précisant le poste pour lequel vous candidatez.
-                                    </p>
 
-
-                                </div>
-                            </div> <div class="separator  transparent center  " style="margin-top: 93px;margin-bottom: 0px;"></div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="wpb_wrapper">
-                            <h5>NOS VALEURS</h5>
-                            <div class="wpb_text_column wpb_content_element">
-                                <div class="wpb_wrapper">
-                                    <p>
-                                        <strong>Motivation</strong>
-                                        <br>
-                                        Nous cherchons des gens motivés. La motivation est la clef pour produire un travail de qualité.
-                                        <br>
-                                        <strong>Proposition</strong>
-                                        <br>
-                                        Chez VYPER Japanese Music, il n'est pas seulement question de motivation, mais aussi savoir prendre des initiatives.
-                                        <br>
-                                        <strong>Professionalisme</strong>
-                                        <br>
-                                        VYPER est reconnu par son professionalisme. Nous cherchons des gens capable de perpétuer cette valeur.
-                                    </p>
-
-
-                                </div>
-                            </div> <div class="separator transparent center" style="margin-top: 93px;margin-bottom: 0px;"></div>
+            <section class="features features-7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 text-center">
+                            <h4>
+                                UN MAGAZINE UNIQUE EN FRANCE
+                            </h4>
+                            <h5>
+                                VYPER est le magazine papier de la musique Japonaise en France.
+                                Nous vous offrons la possibilité de suivre tous les 2 mois l'actualité
+                                du J-Rock et Visual-Kei
+                            </h5>
 
                         </div>
                     </div>
                 </div>
 
-                <h4>REDACTEUR/TRICE</h4>
+            </section>
+            <section class="features features-5 bgdark">
+                <div class="container">
+                    <div class="row v-align-children">
 
+                        <div class="col-sm-6 col-md-5 feature text-right">
+                            <h4>Un contenu<br>unique en son genre.</h4>
+                            <p>
+                                VYPER s'appuie sur des rédacteurs compétents ainsi que l'ensemble de ses partenaires pour fournir à ses lecteurs le meilleur du J-Rock et Visual-Kei.
+                            </p>
+                        </div>
 
-                <p>
-                    Les critiques acérées des lecteurs ne vous effraient pas, et vous aimez décortiquer la dernière sortie d’un groupe, partager un concert ou encore partager l’interview d’un artiste… N’hésitez pas, sortez votre plus belle plume et venez-vous créer une place au sein de notre équipe.
-                </p>
+                        <div class="col-sm-6 col-md-offset-1 text-center feature">
+                            <img alt="Feature Image" src="/bundles/vypersite/img/bg/cross.png">
+                        </div>
 
-                <h4>CORRECTEUR/TRICE</h4>
-                <p>
-                    Parce que la langue française ne se résume pas au langage sms mais également car personne n’est parfait, nous avons besoin de personnes prêtes à jeter un œil nouveau sur les articles avant leur parution afin de les rendre plus fluide et plus compréhensible par nos lecteurs. Poste tout aussi important que celui de rédacteur.
-                </p>
-
-
-            </div>
-        </section>
-
-        <section class="features features-13 red">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-                        <h5 class="text-white">Le nombre de poste est voué à évoluer au cours de l’agrandissement de notre structure. Il se peut que vous commenciez rédacteur pour ensuite toucher à des domaines plus vastes. VYPER Japanese Music est une association en perpétuelle évolution, n’hésitez pas à nous rejoindre !</h5>
-                        <a class="qbutton white" href="{{ path('vyper_site_contact') }}">CONTACTEZ-NOUS</a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+
+            <section class="features features-4">
+                <div class="container">
+                    <div class="row v-align-children">
+                        <div class="col-sm-6 text-center feature">
+                            <img alt="Feature Image" src="/bundles/vypersite/img/bg/luna2.png">
+                        </div>
+
+                        <div class="col-sm-6 col-md-5 col-md-offset-1 feature">
+                            <h4>
+                                L'actualité complète et variée dans un seul magazine
+                            </h4>
+                            <p>
+                                VYPER propose articles spéciaux, photos exclusives, live report interviews et autres promotions et découvertes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="pricing pricing-1 bgdark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <h3>Vyper à toutes les sauces.</h3>
+                            <h5>
+
+                                Choisissez parmi les 3 formules que nous vous proposons, celle qui vous convient le mieux.<br>
+                                Visu, Pop ou Rock, le magazine VYPER assurément chez vous.
+
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <a href="http://boutique.vyper-jmusic.com/index.php?id_product=6&amp;controller=product">
+                            <div class="col-sm-4 text-center pricing-option">
+                                <h6>Visu</h6>
+                                <div class="price-container">
+                                    <span class="price">30</span>
+                                    <span class="dollar">€</span>
+                                    <span class="terms">TTC</span>
+                                </div>
+                                <h5>Abonnement de 1 an</h5>
+                                <ul>
+                                    <li>Souscrit en France Métropolitaine</li>
+                                    <li><strong>Au lieu de 35€ TTC</strong></li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <a href="http://boutique.vyper-jmusic.com/index.php?id_product=7&amp;controller=product">
+                            <div class="col-sm-4 text-center pricing-option active">
+                                <h6>Pop</h6>
+                                <div class="price-container">
+                                    <span class="price">45</span>
+                                    <span class="dollar">€</span>
+                                    <span class="terms">TTC</span>
+                                </div>
+                                <h5>Abonnement de 1 an + HS</h5>
+                                <ul>
+                                    <li>Souscrit en France Métropolitaine</li>
+                                    <li><strong>Au lieu de 50€ TTC</strong></li>
+                                </ul>
+                            </div>
+                        </a>
+
+                        <a href="http://boutique.vyper-jmusic.com/index.php?id_product=8&amp;controller=product">
+                            <div class="col-sm-4 text-center pricing-option">
+                                <h6>Rock</h6>
+                                <div class="price-container">
+                                    <span class="price">55</span>
+                                    <span class="dollar">€</span>
+                                    <span class="terms">TTC</span>
+                                </div>
+                                <h5>Abonnement de 2 ans</h5>
+                                <ul>
+                                    <li>Souscrit en France Métropolitaine</li>
+                                    <li><strong>Au lieu de 70€ TTC</strong></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <p>Besoin d'infos supplémentaires? <a href="/contact">Contactez-nous</a>, VYPER vous répond dans les 24 heures !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="features features-13 red">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 text-right">
+                            <h5 class="text-white">Profitez maintenant du magazine le plus complet en France ainsi que des avantages exclusifs proposés par VYPER</h5>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <a class="qbutton white" href="http://boutique.vyper-jmusic.com/index.php?id_category=13&amp;controller=category">JE M'ABONNE</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <footer class="footer footer-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/news">
+                                        Actualités
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/faq">
+                                        FAQ
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        Mentions légales
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        C.G.U
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/contact">
+                                        Contact
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/jobs">
+                                        Jobs
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/partenaires">
+                                        Partenaires
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <a href="/">
+                                <img alt="Logo" src="/bundles/vypersite/img/logo.png">
+                            </a>
+                            <p class="sub">
+                                © Copyright 2015 VYPER Japanese Music - Tous droits réservés
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
     {% endblock %}

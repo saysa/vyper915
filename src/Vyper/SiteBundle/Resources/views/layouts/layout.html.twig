@@ -189,7 +189,7 @@
             <div class="inner-wrapper">
 
                 <!-- Main -->
-                <div id="main" role="main" {% if current_videos is defined %}{% elseif page_404 is defined %}class="page404"{% else %}class="left"{% endif %}>
+                <div id="main" role="main" {% if current_videos is defined %}{% elseif page_magazine is defined %}{% elseif page_404 is defined %}class="page404"{% else %}class="left"{% endif %}>
 
                     <!-- Start template -->
                     {% block content %}{% endblock %}
@@ -200,6 +200,7 @@
 
                 {% if current_videos is defined %}
                 {% elseif page_404 is defined %}
+                {% elseif page_magazine is defined %}
                 {% else %}
                 <!-- Aside -->
                 <aside id="sidebar" role="complementary">
