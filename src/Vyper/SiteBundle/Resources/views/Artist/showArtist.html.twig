@@ -247,8 +247,8 @@
             </p>
 
             <ul id="toggle-target-links">
-                {% if artist.officialWebsite is not empty %}<li><a href="{{ artist.officialWebsite }}">Site officiel</a></li>{% endif %}
-                {% if artist.youtubeChannel is not empty %}<li><a href="{{ artist.youtubeChannel }}">Chaine Youtube</a></li>{% endif %}
+                {% if artist.officialWebsite is not empty %}<li><a href="{{ artist.officialWebsite }}">{{ 'artist.official.website'|trans }}</a></li>{% endif %}
+                {% if artist.youtubeChannel is not empty %}<li><a href="{{ artist.youtubeChannel }}">{{ 'artist.youtube.channel'|trans }}</a></li>{% endif %}
             </ul>
 
         {% endif %}
