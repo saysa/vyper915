@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="post-share">
-                        <span class="share-text">Share this post:</span>
+                        <span class="share-text">{{ 'article.share.this.post'|trans }}</span>
                         <ul>
                             <li>
                                 <a data-hashtags="" data-url="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" data-via="VYPER_JMusic" data-text="{{ article.getTitle }}" data-tip="{{ 'social.share.twitter'|trans }}" href="https://twitter.com/intent/tweet?hashtags=&amp;original_referer={{ url('showArticle', {'id': article.getId, 'slug': article.slug})|url_encode }}&amp;source=tweetbutton&amp;text={{ article.getTitle }}&amp;url={{ url('showArticle', {'id': article.getId, 'slug': article.slug})|url_encode }}&amp;via=VYPER_JMusic" class="twitter df-tweet" target="_blank">
