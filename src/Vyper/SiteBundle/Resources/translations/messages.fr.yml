@@ -3,9 +3,15 @@
 main:
     menu:
         home: Accueil
+        magazine: Magazine
         artists: Artistes
         contests: Concours
         features: Vidéos
+main.menu.magazine.news: NewsFFF
+main.menu.magazine.store: La Boutique
+main.menu.magazine.magazine: Magazine
+main.menu.magazine.media: Presse
+main.menu.magazine.subscriptions: Abonnements
 
 article:
     author: Auteur

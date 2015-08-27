@@ -3,9 +3,15 @@
 main:
     menu:
         home: Home
+        magazine: Magazine
         artists: Artists
         contests: Contests
         features: Features
+main.menu.magazine.news: NewSSS
+main.menu.magazine.store: The Store
+main.menu.magazine.magazine: Magazine
+main.menu.magazine.media: Media
+main.menu.magazine.subscriptions: Subscriptions
 
 article:
     author: Author
