@@ -12,7 +12,7 @@
     <script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>
 
     {% block meta_description %}
-        <meta name="description" content="L'actualité de la musique japonaise, visual kei, jrock, jpop au travers de news, live reports, vidéos, interviews, commentaires et plus encore." />
+        <meta name="description" content="{{ 'meta.description'|trans|raw }}" />
     {% endblock %}
 
 
