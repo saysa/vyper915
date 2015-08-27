@@ -163,7 +163,7 @@
 
 
 
-            <a href="{{ path('showAlbum', {'id': article.album.getId, 'slug': article.album.slug}) }}">Plus de photos</a>
+            <a href="{{ path('showAlbum', {'id': article.album.getId, 'slug': article.album.slug}) }}">{{ 'article.see.more.pictures'|trans }}</a>
         {% endif %}
 
 
@@ -174,9 +174,9 @@
 
 
 
-        <div id="comments" class="content-title main-color-reverse">
-            <h4>Réagir</h4>
-        </div>
+        <p class="content-title main-color-reverse" id="comments">
+            <span><strong>{{ 'article.title.comments'|trans }}</strong></span>
+        </p>
         <!-- /comments -->
 
 
