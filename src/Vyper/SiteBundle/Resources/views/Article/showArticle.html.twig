@@ -48,40 +48,8 @@
                     </div>
 
                     <div class="post-container">
-                        {% if (article.textEN is not null or article.textJP is not null)  %}
-                            <script>
-                                $(function() {
-                                    $( "#lang-tabs" ).tabs();
-                                });
-                            </script>
 
-                            <div id="lang-tabs">
-                                <ul>
-                                    <li><a href="#tabs-1">FR <img src="{{ asset('assets/css/images/france.ico') }}" /></a></li>
-                                    {% if article.textEN is not null %}
-                                        <li><a href="#tabs-2">EN <img src="{{ asset('assets/css/images/uk.ico') }}" /></a></li>
-                                    {% endif %}
-                                    {% if article.textJP is not null %}
-                                        <li><a href="#tabs-3">JP <img src="{{ asset('assets/css/images/japan.ico') }}" /></a></li>
-                                    {% endif %}
-                                </ul>
-                                <div id="tabs-1">
-                                    {{ article.text|raw }}
-                                </div>
-                                {% if article.textEN is not null %}
-                                    <div id="tabs-2" lang="en">
-                                        {{ article.textEN|raw }}
-                                    </div>
-                                {% endif %}
-                                {% if article.textJP is not null %}
-                                    <div id="tabs-3" lang="ja">
-                                        {{ article.textJP|raw }}
-                                    </div>
-                                {% endif %}
-                            </div>
-                        {% else %}
-                            {{ article.text|raw }}
-                        {% endif %}
+                        {{ article.text|raw }}
 
 
 
