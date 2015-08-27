@@ -42,6 +42,10 @@ event:
     title.calendar.us: Calendrier États-Unis
     title.calendar.asia: Calendrier Asie
 
+artists:
+    intro: Retrouvez tous les artistes apparus dans le magazine.
+    pagination.all: Tous
+
 artist:
     biography: Biographie
     discography: Discographie

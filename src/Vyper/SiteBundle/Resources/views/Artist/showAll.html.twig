@@ -1,6 +1,6 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}Artistes | {{ parent() }}{% endblock %}
+{% block title %}{{ 'title.artists'|trans }} | {{ parent() }}{% endblock %}
 
     {% block above_the_fold %}
         <div id="above-the-fold" class="above-the-fold light">
@@ -12,13 +12,13 @@
 
     {% block content %}
 
-        <p class="lead">Retrouvez tous les artistes apparus dans le magazine.</p>
+        <p class="lead">{{ 'artists.intro'|trans }}</p>
 
         <div id="filters" class="portfolioFilter">
 
             <div class="button-group" data-filter-group="a-alpha">
                 <ul class="page-numbers">
-                    <li><a href="javascript: void(0);" data-filter="" class="iso current">Tous</a></li>
+                    <li><a href="javascript: void(0);" data-filter="" class="iso current">{{ 'artists.pagination.all'|trans }}</a></li>
                     {% for letter in 'a'..'z' %}
                         <li><a href="javascript: void(0);" data-filter=".{{ letter }}" class="iso">{{ letter|upper }}</a></li>
                     {% endfor %}
