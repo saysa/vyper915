@@ -245,7 +245,7 @@
                     {{ render(controller("VyperSiteBundle:Event:nextEvent")) }}
 
                     <aside class="widget">
-                        <div class="widget-title"><h4>Suivez-nous</h4></div>
+                        <div class="widget-title"><h4>{{ 'sidebar.title.follow.us'|trans }}</h4></div>
                         <div class="fb-like-box" data-href="https://www.facebook.com/vyperjmusic" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
                     </aside>
 
@@ -279,10 +279,10 @@
                         <div class="grid_6">{{ 'footer.copyright'|trans }}</div>
                         <div class="grid_6">
                             <ul class="inline-list right">
-                                <li><a href="{{ path('vyper_site_partenaires') }}">Partenaires</a></li>
-                                <li><a href="{{ path('vyper_site_contact') }}">Contact</a></li>
-                                <li><a href="{{ path('vyper_site_jobs') }}">Jobs</a></li>
-                                <li><a href="{{ path('vyper_site_cgu') }}">CGU</a></li>
+                                <li><a href="{{ path('vyper_site_partenaires') }}">{{ 'footer.menu.partners'|trans }}</a></li>
+                                <li><a href="{{ path('vyper_site_contact') }}">{{ 'footer.menu.contact'|trans }}</a></li>
+                                <li><a href="{{ path('vyper_site_jobs') }}">{{ 'footer.menu.jobs'|trans }}</a></li>
+                                <li><a href="{{ path('vyper_site_cgu') }}">{{ 'footer.menu.cgu'|trans }}</a></li>
                             </ul>
                         </div>
                     </div>

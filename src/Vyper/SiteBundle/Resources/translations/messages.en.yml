@@ -55,6 +55,11 @@ discography:
 
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - All rights reserved.
+    menu:
+        partners: Partners
+        contact: Contact
+        jobs: Jobs
+        cgu: CGU
 
 title:
     artists: Artists
@@ -65,6 +70,7 @@ title:
 sidebar:
     title:
         nextevent: Next Event
+        follow.us: Follow us
 
 calendar:
     today: Today
