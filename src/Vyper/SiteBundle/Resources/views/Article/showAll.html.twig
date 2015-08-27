@@ -17,7 +17,7 @@
             {% for article in articles %}
 
                 <!-- Post -->
-                <div class="main-item post-109 post type-post status-publish format-standard has-post-thumbnail hentry category-culture category-fun category-lifestyle tag-css3 tag-development">
+                <div class="main-item post type-post format-standard hentry">
                     <div class="post-img">
                         <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
                             <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
