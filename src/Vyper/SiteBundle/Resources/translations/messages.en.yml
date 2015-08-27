@@ -6,6 +6,7 @@ main:
         magazine: Magazine
         artists: Artists
         contests: Contests
+        events: Events
         features: Features
 main.menu.magazine.news: NewSSS
 main.menu.magazine.store: The Store

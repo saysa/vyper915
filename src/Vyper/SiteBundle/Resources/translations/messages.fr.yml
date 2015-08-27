@@ -6,6 +6,7 @@ main:
         magazine: Magazine
         artists: Artistes
         contests: Concours
+        events: Événements
         features: Vidéos
 main.menu.magazine.news: NewsFFF
 main.menu.magazine.store: La Boutique
