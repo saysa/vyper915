@@ -8,14 +8,14 @@
 
 {% block social_card %}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@japanfm" />
+    <meta name="twitter:site" content="@VYPER_JMusic" />
     <meta name="twitter:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" />
     <meta name="twitter:description" content="{{ article.getDescription|escape }}" />
 
     <meta property="og:title" content="{{ article.getTitle }}" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ url('showArticle', {'id': article.getId, 'slug': article.slug}) }}" />
-    <meta property="og:site_name" content="Japan FM" />
+    <meta property="og:site_name" content="VYPER Japanese Music" />
     <meta property="og:image" content="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" />
     <meta property="og:description" content="{{ article.getDescription|escape }}" />
 {% endblock %}
