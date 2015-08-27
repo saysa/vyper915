@@ -1,11 +1,11 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}Featured | {{ parent() }}{% endblock %}
+{% block title %}{{ 'title.features'|trans }} | {{ parent() }}{% endblock %}
 
 {% block above_the_fold %}
     <div id="above-the-fold" class="above-the-fold light">
         <div class="inner-wrapper">
-            <h2 class="page-title">FEATURED</h2>
+            <h2 class="page-title">{{ 'title.features'|trans|upper }}</h2>
         </div>
     </div>
 {% endblock %}

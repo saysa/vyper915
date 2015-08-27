@@ -41,6 +41,7 @@ event:
     title.calendar.eu: Calendar Europe
     title.calendar.us: Calendar United States
     title.calendar.asia: Calendar Asia
+    discuss: Discuss
 
 artists:
     intro: All the artists that appear in the magazine.
@@ -76,6 +77,7 @@ title:
     artists: Artists
     partners: Partners
     events: Events
+    features: Features
     404: Page not found
 
 sidebar:
