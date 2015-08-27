@@ -61,6 +61,8 @@ artist:
 discography:
     discography: Discographie
     buy: Acheter
+    country: Pays
+    released.date: Date de sortie
 
 footer:
     copyright: © Copyright 2015 VYPER Japanese Music - Tous droits réservés
