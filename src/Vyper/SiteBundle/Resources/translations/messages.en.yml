@@ -113,3 +113,6 @@ calendar:
         fri: Fri
         sat: Sat
         sun: Sun
+
+browser.warning: Our website is optimized for modern browsers.
+browser.update: Update now !

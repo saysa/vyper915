@@ -90,7 +90,7 @@
 
 {% block body %}
     <!--[if lt IE 9]>
-    <p class="chromeframe">Notre site est optimisé pour les navigateurs plus récents. <a data-bypass href="http://browsehappy.com/">Mets le tien à jour !</a></p>
+    <p class="chromeframe">{{ 'browser.warning'|trans }} <a data-bypass href="http://browsehappy.com/">{{ 'browser.update'|trans }}</a></p>
     <![endif]-->
 
     <div id="fb-root"></div>

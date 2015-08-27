@@ -113,3 +113,6 @@ calendar:
         fri: Ven
         sat: Sam
         sun: Dim
+
+browser.warning: DDDNotre site est optimisé pour les navigateurs plus récents.
+browser.update: DDDMets le tien à jour !
