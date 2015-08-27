@@ -1,12 +1,12 @@
 {% extends "VyperSiteBundle:layouts:layout.html.twig" %}
 
-{% block title %}Vyper Japanese Music Magazines | {{ parent() }}{% endblock %}
+{% block title %}VYPER Japanese Music Magazines | {{ parent() }}{% endblock %}
 
     {% block content %}
         <div class="post-wrap">
             <article id="post-28" class="post-28 post type-post status-publish format-standard hentry category-entertainment category-games tag-characters tag-villain">
                 <header class="entry-header">
-                    <h1>Vyper Japanese Music Magazines</h1>
+                    <h1>VYPER Japanese Music Magazines</h1>
                 </header>
             </article>
         </div>
@@ -21,7 +21,7 @@
                                 <a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
                             </div>
 
-                            <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">Vyper Magazine</a></h4>
+                            <h4 class="release-title"><a href="{{ path('showMagazine', {'id': mag.getId, 'slug': mag.slug}) }}">VYPER Magazine</a></h4>
                             <h6 class="release-artist">Vol {{ mag.volume }}</h6>
                             <div class="release-meta">
 
