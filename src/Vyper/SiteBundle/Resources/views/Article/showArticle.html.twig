@@ -115,9 +115,9 @@
                 <span><strong>VYPER Japanese Music</strong></span>
             </p>
 
-            <ul>
+            <div class="row">
             {% for key, mag in article.magazines %}
-                <div class="col-md-3 padding-off">
+                <div class="grid_3 padding-off">
                     <div class="release-thumbnail">
                         <div class="release-cover">
                             <a href="{{ mag.getShopLink }}"><img src="{{ asset(mag.picture.getPath('cover-mag-front')) }}" class="fullwidth" alt=""></a>
@@ -134,7 +134,8 @@
                     </div>
                 </div>
             {% endfor %}
-            </ul>
+            </div>
+
             <div class="clear"></div>
         {% endif %}
 
