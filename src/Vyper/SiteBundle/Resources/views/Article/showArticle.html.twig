@@ -205,11 +205,11 @@
             <aside class="widget fiche-group">
                 {% for artist in article.artists %}
                     <h4>{{ artist.name }}</h4>
-                    <div class="">
-                        <div class="">
+                    <div class="row">
+                        <div class="grid_1">
                             <img  src="{{ asset(artist.picture.getPath('75-75')) }}" alt="{{ artist.name }}">
                         </div>
-                        <div class="">
+                        <div class="grid_2">
                             <ul>
                                 {% if artist.getBiography and app.request.getLocale() == 'fr' %}
                                     <li><a href="{{ path('showArtist', {'id': artist.getId, 'slug': artist.slug}) }}#biography">{{ 'artist.biography'|trans }}</a></li>
