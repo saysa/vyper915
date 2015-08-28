@@ -111,9 +111,9 @@
 
 
         {% if article.magazines is defined %}
-            <div class="content-title main-color-reverse">
-                <h4>VYPER Japanese Music</h4>
-            </div>
+            <p class="title">
+                <span><strong>VYPER Japanese Music</strong></span>
+            </p>
 
             <ul>
             {% for key, mag in article.magazines %}
@@ -140,9 +140,9 @@
 
 
         {% if article.album is not null %}
-            <div class="content-title main-color-reverse">
-                <h4>{{ 'article.gallery'|trans }}</h4>
-            </div>
+            <p class="title">
+                <span><strong>{{ 'article.gallery'|trans }}</strong></span>
+            </p>
 
 
 
@@ -173,8 +173,7 @@
 
 
 
-
-        <p class="content-title main-color-reverse" id="comments">
+        <p class="title" id="comments">
             <span><strong>{{ 'article.title.comments'|trans }}</strong></span>
         </p>
         <!-- /comments -->
