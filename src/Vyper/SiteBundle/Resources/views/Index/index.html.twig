@@ -21,14 +21,8 @@
                         </div>
                         <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
                         <div class="post-dca">
-                            <span class="date">June 9, 2014</span>
-                            <span class="comments"><a href="http://dialy.different-themes.com/sali-hughes-on-facial-sunblocks-2/#comments">No Comments</a></span>
-                            <span class="author"><a href="http://dialy.different-themes.com/author/admin/" title="Posts by Different Themes" rel="author">Different Themes</a></span>
-                            <ul class="rating-list">
-                                <li>
-
-                                </li>
-                            </ul>
+                            <span class="author">{{ 'article.author'|trans }} <a href="#">{{ article.author }}</a></span>
+                            <span class="date">{{ 'article.published'|trans }} <a href="#month">{{ article.getReleaseDateFrontFormat() }}</a></span>
                         </div>
                         <p>{{ article.getDescription }}</p>
                     </div>
@@ -66,14 +60,9 @@
                     <div class="post-meta">
                         <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
                         <div class="post-dca">
-                            <span class="date">June 10, 2014</span>
-                            <span class="comments"><a href="http://dialy.different-themes.com/the-homesman-rides-the-expendables-assemble-2/#comments">No Comments</a></span>
-                            <span class="author"><a href="http://dialy.different-themes.com/author/admin/" title="Posts by Different Themes" rel="author">Different Themes</a></span>
-                            <ul class="rating-list">
-                                <li>
-
-                                </li>
-                            </ul>
+                            <span class="author">{{ 'article.author'|trans }} <a href="#">{{ article.author }}</a></span>
+                            <span class="date">{{ 'article.published'|trans }} <a href="#month">{{ article.getReleaseDateFrontFormat() }}</a></span>
+                            <span class="theme">Theme <a href="#">{{ article.getArticleType.getName }}</a></span>
                         </div>
                         <p>{{ article.getDescription }}</p>
                     </div>
@@ -100,14 +89,8 @@
                             </div>
                             <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
                             <div class="post-dca">
-                                <span class="date">June 9, 2014</span>
-                                <span class="comments"><a href="http://dialy.different-themes.com/sali-hughes-on-facial-sunblocks-2/#comments">No Comments</a></span>
-                                <span class="author"><a href="http://dialy.different-themes.com/author/admin/" title="Posts by Different Themes" rel="author">Different Themes</a></span>
-                                <ul class="rating-list">
-                                    <li>
-
-                                    </li>
-                                </ul>
+                                <span class="author">{{ 'article.author'|trans }} <a href="#">{{ article.author }}</a></span>
+                                <span class="date">{{ 'article.published'|trans }} <a href="#month">{{ article.getReleaseDateFrontFormat() }}</a></span>
                             </div>
                             <p>{{ article.getDescription }}</p>
                         </div>
