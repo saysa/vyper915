@@ -14,6 +14,9 @@ main.menu.magazine.magazine: Magazine
 main.menu.magazine.media: Media
 main.menu.magazine.subscriptions: Subscriptions
 
+homepage:
+    latests.news: Latest news
+
 article:
     author: Author
     published: Published
