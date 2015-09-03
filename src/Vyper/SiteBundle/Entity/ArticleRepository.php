@@ -71,6 +71,30 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
+    public function highlightWithoutMagazine($locale, $type)
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.live = true')
+            ->andWhere('a.highlight = true')
+            ->andWhere('a.locale = :locale')
+            ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
+            ->setMaxResults(8)
+            ->setParameter('locale', $locale)
+        ;
+
+        $queryBuilder
+            ->andWhere('a.articleType != :type')
+            ->setParameter('type', $type);
+
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function showRecentArticles($limit = 10)
     {
         $queryBuilder = $this->createQueryBuilder('a');
