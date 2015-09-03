@@ -238,9 +238,11 @@
 
     <script>
         $(document).ready(function () {
-           var n_width = $('.entry-image img').width();
-            console.log(n_width);
-           $('.caption').width(n_width-30);
+
+            setInterval(function() {
+                var n_width = $('.entry-image img').width();
+                $('.caption').width(n_width-30);
+            }, 1000);
         });
     </script>
 
