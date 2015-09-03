@@ -32,9 +32,11 @@
                                 <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" class="big-format" alt="{{ article.getTitle|escape }}">
 
                             {% endif %}
-                            <div>
-                                {{ article.picture.getPhotoCredit }}
-                            </div>
+                            {% if article.picture.getPhotoCredit != '' %}
+                                <div class="caption">
+                                    <p>Credit : {{ article.picture.getPhotoCredit }}</p>
+                                </div>
+                            {% endif %}
                         </div>
                     </div>
 
@@ -227,4 +229,19 @@
             </aside>
         {% endif %}
     {% endif %}
+{% endblock %}
+
+
+{% block javascripts_footer %}
+
+    {{ parent() }}
+
+    <script>
+        $(document).ready(function () {
+           var n_width = $('.entry-image img').width();
+            console.log(n_width);
+           $('.caption').width(n_width-30);
+        });
+    </script>
+
 {% endblock %}
