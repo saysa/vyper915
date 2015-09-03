@@ -8,7 +8,7 @@ main:
         contests: Contests
         events: Events
         features: Features
-main.menu.magazine.news: NewSSS
+main.menu.magazine.news: News
 main.menu.magazine.store: The Store
 main.menu.magazine.magazine: Magazine
 main.menu.magazine.media: Media
