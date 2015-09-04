@@ -111,16 +111,18 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
-    public function latestNews($type)
+    public function latestNews($type, $locale)
     {
         $queryBuilder = $this->createQueryBuilder('a');
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.articleType = :type')
             ->andWhere('a.live = true')
+            ->andWhere('a.locale = :locale')
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
             ->setMaxResults(5)
             ->setParameter('type', $type)
+            ->setParameter('locale', $locale)
         ;
         $query = $queryBuilder->getQuery();
         $results = $query->getResult();
@@ -163,7 +165,7 @@ class ArticleRepository extends EntityRepository
     }
 
 
-    public function showAll($posts_per_page, $page, $type)
+    public function showAll($posts_per_page, $page, $type, $locale)
     {
         if ($page < 1) {
             throw new \InvalidArgumentException('Can not be < 1');
@@ -174,6 +176,7 @@ class ArticleRepository extends EntityRepository
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.live = true')
+            ->andWhere('a.locale = :locale')
         ;
         if (!is_object($type[0])) {
             $w = '';
@@ -196,6 +199,7 @@ class ArticleRepository extends EntityRepository
                 ->setParameter('type', $type);
         }
 
+        $queryBuilder->setParameter('locale', $locale);
         $queryBuilder->add('orderBy','a.releaseDate DESC, a.releaseTime DESC');
 
         $query = $queryBuilder->getQuery();

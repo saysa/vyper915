@@ -51,19 +51,19 @@ class IndexController extends Controller
             $em->getRepository('VyperSiteBundle:ArticleType')->findByName("musique : news"),
             $em->getRepository('VyperSiteBundle:ArticleType')->findByName("news"),
         );
-        $latest_actu  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page=5, $page=1, $type);
+        $latest_actu  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page=5, $page=1, $type, $locale);
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("News");
-        $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $latest_news = $em->getRepository('VyperSiteBundle:Article')->latestNews($type, $locale);
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Chronique");
-        $latest_chroniques = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $latest_chroniques = $em->getRepository('VyperSiteBundle:Article')->latestNews($type, $locale);
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Interview");
-        $latest_interviews = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $latest_interviews = $em->getRepository('VyperSiteBundle:Article')->latestNews($type, $locale);
 
         $type = $em->getRepository('VyperSiteBundle:ArticleType')->findByName("Live report");
-        $latest_livereports = $em->getRepository('VyperSiteBundle:Article')->latestNews($type);
+        $latest_livereports = $em->getRepository('VyperSiteBundle:Article')->latestNews($type, $locale);
 
         $last_videos = $em->getRepository('VyperSiteBundle:Video')->lastFive();
 
