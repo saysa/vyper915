@@ -2,11 +2,18 @@
 
 {% block title %}{{ event.title }}, {{ event.location.name }} | {{ parent() }}{% endblock %}
 
+{% block above_the_fold %}
+    <div id="above-the-fold" class="above-the-fold light">
+        <div class="inner-wrapper">
+            <h2 class="page-title">{{ event.getTitle }}</h2>
+        </div>
+    </div>
+{% endblock %}
+
     {% block content %}
         <div class="post-wrap">
             <article id="post-28" class="post type-post hentry">
                 <header class="entry-header">
-                    <h1>{{ event.getTitle }}</h1>
 
                     <div class="entry-meta">
                         <!-- AddThis Button BEGIN -->
