@@ -110,8 +110,8 @@
 
                 <div class="polyglot-language-switcher" data-grid-columns="1" data-anim-effect="fade" data-open-mode="click">
                     <ul style="display: none">
-                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/en" {% if app.request.getLocale() == 'en' %}class="pls-selected-locale"{% endif %} title="English" data-lang-id="en"> English</a></li>
-                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/fr" {% if app.request.getLocale() == 'fr' %}class="pls-selected-locale"{% endif %} title="French (France)" data-lang-id="fr"> Français (France)</a></li>
+                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/en" {% if app.request.getLocale() == 'en' %}class="pls-selected-locale"{% endif %} title="English" data-lang-id="en"><img src="{{ asset('bundles/vypersite/img/acme/img/us.png') }}" alt="English"> English</a></li>
+                        <li><a href="{{ app.request.getSchemeAndHttpHost() }}/fr" {% if app.request.getLocale() == 'fr' %}class="pls-selected-locale"{% endif %} title="French (France)" data-lang-id="fr"><img src="{{ asset('bundles/vypersite/img/acme/img/fr.png') }}" alt="Français"> Français</a></li>
                     </ul>
                 </div>
 
