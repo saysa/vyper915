@@ -54,7 +54,7 @@
                     </div>
 
                 </div>
-                {% if clear_count == 2 %}</div>{% endif %}
+                {% if clear_count == 2 or loop.last == true %}</div>{% endif %}
 
                 {% if clear_count==2 %}
                     {% set clear_count = 0 %}
