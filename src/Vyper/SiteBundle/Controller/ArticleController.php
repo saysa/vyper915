@@ -81,6 +81,7 @@ class ArticleController extends Controller
     public function showAllAction(Request $request, $page, $type)
     {
         $em = $this->getDoctrine()->getManager();
+        $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
         $view = $this->container->get('saysa_view');
         $articles_per_page = $this->container->getParameter('articles_per_page');
 
@@ -133,7 +134,7 @@ class ArticleController extends Controller
                 break;
         }
 
-        $articles  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page, $page, $type);
+        $articles  = $em->getRepository('VyperSiteBundle:Article')->showAll($articles_per_page, $page, $type, $locale);
         $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
         $view
             ->set('articles', $articles)
