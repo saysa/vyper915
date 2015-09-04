@@ -50,9 +50,10 @@
                         <p>
                             {{ event.getDescription }}
                         </p>
-                        <div class="content-title main-color-reverse">
-                            <h4>Plan</h4>
-                        </div>
+
+                        <p class="title">
+                            <span><strong>Plan</strong></span>
+                        </p>
 
                         <div class="map">
                             <iframe width="100%" scrolling="no" height="270" frameborder="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q={{ event.location.googlemap }}&amp;z=14&amp;iwloc=near&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
@@ -74,8 +75,7 @@
 
 
 
-
-        <p class="content-title main-color-reverse" id="comments">
+        <p class="title" id="comments">
             <span><strong>{{ 'event.discuss'|trans }}</strong></span>
         </p>
         <!-- /comments -->
