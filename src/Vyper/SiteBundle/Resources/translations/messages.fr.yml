@@ -10,7 +10,7 @@ main:
         features: Vidéos
 main.menu.magazine.news: News
 main.menu.magazine.store: La Boutique
-main.menu.magazine.magazine: Magazine
+main.menu.magazine.magazine: Découvrir le magazine
 main.menu.magazine.media: Presse
 main.menu.magazine.subscriptions: Abonnements
 main.menu.magazine.subscriptions.ad: Profitez du magazine le plus complet en France
@@ -159,3 +159,11 @@ contest:
     end: Fin
     draw: Tirage au sort
     first: Premier arrivé premier servi
+
+magazine:
+    bottom: Profitez maintenant du magazine le plus complet en France ainsi que des avantages exclusifs proposés par VYPER
+    subscribe.button: Je m'abonne
+
+contact:
+    premises: La maison
+    send.form.button: Envoyer

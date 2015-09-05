@@ -10,7 +10,7 @@ main:
         features: Features
 main.menu.magazine.news: News
 main.menu.magazine.store: The Store
-main.menu.magazine.magazine: Magazine
+main.menu.magazine.magazine: Discover the magazine
 main.menu.magazine.media: Media
 main.menu.magazine.subscriptions: Subscriptions
 main.menu.magazine.subscriptions.ad: Order now the best of the J-Rock music
@@ -78,7 +78,7 @@ footer:
     copyright: © Copyright 2015 VYPER Japanese Music - All rights reserved.
     menu:
         partners: Partners
-        contact: Contact
+        contact: Contact us
         jobs: Jobs
         cgu: CGU
 
@@ -159,3 +159,11 @@ contest:
     end: End
     draw: Draw
     first: First arrived
+
+magazine:
+    bottom: Enjoy now the most complete magazine offered by VYPER
+    subscribe.button: Subscribe now
+
+contact:
+    premises: Our premises
+    send.form.button: Contact us
