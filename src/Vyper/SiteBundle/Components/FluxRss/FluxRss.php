@@ -37,7 +37,7 @@ class FluxRss {
         $xml .= "<copyright>$copy</copyright>\n";
         $xml .= "<image>\n";
         $xml .= "	<title>VYPER Japanese Music</title>\n";
-        $xml .= "	<url>". $request->getSchemeAndHttpHost() ."/assets/img/logo.png</url>\n";
+        $xml .= "	<url>". $request->getSchemeAndHttpHost() ."/bundles/vypersite/img/logo.png?size=150</url>\n";
         $xml .= "	<link>http://www.vyper-jmusic.com</link>\n";
         $xml .= "</image>\n";
         $xml .= "<atom:link href=\"" . $request->getSchemeAndHttpHost() . "/rss_fil_info.xml\" rel=\"self\" type=\"application/rss+xml\" />\n";
