@@ -46,6 +46,11 @@ event:
     title.calendar.us: Calendrier États-Unis
     title.calendar.asia: Calendrier Asie
     discuss: Discuter
+    concert: Concert
+    convention: Convention
+    hours: Horaires
+    price: Prix
+    address: Addresse
 
 artists:
     intro: Retrouvez tous les artistes apparus dans le magazine.

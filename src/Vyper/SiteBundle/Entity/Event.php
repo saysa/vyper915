@@ -652,4 +652,14 @@ class Event
     {
         return $this->timeEnd;
     }
+
+    public function getEventDateMonth()
+    {
+        setlocale (LC_TIME, 'fr_FR.utf8','fra');
+        $event = $this->getDate()->getTimestamp();
+        $month = ucfirst(strftime( "%b", $event ));
+        $month = str_replace(".", "", $month);
+        $month = substr($month, 0, 3);
+        return $month;
+    }
 }

@@ -12,51 +12,111 @@
 
     {% block content %}
         <div class="post-wrap">
-            <article id="post-28" class="post type-post hentry">
-                <header class="entry-header">
-
-                    <div class="entry-meta">
-                        <!-- AddThis Button BEGIN -->
-                        <div class="addthis_toolbox addthis_default_style ">
-                            <a class="addthis_button_preferred_1"></a>
-                            <a class="addthis_button_preferred_2"></a>
-                            <a class="addthis_button_preferred_3"></a>
-                            <a class="addthis_button_preferred_4"></a>
-                            <a class="addthis_button_compact"></a>
-                            <a class="addthis_counter addthis_bubble_style"></a>
-                        </div>
-                        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
-                        <!-- AddThis Button END -->
-                        <div class="left">
-                            <span class="date"><i class="fa fa-calendar"></i> {{ event.getDateFrontFormat }}</span>
-
-
-
-					<span class="category">
-						<i class="fa fa-globe"></i>
-                        {{ event.location.town }}, {{ event.location.country.name|upper|slice(0, 3) }}
-				    </span>
-
-                        </div>
-
-
-                    </div>
-                </header>
-
+            <article class="post type-post hentry">
 
                 <div class="entry-content-wrap">
 
-                    {% if event.picture is null %}
-                        <img  src="{{ asset('bundles/vypersite/css/images/artists-event.jpg?size=374-200') }}" class="wp-post-image artists-img" alt="">
-                    {% else %}
-                        <img  src="{{ asset(event.picture.getPath('374-200')) }}" alt="{{ event.getTitle }}" />
-                    {% endif %}
+                    <div class="article-big-image">
+                        <div class="row">
+                            <div class="grid_6">
+                            <span class="event-calendar first-child">
+                            <font class="event-date first-child">{{ event.date|date("d") }}</font>
+                            <font class="event-month">{{ event.getEventDateMonth }} {{ event.date|date("Y") }}</font>
+                            <font class="event-year last-child">{{ event.location.town }}, {{ event.location.country.name|upper|slice(0,3) }}</font>
+                            </span>
+
+
+                                {% if event.picture is null %}
+                                    <img  src="{{ asset('bundles/vypersite/css/images/artists-event.jpg?size=374-200') }}" class="wp-post-image artists-img" title="{{ event.title }}" alt="">
+                                {% else %}
+                                    <img  src="{{ asset(event.picture.getPath('374-200')) }}" alt="{{ event.getTitle }}" title="{{ event.title }}" />
+                                {% endif %}
+                            </div>
+
+                            <div class="grid_6">
+                                <!-- AddThis Button BEGIN -->
+                                <div class="addthis_toolbox addthis_default_style ">
+                                    <a class="addthis_button_preferred_1"></a>
+                                    <a class="addthis_button_preferred_2"></a>
+                                    <a class="addthis_button_preferred_3"></a>
+                                    <a class="addthis_button_preferred_4"></a>
+                                    <a class="addthis_button_compact"></a>
+                                    <a class="addthis_counter addthis_bubble_style"></a>
+                                </div>
+                                <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-533aac5d5a5f5a91"></script>
+                                <!-- AddThis Button END -->
+                            </div>
+                        </div>
+
+                    </div>
+
 
                     <div class="entry-content">
                         <p>
                             {{ event.getDescription }}
                         </p>
+
+                        <table>
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+
+                            <tr>
+                                <td>Type</td>
+                                <td>
+                                    {% if event.type.name == 'Concert' %}
+                                        {{ 'event.concert'|trans }}
+                                    {% elseif event.type.name == 'Convention' %}
+                                        {{ 'event.convention'|trans }}
+                                    {% endif %}
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Tour/Festival</td>
+                                <td>
+                                    {{ event.tour.title }}
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Date</td>
+                                <td>
+                                    {{ event.getDateFrontFormat(event.getId) }}
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>{{ 'event.hours'|trans }}</td>
+                                <td>
+                                    {{ event.time|date('h:i') }} - {{ event.timeEnd|date('h:i') }}
+                                </td>
+                            </tr>
+
+                            {% if event.price is not null %}
+                                <tr>
+                                    <td>{{ 'event.price'|trans }}</td>
+                                    <td>
+                                        {{ event.price }}
+                                    </td>
+                                </tr>
+                            {% endif %}
+
+                            <tr>
+                                <td>{{ 'event.address'|trans }}</td>
+                                <td>
+                                    {{ event.location.address }} - {{ event.location.country.name|upper|slice(0, 3) }}
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
 
                         <p class="title">
                             <span><strong>Plan</strong></span>
