@@ -25,17 +25,29 @@
                     <h3><a href="">{{ video.getTitle }}</a></h3>
                     <div class="post-dca">
                         <span class="date">{{ video.getReleaseDateFrontFormat(video.getId) }}</span>
-                        <ul class="rating-list">
-                            <li>
-
-                            </li>
-                        </ul>
+                        <span class="author"><a href="#" rel="author">VYPER Japanese Music</a></span>
                     </div>
 
                     <p>{{ video.getDescription }}</p>
                 </div>
             </div>
-            {% if loop.index%2==0 %}</div><!-- end row -->{% endif %}
+            {% if loop.index%2==0 or loop.last == true %}</div><!-- end row -->{% endif %}
+
+
+            {% if loop.index==2 %}
+                <div class="text-center under-margin">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- footer-leaderboard -->
+                    <ins class="adsbygoogle"
+                         style="display:inline-block;width:728px;height:90px"
+                         data-ad-client="ca-pub-3070362287154347"
+                         data-ad-slot="5037213511"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            {% endif %}
+
         {% endfor %}
 
 
@@ -44,28 +56,17 @@
 
 
 
-        <div class="add_468">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- un_artist + encarts index -->
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:468px;height:60px"
-                 data-ad-client="ca-pub-3070362287154347"
-                 data-ad-slot="6183315514"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
 
-        <div class="pagination">
+        <ul class="page-numbers">
 
             {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
             {% for p in range(1, total_videos) %}
                 {% if p == page %}
-                    <span class="page-numbers current">{{ p }}</span>
+                    <li><span class="page-numbers current">{{ p }}</span></li>
                 {% else %}
-                    <a href="{{ path('vyper_site_showAllVideos', {'page': p}) }}" class="page-numbers">{{ p }}</a>
+                    <li><a href="{{ path('vyper_site_showAllVideos', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
                 {% endif %}
             {% endfor %}
 
-        </div>
+        </ul>
     {% endblock %}
