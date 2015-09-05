@@ -18,7 +18,7 @@ article .post-meta span:before,
 .above-the-fold h2.page-title,
 .page404 h2,
 #groups-list-options a.selected,
-#members-list-options a.selected {color: #D54858 }
+#members-list-options a.selected {color: #B31C24 }
 
 
 /*==============================================================================
@@ -39,7 +39,7 @@ a.selected-gallery-filter,
 .block-layout-four .main-item .post-img span,
 .block-layout-five .main-item .post-img span,
 table.cart td.actions .coupon .button,
-ul.top-rated .rating-total strong {background-color: #D54858 }
+ul.top-rated .rating-total strong {background-color: #B31C24 }
 
 
 /*==============================================================================
@@ -48,7 +48,7 @@ ul.top-rated .rating-total strong {background-color: #D54858 }
 .price_slider_wrapper .ui-slider-handle,
 .block-layout-three .item img,
 .block-layout-two .item img,
-.block-layout-one .item img {border-color: #D54858 }
+.block-layout-one .item img {border-color: #B31C24 }
 
 
 
@@ -364,7 +364,7 @@ aside h4 {
 }
 
 .features-13 {
-    background: #A0505A;
+    background: #B31C24;
     color: #fff;
     padding: 80px 0;
     position: relative;
@@ -421,7 +421,7 @@ aside h4 {
 .qbutton:hover {
     background-color: #FFF;
     border-color: #FFF;
-    color: #A0505A;
+    color:#B31C24;
 }
 
 .bgdark {
@@ -562,4 +562,59 @@ ul.social-icons li.rss a {
     margin-left: 54px;
     padding-top: 0;
     font-size: 10px;
+}
+
+
+.v-align-children {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.pricing-1 .pricing-option h6 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    margin-bottom: 20px;
+}
+
+.pricing-1 .price-container {
+    margin-bottom: 26.66666667px;
+}
+
+.pricing-1 .price {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 120px;
+}
+
+.pricing-1 .dollar {
+    position: relative;
+    bottom: 67px;
+}
+
+.pricing-1 .dollar, .pricing-1 .terms {
+    font-size: 22px;
+}
+
+.pricing-1 h5 {
+    margin-bottom: 20px;
+}
+
+.pricing-1 ul {
+    line-height: 32px;
+    list-style: none;
+}
+
+.pricing-subscriptions {
+    padding: 80px 0;
+    position: relative;
+
 }
