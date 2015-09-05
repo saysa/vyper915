@@ -18,7 +18,7 @@ article .post-meta span:before,
 .above-the-fold h2.page-title,
 .page404 h2,
 #groups-list-options a.selected,
-#members-list-options a.selected {color: #B31C24 }
+#members-list-options a.selected {color: #D54858 }
 
 
 /*==============================================================================
@@ -39,7 +39,7 @@ a.selected-gallery-filter,
 .block-layout-four .main-item .post-img span,
 .block-layout-five .main-item .post-img span,
 table.cart td.actions .coupon .button,
-ul.top-rated .rating-total strong {background-color: #B31C24 }
+ul.top-rated .rating-total strong {background-color: #D54858 }
 
 
 /*==============================================================================
@@ -48,7 +48,7 @@ ul.top-rated .rating-total strong {background-color: #B31C24 }
 .price_slider_wrapper .ui-slider-handle,
 .block-layout-three .item img,
 .block-layout-two .item img,
-.block-layout-one .item img {border-color: #B31C24 }
+.block-layout-one .item img {border-color: #D54858 }
 
 
 
