@@ -30,15 +30,15 @@ class FluxRss {
         //-- On affecte le futur contenu du fichier xml
         $xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\">\n";
         $xml .= "<channel>\n";
-        $xml .= "<title>Japan FM</title>\n";
-        $xml .= "<link>http://www.japanfm.fr</link>\n";
-        $xml .= "<description>Toutes les news de japanfm.fr</description>\n";
+        $xml .= "<title>VYPER Japanese Music</title>\n";
+        $xml .= "<link>http://www.vyper-jmusic.com</link>\n";
+        $xml .= "<description>Toutes les news de vyper-jmusic.com</description>\n";
         $xml .= "<language>fr</language>\n";
         $xml .= "<copyright>$copy</copyright>\n";
         $xml .= "<image>\n";
-        $xml .= "	<title>Japan FM</title>\n";
+        $xml .= "	<title>VYPER Japanese Music</title>\n";
         $xml .= "	<url>". $request->getSchemeAndHttpHost() ."/assets/img/logo.png</url>\n";
-        $xml .= "	<link>http://www.japanfm.fr</link>\n";
+        $xml .= "	<link>http://www.vyper-jmusic.com</link>\n";
         $xml .= "</image>\n";
         $xml .= "<atom:link href=\"" . $request->getSchemeAndHttpHost() . "/rss_fil_info.xml\" rel=\"self\" type=\"application/rss+xml\" />\n";
 
