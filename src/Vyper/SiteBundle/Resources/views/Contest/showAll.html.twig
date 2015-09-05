@@ -31,6 +31,9 @@
 
                     <p>{{ contest.getDescription|raw }}</p>
 
+                    {% if contest.picture is not null %}
+                        <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(contest.picture.getPath('article')) }}" alt="" title="{{ contest.getTitle }}" />
+                    {% endif %}
 
                     <table>
                         <thead>
@@ -79,21 +82,6 @@
 
                 </div>
 
-                <div class="post-meta ">
-                    <h3><a href="#">{{ contest.getTitle }}</a></h3>
-                    <div class="post-dca">
-                        <span class="date">{{ contest.getReleaseDateFrontFormat(contest.getId) }}</span>
-                        <span class="author"><a href="#" title="VYPER Japanese Music" rel="author">VYPER Japanese Music</a></span>
-                        <ul class="rating-list">
-                            <li>
-
-                            </li>
-                        </ul>
-                    </div>
-
-
-                    <p>Aliquam justo mi, lobortis posuere lacus ut, ultricies feugiat nulla. Nulla vestibulum lacinia sollicitudin. Quisque ultricies semper congue. Aenean nec odio ante. Etiam rutrum hendrerit nulla, et accumsan justo dapibus ac. Duis varius sit amet sapien vitae ultricies. Nulla cursus dolor et justo pulvinar mattis. Vestibulum diam nisl, vulputate vitae</p>
-                </div>
 
             {% endfor %}
 
