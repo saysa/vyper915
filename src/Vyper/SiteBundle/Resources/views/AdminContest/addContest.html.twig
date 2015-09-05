@@ -20,6 +20,17 @@
 
                             <fieldset class="col-sm-12">
 
+                                <!-- Locale -->
+                                <div class="row">
+                                    <div class="form-group col-lg-9">
+                                        {{ form_label(form.locale, "Language") }}
+                                        <div class="controls">
+                                            {{ form_widget(form.locale, {  'attr': {'class': 'form-control', 'data-rel': 'chosen'} }) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+
                                 <div class="row">
                                     <div class="col-lg-4">
 
@@ -57,12 +68,16 @@
                                             <div class="form-group col-lg-9{%if error_name is defined %} has-error{% endif %}">
                                                 {{ form_label(form.description, "Description *") }}
                                                 <div class="controls">
-                                                    {{ form_widget(form.description, {  'attr': {'class': 'form-control'} }) }}
+                                                    {{ form_widget(form.description, { 'attr': {'class': 'cleditor'} }) }}
                                                     {{ form_errors(form.description) }}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                </div>
+
+                                <div class="row">
                                     <div class="col-lg-4">
                                         <!-- Prizes  -->
                                         <div class="row">
@@ -74,6 +89,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-lg-4">
+
                                     </div>
                                 </div>
 

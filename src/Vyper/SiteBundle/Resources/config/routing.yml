@@ -126,6 +126,12 @@ vyper_site_showAllArtist:
     requirements:
         page: \d*
 
+vyper_site_showAllContests:
+    path:    /concours/{page}
+    defaults: { _controller: VyperSiteBundle:Contest:showAll, page: 1 }
+    requirements:
+        page: \d*
+
 vyper_site_showAllEvent:
     path:    /events
     defaults: { _controller: VyperSiteBundle:Event:showAll }

@@ -1,5 +1,6 @@
 parameters:
     articles_per_page: 8
+    contests_per_page: 8
     albums_per_page: 32
     magazines_per_page: 12
     videos_per_page: 6

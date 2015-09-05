@@ -29,6 +29,10 @@ class ContestType extends AbstractType
             ->add('dateEnd', 'date', array('widget' => 'single_text'))
             ->add('time', 'time', array('widget' => 'single_text'))
             ->add('timeEnd', 'time', array('widget' => 'single_text'))
+            ->add('locale', 'entity', array(
+                'class' => 'VyperSiteBundle:LocaleType',
+                'property' => 'name',
+            ))
         ;
     }
     

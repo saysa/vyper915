@@ -81,6 +81,7 @@ title:
     artists: Artists
     partners: Partners
     events: Events
+    contests: Contests
     features: Features
     404: Page not found
 
@@ -145,3 +146,11 @@ browser.update: Update now !
 partners:
     prod.and.media: Productions and Medias
     event: Events
+
+contest:
+    prizes: Prizes
+    how.much.winners: How much winners ?
+    start: Start
+    end: End
+    draw: Draw
+    first: First arrived

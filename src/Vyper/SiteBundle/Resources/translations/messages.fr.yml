@@ -81,6 +81,7 @@ title:
     artists: Artistes
     partners: Partenaires
     events: Événements
+    contests: Concours
     features: Vidéos
     404: Page non trouvée
 
@@ -145,3 +146,11 @@ browser.update: DDDMets le tien à jour !
 partners:
     prod.and.media: Productions et Médias
     event: Événements
+
+contest:
+    prizes: Prix
+    how.much.winners: Combien de gagnants ?
+    start: Début
+    end: Fin
+    draw: Tirage au sort
+    first: Premier arrivé premier servi

@@ -139,7 +139,7 @@ class ContestRepository extends EntityRepository
     }
 
 
-    public function showAll($posts_per_page, $page, $type)
+    public function showAll($posts_per_page, $page, $locale)
     {
         if ($page < 1) {
             throw new \InvalidArgumentException('Can not be < 1');
@@ -150,29 +150,10 @@ class ContestRepository extends EntityRepository
         $queryBuilder
             ->where('a.deleted = false')
             ->andWhere('a.live = true')
+            ->andWhere('a.locale = :locale')
+            ->setParameter('locale', $locale)
+            ->add('orderBy','a.created DESC')
         ;
-        if (!is_object($type[0])) {
-            $w = '';
-
-            foreach ($type as $k => $typeMusique) {
-                if (!is_string($typeMusique)) {
-                    if ($k == 1)
-                        $w = ' a.articleType = :m' . $k . 'param';
-                    else
-                        $w.= ' OR a.articleType = :m' . $k . 'param';
-
-
-                    $queryBuilder->setParameter('m' . $k . 'param', $typeMusique);
-                    #echo "set Param $k et $typeMusique <br />";
-                }
-            }
-            $queryBuilder->andWhere($w);
-        } else {
-            $queryBuilder->andWhere('a.articleType = :type')
-                ->setParameter('type', $type);
-        }
-
-        $queryBuilder->add('orderBy','a.releaseDate DESC, a.releaseTime DESC');
 
         $query = $queryBuilder->getQuery();
 

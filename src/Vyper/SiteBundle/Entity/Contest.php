@@ -32,6 +32,12 @@ class Contest
     private $title;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\LocaleType")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $locale;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="prizes", type="string", length=255)
@@ -519,5 +525,43 @@ class Contest
     public function getContestWinType()
     {
         return $this->contestWinType;
+    }
+
+    /**
+     * Set locale
+     *
+     * @param \Vyper\SiteBundle\Entity\LocaleType $locale
+     * @return Article
+     */
+    public function setLocale(\Vyper\SiteBundle\Entity\LocaleType $locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Get locale
+     *
+     * @return \Vyper\SiteBundle\Entity\LocaleType
+     */
+    public function getLocale()
+    {
+        return $this->locale;
+    }
+
+    public function getReleaseDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getCreated()->format('Y-m-d'));
+    }
+
+    public function getStartDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getDate()->format('Y-m-d'));
+    }
+
+    public function getEndDateFrontFormat()
+    {
+        return StringMethods::sqlDateToCustom($this->getDateEnd()->format('Y-m-d'));
     }
 }
