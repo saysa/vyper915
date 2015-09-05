@@ -2,18 +2,26 @@
     <aside class="widget widget_flickr">
         <div class="widget-title"><h4>{{ 'sidebar.title.nextevent'|trans }}</h4></div>
 
+        <div class="article-big-image">
+
+            <span class="event-calendar first-child">
+                <font class="event-date first-child">{{ nextEvent_event.date|date("d") }}</font>
+                <font class="event-month">{{ nextEvent_dateMonth }}</font>
+                <font class="event-year last-child">{{ nextEvent_event.location.town }}, {{ nextEvent_event.location.country.name|upper|slice(0,3) }}</font>
+            </span>
+
+            {% if nextEvent_event.picture is null %}
+                <img  src="{{ asset('bundles/vypersite/css/images/artists-event.jpg?size=374-200') }}" class="wp-post-image artists-img" title="{{ nextEvent_event.title }}" alt="">
+            {% else %}
+                <img  src="{{ asset(event.picture.getPath('374-200')) }}" alt="{{ event.getTitle }}" title="{{ nextEvent_event.title }}" />
+            {% endif %}
+
+        </div>
+
         <div class="featured-event">
-            <div class="event-date">
-                <div class="event-date-holder">
-                    <div class="event-date-number">{{ nextEvent_event.date|date("d") }}</div>
-                    <div class="event-month">{{ nextEvent_dateMonth }}</div>
-                </div>
-                <div class="clear"></div>
-            </div>
+
             <div class="event-details">
                 <h5 class="event-title"><a href="{{ path('showEvent', {'id': nextEvent_event.getId, 'slug': nextEvent_event.slug}) }}">{{ nextEvent_event.title }}</a></h5>
-                <div class="event-place">{{ nextEvent_event.location.town }}, {{ nextEvent_event.location.country.name|upper|slice(0,3) }}</div>
-                <div>{{ nextEvent_remainingDays }} jours restant(s)</div>
             </div>
         </div>
     </aside>

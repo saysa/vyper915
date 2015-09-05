@@ -522,3 +522,44 @@ ul.social-icons li.github a {
 ul.social-icons li.rss a {
     background-color: #f59942
 }
+
+.article-big-image {
+    position: relative;
+}
+
+.article-big-image .event-calendar {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    padding: 10px 15px;
+    background: url(../img/spray-black-dots.png);
+    text-shadow: 0px 1px 0px #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.event-block .event-photo .event-calendar .event-date, .article-big-image .event-calendar .event-date, .article-small-image .event-calendar .event-date {
+    font-size: 36px;
+    line-height: 34px;
+    display: block;
+    float: left;
+    padding-bottom: 3px;
+}
+
+.event-block .event-photo .event-calendar .event-month, .article-big-image .event-calendar .event-month, .article-small-image .event-calendar .event-month {
+    display: block;
+    margin-left: 54px;
+    padding-top: 2px;
+    font-size: 10px;
+    line-height: 15px;
+}
+
+.event-block .event-photo .event-calendar .event-year, .article-big-image .event-calendar .event-year, .article-small-image .event-calendar .event-year {
+    display: block;
+    margin-left: 54px;
+    padding-top: 0;
+    font-size: 10px;
+}
