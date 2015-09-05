@@ -448,3 +448,77 @@ aside h4 {
     margin: 0;
     padding: 0;
 }
+
+/* ==========================================================================
+   Social icons
+   ========================================================================== */
+.widget ul.social-icons {
+    margin-bottom: 0
+}
+ul.social-icons {
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    list-style: none
+}
+ul.social-icons li {
+    margin: 0 5px 5px 0;
+    float: left
+}
+ul.social-icons li a {
+    background-color: #999;
+    color: #FFF;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+ul.social-icons li a:hover {
+    -moz-opacity: 0.8;
+    -ms-opacity: 0.8;
+    filter: alpha(opacity=80);
+    -khtml-opacity: 0.8;
+    -o-opacity: 0.8;
+    -webkit-opacity: 0.8;
+    opacity: 0.8;
+    text-decoration: none
+}
+ul.social-icons li.twitter a {
+    background-color: #20b6ff
+}
+ul.social-icons li.facebook a {
+    background-color: #3289da
+}
+ul.social-icons li.dribbble a {
+    background-color: #cf5c9e
+}
+ul.social-icons li.youtube a {
+    background-color: #eb5350
+}
+ul.social-icons li.google-plus a {
+    background-color: #d0422b
+}
+ul.social-icons li.linkedin a {
+    background-color: #0083bd
+}
+ul.social-icons li.pinterest a {
+    background-color: #e13138
+}
+ul.social-icons li.skype a {
+    background-color: #13c1f3
+}
+ul.social-icons li.flickr a {
+    background-color: #ff48a3
+}
+ul.social-icons li.tumblr a {
+    background-color: #426d9b
+}
+ul.social-icons li.instagram a {
+    background-color: #3b82b9
+}
+ul.social-icons li.github a {
+    background-color: #3f91cb
+}
+ul.social-icons li.rss a {
+    background-color: #f59942
+}
