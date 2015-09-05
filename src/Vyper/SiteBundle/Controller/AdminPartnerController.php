@@ -23,7 +23,7 @@ class AdminPartnerController extends AdminCommonController {
      * @param Request $request
      * @param Partner $partner
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_AUTHOR')")
+     * @Security("has_role('ROLE_ADMIN')")
      */
     public function updateAction(Request $request, Partner $partner)
     {
@@ -53,12 +53,18 @@ class AdminPartnerController extends AdminCommonController {
             ->set('partner', $partner)
             ->set('active_editable', true)
             ->set('form', $form->createView())
+            ->set('user_role', $this->getUserRole())
         ;
 
         return $this->render('VyperSiteBundle:AdminPartner:update.html.twig', $view->getView());
     }
 
-    public function showAllAction()
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
+    public function showAllAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
         $em = $this->getDoctrine()->getManager();
@@ -72,12 +78,18 @@ class AdminPartnerController extends AdminCommonController {
 
         $view->set('partner_media',       $partner_media);
         $view->set('partner_event',     $partner_event);
+        $view->set('user_role', $this->getUserRole());
 
         $view->set("active_editable",  true);
 
         return $this->render('VyperSiteBundle:AdminPartner:showAll.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function addAction(Request $request)
     {
         $view = $this->container->get('saysa_view');
@@ -109,11 +121,18 @@ class AdminPartnerController extends AdminCommonController {
         $view
             ->set('form', $form->createView())
             ->set('active_editable', true)
+            ->set('user_role', $this->getUserRole())
         ;
 
         return $this->render('VyperSiteBundle:AdminPartner:add.html.twig', $view->getView());
     }
 
+    /**
+     * @param Request $request
+     * @param Partner $partner
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @Security("has_role('ROLE_ADMIN')")
+     */
     public function deleteAction(Request $request, Partner $partner)
     {
         $em = $this->getDoctrine()->getManager();

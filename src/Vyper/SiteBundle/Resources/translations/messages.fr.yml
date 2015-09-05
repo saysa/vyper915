@@ -140,3 +140,7 @@ meta.description: L'actualité de la musique japonaise, visual kei, jrock, jpop 
 
 browser.warning: DDDNotre site est optimisé pour les navigateurs plus récents.
 browser.update: DDDMets le tien à jour !
+
+partners:
+    prod.and.media: Productions and Médias
+    event: Événements

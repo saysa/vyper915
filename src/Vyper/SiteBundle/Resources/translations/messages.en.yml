@@ -140,3 +140,7 @@ meta.description: All the news about japanese music, visual kei, jrock, jpop via
 
 browser.warning: Our website is optimized for modern browsers.
 browser.update: Update now !
+
+partners:
+    prod.and.media: Productions and Medias
+    event: Events

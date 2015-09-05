@@ -13,18 +13,18 @@
     {% block content %}
 
 
-        <div class="content-title main-color-reverse">
-            <h4>Production et Médias</h4>
-        </div>
+        <p class="title">
+            <span><strong>{{ 'partners.prod.and.media'|trans }}</strong></span>
+        </p>
 
         {% set count = 1 %}
         {% for partner in partner_media %}
             {% if count==1 %}
                 <div class="row">
             {% endif %}
-            <div class="col-md-3">
+            <div class="col-md-3 grid_3">
                 <a href="{{ partner.link }}">
-                    <img src="{{ asset(partner.picture.getPath('partner')) }}"
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}" />
                 </a>
             </div>
             {% if count==4 or loop.last %}
@@ -41,17 +41,17 @@
 
 
 
-        <div class="content-title main-color-reverse">
-            <h4>Evénements</h4>
-        </div>
+        <p class="title">
+            <span><strong>{{ 'partners.event'|trans }}</strong></span>
+        </p>
         {% set count = 1 %}
         {% for partner in partner_event %}
             {% if count==1 %}
                 <div class="row">
             {% endif %}
-            <div class="col-md-3">
+            <div class="col-md-3 grid_3">
                 <a href="{{ partner.link }}">
-                    <img src="{{ asset(partner.picture.getPath('partner')) }}"
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}" />
                 </a>
             </div>
             {% if count==4 or loop.last %}

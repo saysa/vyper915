@@ -339,15 +339,18 @@
                     </ul>
                 </li>
 
-                {#
+
                 <li{% if active_editable is defined %} class="active"{% endif %}>
                     <a class="dropmenu" href="#"><i class="fa fa-edit"></i><span class="hidden-sm"> Pages</span></a>
                     <ul>
+                        {#
                         <li><a class="submenu" href="{{ path('admin_show_editables') }}"><i class="fa fa-edit"></i><span class="hidden-sm"> Pages</span></a></li>
+                        #}
+
                         <li><a class="submenu" href="{{ path('admin_show_partners') }}"><i class="fa fa-edit"></i><span class="hidden-sm"> Partners</span></a></li>
                     </ul>
                 </li>
-                #}
+
             {% endif %}
             <li><a href="{{ path('fos_user_security_logout') }}"><i class="icon-lock"></i><span class="hidden-sm"> Logout</span></a></li>
         </ul>
