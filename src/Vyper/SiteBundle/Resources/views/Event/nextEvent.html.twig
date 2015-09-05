@@ -10,11 +10,13 @@
                 <font class="event-year last-child">{{ nextEvent_event.location.town }}, {{ nextEvent_event.location.country.name|upper|slice(0,3) }}</font>
             </span>
 
+            <a href="{{ path('showEvent', {'id': nextEvent_event.getId, 'slug': nextEvent_event.slug}) }}">
             {% if nextEvent_event.picture is null %}
                 <img  src="{{ asset('bundles/vypersite/css/images/artists-event.jpg?size=374-200') }}" class="wp-post-image artists-img" title="{{ nextEvent_event.title }}" alt="">
             {% else %}
                 <img  src="{{ asset(event.picture.getPath('374-200')) }}" alt="{{ event.getTitle }}" title="{{ nextEvent_event.title }}" />
             {% endif %}
+            </a>
 
         </div>
 
