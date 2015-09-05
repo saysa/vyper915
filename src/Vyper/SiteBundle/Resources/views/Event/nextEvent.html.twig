@@ -6,7 +6,7 @@
 
             <span class="event-calendar first-child">
                 <font class="event-date first-child">{{ nextEvent_event.date|date("d") }}</font>
-                <font class="event-month">{{ nextEvent_dateMonth }}</font>
+                <font class="event-month">{{ nextEvent_dateMonth }} {{ nextEvent_event.date|date("Y") }}</font>
                 <font class="event-year last-child">{{ nextEvent_event.location.town }}, {{ nextEvent_event.location.country.name|upper|slice(0,3) }}</font>
             </span>
 
@@ -23,7 +23,7 @@
         <div class="featured-event">
 
             <div class="event-details">
-                <h5 class="event-title"><a href="{{ path('showEvent', {'id': nextEvent_event.getId, 'slug': nextEvent_event.slug}) }}">{{ nextEvent_event.title }}</a></h5>
+                <h5 class="event-title"><a href="{{ path('showEvent', {'id': nextEvent_event.getId, 'slug': nextEvent_event.slug}) }}">{{ nextEvent_event.tour.title }} : {{ nextEvent_event.title }}</a></h5>
             </div>
         </div>
     </aside>
