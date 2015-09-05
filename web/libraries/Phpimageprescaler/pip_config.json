@@ -168,6 +168,14 @@
                 }
             }
         },
+        "390-199": {
+          "dimensions": {
+            "0": {
+              "w": 390,
+              "h": 199
+            }
+          }
+        },
         "flux-rss": {
             "dimensions": {
                 "mobile": {
