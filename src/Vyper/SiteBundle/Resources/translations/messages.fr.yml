@@ -165,5 +165,8 @@ magazine:
     subscribe.button: Je m'abonne
 
 contact:
+    title: Contactez-nous
     premises: La maison
+    form.intro.1: MERCI DE REMPLIR LE FORMULAIRE SUIVANT
+    form.intro.2: (OU NOUS ADDRESSER UN MESSAGE À CONTACT@VYPER-JMUSIC.COM)
     send.form.button: Envoyer

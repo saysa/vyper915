@@ -165,5 +165,8 @@ magazine:
     subscribe.button: Subscribe now
 
 contact:
+    title: Contact us
     premises: Our premises
+    form.intro.1: Please fill in the following form
+    form.intro.2: (or send us a message to CONTACT@VYPER-JMUSIC.COM)
     send.form.button: Contact us

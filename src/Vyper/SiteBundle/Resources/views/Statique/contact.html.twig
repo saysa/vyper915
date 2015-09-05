@@ -14,7 +14,7 @@
 
         <div class="above-the-fold light">
             <div class="inner-wrapper">
-                <h2 class="page-title">Contactez-nous</h2>
+                <h2 class="page-title">{{ 'contact.title'|trans }}</h2>
             </div>
         </div>
     {% endblock %}
@@ -45,8 +45,8 @@
 
                         {{ form_widget(form._token) }}
 
-                        <h6>MERCI DE REMPLIR LE FORMULAIRE SUIVANT<br>
-                            (OU NOUS ADDRESSER UN MESSAGE À CONTACT@VYPER-JMUSIC.COM)</h6>
+                        <h6>{{ 'contact.form.intro.1'|trans|upper }}<br>
+                            {{ 'contact.form.intro.2'|trans|upper }}</h6>
                         <div class="row">
                             <div class="half">
                                 {{ form_widget(form.firstname, {  'attr': {'class': 'signup-name-field validate-required'} }) }}
