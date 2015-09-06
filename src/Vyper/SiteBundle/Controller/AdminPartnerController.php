@@ -73,11 +73,14 @@ class AdminPartnerController extends AdminCommonController {
         $partner_media    = $em->getRepository('VyperSiteBundle:Partner')->partnerMedia($type);
         $type = $em->getRepository('VyperSiteBundle:PartnerType')->find(2);
         $partner_event  = $em->getRepository('VyperSiteBundle:Partner')->partnerEvent($type);
+        $type = $em->getRepository('VyperSiteBundle:PartnerType')->find(3);
+        $partner_other  = $em->getRepository('VyperSiteBundle:Partner')->partnerOther($type);
 
 
 
         $view->set('partner_media',       $partner_media);
         $view->set('partner_event',     $partner_event);
+        $view->set('partner_other',     $partner_other);
         $view->set('user_role', $this->getUserRole());
 
         $view->set("active_editable",  true);
