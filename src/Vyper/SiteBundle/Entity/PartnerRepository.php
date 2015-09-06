@@ -51,4 +51,17 @@ class PartnerRepository extends EntityRepository
         return $results;
     }
 
+    public function partnerOther($type)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.type = :type')
+            ->setParameter('type', $type)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
 }

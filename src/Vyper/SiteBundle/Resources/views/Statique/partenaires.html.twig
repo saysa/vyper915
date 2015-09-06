@@ -65,6 +65,30 @@
             {% endif %}
         {% endfor %}
 
+        <p class="title">
+            <span><strong>{{ 'partners.other'|trans }}</strong></span>
+        </p>
+        {% set count = 1 %}
+        {% for partner in partner_other %}
+            {% if count==1 %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-3 grid_3">
+                <a href="{{ partner.link }}">
+                    <img src="{{ asset(partner.picture.getPath('partner')) }}" />
+                </a>
+            </div>
+            {% if count==4 or loop.last %}
+                </div>
+            {% endif %}
+
+            {% set count = count + 1 %}
+
+            {% if count==5 %}
+                {% set count = 1 %}
+            {% endif %}
+        {% endfor %}
+
 
 
 

@@ -151,6 +151,7 @@ browser.update: Update now !
 partners:
     prod.and.media: Productions and Medias
     event: Events
+    other: Others
 
 contest:
     prizes: Prizes
