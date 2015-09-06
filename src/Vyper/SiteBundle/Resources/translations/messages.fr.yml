@@ -163,6 +163,21 @@ contest:
 magazine:
     bottom: Profitez maintenant du magazine le plus complet en France ainsi que des avantages exclusifs proposés par VYPER
     subscribe.button: Je m'abonne
+    title1: UN MAGAZINE UNIQUE EN FRANCE
+    sub1 : VYPER est le magazine papier de la musique Japonaise en France. Nous vous offrons la possibilité de suivre tous les 2 mois l'actualité du J-Rock et Visual-Kei
+    title2: Un contenu%br%unique en son genre.
+    sub2: VYPER s'appuie sur des rédacteurs compétents ainsi que l'ensemble de ses partenaires pour fournir à ses lecteurs le meilleur du J-Rock et Visual-Kei.
+    title3: L'actualité complète et variée dans un seul magazine
+    sub3 : VYPER propose articles spéciaux, photos exclusives, live reports, interviews et autres promotions et découvertes.
+    title4: VYPER à toutes les sauces.
+    sub4: Choisissez parmi les 3 formules que nous vous proposons, celle qui vous convient le mieux.%br%Visu, Pop ou Rock, le magazine VYPER assurément chez vous.
+    insteadof1: Au lieu de 50€ TTC
+    insteadof2: Au lieu de 75€ TTC
+    insteadof3: Au lieu de 100€ TTC
+    subscribtion1: Abonnement de 1 an
+    subscribtion2: Abonnement de 1 an + Hors séries
+    subscribtion3: Abonnement de 2 ans
+    with.tax: TTC
 
 contact:
     title: Contactez-nous

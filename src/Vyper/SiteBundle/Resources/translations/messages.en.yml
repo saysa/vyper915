@@ -163,6 +163,21 @@ contest:
 magazine:
     bottom: Enjoy now the most complete magazine offered by VYPER
     subscribe.button: Subscribe now
+    title1: Discover VYPER Japanese Music magazine
+    sub1 : VYPER is the first magazine about japanese music in France. Every 2 months get in touch with the best of J-Rock and Visual-Kei
+    title2: A one of a kind content.
+    sub2: VYPER's team relies on competent editors and partners in order to offer you the best of the J-Rock and Visual-Kei.
+    title3: All the complete and various news in a single magaazine
+    sub3: VYPER provides special articles, exclusive pictures, live reports, interviews and more
+    title4: VYPER for everyone.
+    sub4: Select among the 3 options which one fit you the best
+    insteadof1: Instead of 50€ with tax
+    insteadof2: Instead of 75€ with tax
+    insteadof3: Instead of 100€ with tax
+    subscribtion1: 1 year subscription
+    subscribtion2: 1 year subscription + Special issues
+    subscribtion3: 2 years subscription
+    with.tax: With tax
 
 contact:
     title: Contact us
