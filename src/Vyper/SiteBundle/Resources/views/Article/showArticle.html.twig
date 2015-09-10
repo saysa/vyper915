@@ -234,8 +234,6 @@
 
 {% block javascripts_footer %}
 
-    {{ parent() }}
-
     <script>
         $(document).ready(function () {
 
@@ -245,5 +243,7 @@
             }, 1000);
         });
     </script>
+
+    {{ parent() }}
 
 {% endblock %}
