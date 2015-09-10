@@ -390,3 +390,19 @@ aside#sidebar {
     margin: 0 0 1em 0;
     overflow: hidden
 }
+
+.ad-banner-728x90,
+.release-cover,
+.mega-menu-magazine-middle,
+.mega-menu-magazine-right,
+.mega-menu-articles-right {
+    display: none!important;
+}
+
+.over-960,
+.over-720,
+.only-1200,
+.only-960,
+.only-720 {
+    display: none;
+}

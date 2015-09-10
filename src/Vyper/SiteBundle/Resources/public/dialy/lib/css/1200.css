@@ -91,4 +91,13 @@ a.responsive-menu-btn {
 #main.left .grid_11, #main.right .grid_11 {width: 787px}
 #main.left .grid_12, #main.right .grid_12 {width: 100%;display: inline-block; float: none; margin: 0 0 1em 0}
 
+.under-1200,
+.under-960,
+.under-720,
+.only-960,
+.only-720,
+.only-mobile {
+    display: none;
+}
+
 

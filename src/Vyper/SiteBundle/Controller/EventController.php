@@ -157,6 +157,7 @@ class EventController extends Controller
             ->set('eventsJP', json_encode($jsonJP))
             ->set('defaultDate', $defaultDate)
             ->set('themes_in_menu', $themesInMenu)
+            ->set('page_fullcalendar_for_init_conflict', true)
         ;
 
         if ($request->isXmlHttpRequest()) {

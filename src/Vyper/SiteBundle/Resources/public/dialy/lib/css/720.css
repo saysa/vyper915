@@ -315,3 +315,23 @@ ul.ad-banner-125x125 li:hover {
 #main.left .grid_10, #main.right .grid_10 {width: 432px}
 #main.left .grid_11, #main.right .grid_11 {width: 476px}
 #main.left .grid_12, #main.right .grid_12 {width: 100%;display: inline-block; float: none; margin: 0 0 1em 0}
+
+.ad-banner-728x90,
+.mega-menu-articles-middle,
+.mega-menu-magazine-middle {
+    display: none!important;
+}
+
+.over-960,
+.over-720,
+.under-720,
+.only-1200,
+.only-960,
+.only-mobile
+{
+    display: none;
+}
+
+aside h4 {
+    font-size: 14px !important;
+}
