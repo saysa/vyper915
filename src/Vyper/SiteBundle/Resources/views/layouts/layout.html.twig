@@ -349,14 +349,6 @@
     {# Jquery UI #}
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js" type="text/javascript"></script>
 
-    {% if page_fullcalendar_for_init_conflict is not defined %}
-        {% javascripts
-        'bundles/vypersite/dialy/lib/js/init.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-    {% endif %}
-
     {% javascripts
     'bundles/vypersite/js/jquery-polyglot.language.switcher.js'
     %}
@@ -368,5 +360,14 @@
             $('.polyglot-language-switcher').polyglotLanguageSwitcher();
         });
     </script>
+
+    {# SHOULD BE ALWAYS AT THE VERY BOTTOM #}
+    {% if page_fullcalendar_for_init_conflict is not defined %}
+        {% javascripts
+        'bundles/vypersite/dialy/lib/js/init.js'
+        %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endif %}
 
 {% endblock %}
