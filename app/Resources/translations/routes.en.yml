@@ -224,7 +224,7 @@ ajax_vyper: /ajax/vyper-jmusic-magazines   # FIXME
 artistDiscography: '/artist-discography/{slug}/{id}.html/{page}'   # FIXME
 
 # Desc: /conditions-utilisation
-vyper_site_cgu: /conditions-utilisation   # FIXME
+vyper_site_cgu: /conditions-of-use
 
 # Desc: /conditions-utilisation-sms
 cgu_sms: /conditions-utilisation-sms   # FIXME
@@ -367,10 +367,10 @@ vyper_site_jobs: /jobs   # FIXME
 vyper_site_partenaires: /partners
 
 # Desc: /actualites/{page}
-vyper_site_showAllArticles: '/actualites/{page}'   # FIXME
+vyper_site_showAllArticles: '/news/{page}'
 
-# Desc: /artistes/{page}
-vyper_site_showAllArtist: '/artistes/{page}'   # FIXME
+# Desc: /artists/{page}
+vyper_site_showAllArtist: '/artists/{page}'
 
 vyper_site_showAllContests: '/contests/{page}'
 

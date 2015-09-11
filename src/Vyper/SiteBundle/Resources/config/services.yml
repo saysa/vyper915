@@ -11,6 +11,9 @@ services:
     vpr_flux_rss:
         class: Vyper\SiteBundle\Components\FluxRss\FluxRss
 
+    vpr_site_map:
+        class: Vyper\SiteBundle\Components\Sitemap\Sitemap
+
 #    vyper_site.example:
 #        class: %vyper_site.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]

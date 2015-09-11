@@ -57,6 +57,16 @@ class AdminArticleController extends AdminCommonController {
      */
     public function addArticleAction(Request $request)
     {
+        $siteMap = $this->container->get('vpr_site_map');
+        $opt = array(
+            'entity_manager'    => $this->getDoctrine()->getManager(),
+            'router'            => $this->get('router'),
+            'app_root'          => $this->get('kernel')->getRootDir(),
+            'assets'            => $this->container->get('templating.helper.assets'),
+            'request'           => $request,
+        );
+        $siteMap->update($opt);
+
         $view = $this->container->get('saysa_view');
         $article = new Article();
         $form = $this->createForm(new ArticleType, $article);

@@ -370,7 +370,7 @@ vyper_site_partenaires: /partenaires
 vyper_site_showAllArticles: '/actualites/{page}'   # FIXME
 
 # Desc: /artistes/{page}
-vyper_site_showAllArtist: '/artistes/{page}'   # FIXME
+vyper_site_showAllArtist: '/artistes/{page}'
 
 vyper_site_showAllContests: '/concours/{page}'
 
