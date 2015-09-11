@@ -403,6 +403,7 @@ aside#sidebar {
 .over-720,
 .only-1200,
 .only-960,
-.only-720 {
+.only-720,
+.over-mobile {
     display: none;
 }

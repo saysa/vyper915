@@ -622,3 +622,7 @@ ul.social-icons li.rss a {
 .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
     width: 100% !important;
 }
+
+article.post {
+    margin-bottom: 15px;
+}
