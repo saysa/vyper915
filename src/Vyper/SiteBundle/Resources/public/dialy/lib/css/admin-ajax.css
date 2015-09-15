@@ -626,3 +626,27 @@ ul.social-icons li.rss a {
 article.post {
     margin-bottom: 15px;
 }
+
+/*
+Habillage
+*/
+#casing {
+    z-index: 1;
+    position: relative;
+}
+
+#casing>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#casing>a span {
+    display: none;
+}
+
+#wrapper {
+    z-index: 2;
+    cursor: default;
+    position: relative;
+}

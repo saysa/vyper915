@@ -335,3 +335,15 @@ ul.ad-banner-125x125 li:hover {
 aside h4 {
     font-size: 14px !important;
 }
+
+/* Habillage */
+#casing-top {
+
+    display: none;
+}
+
+#casing-mini {
+    height: 210px;
+    background: teal;
+    display: none;
+}

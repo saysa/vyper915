@@ -100,4 +100,13 @@ a.responsive-menu-btn {
     display: none;
 }
 
+/* Habillage */
+#casing {
+    background: #000000 url("http://vyperpara.dev/bundles/vypersite/img/habillage/hab02.jpg") no-repeat 50% 0;
+    background: #DDD;
+}
 
+#casing-top {
+    height: 210px;
+    display: none;
+}

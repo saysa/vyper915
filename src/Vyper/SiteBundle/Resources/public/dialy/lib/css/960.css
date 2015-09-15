@@ -276,3 +276,14 @@ nav a.impact {
 .flexslider .slides img {
     height: 421px !important;
 }
+
+/* Habillage */
+#casing {
+    background: #6FC7D5 url("http://vyperpara.dev/bundles/vypersite/img/habillage/hab01.jpg") no-repeat 50% 0;
+    background: #DDD;
+}
+
+#casing-top {
+    height: 210px;
+    display: none;
+}

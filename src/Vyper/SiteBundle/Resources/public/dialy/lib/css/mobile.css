@@ -407,3 +407,8 @@ aside#sidebar {
 .over-mobile {
     display: none;
 }
+
+/* Habillage */
+#casing-top {
+    display: none;
+}
