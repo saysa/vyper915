@@ -278,6 +278,16 @@
 
                     {{ render(controller("VyperSiteBundle:Event:nextEvent")) }}
 
+                    <aside id="fairpixels_flickr_widget-2" class="widget widget_flickr">
+                        <div class="widget-title"><h4>Flickr Gallery</h4></div>
+
+
+                        <div class="flickr_stream">
+                            <ul id="flickr_thumbs" class="list flickr_thumbs"></ul>
+                        </div>
+
+                    </aside>
+
                     <aside class="widget">
                         <div class="widget-title"><h4>{{ 'sidebar.title.follow.us'|trans }}</h4></div>
                         <div class="fb-like-box" data-href="https://www.facebook.com/vyperjmusic" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
@@ -356,6 +366,7 @@
 
     {% javascripts
     'bundles/vypersite/js/jquery-polyglot.language.switcher.js'
+    'bundles/vypersite/js/jflickrfeed.min.js'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -364,7 +375,17 @@
         jQuery(document).ready(function ($) {
             $('.polyglot-language-switcher').polyglotLanguageSwitcher();
 
-
+            jQuery('.flickr_thumbs').jflickrfeed({
+                limit: 8,
+                qstrings: {
+                    id: '134945398@N04'
+                },
+                itemTemplate: '<li><div class="widget-overlay">'+
+                '<a rel="lightbox[flickr-gallery]" href="!!image!!" title="!!title!!">' +
+                '<img src="!!image_s!!" alt="!!title!!" width="75" height="75" />' +
+                '</a>' +
+                '</div></li>'
+            });
 
         });
     </script>

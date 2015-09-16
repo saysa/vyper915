@@ -650,3 +650,22 @@ Habillage
     cursor: default;
     position: relative;
 }
+
+/*
+* Flickr gallery
+*/
+
+#sidebar .widget_flickr ul li {
+    width: 70px;
+    float: left;
+    margin-right: 2px;
+    margin-bottom: 22px;
+    padding: 0 !important;
+    border-bottom: none !important;
+}
+
+#sidebar .widget_flickr .flickr_thumbs img {
+    width: 70px;
+    height: 70px;
+    display: block;
+}
