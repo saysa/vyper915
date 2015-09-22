@@ -39,6 +39,9 @@ admin_add_theme: /_admin_/themes/add   # FIXME
 # Desc: /_admin_/tour/add
 admin_add_tour: /_admin_/tour/add   # FIXME
 
+# Desc: /_admin_/ad/add
+admin_add_ad: /_admin_/ad/add
+
 # Desc: /_admin_/tourType/add
 admin_add_tourType: /_admin_/tourType/add   # FIXME
 
@@ -113,6 +116,9 @@ admin_show_pictures: /_admin_/pictures   # FIXME
 # Desc: /_admin_/tours
 admin_show_tours: /_admin_/tours   # FIXME
 
+# Desc: /_admin_/ads
+admin_show_ads: /_admin_/ads
+
 # Desc: /_admin_/videos
 admin_show_videos: /_admin_/videos   # FIXME
 
@@ -156,6 +162,9 @@ admin_update_theme: '/_admin_/theme/update/{id}'   # FIXME
 
 # Desc: /_admin_/tour/update/{id}
 admin_update_tour: '/_admin_/tour/update/{id}'   # FIXME
+
+# Desc: /_admin_/ad/update/{id}
+admin_update_ad: '/_admin_/ad/update/{id}'
 
 # Desc: /_admin_/tourType/update/{id}
 admin_update_tourType: '/_admin_/tourType/update/{id}'   # FIXME

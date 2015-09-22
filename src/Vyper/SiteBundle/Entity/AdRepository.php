@@ -13,5 +13,13 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
  */
 class AdRepository extends EntityRepository
 {
+    public function myFindAll()
+    {
+        $queryBuilder = $this->createQueryBuilder('p');
+        $queryBuilder->where('p.deleted = false');
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
 
+        return $results;
+    }
 }

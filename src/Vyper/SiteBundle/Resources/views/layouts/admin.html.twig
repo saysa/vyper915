@@ -353,6 +353,8 @@
                     </ul>
                 </li>
 
+                <li{% if active_ad is defined %} class="active"{% endif %}><a href="{{ path('admin_show_ads') }}"><i class="fa fa-globe"></i><span class="hidden-sm"> Ads</span></a></li>
+
             {% endif %}
             <li><a href="{{ path('fos_user_security_logout') }}"><i class="icon-lock"></i><span class="hidden-sm"> Logout</span></a></li>
         </ul>

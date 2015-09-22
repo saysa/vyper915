@@ -415,13 +415,27 @@ admin_show_tours:
     path:     /_admin_/tours
     defaults: { _controller: VyperSiteBundle:AdminTour:showTours }
 
+admin_show_ads:
+    path:     /_admin_/ads
+    defaults: { _controller: VyperSiteBundle:AdminAd:showAds }
+
 admin_add_tour:
     path:     /_admin_/tour/add
     defaults: { _controller: VyperSiteBundle:AdminTour:addTour }
 
+admin_add_ad:
+    path:     /_admin_/ad/add
+    defaults: { _controller: VyperSiteBundle:AdminAd:addAd }
+
 admin_update_tour:
     path:     _admin_/tour/update/{id}
     defaults: { _controller: VyperSiteBundle:AdminTour:updateTour }
+    requirements:
+        id: \d+
+
+admin_update_ad:
+    path:     _admin_/ad/update/{id}
+    defaults: { _controller: VyperSiteBundle:AdminAd:updateAd }
     requirements:
         id: \d+
 

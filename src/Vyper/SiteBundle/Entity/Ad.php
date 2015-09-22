@@ -31,6 +31,13 @@ class Ad
     private $locale;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="active", type="boolean")
+     */
+    private $active;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\AdType")
      * @ORM\JoinColumn(nullable=false)
      */
@@ -54,26 +61,14 @@ class Ad
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture")
      * @ORM\JoinColumn(nullable=true)
      */
-    private $pictureFr;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Picture")
-     * @ORM\JoinColumn(nullable=true)
-     */
-    private $pictureEn;
+    private $picture;
 
     /**
      * @var integer
      * Pour stocker l'ID du formulaire
      */
-    private $pictureFrID;
-
-    /**
-     * @var integer
-     * Pour stocker l'ID du formulaire
-     */
-    private $pictureEnID;
-
+    private $pictureID;
+    
     /**
      * @var boolean
      *
@@ -157,6 +152,29 @@ class Ad
     public function getBgcolor()
     {
         return $this->bgcolor;
+    }
+
+    /**
+     * Set active
+     *
+     * @param boolean $active
+     * @return Ad
+     */
+    public function setActive($active)
+    {
+        $this->active = $active;
+
+        return $this;
+    }
+
+    /**
+     * Get active
+     *
+     * @return boolean
+     */
+    public function getActive()
+    {
+        return $this->active;
     }
 
     /**
@@ -275,82 +293,45 @@ class Ad
     }
 
     /**
-     * Set pictureFr
+     * Set picture
      *
-     * @param \Vyper\SiteBundle\Entity\Picture $pictureFr
+     * @param \Vyper\SiteBundle\Entity\Picture $picture
      * @return Ad
      */
-    public function setPictureFr(\Vyper\SiteBundle\Entity\Picture $pictureFr = null)
+    public function setPicture(\Vyper\SiteBundle\Entity\Picture $picture = null)
     {
-        $this->pictureFr = $pictureFr;
+        $this->picture = $picture;
 
         return $this;
     }
 
     /**
-     * Get pictureFr
+     * Get picture
      *
      * @return \Vyper\SiteBundle\Entity\Picture
      */
-    public function getPictureFr()
+    public function getPicture()
     {
-        return $this->pictureFr;
+        return $this->picture;
     }
 
-    /**
-     * Set pictureEn
-     *
-     * @param \Vyper\SiteBundle\Entity\Picture $pictureEn
-     * @return Ad
-     */
-    public function setPictureEn(\Vyper\SiteBundle\Entity\Picture $pictureEn = null)
-    {
-        $this->pictureEn = $pictureEn;
-
-        return $this;
-    }
 
     /**
-     * Get pictureEn
-     *
-     * @return \Vyper\SiteBundle\Entity\Picture
+     * @param int $pictureID
      */
-    public function getPictureEn()
+    public function setPictureID($pictureID)
     {
-        return $this->pictureEn;
-    }
-
-    /**
-     * @param int $pictureFrID
-     */
-    public function setPictureFrID($pictureFrID)
-    {
-        $this->pictureFrID = $pictureFrID;
+        $this->pictureID = $pictureID;
     }
 
     /**
      * @return int
      */
-    public function getPictureFrID()
+    public function getPictureID()
     {
-        return $this->pictureFrID;
+        return $this->pictureID;
     }
 
-    /**
-     * @param int $pictureEnID
-     */
-    public function setPictureEnID($pictureEnID)
-    {
-        $this->pictureEnID = $pictureEnID;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPictureEnID()
-    {
-        return $this->pictureEnID;
-    }
 
     /**
      * @ORM\PrePersist
