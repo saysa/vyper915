@@ -28,8 +28,7 @@ class AdType extends AbstractType
                 'class' => 'VyperSiteBundle:LocaleType',
                 'property' => 'name',
             ))
-            ->add('picture_fr_id', 'text', array('attr' => array('placeholder' => 'Picture FR ID')))
-            ->add('picture_en_id', 'text', array('attr' => array('placeholder' => 'Picture FR ID')))
+            ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
 
         ;
 
@@ -46,8 +45,7 @@ class AdType extends AbstractType
                 }
                 if (null !== $ad->getId()) {
 
-                    $event->getForm()->add('$pictureFrID', 'text', array('data' => $ad->getPictureFr()->getId()));
-                    $event->getForm()->add('$pictureEnID', 'text', array('data' => $ad->getPictureEn()->getId()));
+                    $event->getForm()->add('$pictureID', 'text', array('data' => $ad->getPicture()->getId()));
                 }
             }
         );
