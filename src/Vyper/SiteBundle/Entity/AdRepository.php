@@ -22,4 +22,21 @@ class AdRepository extends EntityRepository
 
         return $results;
     }
+
+    public function getSquare($locale, $adType)
+    {
+        $queryBuilder = $this->createQueryBuilder('a');
+        $queryBuilder
+            ->where('a.deleted = false')
+            ->andWhere('a.live = true')
+            ->andWhere('a.locale = :locale')
+            ->setParameter('locale', $locale)
+            ->andWhere('a.type = :type')
+            ->setParameter('type', $adType);
+
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
 }

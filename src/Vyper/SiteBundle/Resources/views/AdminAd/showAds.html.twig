@@ -21,11 +21,7 @@
                             <div class="alert alert-info">{{ message }}</div>
                         {% endfor %}
 
-                        <div class="pull-right">
-                            <a href="{{ path('admin_add_ad') }}">
-                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
-                            </a>
-                        </div>
+
 
 
                         <hr>
@@ -34,7 +30,7 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Active</th>
+                                {# <th>Active</th> #}
                                 <th>Locale</th>
                                 <th>Type</th>
                                 <th>Edit</th>
@@ -45,7 +41,9 @@
                             {% for ad in ads %}
                                 <tr>
                                     <td>{{ ad.getId }}</td>
+                                    {#
                                     <td><input type="checkbox" class="active" data-adid="{{ ad.getId }}" {% if ad.getActive == 1 %}checked="checked"{% endif %} /></td>
+                                    #}
                                     <td>
                                         {% if ad.getLocale.getName == 'fr' %}
                                             <img src="{{ asset('bundles/vypersite/img/acme/img/fr.png') }}" alt="fr" />
@@ -62,11 +60,7 @@
 
                         <hr>
 
-                        <div class="pull-right">
-                            <a href="{{ path('admin_add_ad') }}">
-                                <button class="btn btn-small btn-primary"><i class="icon-plus"></i> add</button>
-                            </a>
-                        </div>
+
 
                         <div class="clearfix"></div>
 

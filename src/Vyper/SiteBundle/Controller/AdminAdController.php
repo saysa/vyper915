@@ -58,19 +58,28 @@ class AdminAdController extends AdminCommonController {
      */
     public function updateAdAction(Request $request, Ad $ad)
     {
+        $em = $this->getDoctrine()->getManager();
         $view = $this->container->get('saysa_view');
 
         $form = $this->createForm(new AdType, $ad);
 
         if ('POST' === $request->getMethod()) {
 
+            $post_data = $request->request->get('vyper_sitebundle_ad');
+
             $form->submit($request);
 
+            $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
+
+            $ad->setPicture($picture);
+
             if ($form->isValid()) {
-                $em = $this->getDoctrine()->getManager();
+                
                 $em->flush();
             }
             $request->getSession()->getFlashBag()->add('info', 'Ad updated.');
+
+            return $this->redirect($this->generateUrl('admin_show_ads'));
         }
 
         $view
@@ -80,7 +89,7 @@ class AdminAdController extends AdminCommonController {
             ->set('form', $form->createView())
         ;
 
-        return $this->render('VyperSiteBundle:AdminTour:updateTour.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:AdminAd:updateAd.html.twig', $view->getView());
     }
 
     /**

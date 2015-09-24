@@ -20,14 +20,7 @@ class AdType extends AbstractType
         $builder
             ->add('bgcolor', 'text', array('required' => false, 'attr' => array('placeholder' => '#FFFFFF')))
             ->add('link', 'text', array('required' => false, 'attr' => array('placeholder' => 'http:// (optional)')))
-            ->add('type', 'entity', array(
-                'class' => 'VyperSiteBundle:AdType',
-                'property' => 'name',
-            ))
-            ->add('locale', 'entity', array(
-                'class' => 'VyperSiteBundle:LocaleType',
-                'property' => 'name',
-            ))
+
             ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
 
         ;
@@ -45,7 +38,7 @@ class AdType extends AbstractType
                 }
                 if (null !== $ad->getId()) {
 
-                    $event->getForm()->add('$pictureID', 'text', array('data' => $ad->getPicture()->getId()));
+                    $event->getForm()->add('pictureID', 'text', array('data' => $ad->getPicture()->getId()));
                 }
             }
         );

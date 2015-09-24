@@ -69,6 +69,12 @@ class IndexController extends Controller
 
         $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
 
+        // get 2 top-squares
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Top Square A');
+        $squareA = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Top Square B');
+        $squareB = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
+
         $big_news = array(
             $latest_chroniques,
             $latest_interviews,
@@ -87,6 +93,8 @@ class IndexController extends Controller
             ->set('themes_in_menu', $themesInMenu)
             ->set('front_page_index', true)
             ->set('user_id', $user)
+            ->set('squareA', $squareA)
+            ->set('squareB', $squareB)
         ;
         return $this->render('VyperSiteBundle:Index:index.html.twig', $view->getView());
     }
