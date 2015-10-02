@@ -92,9 +92,9 @@
         <ul class="page-numbers">
             {# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
             {% for p in range(1, total_contests) %}
-                {% if p == page %}
+                {% if p == page and p != 0 %}
                     <li><span class="page-numbers current">{{ p }}</span></li>
-                {% else %}
+                {% elseif p != 0 %}
                     <li><a href="{{ path('vyper_site_showAllContests', {'page': p}) }}" class="page-numbers">{{ p }}</a></li>
                 {% endif %}
             {% endfor %}
