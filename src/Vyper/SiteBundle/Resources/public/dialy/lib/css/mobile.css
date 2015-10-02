@@ -20,7 +20,7 @@
 /* Logo */
 #logo {
     float: none;
-    display: block
+    display: none;
 }
 h1#site-logo {
     margin-bottom: 0.2em
@@ -411,4 +411,8 @@ aside#sidebar {
 /* Habillage */
 #casing-top {
     display: none;
+}
+
+.polyglot-language-switcher {
+    margin-bottom: 15px;
 }
