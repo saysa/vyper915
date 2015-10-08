@@ -12,6 +12,10 @@ ajax_general:
     requirements:
         _method:  POST
 
+vyper_test_pdf:
+    path:     /pdf
+    defaults: { _controller: VyperSiteBundle:Statique:pdf }
+
 vyper_site_jobs:
     path:     /jobs
     defaults: { _controller: VyperSiteBundle:Statique:jobs }

@@ -372,6 +372,8 @@ vyper_site_index: /   # FIXME
 # Desc: /jobs
 vyper_site_jobs: /jobs   # FIXME
 
+vyper_test_pdf: /pdf
+
 # Desc: /partenaires
 vyper_site_partenaires: /partners
 

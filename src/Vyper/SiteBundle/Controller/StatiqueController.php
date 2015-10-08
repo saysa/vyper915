@@ -150,4 +150,14 @@ class StatiqueController extends Controller
         return $view->getView();
     }
 
+    /**
+     * @return array
+     * @Template
+     */
+    public function pdfAction()
+    {
+        $view = $this->container->get('saysa_view');
+        return $view->getView();
+    }
+
 }
