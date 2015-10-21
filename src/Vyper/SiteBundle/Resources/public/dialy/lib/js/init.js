@@ -16,13 +16,13 @@ jQuery(document).ready(function($) {
     jQuery(".accordion").accordion({collapsible: true, heightStyle: "content"});
     
     // Flexslider
-    jQuery(".flexslider").flexslider({animation: "fade", controlNav: false});
+    //jQuery(".flexslider").flexslider({animation: "fade", controlNav: false});
     
     // Gallery slider
-    jQuery(".gallery-single").flexslider({slideshow : false,smoothHeight : true, controlNav: "thumbnails", animation: "slide"});
+    //jQuery(".gallery-single").flexslider({slideshow : false,smoothHeight : true, controlNav: "thumbnails", animation: "slide"});
     
     // Fitvids
-    jQuery("body").fitVids();
+    //jQuery("body").fitVids();
 
     /*==============================================================================
         Responsive navigation
@@ -58,9 +58,9 @@ jQuery(document).ready(function($) {
     // Portfolio container
     var $container = $('.gallery-content');
    
-    $container.isotope({
+    /*$container.isotope({
         layoutMode: 'fitRows'
-    });
+    });*/
  
     
 
