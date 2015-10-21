@@ -393,15 +393,25 @@ admin_show_pictures:
 
 admin_show_pdfs:
     path:     /_admin_/pdfs
-    defaults: { _controller: VyperSiteBundle:AdminPicture:showPictures }
+    defaults: { _controller: VyperSiteBundle:AdminPdf:showPdfs }
 
 admin_add_picture:
     path:     /_admin_/picture/add
     defaults: { _controller: VyperSiteBundle:AdminPicture:addPicture }
 
+admin_add_pdf:
+    path:     /_admin_/pdf/add
+    defaults: { _controller: VyperSiteBundle:AdminPdf:addPdf }
+
 admin_delete_picture:
     path:     /_admin_/picture/delete/{id}
     defaults: { _controller: VyperSiteBundle:AdminPicture:delete }
+    requirements:
+        id: \d+
+
+admin_delete_pdf:
+    path:     /_admin_/pdf/delete/{id}
+    defaults: { _controller: VyperSiteBundle:AdminPdf:delete }
     requirements:
         id: \d+
 

@@ -33,6 +33,8 @@ admin_add_partner: /_admin_/partner/add   # FIXME
 # Desc: /_admin_/picture/add
 admin_add_picture: /_admin_/picture/add   # FIXME
 
+admin_add_pdf: /_admin_/pdf/add
+
 # Desc: /_admin_/themes/add
 admin_add_theme: /_admin_/themes/add   # FIXME
 
@@ -76,6 +78,8 @@ admin_delete_partner: '/_admin_/partner/delete/{id}'   # FIXME
 
 # Desc: /_admin_/picture/delete/{id}
 admin_delete_picture: '/_admin_/picture/delete/{id}'   # FIXME
+
+admin_delete_pdf: '/_admin_/pdf/delete/{id}'
 
 # Desc: /_admin_/themes/delete/{id}
 admin_delete_theme: '/_admin_/themes/delete/{id}'   # FIXME

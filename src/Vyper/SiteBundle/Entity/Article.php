@@ -153,6 +153,12 @@ class Article
     private $picture;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Pdf")
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $pdf;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Vyper\SiteBundle\Entity\Album")
      * @ORM\JoinColumn(nullable=true)
      */
@@ -173,6 +179,12 @@ class Article
      * Pour stocker l'ID du formulaire
      */
     private $pictureID;
+
+    /**
+     * @var integer
+     * Pour stocker l'ID du formulaire
+     */
+    private $pdfID;
 
     /**
      * @var boolean
@@ -735,6 +747,30 @@ class Article
     {
         return $this->picture;
     }
+
+    /**
+     * Set pdf
+     *
+     * @param \Vyper\SiteBundle\Entity\Pdf $pdf
+     * @return Article
+     */
+    public function setPdf(\Vyper\SiteBundle\Entity\Pdf $pdf)
+    {
+        $this->pdf = $pdf;
+
+        return $this;
+    }
+
+    /**
+     * Get pdf
+     *
+     * @return \Vyper\SiteBundle\Entity\Pdf
+     */
+    public function getPdf()
+    {
+        return $this->pdf;
+    }
+
     /**
      * Constructor
      */
@@ -833,6 +869,22 @@ class Article
     public function getPictureID()
     {
         return $this->pictureID;
+    }
+
+    /**
+     * @param int $pdfID
+     */
+    public function setPdfID($pdfID)
+    {
+        $this->pdfID = $pdfID;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPdfID()
+    {
+        return $this->pdfID;
     }
 
     public function getReleaseDateFrontFormat()

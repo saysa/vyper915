@@ -26,6 +26,19 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
+    public function getByPdfId($pdfID)
+    {
+        $queryBuilder = $this->createQueryBuilder('t');
+        $queryBuilder
+            ->where('t.pdf = :pdfID')
+            ->setParameter('pdfID', $pdfID)
+        ;
+        $query = $queryBuilder->getQuery();
+        $results = $query->getResult();
+
+        return $results;
+    }
+
     public function myFindAll()
     {
         $queryBuilder = $this->createQueryBuilder('a');

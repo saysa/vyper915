@@ -98,7 +98,7 @@ class Pdf
      * Set filename
      *
      * @param string $filename
-     * @return Picture
+     * @return Pdf
      */
     public function setFilename($filename)
     {
@@ -121,7 +121,7 @@ class Pdf
      * Set name
      *
      * @param string $name
-     * @return Picture
+     * @return Pdf
      */
     public function setName($name)
     {
@@ -144,7 +144,7 @@ class Pdf
      * Set mime
      *
      * @param string $mime
-     * @return Picture
+     * @return Pdf
      */
     public function setMime($mime)
     {
@@ -167,7 +167,7 @@ class Pdf
      * Set size
      *
      * @param integer $size
-     * @return Picture
+     * @return Pdf
      */
     public function setSize($size)
     {
@@ -190,7 +190,7 @@ class Pdf
      * Set live
      *
      * @param boolean $live
-     * @return Picture
+     * @return Pdf
      */
     public function setLive($live)
     {
@@ -213,7 +213,7 @@ class Pdf
      * Set deleted
      *
      * @param boolean $deleted
-     * @return Picture
+     * @return Pdf
      */
     public function setDeleted($deleted)
     {
@@ -236,7 +236,7 @@ class Pdf
      * Set created
      *
      * @param \DateTime $created
-     * @return Picture
+     * @return Pdf
      */
     public function setCreated($created)
     {
@@ -259,7 +259,7 @@ class Pdf
      * Set modified
      *
      * @param \DateTime $modified
-     * @return Picture
+     * @return Pdf
      */
     public function setModified($modified)
     {
@@ -315,18 +315,9 @@ class Pdf
         $filename = "{$rd}-{$time}.{$extension}";
         $this->file->move($this->getUploadRootDir() . "/{$year}/{$month}", $filename);
 
-        $meta = getimagesize("{$this->getUploadRootDir()}" . "/{$year}/{$month}/{$filename}");
-        if ($meta) {
-
-            $width = $meta[0];
-            $height = $meta[1];
-
-            $this->setFilename($filename);
-            $this->setWidth($width);
-            $this->setHeight($height);
-            $this->setSize($this->file->getClientSize());
-            $this->setMime($this->file->getClientMimeType());
-        }
+        $this->setFilename($filename);
+        $this->setSize($this->file->getClientSize());
+        $this->setMime($this->file->getClientMimeType());
 
     }
 
