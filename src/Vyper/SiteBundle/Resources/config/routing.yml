@@ -391,6 +391,10 @@ admin_show_pictures:
     path:     /_admin_/pictures
     defaults: { _controller: VyperSiteBundle:AdminPicture:showPictures }
 
+admin_show_pdfs:
+    path:     /_admin_/pdfs
+    defaults: { _controller: VyperSiteBundle:AdminPicture:showPictures }
+
 admin_add_picture:
     path:     /_admin_/picture/add
     defaults: { _controller: VyperSiteBundle:AdminPicture:addPicture }

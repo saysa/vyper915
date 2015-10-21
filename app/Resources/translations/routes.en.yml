@@ -113,6 +113,8 @@ admin_show_partners: /_admin_/partners   # FIXME
 # Desc: /_admin_/pictures
 admin_show_pictures: /_admin_/pictures   # FIXME
 
+admin_show_pdfs: /_admin_/pdfs
+
 # Desc: /_admin_/tours
 admin_show_tours: /_admin_/tours   # FIXME
 
