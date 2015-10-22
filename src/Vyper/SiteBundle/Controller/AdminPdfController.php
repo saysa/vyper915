@@ -30,7 +30,7 @@ class AdminPdfController extends AdminCommonController {
 
         $view->set('pdfs',       $pdfs);
         $view->set('user_role', $this->getUserRole());
-        $view->set("active_picture", true);
+        $view->set("active_pdf", true);
 
         return $this->render('VyperSiteBundle:AdminPdf:showPdfs.html.twig', $view->getView());
     }
@@ -63,7 +63,7 @@ class AdminPdfController extends AdminCommonController {
 
         $view->set('form', $form->createView());
         $view->set('user_role', $this->getUserRole());
-        $view->set("active_picture", true);
+        $view->set("active_pdf", true);
 
         return $this->render('VyperSiteBundle:AdminPdf:addPdf.html.twig', $view->getView());
     }

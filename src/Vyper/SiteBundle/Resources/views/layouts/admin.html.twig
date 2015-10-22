@@ -326,6 +326,7 @@
             <li{% if active_article is defined %} class="active"{% endif %}><a href="{{ path('admin_show_articles') }}"><i class="icon-book"></i><span class="hidden-sm"> Articles</span></a></li>
             {% if user_role == 'admin' %}
                 <li{% if active_picture  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_pictures') }}"><i class="icon-picture"></i><span class="hidden-sm"> Pictures</span></a></li>
+                <li{% if active_pdf  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_pdfs') }}"><i class="icon-picture"></i><span class="hidden-sm"> PDF</span></a></li>
                 <li{% if active_magazine  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_magazines') }}"><i class="fa fa-book"></i><span class="hidden-sm"> Magazine</span></a></li>
                 <li{% if active_video  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_videos') }}"><i class="fa fa-play-circle-o"></i><span class="hidden-sm"> Videos</span></a></li>
                 <li{% if active_artist  is defined %} class="active"{% endif %}><a href="{{ path('admin_show_artists') }}"><i class="icon-star"></i><span class="hidden-sm"> Artists</span></a></li>
