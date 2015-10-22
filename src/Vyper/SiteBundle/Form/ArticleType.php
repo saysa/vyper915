@@ -58,6 +58,7 @@ class ArticleType extends AbstractType
                 'property' => 'name',
             ))
             ->add('pictureID', 'text', array('attr' => array('placeholder' => 'Picture ID')))
+            ->add('pdfID', 'text', array('required' => false, 'attr' => array('placeholder' => 'PDF file ID')))
 
         ;
 
@@ -75,6 +76,11 @@ class ArticleType extends AbstractType
                 if (null !== $article->getId()) {
 
                     $event->getForm()->add('pictureID', 'text', array('data' => $article->getPicture()->getId()));
+
+                    if (is_object($article->getPdf())) {
+                        $event->getForm()->add('pdfID', 'text', array('data' => $article->getPdf()->getId()));
+                    }
+
                 }
             }
         );

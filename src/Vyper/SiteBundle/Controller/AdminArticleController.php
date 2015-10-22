@@ -82,6 +82,11 @@ class AdminArticleController extends AdminCommonController {
             $article->setUser($this->getUser());
             $article->setPicture($picture);
 
+            if (!empty($post_data['pdfID'])) {
+                $pdf = $em->getRepository('VyperSiteBundle:Pdf')->find($post_data['pdfID']);
+                $article->setPdf($pdf);
+            }
+
             $dateArticle = new \DateTime($article->getReleaseDate()->format("Y-m-d") . " " . $article->getReleaseTime()->format("H:i:s"));
             $dateNow = new \DateTime("NOW");
 
@@ -130,8 +135,12 @@ class AdminArticleController extends AdminCommonController {
             $form->submit($request);
 
             $picture = $em->getRepository('VyperSiteBundle:Picture')->find($post_data['pictureID']);
-
             $article->setPicture($picture);
+
+            if (!empty($post_data['pdfID'])) {
+                $pdf = $em->getRepository('VyperSiteBundle:Pdf')->find($post_data['pdfID']);
+                $article->setPdf($pdf);
+            }
 
             $dateArticle = new \DateTime($article->getReleaseDate()->format("Y-m-d") . " " . $article->getReleaseTime()->format("H:i:s"));
             $dateNow = new \DateTime("NOW");

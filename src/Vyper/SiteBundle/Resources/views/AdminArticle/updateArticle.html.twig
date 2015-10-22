@@ -198,6 +198,16 @@
                                         {{ form_errors(form.pictureID) }}
                                     </div>
                                 </div>
+                                <div class="form-group col-lg-1"></div>
+                                <!-- Related PDF file -->
+                                <div class="form-group col-lg-3">
+                                    {{ form_label(form.pdfID, "PDF file (optional)") }}
+                                    <div class="controls">
+                                        {{ form_widget(form.pdfID, { 'attr': {'class': 'form-control'} }) }}
+                                        <a href="{{ path('admin_show_pdfs') }}" target="_blank">View all PDF files</a>
+                                        {{ form_errors(form.pdfID) }}
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row">
