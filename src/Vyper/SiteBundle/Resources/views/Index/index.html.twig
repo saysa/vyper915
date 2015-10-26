@@ -140,7 +140,6 @@
 
         {% javascripts
         'bundles/vypersite/dialy/lib/js/flexslider.min.js'
-        'bundles/vypersite/js/fancybox/jquery.fancybox.pack.js'
         %}
 
         <script type="text/javascript" src="{{ asset_url }}"></script>
@@ -151,37 +150,39 @@
             $(function () {
 
                 // Flexslider
-                $(".flexslider").flexslider({
+                jQuery(".flexslider").flexslider({
                     animation: "fade",
                     slideshow: true,
                     slideshowSpeed: 5000,
                     controlNav: false
                 });
-
-                var fancybox_elem = $(".fancybox");
-                fancybox_elem.fancybox({
-                    openEffect  : 'none',
-                    closeEffect : 'none',
-                    iframe : {
-                        preload: false
-                    },
-                    helpers : {
-                        overlay: {
-                            opacity: 0.8, // or the opacity you want
-                            css: {'background-color': '#000000'} // or your preferred hex color value
-                        } // overlay
-                    } // helpers
-                });
-
-                fancybox_elem.on('click', function() {
-                    googleSend($(this));
-                });
-
-                $('.pdf-mobile').on('click', function() {
-                    googleSend($(this));
-                });
-
             });
+
+            /*
+
+             var fancybox_elem = $(".fancybox");
+             fancybox_elem.fancybox({
+             openEffect  : 'none',
+             closeEffect : 'none',
+             iframe : {
+             preload: false
+             },
+             helpers : {
+             overlay: {
+             opacity: 0.8, // or the opacity you want
+             css: {'background-color': '#000000'} // or your preferred hex color value
+             } // overlay
+             } // helpers
+             });
+
+             fancybox_elem.on('click', function() {
+             googleSend($(this));
+             });
+
+             $('.pdf-mobile').on('click', function() {
+             googleSend($(this));
+             });
+             */
 
             function googleSend(elem) {
                 var slug = elem.data('slug');
