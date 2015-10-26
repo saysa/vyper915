@@ -99,7 +99,16 @@
                     </span>
                     </div>
                     <div class="post-meta">
-                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                        <h3>
+                            {% if article.pdf %}
+                                <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                            {% else %}
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                            {% endif %}
+                        </h3>
                         <div class="post-dca">
                             <span class="author">{{ 'article.author'|trans }} <a href="#">{{ article.author }}</a></span>
                             <span class="date">{{ 'article.published'|trans }} <a href="#month">{{ article.getReleaseDateFrontFormat() }}</a></span>
