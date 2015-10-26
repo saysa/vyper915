@@ -192,7 +192,16 @@
                                     <img src="{{ asset(article.picture.getPath('homepage-slider')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}" draggable="false">
                                     <div class="post-box-text">
                                         <span style="background-color: #dd030e"><a href="#">{{ article.getArticleType.getName }}</a></span>
-                                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                                        <h3>
+                                            {% if article.pdf %}
+                                                <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                            {% else %}
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                                            {% endif %}
+                                        </h3>
                                         <p>{{ article.getReleaseDateFrontFormat(article.getId) }}</p>
                                     </div>
                                 </li>
