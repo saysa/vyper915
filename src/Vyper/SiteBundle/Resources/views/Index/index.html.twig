@@ -140,21 +140,23 @@
 
         {% javascripts
         'bundles/vypersite/dialy/lib/js/flexslider.min.js'
+        'bundles/vypersite/js/fancybox/jquery.fancybox.pack.js'
         %}
 
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
 
         <script>
-            // Flexslider
-            jQuery(".flexslider").flexslider({
-                animation: "fade",
-                slideshow: true,
-                slideshowSpeed: 5000,
-                controlNav: false
-            });
 
             $(function () {
+
+                // Flexslider
+                jQuery(".flexslider").flexslider({
+                    animation: "fade",
+                    slideshow: true,
+                    slideshowSpeed: 5000,
+                    controlNav: false
+                });
 
                 var fancybox_elem = $(".fancybox");
                 fancybox_elem.fancybox({
