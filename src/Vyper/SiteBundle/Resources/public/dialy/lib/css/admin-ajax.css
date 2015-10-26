@@ -669,3 +669,11 @@ Habillage
     height: 70px;
     display: block;
 }
+
+/*
+Button
+*/
+.read-button {
+    background: #DD030E;
+    color: white;
+}

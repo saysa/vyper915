@@ -2,6 +2,15 @@
 
 {% block title %}{{ article_type }} | {{ parent() }}{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite'
+    'bundles/vypersite/css/fancybox/jquery.fancybox.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
     {% block above_the_fold %}
     <div id="above-the-fold" class="above-the-fold light">
         <div class="inner-wrapper">
@@ -19,13 +28,24 @@
                 <!-- Post -->
                 <div class="main-item post type-post format-standard hentry">
                     <div class="post-img">
-                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
-                            <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
+                        {% if article.pdf %}
+                            <a class="fancybox" data-fancybox-type="iframe" rel="group" href="{{ asset(article.pdf.getPath()) }}">
+                                <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
+                        {% else %}
+                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
+                        {% endif %}
                     </div>
 
 
                     <div class="post-meta ">
-                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3>
+                        <h3>
+                            {% if article.pdf %}
+                                <a class="fancybox" data-fancybox-type="iframe" rel="group" href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                            {% else %}
+                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
+                            {% endif %}
+                        </h3>
                         <div class="post-dca">
                             <span class="date">{{ article.getReleaseDateFrontFormat(article.getId) }}</span>
                             <span class="theme"><a href="#">{{ article.getArticleType.getName }}</a></span>
@@ -38,6 +58,14 @@
                         <span class="disqus-comment-count" data-disqus-url="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">First article</span>
                         #}
                         <p>{{ article.getDescription }}</p>
+
+                        {% if article.pdf %}
+                            <a class="under-960" href="{{ asset(article.pdf.getPath()) }}">OPEN PDF tablet mobile</a>
+                            <a data-slug="{{ article.slug }}" href="{{ asset(article.pdf.getPath()) }}"
+                               class="btn btn-default fancybox over-720 read-button"
+                               data-fancybox-type="iframe" rel="group"
+                               ><i class="fa fa-file"></i> Lire l'article</a>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -82,6 +110,41 @@
 
 {% block javascripts_footer %}
     {{ parent() }}
+
+    {% javascripts
+    'bundles/vypersite/js/fancybox/jquery.fancybox.pack.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            //setPrettyPhoto();
+            //$('#pdf').trigger('click');
+            var fancybox_elem = $(".fancybox");
+            fancybox_elem.fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                iframe : {
+                    preload: false
+                },
+                helpers : {
+                    overlay: {
+                        opacity: 0.8, // or the opacity you want
+                        css: {'background-color': '#000000'} // or your preferred hex color value
+                    } // overlay
+                } // helpers
+            });
+
+            fancybox_elem.on('click', function() {
+                var slug = $(this).data('slug');
+               console.log(slug);
+            });
+
+        });
+
+    </script>
 
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
