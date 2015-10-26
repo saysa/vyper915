@@ -144,6 +144,13 @@
                 slideshowSpeed: 5000,
                 controlNav: false
             });
+
+            $(function () {
+
+                ga('send', 'event', 'My Category', 'My action', 'My label', {'nonInteraction': 1});
+
+            });
+
         </script>
 
     {% endblock %}
