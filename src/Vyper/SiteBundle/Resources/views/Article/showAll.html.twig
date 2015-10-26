@@ -29,8 +29,14 @@
                 <div class="main-item post type-post format-standard hentry">
                     <div class="post-img">
                         {% if article.pdf %}
-                            <a class="fancybox" data-fancybox-type="iframe" rel="group" href="{{ asset(article.pdf.getPath()) }}">
-                                <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
+                            <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe" rel="group"
+                               href="{{ asset(article.pdf.getPath()) }}">
+                                <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}"
+                                     title="{{ article.getTitle }}">        </a>
+                            <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                               rel="group" href="{{ asset(article.pdf.getPath()) }}">
+                                <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}"
+                                     title="{{ article.getTitle }}">        </a>
                         {% else %}
                             <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
                                 <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
@@ -41,7 +47,10 @@
                     <div class="post-meta ">
                         <h3>
                             {% if article.pdf %}
-                                <a class="fancybox" data-fancybox-type="iframe" rel="group" href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                   rel="group" href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
                             {% else %}
                                 <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
                             {% endif %}
@@ -60,7 +69,7 @@
                         <p>{{ article.getDescription }}</p>
 
                         {% if article.pdf %}
-                            <a class="under-960" href="{{ asset(article.pdf.getPath()) }}">OPEN PDF tablet mobile</a>
+                            <a data-slug="{{ article.slug }}" class="under-960 pdf-mobile" href="{{ asset(article.pdf.getPath()) }}">OPEN PDF tablet mobile</a>
                             <a data-slug="{{ article.slug }}" href="{{ asset(article.pdf.getPath()) }}"
                                class="btn btn-default fancybox over-720 read-button"
                                data-fancybox-type="iframe" rel="group"
@@ -138,11 +147,19 @@
             });
 
             fancybox_elem.on('click', function() {
-                var slug = $(this).data('slug');
-               console.log(slug);
+                googleSend($(this));
+            });
+
+            $('.pdf-mobile').on('click', function() {
+                googleSend($(this));
             });
 
         });
+
+        function googleSend(elem) {
+            var slug = elem.data('slug');
+            ga('send', 'event', 'Article PDF', 'Clic', slug, {'nonInteraction': 1});
+        }
 
     </script>
 
