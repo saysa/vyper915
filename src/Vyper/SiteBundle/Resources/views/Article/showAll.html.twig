@@ -29,12 +29,12 @@
                 <div class="main-item post type-post format-standard hentry">
                     <div class="post-img">
                         {% if article.pdf %}
-                            <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe" rel="group"
+                            <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
                                href="{{ asset(article.pdf.getPath()) }}">
                                 <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}"
                                      title="{{ article.getTitle }}">        </a>
                             <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
-                               rel="group" href="{{ asset(article.pdf.getPath()) }}">
+                               href="{{ asset(article.pdf.getPath()) }}">
                                 <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}"
                                      title="{{ article.getTitle }}">        </a>
                         {% else %}
@@ -48,7 +48,7 @@
                         <h3>
                             {% if article.pdf %}
                                 <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
-                                   rel="group" href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
                                 <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
                                    href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
                             {% else %}
@@ -72,7 +72,7 @@
                             <a data-slug="{{ article.slug }}" class="under-960 pdf-mobile" href="{{ asset(article.pdf.getPath()) }}">OPEN PDF tablet mobile</a>
                             <a data-slug="{{ article.slug }}" href="{{ asset(article.pdf.getPath()) }}"
                                class="btn btn-default fancybox over-720 read-button"
-                               data-fancybox-type="iframe" rel="group"
+                               data-fancybox-type="iframe"
                                ><i class="fa fa-file"></i> Lire l'article</a>
                         {% endif %}
                     </div>
