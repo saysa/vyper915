@@ -70,11 +70,11 @@
 
                         {% if article.pdf %}
                             <a data-slug="{{ article.slug }}" class="under-960 pdf-mobile btn btn-default read-button"
-                               href="{{ asset(article.pdf.getPath()) }}">OPEN PDF tablet mobile</a>
+                               href="{{ asset(article.pdf.getPath()) }}"><i class="fa fa-file"></i> Lire l'article PDF</a>
                             <a data-slug="{{ article.slug }}" href="{{ asset(article.pdf.getPath()) }}"
                                class="btn btn-default fancybox over-720 read-button"
                                data-fancybox-type="iframe"
-                               ><i class="fa fa-file"></i> Lire l'article</a>
+                               ><i class="fa fa-file"></i> Lire l'article PDF</a>
                         {% endif %}
                     </div>
                 </div>
