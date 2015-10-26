@@ -81,9 +81,19 @@
             {% if loop.index == 1 %}
                 <div class="main-item">
                     <div class="post-img">
-                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
-                            <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}">
-                        </a>
+                        {% if article.pdf %}
+                            <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                               href="{{ asset(article.pdf.getPath()) }}">
+                                <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
+                                     title="{{ article.getTitle }}">        </a>
+                            <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                               href="{{ asset(article.pdf.getPath()) }}">
+                                <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
+                                     title="{{ article.getTitle }}">        </a>
+                        {% else %}
+                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">        </a>
+                        {% endif %}
                                     <span style="background-color: #222222">
                         <a href="#">{{ article.getArticleType.getName }}</a>
                     </span>
