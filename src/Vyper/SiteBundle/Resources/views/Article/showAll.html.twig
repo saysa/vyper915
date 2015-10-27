@@ -29,7 +29,7 @@
                 <div class="main-item post type-post format-standard hentry">
                     <div class="post-img">
                         {% if article.pdf %}
-                            <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                            <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
                                href="{{ asset(article.pdf.getPath()) }}">
                                 <img src="{{ asset(article.picture.getPath()) }}" alt="{{ article.getTitle }}"
                                      title="{{ article.getTitle }}">        </a>
