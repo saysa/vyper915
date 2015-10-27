@@ -15,6 +15,9 @@ main.menu.magazine.media: Presse
 main.menu.magazine.subscriptions: Abonnements
 main.menu.magazine.subscriptions.ad: Profitez du magazine le plus complet en France
 
+button:
+    open.pdf: Lire l'article PDF
+
 homepage:
     latests.news: Les dernières News
 
