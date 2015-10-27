@@ -82,12 +82,40 @@
                                 <div class="block-layout-two">
                                     <div class="main-item">
                                         <div class="post-img">
-                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
-                                                <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}" data-size="338x250" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">
-                                            </a><span style="background-color: #222222">
+                                            {% if article.pdf %}
+                                                <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                   href="{{ asset(article.pdf.getPath()) }}">
+                                                    <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}"
+                                                         alt="{{ article.getTitle }}" data-size="338x250"
+                                                         title="{{ article.getTitle }}">        </a>
+                                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                   href="{{ asset(article.pdf.getPath()) }}">
+                                                    <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}"
+                                                         alt="{{ article.getTitle }}" data-size="338x250"
+                                                         title="{{ article.getTitle }}">        </a>
+                                            {% else %}
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                                    <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}"
+                                                         alt="{{ article.getTitle }}" data-size="338x250"
+                                                         title="{{ article.getTitle }}">
+                                                </a>
+                                            {% endif %}
+                                            <span style="background-color: #222222">
 		                    							<a href="#">{{ article.getArticleType.getName }}</a>
 		                    						</span></div>
-                                        <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3><p class="date">{{ article.getReleaseDateFrontFormat() }}</p></div>
+                                        <h3>
+                                            {% if article.pdf %}
+                                                <a class="fancybox over-720" data-slug="{{ article.slug }}"
+                                                   data-fancybox-type="iframe"
+                                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                                   href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                            {% else %}
+                                                <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                                    {{ article.getTitle }}</a>
+                                            {% endif %}
+                                        </h3>
+                                        <p class="date">{{ article.getReleaseDateFrontFormat() }}</p></div>
                                 </div>
                                 {% endif %}
                                 {% endfor %}
@@ -102,12 +130,39 @@
                                         {% if loop.index > 1 and loop.index <5 %}
                                             <li>
                                                 <div class="image">
-                                                    <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
-                                                        <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('80-65')) }}" alt="{{ article.getTitle }}" title="{{ article.getTitle }}">
-                                                    </a>
+                                                    {% if article.pdf %}
+                                                        <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                           href="{{ asset(article.pdf.getPath()) }}">
+                                                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('80-65')) }}"
+                                                                 alt="{{ article.getTitle }}"
+                                                                 title="{{ article.getTitle }}">        </a>
+                                                        <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                           href="{{ asset(article.pdf.getPath()) }}">
+                                                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('80-65')) }}"
+                                                                 alt="{{ article.getTitle }}"
+                                                                 title="{{ article.getTitle }}">        </a>
+                                                    {% else %}
+                                                        <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                                            <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath('80-65')) }}"
+                                                                 alt="{{ article.getTitle }}"
+                                                                 title="{{ article.getTitle }}">
+                                                        </a>
+                                                    {% endif %}
                                                 </div>
                                                 <div class="text">
-                                                    <h3><a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a></h3><p class="date">{{ article.getReleaseDateFrontFormat() }}</p></div>
+                                                    <h3>
+                                                        {% if article.pdf %}
+                                                            <a class="fancybox over-720" data-slug="{{ article.slug }}"
+                                                               data-fancybox-type="iframe"
+                                                               href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                                            <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                                               href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
+                                                        {% else %}
+                                                            <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
+                                                                {{ article.getTitle }}</a>
+                                                        {% endif %}
+                                                    </h3>
+                                                    <p class="date">{{ article.getReleaseDateFrontFormat() }}</p></div>
                                             </li>
                                         {% endif %}
                                     {% endfor %}
