@@ -75,6 +75,12 @@
                                class="btn btn-default fancybox over-720 read-button"
                                data-fancybox-type="iframe"
                                ><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>
+
+                            {% if article.youtube %}
+                            <a href="http://www.youtube.com/v/{{ article.youtube }}?fs=1&amp;autoplay=1"
+                               class="fancy-video btn btn-default over-720 read-button">
+                                <i class="fa fa-youtube-play"></i> Video</a>
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
@@ -153,6 +159,32 @@
 
             $('.pdf-mobile').on('click', function() {
                 googleSend($(this));
+            });
+
+            $(".fancy-video").click(function() {
+                $.fancybox({
+                    'padding'		: 0,
+                    'autoScale'		: false,
+                    'transitionIn'	: 'none',
+                    'transitionOut'	: 'none',
+                    'title'			: this.title,
+                    'width'			: 640,
+                    'height'		: 385,
+                    'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+                    'type'			: 'swf',
+                    'swf'			: {
+                        'wmode'				: 'transparent',
+                        'allowfullscreen'	: 'true'
+                    },
+                    helpers : {
+                        overlay: {
+                            opacity: 0.8, // or the opacity you want
+                            css: {'background-color': '#000000'} // or your preferred hex color value
+                        } // overlay
+                    } // helpers
+                });
+
+                return false;
             });
 
         });
