@@ -676,4 +676,6 @@ Button
 .read-button {
     background: #DD030E;
     color: white;
+    font-family: 'Roboto Condensed', serif;
+    text-transform: uppercase;
 }
