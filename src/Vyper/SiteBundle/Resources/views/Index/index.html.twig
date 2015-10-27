@@ -82,7 +82,7 @@
                 <div class="main-item">
                     <div class="post-img">
                         {% if article.pdf %}
-                            <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                            <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
                                href="{{ asset(article.pdf.getPath()) }}">
                                 <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
                                      title="{{ article.getTitle }}">        </a>
@@ -145,7 +145,7 @@
                         <div class="main-item">
                             <div class="post-img">
                                 {% if article.pdf %}
-                                    <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                    <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
                                        href="{{ asset(article.pdf.getPath()) }}">
                                         <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
                                              title="{{ article.getTitle }}">        </a>
