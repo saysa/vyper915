@@ -405,7 +405,7 @@ aside#sidebar {
 .only-960,
 .only-720,
 .over-mobile {
-    display: none;
+    display: none!important;
 }
 
 /* Habillage */

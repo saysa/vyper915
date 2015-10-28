@@ -97,7 +97,7 @@ a.responsive-menu-btn {
 .only-960,
 .only-720,
 .only-mobile {
-    display: none;
+    display: none!important;
 }
 
 /* Habillage */

@@ -329,7 +329,7 @@ ul.ad-banner-125x125 li:hover {
 .only-960,
 .only-mobile
 {
-    display: none;
+    display: none!important;
 }
 
 aside h4 {
