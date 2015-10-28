@@ -83,7 +83,7 @@
                                     <div class="main-item">
                                         <div class="post-img">
                                             {% if article.pdf %}
-                                                <a class="fancybox" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
                                                    href="{{ asset(article.pdf.getPath()) }}">
                                                     <img src="{{ app.request.getSchemeAndHttpHost() ~ asset(article.picture.getPath()) }}"
                                                          alt="{{ article.getTitle }}" data-size="338x250"
