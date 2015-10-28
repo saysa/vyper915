@@ -679,3 +679,44 @@ Button
     font-family: 'Roboto Condensed', serif;
     text-transform: uppercase;
 }
+
+/*
+* Google search
+*/
+.cse .gsc-control-cse,
+.gsc-control-cse {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.gsc-control-cse {
+    border-color: #F2F2F2 !important;
+    background-color: #F2F2F2 !important;
+}
+
+form.gsc-search-box {
+    margin: 0 !important;
+}
+
+table.gsc-search-box {
+    margin-bottom: 0 !important;
+}
+
+table.gsc-search-box td {
+    padding: 0 !important;
+    border: none;
+}
+
+div.gsc-control-wrapper-cse {
+    background: white!important;
+}
+
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+    border-color: #666666 !important;
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}

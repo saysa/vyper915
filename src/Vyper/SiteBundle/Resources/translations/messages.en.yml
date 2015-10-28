@@ -97,6 +97,7 @@ sidebar:
     title:
         nextevent: Next Event
         follow.us: Follow us
+        search: Search
 
 calendar:
     today: Today
