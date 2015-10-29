@@ -82,11 +82,11 @@
                 <div class="main-item">
                     <div class="post-img">
                         {% if article.pdf %}
-                            <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                            <a class="fancybox over-720" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                href="{{ asset(article.pdf.getPath()) }}">
                                 <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
                                      title="{{ article.getTitle }}">        </a>
-                            <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                            <a class="under-960 pdf-mobile" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                href="{{ asset(article.pdf.getPath()) }}">
                                 <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
                                      title="{{ article.getTitle }}">        </a>
@@ -101,9 +101,9 @@
                     <div class="post-meta">
                         <h3>
                             {% if article.pdf %}
-                                <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                <a class="fancybox over-720" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                    href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
-                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                <a class="under-960 pdf-mobile" data-slug="{{ article.pdf.name }}"
                                    href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
                             {% else %}
                                 <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
@@ -117,9 +117,9 @@
                         <p>{{ article.getDescription }}</p>
 
                         {% if article.pdf %}
-                            <a data-slug="{{ article.slug }}" class="under-960 pdf-mobile btn btn-default read-button"
+                            <a data-slug="{{ article.pdf.name }}" class="under-960 pdf-mobile btn btn-default read-button"
                                href="{{ asset(article.pdf.getPath()) }}"><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>
-                            <a data-slug="{{ article.slug }}" href="{{ asset(article.pdf.getPath()) }}"
+                            <a data-slug="{{ article.pdf.name }}" href="{{ asset(article.pdf.getPath()) }}"
                                class="btn btn-default fancybox over-720 read-button"
                                data-fancybox-type="iframe"
                                     ><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>
@@ -145,11 +145,11 @@
                         <div class="main-item">
                             <div class="post-img">
                                 {% if article.pdf %}
-                                    <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                    <a class="fancybox over-720" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                        href="{{ asset(article.pdf.getPath()) }}">
                                         <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
                                              title="{{ article.getTitle }}">        </a>
-                                    <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                    <a class="under-960 pdf-mobile" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                        href="{{ asset(article.pdf.getPath()) }}">
                                         <img src="{{ asset(article.picture.getPath('303-162')) }}" alt="{{ article.getTitle }}"
                                              title="{{ article.getTitle }}">        </a>
@@ -165,9 +165,9 @@
                             </div>
                             <h3>
                                 {% if article.pdf %}
-                                    <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                    <a class="fancybox over-720" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                        href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
-                                    <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                    <a class="under-960 pdf-mobile" data-slug="{{ article.pdf.name }}"
                                        href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
                                 {% else %}
                                     <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">
@@ -181,9 +181,9 @@
                             <p>{{ article.getDescription }}</p>
 
                             {% if article.pdf %}
-                                <a data-slug="{{ article.slug }}" class="under-960 pdf-mobile btn btn-default read-button"
+                                <a data-slug="{{ article.pdf.name }}" class="under-960 pdf-mobile btn btn-default read-button"
                                    href="{{ asset(article.pdf.getPath()) }}"><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>
-                                <a data-slug="{{ article.slug }}" href="{{ asset(article.pdf.getPath()) }}"
+                                <a data-slug="{{ article.pdf.name }}" href="{{ asset(article.pdf.getPath()) }}"
                                    class="btn btn-default fancybox over-720 read-button"
                                    data-fancybox-type="iframe"
                                         ><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>

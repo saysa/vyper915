@@ -194,9 +194,9 @@
                                         <span style="background-color: #dd030e"><a href="#">{{ article.getArticleType.getName }}</a></span>
                                         <h3>
                                             {% if article.pdf %}
-                                                <a class="fancybox over-720" data-slug="{{ article.slug }}" data-fancybox-type="iframe"
+                                                <a class="fancybox over-720" data-slug="{{ article.pdf.name }}" data-fancybox-type="iframe"
                                                    href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
-                                                <a class="under-960 pdf-mobile" data-slug="{{ article.slug }}"
+                                                <a class="under-960 pdf-mobile" data-slug="{{ article.pdf.name }}"
                                                    href="{{ asset(article.pdf.getPath()) }}">{{ article.getTitle }}</a>
                                             {% else %}
                                                 <a href="{{ path('showArticle', {'id': article.getId, 'slug': article.slug}) }}">{{ article.getTitle }}</a>
