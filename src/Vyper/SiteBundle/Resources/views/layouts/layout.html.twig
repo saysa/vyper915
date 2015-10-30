@@ -80,6 +80,11 @@
     {# Jquery UI #}
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet" type="text/css" />
 
+    {% stylesheets filter='cssrewrite'
+    'bundles/vypersite/css/fancybox/jquery.fancybox.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 
 {% endblock %}
 

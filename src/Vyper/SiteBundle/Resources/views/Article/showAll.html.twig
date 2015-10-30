@@ -2,14 +2,6 @@
 
 {% block title %}{{ article_type }} | {{ parent() }}{% endblock %}
 
-{% block stylesheets %}
-    {{ parent() }}
-    {% stylesheets filter='cssrewrite'
-    'bundles/vypersite/css/fancybox/jquery.fancybox.css'
-    %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
-{% endblock %}
 
     {% block above_the_fold %}
     <div id="above-the-fold" class="above-the-fold light">
