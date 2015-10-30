@@ -234,50 +234,7 @@
                 });
             });
 
-
-
-            function googleSend(elem) {
-                var slug = elem.data('slug');
-                ga('send', 'event', 'Article PDF', 'Clic', slug, {'nonInteraction': 1});
-            }
-
         </script>
 
-        {% javascripts
-        'bundles/vypersite/js/fancybox/jquery.fancybox.pack.js'
-        %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-        {% endjavascripts %}
-
-        <script>
-
-            $(function () {
-                var fancybox_elem = $(".fancybox");
-                fancybox_elem.fancybox({
-                    width: '100%',
-                    height: '100%',
-                    openEffect  : 'none',
-                    closeEffect : 'none',
-                    iframe : {
-                        preload: false
-                    },
-                    helpers : {
-                        overlay: {
-                            opacity: 0.8, // or the opacity you want
-                            css: {'background-color': '#000000'} // or your preferred hex color value
-                        } // overlay
-                    } // helpers
-                });
-
-                fancybox_elem.on('click', function() {
-                    googleSend($(this));
-                });
-
-                $('.pdf-mobile').on('click', function() {
-                    googleSend($(this));
-                });
-
-            });
-        </script>
 
     {% endblock %}
