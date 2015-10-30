@@ -125,6 +125,9 @@
                                     ><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>
                             {% if article.youtube %}
                                 <a href="http://www.youtube.com/v/{{ article.youtube }}?fs=1&amp;autoplay=1"
+                                   class="under-960 btn btn-default read-button" target="_blank">
+                                    <i class="fa fa-youtube-play"></i> Video</a>
+                                <a href="http://www.youtube.com/v/{{ article.youtube }}?fs=1&amp;autoplay=1"
                                    class="fancy-video btn btn-default over-720 read-button">
                                     <i class="fa fa-youtube-play"></i> Video</a>
                             {% endif %}
@@ -189,6 +192,9 @@
                                         ><i class="fa fa-file"></i> {{ 'button.open.pdf'|trans }}</a>
 
                                 {% if article.youtube %}
+                                    <a href="http://www.youtube.com/v/{{ article.youtube }}?fs=1&amp;autoplay=1"
+                                       class="under-960 btn btn-default read-button" target="_blank">
+                                        <i class="fa fa-youtube-play"></i> Video</a>
                                     <a href="http://www.youtube.com/v/{{ article.youtube }}?fs=1&amp;autoplay=1"
                                        class="fancy-video btn btn-default over-720 read-button">
                                         <i class="fa fa-youtube-play"></i> Video</a>
