@@ -178,11 +178,14 @@
             <li><a href="{{ path('vyper_site_showAllContests') }}" class="impact" style="border-color: #4A86B8; ">{{ 'main.menu.contests'|trans }}</a></li>
             <li><a href="{{ path('vyper_site_showAllArtist') }}" class="impact" style="border-color: #ccc700; ">{{ 'main.menu.artists'|trans }}</a></li>
             {% if themes_in_menu|length > 0 %}
-
-                {% for theme in themes_in_menu %}
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="{{ path('vyper_site_showTheme', {'id': theme.id, 'slug': theme.slug}) }}" class="impact special">{{ theme.title }}</a></li>
-                {% endfor %}
-
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                    <a href="#" class="impact special">Themes</a>
+                    <ul class="sub-menu">
+                        {% for theme in themes_in_menu %}
+                            <li class="menu-item"><a href="{{ path('vyper_site_showTheme', {'id': theme.id, 'slug': theme.slug}) }}">{{ theme.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
             {% endif %}
         </ul>
 
