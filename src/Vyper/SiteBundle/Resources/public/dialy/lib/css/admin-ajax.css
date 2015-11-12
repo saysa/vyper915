@@ -720,3 +720,13 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
+
+/* Flickr debug */
+.flickr_stream:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
