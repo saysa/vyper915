@@ -45,4 +45,21 @@ class VideoController extends Controller
         return $view->getView();
     }
 
+    public function latestVideoAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $video = $em->getRepository('VyperSiteBundle:Video')->last();
+        $view = $this->container->get('saysa_view');
+
+        if (sizeof($video) > 0) {
+
+            $view->set('lastVideo_video', $video[0]);
+            $view->set('lastVideo_exists', true);
+
+        }
+
+        return $this->render('VyperSiteBundle:Video:lastVideo.html.twig', $view->getView());
+    }
+
 }

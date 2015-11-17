@@ -1,0 +1,10 @@
+{% if lastVideo_exists is defined %}
+    <aside class="widget widget_flickr">
+        <div class="widget-title"><h4>Videos</h4></div>
+
+        <div class="post-img element-fade-in videoWrapper">
+            <iframe width="422" height="280" src="//www.youtube.com/embed/{{ lastVideo_video.getYoutube }}?wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+
+        </div>
+    </aside>
+{% endif %}
