@@ -1309,6 +1309,32 @@ p.title:after {
     padding: 0 0.5em
 }
 
+h3.title {
+    background: black;
+    color: white;
+    border-radius: 3px;
+    font-size: 20px;
+    padding-left: 15px;
+    height: 32px;
+    line-height: 32px;
+}
+
+h3.title span {
+    display: block;
+    float: right;
+    width: 40px;
+    height: 100%;
+    background: transparent url('../img/icon_arrow_down.png') 50% 50% no-repeat;
+}
+
+h3.title.active {
+    background: #dd030e;
+}
+
+h3.title.active span {
+    background-image: url('../img/icon_arrow_up.png');
+}
+
 /*==============================================================================
     10. Block layout 1
 ===============================================================================*/

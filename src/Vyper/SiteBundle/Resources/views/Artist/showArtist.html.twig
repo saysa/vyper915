@@ -68,19 +68,21 @@
         <!-- /post-wrap -->
 
         {% if artist.getBiography and app.request.getLocale() == 'fr' %}
-            <p class="title" id="toggle-biography">
-                <span id="biography"><strong>{{ 'artist.biography'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" id="toggle-biography" data-name-target="biography">
+                <span id="biography"></span>
+                <strong>{{ 'artist.biography'|trans }}</strong>
+            </h3>
 
-            <div class="entry-content" id="toggle-target-biography">
+            <div class="entry-content target" data-target="biography">
                 {{ artist.getBiography|raw }}
             </div>
         {% elseif artist.getBiographyEn and app.request.getLocale() == 'en' %}
-            <p class="title" id="toggle-biography">
-                <span id="biography"><strong>{{ 'artist.biography'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" id="toggle-biography" data-name-target="biography">
+                <span id="biography"></span>
+                <strong>{{ 'artist.biography'|trans }}</strong>
+            </h3>
 
-            <div class="entry-content" id="toggle-target-biography">
+            <div class="entry-content target" id="toggle-target-biography" data-target="biography">
                 {{ artist.getBiographyEn|raw }}
             </div>
         {% endif %}
@@ -88,11 +90,12 @@
         <!-- /entry-content -->
 
         {% if discos is defined %}
-            <p class="title" id="toggle-discos">
-                <span><strong>{{ 'artist.discography'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" data-name-target="discos">
+                <span></span>
+                <strong>{{ 'artist.discography'|trans }}</strong>
+            </h3>
 
-            <div id="toggle-target-discos">
+            <div class="target" data-target="discos">
 
                 <ul class="products">
                     {% set clear_count = 0 %}
@@ -149,12 +152,12 @@
 
         <div class="clear"></div>
         {% if events is defined %}
-            <p class="title" id="toggle-events">
-                <span><strong>{{ 'artist.events'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" data-name-target="events">
+                <span></span>
+                <strong>{{ 'artist.events'|trans }}</strong>
+            </h3>
 
-
-            <ul class="list" id="toggle-target-events">
+            <ul class="list target" data-target="events">
 
                 {% for key, event in events %}
                     <li class="one-third{% if key==2 %} last{% endif %}">
@@ -184,11 +187,12 @@
         {% endif %}
 
         {% if articles is defined %}
-            <p class="title" id="toggle-articles">
-                <span><strong>{{ 'artist.articles'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" data-name-target="articles">
+                <span></span>
+                <strong>{{ 'artist.articles'|trans }}</strong>
+            </h3>
 
-            <ul class="list" id="toggle-target-articles">
+            <ul class="list target" data-target="articles">
                 {% for key, article in articles %}
                     <li class="one-third{% if key==2 %} last{% endif %}">
                         <div class="thumbnail">
@@ -215,11 +219,12 @@
         {% endif %}
 
         {% if albums is defined %}
-            <p class="title" id="toggle-albums">
-                <span><strong>{{ 'artist.gallery'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" data-name-target="albums">
+                <span></span>
+                <strong>{{ 'artist.gallery'|trans }}</strong>
+            </h3>
 
-            <ul class="list" id="toggle-target-albums">
+            <ul class="list target" data-target="albums">
                 {% for key, album in albums %}
                     <li class="one-third{% if key==2 %} last{% endif %}">
                         <div class="thumbnail">
@@ -242,11 +247,12 @@
 
 
         {% if artist.youtubeChannel is not empty or artist.officialWebsite is not empty %}
-            <p class="title" id="toggle-links">
-                <span><strong>{{ 'artist.links'|trans }}</strong></span>
-            </p>
+            <h3 class="title toggle-content" data-name-target="links">
+                <span></span>
+                <strong>{{ 'artist.links'|trans }}</strong>
+            </h3>
 
-            <ul id="toggle-target-links">
+            <ul class="target" data-target="links">
                 {% if artist.officialWebsite is not empty %}<li><a href="{{ artist.officialWebsite }}">{{ 'artist.official.website'|trans }}</a></li>{% endif %}
                 {% if artist.youtubeChannel is not empty %}<li><a href="{{ artist.youtubeChannel }}">{{ 'artist.youtube.channel'|trans }}</a></li>{% endif %}
             </ul>
@@ -315,40 +321,17 @@
 
     <script>
         $(document).ready(function() {
-            $( "#toggle-biography" ).on("click", function() {
-                $('#toggle-target-biography').toggle('slow');
+            $( ".toggle-content" ).on("click", function() {
+                $('.toggle-content').removeClass('active');
+                $('.target').hide();
+                $(this).addClass('active');
+                $('*[data-target="' + $(this).data('name-target') + '"]').toggle('slow');
+                $('html,body').animate({
+                    scrollTop: $(this).offset().top
+                }, 1000);
             });
-            $('#toggle-target-biography').hide();
-
-
-            $( "#toggle-discos" ).on("click", function() {
-                $('#toggle-target-discos').toggle('slow');
-            });
-            //$('#toggle-target-discos').hide();
-
-            $( "#toggle-events" ).on("click", function() {
-                $('#toggle-target-events').toggle('slow');
-            });
-            $('#toggle-target-events').hide();
-
-            $( "#toggle-articles" ).on("click", function() {
-                $('#toggle-target-articles').toggle('slow');
-            });
-            $('#toggle-target-articles').hide();
-
-
-
-            $( "#toggle-albums" ).on("click", function() {
-                $('#toggle-target-albums').toggle('slow');
-            });
-            $('#toggle-target-albums').hide();
-
-
-            $( "#toggle-links" ).on("click", function() {
-                $('#toggle-target-links').toggle('slow');
-            });
-            $('#toggle-target-links').hide();
-
+            $('.target').hide();
+            
         });
 
     </script>
