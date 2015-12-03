@@ -427,7 +427,7 @@
                     id: '134945398@N04'
                 },
                 itemTemplate: '<li><div class="widget-overlay">'+
-                '<a rel="lightbox[flickr-gallery]" href="!!image!!" title="!!title!!">' +
+                '<a class="flickr-gallery" rel="lightbox[flickr-gallery]" href="!!image!!" title="!!title!!">' +
                 '<img src="!!image_s!!" alt="!!title!!" width="75" height="75" />' +
                 '</a>' +
                 '</div></li>'
@@ -444,6 +444,19 @@
 
     <script>
         jQuery(document).ready(function ($) {
+
+            var flickr_gallery_elem = $('.flickr-gallery');
+            flickr_gallery_elem.fancybox({
+                width: '70%',
+                height: '70%',
+                helpers : {
+                    overlay: {
+                        opacity: 0.8, // or the opacity you want
+                        css: {'background-color': '#000000'} // or your preferred hex color value
+                    } // overlay
+                } // helpers
+            });
+
 
             //setPrettyPhoto();
             //$('#pdf').trigger('click');
