@@ -46,6 +46,8 @@ class AdminCommonController extends Controller {
         $user = $this->getUser();
         if ( $user->getRoles()[0] == 'ROLE_SAYSA' || $user->getRoles()[0] == 'ROLE_ADMIN' ) {
             $user_role = 'admin';
+        } else if ($user->getRoles()[0] == 'ROLE_SREDAC') {
+            $user_role = 's_redac';
         } else {
             $user_role = '';
         }

@@ -18,7 +18,7 @@ class AdminPictureController extends AdminCommonController {
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_ADMIN')")
+     * @Security("has_role('ROLE_SREDAC')")
      */
     public function showPicturesAction(Request $request)
     {
@@ -40,7 +40,7 @@ class AdminPictureController extends AdminCommonController {
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_ADMIN')")
+     * @Security("has_role('ROLE_SREDAC')")
      */
     public function addPictureAction(Request $request)
     {
@@ -73,7 +73,7 @@ class AdminPictureController extends AdminCommonController {
     /**
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Security("has_role('ROLE_ADMIN')")
+     * @Security("has_role('ROLE_SREDAC')")
      */
     public function deleteAction(Request $request, Picture $picture)
     {
