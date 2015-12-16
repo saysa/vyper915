@@ -12,10 +12,10 @@ use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Vyper\SiteBundle\Entity\LocaleType;
+use Vyper\SiteBundle\Entity\AdType;
 
 
-class LoadLocaleType extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
+class LoadAdType extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface {
 
     /**
      * Load data fixtures with the passed EntityManager
@@ -24,16 +24,16 @@ class LoadLocaleType extends AbstractFixture implements FixtureInterface, Ordere
      */
     public function load(ObjectManager $manager)
     {
-        $names = array('en', 'fr');
+        $names = array('Top Square A', 'Top Square B');
 
         foreach ($names as $i => $name)
         {
-            $list[$i] = new LocaleType();
+            $list[$i] = new AdType();
             $list[$i]->setName($name);
 
             $manager->persist($list[$i]);
 
-            $this->addReference('locale-type-'.$i, $list[$i]);
+            $this->addReference('ad-type-'.$i, $list[$i]);
         }
 
         $manager->flush();

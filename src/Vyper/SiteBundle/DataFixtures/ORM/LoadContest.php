@@ -55,7 +55,7 @@ class LoadContest extends AbstractFixture implements FixtureInterface, OrderedFi
             $list[$i]->setTimeEnd(new \DateTime("12:08"));
             $list[$i]->setContestWinType($this->getReference('contest-win'));
             $list[$i]->setSlug(uniqid());
-            $list[$i]->setLocale($this->getReference('locale-type'));
+            $list[$i]->setLocale($this->getReference('locale-type-1'));
 
             $manager->persist($list[$i]);
         }
