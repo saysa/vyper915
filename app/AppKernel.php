@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Genemu\Bundle\FormBundle\GenemuFormBundle(),
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Vyper\FoundationBundle\VyperFoundationBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

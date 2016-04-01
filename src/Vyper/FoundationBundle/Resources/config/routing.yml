@@ -1,0 +1,3 @@
+vyper_foundation_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: VyperFoundationBundle:Default:index }
