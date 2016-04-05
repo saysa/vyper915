@@ -1,0 +1,116 @@
+@media screen and (min-width:1301px)
+{
+  /*==============================================================================
+    Layout
+  ===============================================================================*/
+
+  /* Wrapper */
+  #wrapper.boxed,
+  .inner-wrapper {
+    width: 1220px
+  }
+
+
+  /*==============================================================================
+      Responsive menu
+  ===============================================================================*/
+  a.responsive-menu-btn {
+    display: none !important
+  }
+
+
+  /*==============================================================================
+      Grid columns
+  ===============================================================================*/
+
+  /* Default */
+  .row .grid_1,
+  .row .grid_2,
+  .row .grid_3,
+  .row .grid_4,
+  .row .grid_5,
+  .row .grid_6,
+  .row .grid_7,
+  .row .grid_8,
+  .row .grid_9,
+  .row .grid_10,
+  .row .grid_11 {
+    display: inline;
+    float: left;
+    margin: 0 20px 1em 0;}
+  .row .grid_1 {width: 80px}
+  .row .grid_2 {width: 180px}
+  .row .grid_3 {width: 280px}
+  .row .grid_4 {width: 380px}
+  .row .grid_5 {width: 480px}
+  .row .grid_6 {width: 580px}
+  .row .grid_7 {width: 680px}
+  .row .grid_8 {width: 780px}
+  .row .grid_9 {width: 880px}
+  .row .grid_10 {width: 980px}
+  .row .grid_11 {width: 1080px}
+  .row .grid_12 {width: 100%;display: inline-block; float: none; margin: 0 0 1em 0}
+
+  .row .grid_1:last-child,
+  .row .grid_2:last-child,
+  .row .grid_3:last-child,
+  .row .grid_4:last-child,
+  .row .grid_5:last-child,
+  .row .grid_6:last-child,
+  .row .grid_7:last-child,
+  .row .grid_8:last-child,
+  .row .grid_9:last-child,
+  .row .grid_10:last-child,
+  .row .grid_11:last-child {
+    margin-right: 0 !important
+  }
+
+  /* With sidebar */
+  #main.left .grid_1, #main.right .grid_1,
+  #main.left .grid_2, #main.right .grid_2,
+  #main.left .grid_3, #main.right .grid_3,
+  #main.left .grid_4, #main.right .grid_4,
+  #main.left .grid_5, #main.right .grid_5,
+  #main.left .grid_6, #main.right .grid_6,
+  #main.left .grid_7, #main.right .grid_7,
+  #main.left .grid_8, #main.right .grid_8,
+  #main.left .grid_9, #main.right .grid_9,
+  #main.left .grid_10, #main.right .grid_10,
+  #main.left .grid_11, #main.right .grid_11 {
+    margin: 0 16px 1em 0
+  }
+
+  #main.left .grid_1, #main.right .grid_1 {width: 57px}
+  #main.left .grid_2, #main.right .grid_2 {width: 130px}
+  #main.left .grid_3, #main.right .grid_3 {width: 203px}
+  #main.left .grid_4, #main.right .grid_4 {width: 276px}
+  #main.left .grid_5, #main.right .grid_5 {width: 349px}
+  #main.left .grid_6, #main.right .grid_6 {width: 422px}
+  #main.left .grid_7, #main.right .grid_7 {width: 495px}
+  #main.left .grid_8, #main.right .grid_8 {width: 568px}
+  #main.left .grid_9, #main.right .grid_9 {width: 641px}
+  #main.left .grid_10, #main.right .grid_10 {width: 714px}
+  #main.left .grid_11, #main.right .grid_11 {width: 787px}
+  #main.left .grid_12, #main.right .grid_12 {width: 100%;display: inline-block; float: none; margin: 0 0 1em 0}
+
+  .under-1200,
+  .under-960,
+  .under-720,
+  .only-960,
+  .only-720,
+  .only-mobile {
+    display: none!important;
+  }
+
+  /* Habillage */
+  #casing {
+    background: #000000 url("http://vyperpara.dev/bundles/vypersite/img/habillage/hab02.jpg") no-repeat 50% 0;
+    background: #DDD;
+  }
+
+  #casing-top {
+    height: 230px;
+    display: none;
+  }
+
+}
