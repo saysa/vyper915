@@ -1,0 +1,829 @@
+
+/*==============================================================================
+
+Table of contents
+
+1. Base
+2. Social icons
+3. CSS Common
+4. Typography
+5. Tables
+6. Forms
+7. Buttons
+8. Layout
+9. Responsive menu
+10. Main
+11. Pagination
+12. Shortcodes
+
+===============================================================================*/
+
+
+/*==============================================================================
+    1. Base
+===============================================================================*/
+
+/* Body colors, fonts */
+body {
+  color: #555;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5em;
+  cursor: default;
+  background-color: #eee
+}
+
+/* Hides horizontal scroll bars when menu is open,
+disable the webkit tap highlight and fix the focus scrolling in Safari */
+html, body{
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+/* Link colors */
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+a:hover {
+  cursor: pointer;
+  color: #333;
+}
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none
+}
+:focus {
+  outline:0
+}
+
+/* Margins */
+p,
+ul,
+ol,
+dl,
+blockquote,
+hr,
+pre,
+table,
+form,
+fieldset,
+figure,
+address {
+  margin-bottom: 1em
+}
+
+/* Image, video */
+img {
+  border: 0;
+  font-size: 0;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle
+}
+a img {
+  border: none
+}
+
+/*==============================================================================
+    2. Social icons
+===============================================================================*/
+@font-face {
+  font-family: 'socicon';
+  src: url('../fonts/socicon-webfont.eot');
+  src: url('../fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/socicon-webfont.woff') format('woff'),
+  url('../fonts/socicon-webfont.ttf') format('truetype'),
+  url('../fonts/socicon-webfont.svg#sociconregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.socicon {
+  font-family: 'socicon' !important;
+}
+
+
+/*==============================================================================
+    3. CSS Common
+===============================================================================*/
+
+/* Place elements and padding inside the box. */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after,
+#wrapper:before,
+#wrapper:after,
+.inner-wrapper:before,
+.inner-wrapper:after,
+.row:before,
+.row:after,
+.tabs .ui-tabs-nav:before,
+.tabs .ui-tabs-nav:after {
+  content: " ";
+  display: table
+}
+.clearfix:after,
+#wrapper:after,
+.inner-wrapper:after,
+.row:after,
+.tabs .ui-tabs-nav:after {
+  clear: both
+}
+
+/* Remove the gap between images, videos, audio and canvas. */
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%
+}
+
+/* Remove text-shadow in selection highlight. */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none
+}
+
+/*==============================================================================
+    4. Typography
+===============================================================================*/
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: normal
+}
+h1 {
+  line-height: 1.111em;
+  font-size: 36px;
+}
+h2 {
+  line-height: 1.222em;
+  font-size: 30px;
+}
+h3 {
+  line-height: 1.333em;
+  font-size: 24px;
+}
+h4 {
+  line-height: 1.444em;
+  font-size: 18px;
+}
+h5 {
+  line-height: 1.555em;
+  font-size: 14px;
+}
+h6 {
+  line-height: 1.555em;
+  font-size: 12px;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #333;
+  text-decoration: none
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+  text-decoration: underline
+}
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  font-weight: 700
+}
+.subheading {
+  color: #777;
+}
+
+/* Dropcap */
+.dropcap:first-letter {
+  color: #333;
+  font-size: 60px;
+  float: left;
+  padding: 18px 15px 10px 0
+}
+
+/* Hr */
+hr {
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-top: 1em;
+  height: 0;
+  border: 0;
+  display: block;
+  border-top: 1px solid #ddd;
+}
+div.spacer {
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-top: 3em;
+  height: 0;
+  border: 0;
+  display: block
+}
+
+/* Paragraph */
+.lead {
+  font-size: 18px;
+  color: #999;
+  line-height: 1.4em
+}
+
+/* Inline elements */
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+  cursor: help
+}
+cite {
+  font-style: italic
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 90%
+}
+code {
+  white-space: nowrap;
+  background-color: #f9f9f9;
+  padding: 2px 4px;
+  line-height: 1
+}
+pre {
+  border: 1px solid #eee;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: block;
+  padding: 1em;
+  font-size: 13px;
+  overflow: auto;
+  max-width: 100%;
+  background-color: #f9f9f9;
+  clear: both;
+}
+em,
+i,
+dfn {
+  font-style: italic
+}
+sub,
+sup,
+small {
+  font-size: 90%
+}
+sub,
+sup {
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+b,
+strong {
+  font-weight: 700
+}
+del {
+  text-decoration: line-through
+}
+address {
+  font-style: normal
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1.5em;
+  border-left: 5px solid #ccc;
+}
+blockquote p {
+  font-size: 16px;
+  padding-left: 1em;
+  font-family: "Georgia", serif;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Lists */
+ul {
+  list-style-type:disc
+}
+ol {
+  list-style-type:decimal
+}
+ul,
+ol {
+  margin-bottom: 1em
+}
+li ul,
+li ol {
+  margin:0
+}
+
+/* Definition list */
+dt {
+  font-weight: 700
+}
+dd {
+  margin-left: 0;
+  margin-bottom: 0.5em
+}
+
+/* Alignment */
+.text-left {
+  text-align: left
+}
+.text-center {
+  text-align: center
+}
+.text-right {
+  text-align: right
+}
+.text-justify  {
+  text-align: justify
+}
+
+/*==============================================================================
+    5. Tables
+===============================================================================*/
+
+/* Default table */
+table {
+  border: 0;
+  width: 100%
+}
+table thead {
+  text-align: left;
+  vertical-align: bottom
+}
+table thead tr {
+}
+table th,
+table td {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5em 1em
+}
+table td:first-child,
+table th:first-child {
+  border-left-width: 0
+}
+table td {
+}
+
+/* Bordered table */
+table.bordered {
+  border: 1px solid #ccc;
+  width: 100%
+}
+table.bordered thead {
+  background-color: #fafafa;
+  text-align: left;
+  vertical-align: bottom
+}
+table.bordered thead tr {
+  border-bottom: 1px solid #ccc
+}
+table.bordered th,
+table.bordered td {
+  border-left: 1px solid #ccc;
+  padding: 0.5em 1em
+}
+table.bordered td:first-child,
+table.bordered th:first-child {
+  border-left-width: 0
+}
+table.bordered td {
+  border-bottom: 1px solid #ccc
+}
+
+/*==============================================================================
+    6. Forms
+===============================================================================*/
+
+/* Form */
+form {
+  display: block;
+  clear: both
+}
+form .form-group {
+  margin-bottom: 1em
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 0.5em
+}
+
+/* Fields */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  width: 100%
+}
+select {
+  background-color:#fff
+}
+input[type=radio],
+input[type=checkbox] {
+  margin: 4px 0.5em 0 0;
+  float: left
+}
+
+/* Textarea */
+textarea {
+  max-width: 100%;
+  min-height: 150px
+}
+
+/* Fieldset */
+fieldset {
+  padding: 1.5em;
+  border: 1px solid #ccc;
+}
+fieldset legend {
+  font-size: 18px;
+  margin-left: -0.5em;
+  padding: 0.5em
+}
+
+
+/*==============================================================================
+    7. Buttons
+===============================================================================*/
+
+/* Buttons */
+.btn,
+.button,
+button{
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1em;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.btn:hover,
+.button:hover,
+button:hover {
+  background-color: #333;
+  color: #fff
+}
+
+/* Sizes */
+.btn-small {
+  padding: 0.35em 0.65em;
+  font-size: 12px
+}
+.btn-large {
+  padding: 0.6em 0.9em;
+  font-size: 18px
+}
+.btn-expand {
+  width: 100%;
+  display: block
+}
+
+/* Types */
+.btn-radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* Colors */
+.btn-turquoise {
+  background-color: #1abc9c
+}
+.btn-turquoise:hover {
+  background-color: #16a085
+}
+.btn-green {
+  background-color: #2ecc71
+}
+.btn-green:hover {
+  background-color: #27ae60
+}
+.btn-blue {
+  background-color: #3498db
+}
+.btn-blue:hover {
+  background-color: #2980b9
+}
+.btn-darkblue {
+  background-color: #34495e
+}
+.btn-darkblue:hover {
+  background-color: #2c3e50
+}
+.btn-purple {
+  background-color: #9b59b6
+}
+.btn-purple:hover {
+  background-color: #8e44ad
+}
+.btn-red {
+  background-color: #e74c3c
+}
+.btn-red:hover {
+  background-color: #c0392b
+}
+.btn-orange {
+  background-color: #f1c40f
+}
+.btn-orange:hover {
+  background-color: #f39c12
+}
+.btn-grey {
+  background-color: #95a5a6
+}
+.btn-grey:hover {
+  background-color: #7f8c8d
+}
+
+
+/*==============================================================================
+    8. Layout
+===============================================================================*/
+
+/* Wrapper */
+#wrapper {
+  -moz-box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0px 10px rgba(0,0,0,0.2);
+  background-color: #fff;
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+  -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+  -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+  transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+}
+#wrapper.boxed {
+  margin: 0 auto
+}
+
+/* Inner wrapper */
+.inner-wrapper {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px
+}
+
+/*==============================================================================
+    10. Main
+===============================================================================*/
+
+/* Main */
+#main {
+  margin-bottom: 1em;
+  width: 100%
+}
+#main.left {
+  float: left;
+  width: 860px;
+  margin-right: 20px
+}
+#main.right {
+  float: right;
+  width: 860px;
+  margin-left: 20px
+}
+
+/*==============================================================================
+    11. Pagination
+===============================================================================*/
+
+/* Base */
+ul.page-numbers {
+  font-size: 13px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0
+}
+ul.page-numbers li {
+  margin-right: 5px;
+  float: left
+}
+ul.page-numbers li a {
+  background-color: #eee;
+  display: inline-block;
+  padding: 0 10px;
+  color: #999;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+ul.page-numbers li a:hover {
+  color: #fff
+}
+ul.page-numbers li span.current {
+  color: #fff;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+}
+
+
+/*==============================================================================
+    12. Shortcodes
+===============================================================================*/
+
+/* Alerts */
+.alert {
+  padding: 0.5em;
+  margin: 0 0 1em 0;
+  background-color: #fff
+}
+.alert.white {
+  background-color: #fff;
+  border: 1px solid #ddd
+}
+.alert.grey {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  color: #333
+}
+.alert.red {
+  background-color: #ffe6e3;
+  border: 1px solid #f2c3bf;
+  color: #bf210e
+}
+.alert.yellow {
+  background-color: #fff7d6;
+  border: 1px solid #e9d477;
+  color: #956433
+}
+.alert.green {
+  background-color: #edfdd3;
+  border: 1px solid #c4dba0;
+  color: #657e3c
+}
+
+/* Tooltips */
+[data-tip] {
+  position:relative
+}
+[data-tip]:before {
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  border: 5px solid #000;
+  border-top-color: #000;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  z-index: 8;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+[data-tip]:after {
+  visibility: hidden;
+  opacity: 0;
+  content: attr(data-tip);
+  position: absolute;
+  top: -35px;
+  left: 0px;
+  padding: 0 0.5em;
+  background: #000;
+  color: #fff;
+  z-index: 9;
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+  white-space: nowrap;
+  word-wrap: normal;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+  visibility: visible;
+  opacity: 1
+}
+
+/* Tabs */
+.tabs {
+  margin: 0 0 1em 0
+}
+.tabs .ui-tabs-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+.tabs .ui-tabs-nav li {
+  margin-right: 0.5em;
+  position: relative;
+  float: left
+}
+.tabs .ui-tabs-panel {}
+
+/* Accordion */
+.accordion {
+  clear: both;
+  margin: 0 0 1em 0
+}
+.accordion .title {
+  color: #999;
+  margin-bottom: -1px
+}
+.accordion .title:before {
+  font-family:'FontAwesome';
+  display: inline-block;
+  width: 20px;
+  content: "\f196"
+}
+.accordion .title.ui-state-active {
+  background-color: #f9f9f9
+}
+.accordion .title.ui-state-active:before {
+  content: "\f147"
+}
+.accordion .ui-accordion-header {
+  padding: 0.5em;
+  cursor: pointer;
+  border: 1px solid #ddd
+}
+.accordion .ui-accordion-content {
+  overflow: hidden
+}
+.accordion .ui-accordion-content p:last-child {}
+
