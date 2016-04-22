@@ -16,7 +16,13 @@ class AdController extends Controller
         $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
         
         $view = $this->container->get('saysa_view');
+
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Header (desktop)');
+        $header = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
         
+        $view
+            ->set('ad_header', $header)
+        ;
 
         return $this->render('VyperSiteBundle:Ad:Header.html.twig', $view->getView());
     }

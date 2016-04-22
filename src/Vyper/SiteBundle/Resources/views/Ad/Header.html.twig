@@ -1,1 +1,8 @@
-The header ad
+{% if ad_header.0.link is null %}
+    {% set link = '#' %}
+{% else %}
+    {% set link = ad_header.0.link %}
+{% endif %}
+<a href="{{ link }}">
+    <img src="{{ asset(ad_header.0.picture.getPath()) }}?size=390-199" alt="">
+</a>
