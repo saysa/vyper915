@@ -223,6 +223,8 @@ ajax_switch_article_highlight: /_admin_/ajax/switch_article_highlight   # FIXME
 # Desc: /_admin_/ajax/switch_article_published
 ajax_switch_article_published: /_admin_/ajax/switch_article_published   # FIXME
 
+ajax_switch_ad_actived: /_admin_/ajax/switch_ad_actived
+
 # Desc: /_admin_/ajax/switch_artist_vyper
 ajax_switch_artist_vyper: /_admin_/ajax/switch_artist_vyper   # FIXME
 

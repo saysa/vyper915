@@ -342,4 +342,21 @@ class AdminAjaxController extends AdminCommonController {
 
         return new Response();
     }
+
+    public function switchAdActivedAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $ad = $em->getRepository('VyperSiteBundle:Ad')->find($request->request->get('ad_id'));
+
+        if ($request->request->get('checkboxValue') == "true") {
+            $ad->setActive(true);
+        } else {
+            $ad->setActive(false);
+        }
+
+        $em->persist($ad);
+        $em->flush();
+
+        return new Response();
+    }
 } 
