@@ -1,8 +1,20 @@
-{% if ad_header.0.link is null %}
-    {% set link = '#' %}
+{% if ad_header.0.active %}
+    {% if ad_header.0.link is null %}
+        {% set link = '#' %}
+    {% else %}
+        {% set link = ad_header.0.link %}
+    {% endif %}
+    <a href="{{ link }}">
+        <img src="{{ asset(ad_header.0.picture.getPath()) }}?size=390-199" alt="">
+    </a>
 {% else %}
-    {% set link = ad_header.0.link %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- un_artist + encarts index -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:468px;height:60px"
+         data-ad-client="ca-pub-3070362287154347"
+         data-ad-slot="6183315514"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 {% endif %}
-<a href="{{ link }}">
-    <img src="{{ asset(ad_header.0.picture.getPath()) }}?size=390-199" alt="">
-</a>
