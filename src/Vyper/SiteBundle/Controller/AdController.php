@@ -16,7 +16,7 @@ class AdController extends Controller
         
         $view = $this->container->get('saysa_view');
 
-        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Header (desktop)');
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Header (468x60px)');
         $header = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
         
         $view
