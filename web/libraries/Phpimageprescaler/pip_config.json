@@ -176,6 +176,14 @@
             }
           }
         },
+        "468-60": {
+            "dimensions": {
+                "0": {
+                    "w": 468,
+                    "h": 60
+                }
+            }
+        },
         "flux-rss": {
             "dimensions": {
                 "mobile": {
