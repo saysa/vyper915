@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class AdController extends Controller
 {
 
-    public function HeaderAction(Request $request)
+    public function Header468Action(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
@@ -24,6 +24,6 @@ class AdController extends Controller
             ->set('ad_header', $header)
         ;
 
-        return $this->render('VyperSiteBundle:Ad:Header.html.twig', $view->getView());
+        return $this->render('VyperSiteBundle:Ad:Header468.html.twig', $view->getView());
     }
 }
