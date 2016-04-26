@@ -1,0 +1,20 @@
+{% if ad_header.0.active %}
+    {% if ad_header.0.link is null %}
+        {% set link = '#' %}
+    {% else %}
+        {% set link = ad_header.0.link %}
+    {% endif %}
+    <a href="{{ link }}">
+        <img src="{{ asset(ad_header.0.picture.getPath()) }}?size=728-90" alt="">
+    </a>
+{% else %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- footer-leaderboard -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-3070362287154347"
+         data-ad-slot="5037213511"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+{% endif %}
