@@ -74,4 +74,67 @@ class AdController extends Controller
 
         return $this->render('VyperSiteBundle:Ad:Header320.html.twig', $view->getView());
     }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function Skycraper1200Action(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
+
+        $view = $this->container->get('saysa_view');
+
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Right column big (300px large)');
+        $header = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
+
+        $view
+            ->set('ad_header', $header)
+        ;
+
+        return $this->render('VyperSiteBundle:Ad:Skycraper1200.html.twig', $view->getView());
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function SkycraperMiddleAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
+
+        $view = $this->container->get('saysa_view');
+
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Right column normal (160px large)');
+        $header = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
+
+        $view
+            ->set('ad_header', $header)
+        ;
+
+        return $this->render('VyperSiteBundle:Ad:SkycraperMiddle.html.twig', $view->getView());
+    }
+
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function SkycraperMobileAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
+
+        $view = $this->container->get('saysa_view');
+
+        $adType = $em->getRepository('VyperSiteBundle:AdType')->findByName('Right column small (250px large)');
+        $header = $em->getRepository('VyperSiteBundle:Ad')->getSquare($locale, $adType);
+
+        $view
+            ->set('ad_header', $header)
+        ;
+
+        return $this->render('VyperSiteBundle:Ad:SkycraperMobile.html.twig', $view->getView());
+    }
 }
