@@ -59,13 +59,14 @@ class ArticleController extends Controller
         return $this->render('VyperSiteBundle:Article:showArticle.html.twig', $view->getView());
     }
 
-    public function showThemeAction(Theme $theme, $page)
+    public function showThemeAction(Request $request, Theme $theme, $page)
     {
         $em = $this->getDoctrine()->getManager();
+        $locale = $em->getRepository('VyperSiteBundle:LocaleType')->findByName($request->getLocale());
         $view = $this->container->get('saysa_view');
         $articles_per_page = $this->container->getParameter('articles_per_page');
 
-        $articles  = $em->getRepository('VyperSiteBundle:Article')->myFindByTheme($articles_per_page, $page, $theme);
+        $articles  = $em->getRepository('VyperSiteBundle:Article')->myFindByTheme($articles_per_page, $page, $theme, $locale);
         $themesInMenu = $em->getRepository('VyperSiteBundle:Theme')->getShowInMenu();
         $view
             ->set('articles', $articles)

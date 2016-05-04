@@ -143,7 +143,7 @@ class ArticleRepository extends EntityRepository
         return $results;
     }
 
-    public function myFindByTheme($posts_per_page, $page, $theme)
+    public function myFindByTheme($posts_per_page, $page, $theme, $locale)
     {
         if ($page < 1) {
             throw new \InvalidArgumentException('Can not be < 1');
@@ -161,6 +161,9 @@ class ArticleRepository extends EntityRepository
         ;
         $queryBuilder->add('where', $queryBuilder->expr()->in('t', ':theme'))
             ->setParameter('theme', $theme->getId());
+
+        $queryBuilder->andWhere('a.locale = :locale')
+            ->setParameter('locale', $locale);
 
         $queryBuilder
             ->add('orderBy','a.releaseDate DESC, a.releaseTime DESC')
